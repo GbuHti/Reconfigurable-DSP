@@ -1,3 +1,8 @@
+/*这是一个猜字游戏
+ * 来源：C++ Primer Plus(第6版)P663
+ * Yu Zhenbo  
+ * 2020-02-25 14:30:13 
+ */
 #include <iostream>
 #include <string>
 #include <cstdlib>
