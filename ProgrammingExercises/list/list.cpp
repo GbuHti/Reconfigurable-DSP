@@ -29,7 +29,7 @@ int main()
 	three.remove(2);
 	cout << endl << "List three minus 2s: ";
 	for_each(three.begin(), three.end(), outint);
-	three.splice(three.begin(), one);
+	three.splice(three.begin(), one);               //
 	cout << endl << "List three agter splice: ";
 	for_each(three.begin(), three.end(), outint);
 	cout <<endl << "List one: ";
@@ -37,7 +37,7 @@ int main()
 	three.unique();
 	cout << endl << "List three after unique: ";
 	for_each(three.begin(), three.end(), outint);
-	three.sort();
+	three.sort();                                     //非成员sort()函数需要随机访问迭代器。因为快速插入的代价是放弃随机访问功能，所以不能将非成员函数sort()用于链表。因此，这个类中包括了一个只能在类中使用的成员版本。
 	three.unique();
 	cout <<endl <<"List three after sort & unique: ";
 	for_each(three.begin(), three.end(), outint);
