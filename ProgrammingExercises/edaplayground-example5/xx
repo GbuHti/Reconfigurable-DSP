@@ -1,0 +1,266 @@
+
+Dump memories at time 0 s
+mem[0] = aa000067
+mem[4] = aa0000c6
+mem[8] = aa000069
+mem[c] = aa000073
+mem[10] = aa000051
+mem[14] = aa0000ff
+mem[18] = aa00004a
+mem[1c] = aa0000ec
+mem[20] = aa000029
+mem[24] = aa0000cd
+mem[28] = aa0000ba
+mem[2c] = aa0000ab
+mem[30] = aa0000f2
+mem[34] = aa0000fb
+mem[38] = aa0000e3
+mem[3c] = aa000046
+mem[40] = aa00007c
+mem[44] = aa0000c2
+mem[48] = aa000054
+mem[4c] = aa0000f8
+mem[50] = aa00001b
+mem[54] = aa0000e8
+mem[58] = aa0000e7
+mem[5c] = aa00008d
+mem[60] = aa000076
+mem[64] = aa00005a
+mem[68] = aa00002e
+mem[6c] = aa000063
+mem[70] = aa000033
+mem[74] = aa00009f
+mem[78] = aa0000c9
+mem[7c] = aa00009a
+mem[80] = aa000066
+mem[84] = aa000032
+mem[88] = aa00000d
+mem[8c] = aa0000b7
+mem[90] = aa000031
+mem[94] = aa000058
+mem[98] = aa0000a3
+mem[9c] = aa00005a
+mem[a0] = aa000025
+mem[a4] = aa00005d
+mem[a8] = aa000005
+mem[ac] = aa000017
+mem[b0] = aa000058
+mem[b4] = aa0000e9
+mem[b8] = aa00005e
+mem[bc] = aa0000d4
+mem[c0] = aa0000ab
+mem[c4] = aa0000b2
+mem[c8] = aa0000cd
+mem[cc] = aa0000c6
+mem[d0] = aa00009b
+mem[d4] = aa0000b4
+mem[d8] = aa000054
+mem[dc] = aa000011
+mem[e0] = aa00000e
+mem[e4] = aa000082
+mem[e8] = aa000074
+mem[ec] = aa000041
+mem[f0] = aa000021
+mem[f4] = aa00003d
+mem[f8] = aa0000dc
+mem[fc] = aa000087
+
+WRITE		addr = 0, data = 0 at 0 s delay = 10 ns
+WRITE/DMI addr = 4, data = 4 at 0 s delay = 120 ns
+WRITE/DMI addr = 8, data = 8 at 0 s delay = 230 ns
+WRITE/DMI addr = c, data = c at 0 s delay = 340 ns
+WRITE/DMI addr = 10, data = 10 at 0 s delay = 450 ns
+WRITE/DMI addr = 14, data = 14 at 0 s delay = 560 ns
+WRITE/DMI addr = 18, data = 18 at 0 s delay = 670 ns
+WRITE/DMI addr = 1c, data = 1c at 0 s delay = 780 ns
+WRITE/DMI addr = 20, data = 20 at 0 s delay = 890 ns
+WRITE/DMI addr = 24, data = 24 at 0 s delay = 1 us
+READ     addr = 0, data = 0 at 1 us delay = 10 ns
+WRITE/DMI addr = 28, data = 28 at 1100 ns delay = 10 ns
+WRITE/DMI addr = 2c, data = 2c at 1100 ns delay = 120 ns
+WRITE/DMI addr = 30, data = 30 at 1100 ns delay = 230 ns
+WRITE/DMI addr = 34, data = 34 at 1100 ns delay = 340 ns
+WRITE/DMI addr = 38, data = 38 at 1100 ns delay = 450 ns
+WRITE/DMI addr = 3c, data = 3c at 1100 ns delay = 560 ns
+WRITE/DMI addr = 40, data = 40 at 1100 ns delay = 670 ns
+WRITE/DMI addr = 44, data = 44 at 1100 ns delay = 780 ns
+WRITE/DMI addr = 48, data = 48 at 1100 ns delay = 890 ns
+READ     addr = 4, data = 4 at 1110 ns delay = 10 ns
+READ     addr = 8, data = 8 at 1110 ns delay = 120 ns
+READ     addr = c, data = c at 1110 ns delay = 230 ns
+READ     addr = 10, data = 10 at 1110 ns delay = 340 ns
+READ     addr = 14, data = 14 at 1110 ns delay = 450 ns
+READ     addr = 18, data = 18 at 1110 ns delay = 560 ns
+READ     addr = 1c, data = 1c at 1110 ns delay = 670 ns
+READ     addr = 20, data = 20 at 1110 ns delay = 780 ns
+READ     addr = 24, data = 24 at 1110 ns delay = 890 ns
+WRITE/DMI addr = 4c, data = 4c at 2090 ns delay = 10 ns
+WRITE/DMI addr = 50, data = 50 at 2090 ns delay = 120 ns
+WRITE/DMI addr = 54, data = 54 at 2090 ns delay = 230 ns
+WRITE/DMI addr = 58, data = 58 at 2090 ns delay = 340 ns
+WRITE/DMI addr = 5c, data = 5c at 2090 ns delay = 450 ns
+WRITE/DMI addr = 60, data = 60 at 2090 ns delay = 560 ns
+WRITE/DMI addr = 64, data = 64 at 2090 ns delay = 670 ns
+WRITE/DMI addr = 68, data = 68 at 2090 ns delay = 780 ns
+WRITE/DMI addr = 6c, data = 6c at 2090 ns delay = 890 ns
+READ     addr = 28, data = 28 at 2100 ns delay = 10 ns
+READ     addr = 2c, data = 2c at 2100 ns delay = 120 ns
+READ     addr = 30, data = 30 at 2100 ns delay = 230 ns
+READ     addr = 34, data = 34 at 2100 ns delay = 340 ns
+READ     addr = 38, data = 38 at 2100 ns delay = 450 ns
+READ     addr = 3c, data = 3c at 2100 ns delay = 560 ns
+READ     addr = 40, data = 40 at 2100 ns delay = 670 ns
+READ     addr = 44, data = 44 at 2100 ns delay = 780 ns
+READ     addr = 48, data = 48 at 2100 ns delay = 890 ns
+INVALIDATE DMI	(0..3f) for Initiator1 at 3 us
+INVALIDATE DMI	(0..3f) for Initiator1 at 3 us
+INVALIDATE DMI	(0..3f) for Initiator1 at 3 us
+INVALIDATE DMI	(0..3f) for Initiator1 at 3 us
+WRITE		addr = 70, data = 70 at 3080 ns delay = 10 ns
+WRITE/DMI addr = 74, data = 74 at 3080 ns delay = 120 ns
+WRITE/DMI addr = 78, data = 78 at 3080 ns delay = 230 ns
+WRITE/DMI addr = 7c, data = 7c at 3080 ns delay = 340 ns
+WRITE/DMI addr = 80, data = 80 at 3080 ns delay = 450 ns
+WRITE/DMI addr = 84, data = 84 at 3080 ns delay = 560 ns
+WRITE/DMI addr = 88, data = 88 at 3080 ns delay = 670 ns
+WRITE/DMI addr = 8c, data = 8c at 3080 ns delay = 780 ns
+WRITE/DMI addr = 90, data = 90 at 3080 ns delay = 890 ns
+READ     addr = 4c, data = 4c at 3090 ns delay = 10 ns
+READ     addr = 50, data = 50 at 3090 ns delay = 120 ns
+READ     addr = 54, data = 54 at 3090 ns delay = 230 ns
+READ     addr = 58, data = 58 at 3090 ns delay = 340 ns
+READ     addr = 5c, data = 5c at 3090 ns delay = 450 ns
+READ     addr = 60, data = 60 at 3090 ns delay = 560 ns
+READ     addr = 64, data = 64 at 3090 ns delay = 670 ns
+READ     addr = 68, data = 68 at 3090 ns delay = 780 ns
+READ     addr = 6c, data = 6c at 3090 ns delay = 890 ns
+WRITE/DMI addr = 94, data = 94 at 4070 ns delay = 10 ns
+WRITE/DMI addr = 98, data = 98 at 4070 ns delay = 120 ns
+WRITE/DMI addr = 9c, data = 9c at 4070 ns delay = 230 ns
+WRITE/DMI addr = a0, data = a0 at 4070 ns delay = 340 ns
+WRITE/DMI addr = a4, data = a4 at 4070 ns delay = 450 ns
+WRITE/DMI addr = a8, data = a8 at 4070 ns delay = 560 ns
+WRITE/DMI addr = ac, data = ac at 4070 ns delay = 670 ns
+WRITE/DMI addr = b0, data = b0 at 4070 ns delay = 780 ns
+WRITE/DMI addr = b4, data = b4 at 4070 ns delay = 890 ns
+READ     addr = 70, data = 70 at 4080 ns delay = 10 ns
+READ     addr = 74, data = 74 at 4080 ns delay = 120 ns
+READ     addr = 78, data = 78 at 4080 ns delay = 230 ns
+READ     addr = 7c, data = 7c at 4080 ns delay = 340 ns
+READ     addr = 80, data = 80 at 4080 ns delay = 450 ns
+READ     addr = 84, data = 84 at 4080 ns delay = 560 ns
+READ     addr = 88, data = 88 at 4080 ns delay = 670 ns
+READ     addr = 8c, data = 8c at 4080 ns delay = 780 ns
+READ     addr = 90, data = 90 at 4080 ns delay = 890 ns
+WRITE/DMI addr = b8, data = b8 at 5060 ns delay = 10 ns
+WRITE/DMI addr = bc, data = bc at 5060 ns delay = 120 ns
+WRITE/DMI addr = c0, data = c0 at 5060 ns delay = 230 ns
+WRITE/DMI addr = c4, data = c4 at 5060 ns delay = 340 ns
+WRITE/DMI addr = c8, data = c8 at 5060 ns delay = 450 ns
+WRITE/DMI addr = cc, data = cc at 5060 ns delay = 560 ns
+WRITE/DMI addr = d0, data = d0 at 5060 ns delay = 670 ns
+WRITE/DMI addr = d4, data = d4 at 5060 ns delay = 780 ns
+WRITE/DMI addr = d8, data = d8 at 5060 ns delay = 890 ns
+READ     addr = 94, data = 94 at 5070 ns delay = 10 ns
+READ     addr = 98, data = 98 at 5070 ns delay = 120 ns
+READ     addr = 9c, data = 9c at 5070 ns delay = 230 ns
+READ     addr = a0, data = a0 at 5070 ns delay = 340 ns
+READ     addr = a4, data = a4 at 5070 ns delay = 450 ns
+READ     addr = a8, data = a8 at 5070 ns delay = 560 ns
+READ     addr = ac, data = ac at 5070 ns delay = 670 ns
+READ     addr = b0, data = b0 at 5070 ns delay = 780 ns
+READ     addr = b4, data = b4 at 5070 ns delay = 890 ns
+WRITE/DMI addr = dc, data = dc at 6050 ns delay = 10 ns
+WRITE/DMI addr = e0, data = e0 at 6050 ns delay = 120 ns
+WRITE/DMI addr = e4, data = e4 at 6050 ns delay = 230 ns
+WRITE/DMI addr = e8, data = e8 at 6050 ns delay = 340 ns
+WRITE/DMI addr = ec, data = ec at 6050 ns delay = 450 ns
+WRITE/DMI addr = f0, data = f0 at 6050 ns delay = 560 ns
+WRITE/DMI addr = f4, data = f4 at 6050 ns delay = 670 ns
+WRITE/DMI addr = f8, data = f8 at 6050 ns delay = 780 ns
+WRITE/DMI addr = fc, data = fc at 6050 ns delay = 890 ns
+READ     addr = b8, data = b8 at 6060 ns delay = 10 ns
+READ     addr = bc, data = bc at 6060 ns delay = 120 ns
+READ     addr = c0, data = c0 at 6060 ns delay = 230 ns
+READ     addr = c4, data = c4 at 6060 ns delay = 340 ns
+READ     addr = c8, data = c8 at 6060 ns delay = 450 ns
+READ     addr = cc, data = cc at 6060 ns delay = 560 ns
+READ     addr = d0, data = d0 at 6060 ns delay = 670 ns
+READ     addr = d4, data = d4 at 6060 ns delay = 780 ns
+READ     addr = d8, data = d8 at 6060 ns delay = 890 ns
+
+Dump memories at time 7040 ns
+mem[0] = 0
+mem[4] = 4
+mem[8] = 8
+mem[c] = c
+mem[10] = 10
+mem[14] = 14
+mem[18] = 18
+mem[1c] = 1c
+mem[20] = 20
+mem[24] = 24
+mem[28] = 28
+mem[2c] = 2c
+mem[30] = 30
+mem[34] = 34
+mem[38] = 38
+mem[3c] = 3c
+mem[40] = 40
+mem[44] = 44
+mem[48] = 48
+mem[4c] = 4c
+mem[50] = 50
+mem[54] = 54
+mem[58] = 58
+mem[5c] = 5c
+mem[60] = 60
+mem[64] = 64
+mem[68] = 68
+mem[6c] = 6c
+mem[70] = 70
+mem[74] = 74
+mem[78] = 78
+mem[7c] = 7c
+mem[80] = 80
+mem[84] = 84
+mem[88] = 88
+mem[8c] = 8c
+mem[90] = 90
+mem[94] = 94
+mem[98] = 98
+mem[9c] = 9c
+mem[a0] = a0
+mem[a4] = a4
+mem[a8] = a8
+mem[ac] = ac
+mem[b0] = b0
+mem[b4] = b4
+mem[b8] = b8
+mem[bc] = bc
+mem[c0] = c0
+mem[c4] = c4
+mem[c8] = c8
+mem[cc] = cc
+mem[d0] = d0
+mem[d4] = d4
+mem[d8] = d8
+mem[dc] = dc
+mem[e0] = e0
+mem[e4] = e4
+mem[e8] = e8
+mem[ec] = ec
+mem[f0] = f0
+mem[f4] = f4
+mem[f8] = f8
+mem[fc] = fc
+
+READ     addr = dc, data = dc at 7050 ns delay = 10 ns
+READ     addr = e0, data = e0 at 7050 ns delay = 120 ns
+READ     addr = e4, data = e4 at 7050 ns delay = 230 ns
+READ     addr = e8, data = e8 at 7050 ns delay = 340 ns
+READ     addr = ec, data = ec at 7050 ns delay = 450 ns
+READ     addr = f0, data = f0 at 7050 ns delay = 560 ns
+READ     addr = f4, data = f4 at 7050 ns delay = 670 ns
+READ     addr = f8, data = f8 at 7050 ns delay = 780 ns
+READ     addr = fc, data = fc at 7050 ns delay = 890 ns

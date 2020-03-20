@@ -23,7 +23,7 @@ struct Bus: sc_module
 		{
 			char txt[20];
 			sprintf(txt, "targ_socket_%d", i);
-			targ_socket[i] new tlm_utils::simple_target_socket_tagged<Bus>(txt);
+			targ_socket[i] = new tlm_utils::simple_target_socket_tagged<Bus>(txt);
 
 			targ_socket[i]->register_nb_transport_fw( this, &Bus::nb_transport_fw, i);	
 			targ_socket[i]->register_b_transport( this, &Bus::b_transport, i);
@@ -36,7 +36,7 @@ struct Bus: sc_module
 			sprintf(txt, "init_socket_%d", i);
 			init_socket[i] = new tlm_utils::simple_initiator_socket_tagged<Bus>(txt);
 			init_socket[i]->register_nb_transport_bw( this, &Bus::nb_transport_bw, i);
-			init_socket[i]->register_b_transport( this, &Bus::invalidate_direct_mem_ptr, i);	
+			init_socket[i]->register_invalidate_direct_mem_ptr( this, &Bus::invalidate_direct_mem_ptr, i);	
 		}
 	}
 
@@ -63,7 +63,18 @@ struct Bus: sc_module
 	// Tagged TLM-2 blocking transport method
 	virtual void b_transport(int id, tlm::tlm_generic_payload & trans, sc_time & delay)
 	{
-	
+		if(id < N_INITIATORS)
+		{
+			sc_dt::uint64 addr = trans.get_address();
+			sc_dt::uint64 masked_address = 0xff;
+			unsigned int target_nr = decode_address(addr, masked_address);
+			if(target_nr < N_TARGETS)
+			{
+				sc_dt::uint64 dispatch_address = compose_address(target_nr, addr);
+				trans.set_address(dispatch_address);				
+				(*init_socket[target_nr])->b_transport(trans, delay);		
+			}
+		}	
 	}
 
 	// Tagged TLM-2 forward DMI method
@@ -71,13 +82,24 @@ struct Bus: sc_module
 									tlm::tlm_generic_payload & trans,
 									tlm::tlm_dmi & dmi_data)
 	{
-	
+		(*init_socket[id])->get_direct_mem_ptr(trans, dmi_data);
 	}
 
 	// Tagged debug transaction method
 	virtual unsigned int transport_dbg(int id, tlm::tlm_generic_payload & trans)
 	{
-	
+		if(id < N_INITIATORS)
+		{
+			sc_dt::uint64 addr = trans.get_address();
+			sc_dt::uint64 masked_address = 0xff;
+			unsigned int target_nr = decode_address(addr, masked_address);
+			if(target_nr < N_TARGETS)
+			{
+				sc_dt::uint64 dispatch_address = compose_address(target_nr, addr);
+				trans.set_address(dispatch_address);				
+				(*init_socket[target_nr])->transport_dbg(trans);		
+			}
+		}	
 	}
 
 	// Tagged backward DMI method
@@ -85,18 +107,24 @@ struct Bus: sc_module
 											sc_dt::uint64 start_range,
 											sc_dt::uint64 end_range)
 	{
-	
+		if(id < N_TARGETS)
+		{
+			for(int i = 0; i < N_INITIATORS; i++)
+			{
+				(*targ_socket[i])->invalidate_direct_mem_ptr(start_range, end_range);	
+			}	
+		}	
 	}
 
 	// Simple fixed address decoding
 	inline unsigned int decode_address(sc_dt::uint64 address, sc_dt::uint64 masked_address)
 	{
-	
+		return (address & ~masked_address) >> 8;	
 	}
 
 	inline sc_dt::uint64 compose_address(unsigned int target_nr, sc_dt::uint64 address)
 	{
-	
+		return address ^ (target_nr << 8);
 	}
 
 	std::map <tlm::tlm_generic_payload*, unsigned int> m_id_map;
