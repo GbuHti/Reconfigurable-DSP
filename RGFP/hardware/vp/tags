@@ -1,0 +1,1341 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+A0	csr.h	/^            unsigned A0: 2;             \/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:2
+ADD	instr.cpp	/^    static T ADD(unsigned rd, unsigned rs1, unsigned rs2) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+ADD	instr.h	/^        ADD,$/;"	e	enum:Opcode::mapping
+ADDI	instr.cpp	/^    static T ADDI(unsigned rd, unsigned rs1, int I_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+ADDI	instr.h	/^        ADDI,$/;"	e	enum:Opcode::mapping
+ADDR_SPACE	flash.h	/^    static const unsigned int ADDR_SPACE = DATA_ADDR + BLOCKSIZE;$/;"	m	struct:Flashcontroller	typeref:typename:const unsigned int
+AMOADD_W	instr.h	/^        AMOADD_W,$/;"	e	enum:Opcode::mapping
+AMOAND_W	instr.h	/^        AMOAND_W,$/;"	e	enum:Opcode::mapping
+AMOMAXU_W	instr.h	/^        AMOMAXU_W,$/;"	e	enum:Opcode::mapping
+AMOMAX_W	instr.h	/^        AMOMAX_W,$/;"	e	enum:Opcode::mapping
+AMOMINU_W	instr.h	/^        AMOMINU_W,$/;"	e	enum:Opcode::mapping
+AMOMIN_W	instr.h	/^        AMOMIN_W,$/;"	e	enum:Opcode::mapping
+AMOOR_W	instr.h	/^        AMOOR_W,$/;"	e	enum:Opcode::mapping
+AMOSWAP_W	instr.h	/^        AMOSWAP_W,$/;"	e	enum:Opcode::mapping
+AMOXOR_W	instr.h	/^        AMOXOR_W,$/;"	e	enum:Opcode::mapping
+AND	instr.cpp	/^    static T AND(unsigned rd, unsigned rs1, unsigned rs2) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+AND	instr.h	/^        AND,$/;"	e	enum:Opcode::mapping
+ANDI	instr.cpp	/^    static T ANDI(unsigned rd, unsigned rs1, int I_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+ANDI	instr.h	/^        ANDI,$/;"	e	enum:Opcode::mapping
+AON	sifive/aon.h	/^    AON(sc_core::sc_module_name) {$/;"	f	struct:AON
+AON	sifive/aon.h	/^struct AON : public sc_core::sc_module {$/;"	s
+AUIPC	instr.h	/^        AUIPC,$/;"	e	enum:Opcode::mapping
+AbstractMapping	tlm_map.h	/^    struct AbstractMapping {$/;"	s	namespace:vp::map
+AccessMode	csr.h	/^    enum AccessMode {$/;"	g	struct:csr_base
+Addr_Target_0_Claim_Response	plic.h	/^        Addr_Target_0_Claim_Response        = 4$/;"	e	enum:PLIC::__anon14fe60e30103
+Addr_Target_0_Priority_Threshold	plic.h	/^        Addr_Target_0_Priority_Threshold    = 0,$/;"	e	enum:PLIC::__anon14fe60e30103
+AddressMapping	tlm_map.h	/^    struct AddressMapping : public AbstractMapping {$/;"	s	namespace:vp::map
+BEQ	instr.cpp	/^    static T BEQ(unsigned rs1, unsigned rs2, int B_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+BEQ	instr.h	/^        BEQ,$/;"	e	enum:Opcode::mapping
+BGE	instr.h	/^        BGE,$/;"	e	enum:Opcode::mapping
+BGEU	instr.h	/^        BGEU,$/;"	e	enum:Opcode::mapping
+BIT_RANGE	instr.h	/^#define BIT_RANGE(/;"	d
+BIT_SINGLE	instr.h	/^#define BIT_SINGLE(/;"	d
+BIT_SINGLE_P1	instr.h	/^#define BIT_SINGLE_P1(/;"	d
+BIT_SINGLE_PN	instr.h	/^#define BIT_SINGLE_PN(/;"	d
+BIT_SLICE	instr.h	/^#define BIT_SLICE(/;"	d
+BLOCKSIZE	flash.h	/^    static const unsigned int BLOCKSIZE = 512;$/;"	m	struct:Flashcontroller	typeref:typename:const unsigned int
+BLT	instr.h	/^        BLT,$/;"	e	enum:Opcode::mapping
+BLTU	instr.h	/^        BLTU,$/;"	e	enum:Opcode::mapping
+BNE	instr.cpp	/^    static T BNE(unsigned rs1, unsigned rs2, int B_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+BNE	instr.h	/^        BNE,$/;"	e	enum:Opcode::mapping
+B_imm	instr.h	/^    inline int32_t B_imm() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+BasicTimer	basic_timer.h	/^    BasicTimer(sc_core::sc_module_name, uint32_t irq_number)$/;"	f	struct:BasicTimer
+BasicTimer	basic_timer.h	/^struct BasicTimer : public sc_core::sc_module {$/;"	s
+Blockbuffer	flash.h	/^	Blockbuffer(int fileDescriptor) : offs(0), dirty(false), active(false), fd(fileDescriptor){};$/;"	f	struct:Blockbuffer
+Blockbuffer	flash.h	/^template<size_t width> struct Blockbuffer$/;"	s
+CLINT	clint.h	/^    CLINT(sc_core::sc_module_name) {$/;"	f	struct:CLINT
+CLINT	clint.h	/^struct CLINT : public clint_if,$/;"	s
+CSRRC	instr.h	/^        CSRRC,$/;"	e	enum:Opcode::mapping
+CSRRCI	instr.h	/^        CSRRCI,$/;"	e	enum:Opcode::mapping
+CSRRS	instr.h	/^        CSRRS,$/;"	e	enum:Opcode::mapping
+CSRRSI	instr.h	/^        CSRRSI,$/;"	e	enum:Opcode::mapping
+CSRRW	instr.h	/^        CSRRW,$/;"	e	enum:Opcode::mapping
+CSRRWI	instr.h	/^        CSRRWI,$/;"	e	enum:Opcode::mapping
+CSR_CYCLEH_ADDR	csr.h	/^    CSR_CYCLEH_ADDR = 0xC80,$/;"	e	enum:csr_addresses
+CSR_CYCLE_ADDR	csr.h	/^    CSR_CYCLE_ADDR = 0xC00,$/;"	e	enum:csr_addresses
+CSR_INSTRETH_ADDR	csr.h	/^    CSR_INSTRETH_ADDR = 0xC82,$/;"	e	enum:csr_addresses
+CSR_INSTRET_ADDR	csr.h	/^    CSR_INSTRET_ADDR = 0xC02,$/;"	e	enum:csr_addresses
+CSR_MARCHID_ADDR	csr.h	/^    CSR_MARCHID_ADDR = 0xF12,$/;"	e	enum:csr_addresses
+CSR_MCAUSE_ADDR	csr.h	/^    CSR_MCAUSE_ADDR = 0x342,$/;"	e	enum:csr_addresses
+CSR_MCYCLEH_ADDR	csr.h	/^    CSR_MCYCLEH_ADDR = 0xB80,$/;"	e	enum:csr_addresses
+CSR_MCYCLE_ADDR	csr.h	/^    CSR_MCYCLE_ADDR = 0xB00,$/;"	e	enum:csr_addresses
+CSR_MEPC_ADDR	csr.h	/^    CSR_MEPC_ADDR = 0x341,$/;"	e	enum:csr_addresses
+CSR_MHARTID_ADDR	csr.h	/^    CSR_MHARTID_ADDR = 0xF14,$/;"	e	enum:csr_addresses
+CSR_MIE_ADDR	csr.h	/^    CSR_MIE_ADDR = 0x304,$/;"	e	enum:csr_addresses
+CSR_MIMPID_ADDR	csr.h	/^    CSR_MIMPID_ADDR = 0xF13,$/;"	e	enum:csr_addresses
+CSR_MINSTRETH_ADDR	csr.h	/^    CSR_MINSTRETH_ADDR = 0xB82,$/;"	e	enum:csr_addresses
+CSR_MINSTRET_ADDR	csr.h	/^    CSR_MINSTRET_ADDR = 0xB02,$/;"	e	enum:csr_addresses
+CSR_MIP_ADDR	csr.h	/^    CSR_MIP_ADDR = 0x344,$/;"	e	enum:csr_addresses
+CSR_MISA_ADDR	csr.h	/^    CSR_MISA_ADDR = 0x301,$/;"	e	enum:csr_addresses
+CSR_MSCRATCH_ADDR	csr.h	/^    CSR_MSCRATCH_ADDR = 0x340,$/;"	e	enum:csr_addresses
+CSR_MSTATUS_ADDR	csr.h	/^    CSR_MSTATUS_ADDR = 0x300,$/;"	e	enum:csr_addresses
+CSR_MTIMEH_ADDR	csr.h	/^    CSR_MTIMEH_ADDR  = 0xB81,$/;"	e	enum:csr_addresses
+CSR_MTIME_ADDR	csr.h	/^    CSR_MTIME_ADDR  = 0xB01,$/;"	e	enum:csr_addresses
+CSR_MTVAL_ADDR	csr.h	/^    CSR_MTVAL_ADDR = 0x343,$/;"	e	enum:csr_addresses
+CSR_MTVEC_ADDR	csr.h	/^    CSR_MTVEC_ADDR = 0x305,$/;"	e	enum:csr_addresses
+CSR_MVENDORID_ADDR	csr.h	/^    CSR_MVENDORID_ADDR = 0xF11,$/;"	e	enum:csr_addresses
+CSR_TABLE_ADD_COUNTER_64	csr.h	/^#define CSR_TABLE_ADD_COUNTER_64(/;"	d
+CSR_TABLE_DEFINE_COUNTER	csr.h	/^#define CSR_TABLE_DEFINE_COUNTER(/;"	d
+CSR_TIMEH_ADDR	csr.h	/^    CSR_TIMEH_ADDR  = 0xC81,$/;"	e	enum:csr_addresses
+CSR_TIME_ADDR	csr.h	/^    CSR_TIME_ADDR  = 0xC01,$/;"	e	enum:csr_addresses
+C_ADD	instr.cpp	/^        C_ADD,$/;"	e	enum:Compressed::Opcode	file:
+C_ADDI	instr.cpp	/^        C_ADDI,$/;"	e	enum:Compressed::Opcode	file:
+C_ADDI16SP	instr.cpp	/^        C_ADDI16SP,$/;"	e	enum:Compressed::Opcode	file:
+C_ADDI16SP_NZIMM	instr.cpp	/^int32_t C_ADDI16SP_NZIMM(int32_t n) {$/;"	f	typeref:typename:int32_t
+C_ADDI4SPN	instr.cpp	/^        C_ADDI4SPN,$/;"	e	enum:Compressed::Opcode	file:
+C_ADDI4SPN_NZUIMM	instr.cpp	/^unsigned C_ADDI4SPN_NZUIMM(uint32_t n) {$/;"	f	typeref:typename:unsigned
+C_AND	instr.cpp	/^        C_AND,$/;"	e	enum:Compressed::Opcode	file:
+C_ANDI	instr.cpp	/^        C_ANDI,$/;"	e	enum:Compressed::Opcode	file:
+C_BEQZ	instr.cpp	/^        C_BEQZ,$/;"	e	enum:Compressed::Opcode	file:
+C_BNEZ	instr.cpp	/^        C_BNEZ,$/;"	e	enum:Compressed::Opcode	file:
+C_BRANCH_IMM	instr.cpp	/^int32_t C_BRANCH_IMM(int32_t n) {$/;"	f	typeref:typename:int32_t
+C_EBREAK	instr.cpp	/^        C_EBREAK,$/;"	e	enum:Compressed::Opcode	file:
+C_Illegal	instr.cpp	/^        C_Illegal,$/;"	e	enum:Compressed::Opcode	file:
+C_J	instr.cpp	/^        C_J,$/;"	e	enum:Compressed::Opcode	file:
+C_JAL	instr.cpp	/^        C_JAL,$/;"	e	enum:Compressed::Opcode	file:
+C_JALR	instr.cpp	/^        C_JALR,$/;"	e	enum:Compressed::Opcode	file:
+C_JAL_IMM	instr.cpp	/^int32_t C_JAL_IMM(int32_t n) {$/;"	f	typeref:typename:int32_t
+C_JR	instr.cpp	/^        C_JR,$/;"	e	enum:Compressed::Opcode	file:
+C_J_IMM	instr.cpp	/^int32_t C_J_IMM(int32_t n) {$/;"	f	typeref:typename:int32_t
+C_LI	instr.cpp	/^        C_LI,$/;"	e	enum:Compressed::Opcode	file:
+C_LUI	instr.cpp	/^        C_LUI,$/;"	e	enum:Compressed::Opcode	file:
+C_LUI_NZIMM	instr.cpp	/^int32_t C_LUI_NZIMM(int32_t n) {$/;"	f	typeref:typename:int32_t
+C_LW	instr.cpp	/^        C_LW,$/;"	e	enum:Compressed::Opcode	file:
+C_LWSP	instr.cpp	/^        C_LWSP,$/;"	e	enum:Compressed::Opcode	file:
+C_LWSP_UIMM	instr.cpp	/^uint32_t C_LWSP_UIMM(uint32_t n) {$/;"	f	typeref:typename:uint32_t
+C_LW_UIMM	instr.cpp	/^unsigned C_LW_UIMM(uint32_t n) {$/;"	f	typeref:typename:unsigned
+C_MV	instr.cpp	/^        C_MV,$/;"	e	enum:Compressed::Opcode	file:
+C_NOP	instr.cpp	/^        C_NOP,$/;"	e	enum:Compressed::Opcode	file:
+C_OR	instr.cpp	/^        C_OR,$/;"	e	enum:Compressed::Opcode	file:
+C_Reserved	instr.cpp	/^        C_Reserved,$/;"	e	enum:Compressed::Opcode	file:
+C_SLLI	instr.cpp	/^        C_SLLI,$/;"	e	enum:Compressed::Opcode	file:
+C_SRAI	instr.cpp	/^        C_SRAI,$/;"	e	enum:Compressed::Opcode	file:
+C_SRLI	instr.cpp	/^        C_SRLI,$/;"	e	enum:Compressed::Opcode	file:
+C_SUB	instr.cpp	/^        C_SUB,$/;"	e	enum:Compressed::Opcode	file:
+C_SW	instr.cpp	/^        C_SW,$/;"	e	enum:Compressed::Opcode	file:
+C_SWSP	instr.cpp	/^        C_SWSP,$/;"	e	enum:Compressed::Opcode	file:
+C_SWSP_UIMM	instr.cpp	/^uint32_t C_SWSP_UIMM(uint32_t n) {$/;"	f	typeref:typename:uint32_t
+C_SW_UIMM	instr.cpp	/^unsigned C_SW_UIMM(uint32_t n) {$/;"	f	typeref:typename:unsigned
+C_XOR	instr.cpp	/^        C_XOR,$/;"	e	enum:Compressed::Opcode	file:
+CombinedMemoryInterface	iss.h	/^    CombinedMemoryInterface(sc_core::sc_module_name, tlm_utils::tlm_quantumkeeper &keeper)$/;"	f	struct:CombinedMemoryInterface
+CombinedMemoryInterface	iss.h	/^struct CombinedMemoryInterface : public sc_core::sc_module,$/;"	s
+Compressed	instr.cpp	/^namespace Compressed {$/;"	n	file:
+CoreExecStatus	iss.h	/^enum class CoreExecStatus {$/;"	g
+DATA_ADDR	flash.h	/^    static const unsigned int DATA_ADDR = FLASH_SIZE_REG + sizeof(uint64_t);$/;"	m	struct:Flashcontroller	typeref:typename:const unsigned int
+DIV	instr.h	/^        DIV,$/;"	e	enum:Opcode::mapping
+DIVU	instr.h	/^        DIVU,$/;"	e	enum:Opcode::mapping
+DIV_REG_ADDR	sifive/uart.h	/^        DIV_REG_ADDR = 0x18,$/;"	e	enum:UART::__anon1511316c0103
+DST_ADDR	dma.h	/^        DST_ADDR = 4,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0203
+DataMemoryProxy	iss.h	/^    DataMemoryProxy(direct_memory_interface &dmi, data_memory_interface *next_memory, tlm_utils:/;"	f	struct:DataMemoryProxy
+DataMemoryProxy	iss.h	/^struct DataMemoryProxy : public data_memory_interface {$/;"	s
+DebugCoreRunner	gdb_stub.h	/^    DebugCoreRunner(ISS &core, const debug_memory_mapping &mm)$/;"	f	struct:DebugCoreRunner
+DebugCoreRunner	gdb_stub.h	/^struct DebugCoreRunner : public sc_core::sc_module {$/;"	s
+Direct	csr.h	/^        Direct = 0,$/;"	e	enum:csr_mtvec::Mode
+DirectCoreRunner	iss.h	/^    DirectCoreRunner(ISS &core)$/;"	f	struct:DirectCoreRunner
+DirectCoreRunner	iss.h	/^struct DirectCoreRunner : public sc_core::sc_module {$/;"	s
+Display	display.cpp	/^Display::Display(sc_module_name)$/;"	f	class:Display
+Display	display.hpp	/^struct Display : public sc_core::sc_module$/;"	s
+EBREAK	instr.cpp	/^    static T EBREAK() {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+EBREAK	instr.h	/^        EBREAK,$/;"	e	enum:Opcode::mapping
+ECALL	instr.h	/^        ECALL,$/;"	e	enum:Opcode::mapping
+ELFLoader	elf_loader.h	/^    ELFLoader(const char *filename)$/;"	f	struct:ELFLoader
+ELFLoader	elf_loader.h	/^struct ELFLoader {$/;"	s
+ELF_NIDENT	elf_loader.h	/^#define ELF_NIDENT /;"	d
+EXTRACT_SIGN_BIT	instr.h	/^#define EXTRACT_SIGN_BIT(/;"	d
+Elf32_Addr	elf_loader.h	/^typedef uint32_t Elf32_Addr;	\/\/ Unsigned address$/;"	t	typeref:typename:uint32_t
+Elf32_Ehdr	elf_loader.h	/^} Elf32_Ehdr;$/;"	t	typeref:struct:__anonb7fc41480108
+Elf32_Half	elf_loader.h	/^typedef uint16_t Elf32_Half;	\/\/ Unsigned half int$/;"	t	typeref:typename:uint16_t
+Elf32_Off	elf_loader.h	/^typedef uint32_t Elf32_Off;	    \/\/ Unsigned offset$/;"	t	typeref:typename:uint32_t
+Elf32_Phdr	elf_loader.h	/^} Elf32_Phdr;$/;"	t	typeref:struct:__anonb7fc41480208
+Elf32_PhdrType	elf_loader.h	/^enum Elf32_PhdrType {$/;"	g
+Elf32_Shdr	elf_loader.h	/^} Elf32_Shdr;$/;"	t	typeref:struct:__anonb7fc41480308
+Elf32_Sword	elf_loader.h	/^typedef int32_t  Elf32_Sword;	\/\/ Signed int$/;"	t	typeref:typename:int32_t
+Elf32_Sym	elf_loader.h	/^} Elf32_Sym;$/;"	t	typeref:struct:__anonb7fc41480408
+Elf32_Word	elf_loader.h	/^typedef uint32_t Elf32_Word;	\/\/ Unsigned int$/;"	t	typeref:typename:uint32_t
+EthernetDevice	ethernet.cpp	/^EthernetDevice::EthernetDevice(sc_core::sc_module_name, uint32_t irq_number, uint8_t *mem, std::/;"	f	class:EthernetDevice
+EthernetDevice	ethernet.h	/^struct EthernetDevice : public sc_core::sc_module {$/;"	s
+F12_EBREAK	instr.h	/^        F12_EBREAK = 0b000000000001,$/;"	e	enum:Opcode::parts
+F12_ECALL	instr.h	/^        F12_ECALL  = 0b000000000000,$/;"	e	enum:Opcode::parts
+F12_MRET	instr.h	/^        F12_MRET   = 0b001100000010,$/;"	e	enum:Opcode::parts
+F12_SRET	instr.h	/^        F12_SRET   = 0b000100000010,$/;"	e	enum:Opcode::parts
+F12_URET	instr.h	/^                F12_URET   = 0b000000000010,$/;"	e	enum:Opcode::parts
+F12_WFI	instr.h	/^        F12_WFI    = 0b000100000101,$/;"	e	enum:Opcode::parts
+F3_ADD	instr.h	/^        F3_ADD    = 0b000,$/;"	e	enum:Opcode::parts
+F3_ADDI	instr.h	/^        F3_ADDI   = 0b000,$/;"	e	enum:Opcode::parts
+F3_AND	instr.h	/^        F3_AND    = 0b111,$/;"	e	enum:Opcode::parts
+F3_ANDI	instr.h	/^        F3_ANDI   = 0b111,$/;"	e	enum:Opcode::parts
+F3_BEQ	instr.h	/^        F3_BEQ    = 0b000,$/;"	e	enum:Opcode::parts
+F3_BGE	instr.h	/^        F3_BGE    = 0b101,$/;"	e	enum:Opcode::parts
+F3_BGEU	instr.h	/^        F3_BGEU   = 0b111,$/;"	e	enum:Opcode::parts
+F3_BLT	instr.h	/^        F3_BLT    = 0b100,$/;"	e	enum:Opcode::parts
+F3_BLTU	instr.h	/^        F3_BLTU   = 0b110,$/;"	e	enum:Opcode::parts
+F3_BNE	instr.h	/^        F3_BNE    = 0b001,$/;"	e	enum:Opcode::parts
+F3_CSRRC	instr.h	/^        F3_CSRRC   = 0b011,$/;"	e	enum:Opcode::parts
+F3_CSRRCI	instr.h	/^        F3_CSRRCI  = 0b111,$/;"	e	enum:Opcode::parts
+F3_CSRRS	instr.h	/^        F3_CSRRS   = 0b010,$/;"	e	enum:Opcode::parts
+F3_CSRRSI	instr.h	/^        F3_CSRRSI  = 0b110,$/;"	e	enum:Opcode::parts
+F3_CSRRW	instr.h	/^                F3_CSRRW   = 0b001,$/;"	e	enum:Opcode::parts
+F3_CSRRWI	instr.h	/^        F3_CSRRWI  = 0b101,$/;"	e	enum:Opcode::parts
+F3_DIV	instr.h	/^        F3_DIV    = 0b100,$/;"	e	enum:Opcode::parts
+F3_DIVU	instr.h	/^        F3_DIVU   = 0b101,$/;"	e	enum:Opcode::parts
+F3_JALR	instr.h	/^        F3_JALR   = 0b000,$/;"	e	enum:Opcode::parts
+F3_LB	instr.h	/^        F3_LB     = 0b000,$/;"	e	enum:Opcode::parts
+F3_LBU	instr.h	/^        F3_LBU    = 0b100,$/;"	e	enum:Opcode::parts
+F3_LH	instr.h	/^        F3_LH     = 0b001,$/;"	e	enum:Opcode::parts
+F3_LHU	instr.h	/^        F3_LHU    = 0b101,$/;"	e	enum:Opcode::parts
+F3_LW	instr.h	/^        F3_LW     = 0b010,$/;"	e	enum:Opcode::parts
+F3_MUL	instr.h	/^        F3_MUL    = 0b000,$/;"	e	enum:Opcode::parts
+F3_MULH	instr.h	/^        F3_MULH   = 0b001,$/;"	e	enum:Opcode::parts
+F3_MULHSU	instr.h	/^        F3_MULHSU = 0b010,$/;"	e	enum:Opcode::parts
+F3_MULHU	instr.h	/^        F3_MULHU  = 0b011,$/;"	e	enum:Opcode::parts
+F3_OR	instr.h	/^        F3_OR     = 0b110,$/;"	e	enum:Opcode::parts
+F3_ORI	instr.h	/^        F3_ORI    = 0b110,$/;"	e	enum:Opcode::parts
+F3_REM	instr.h	/^        F3_REM    = 0b110,$/;"	e	enum:Opcode::parts
+F3_REMU	instr.h	/^        F3_REMU   = 0b111,$/;"	e	enum:Opcode::parts
+F3_SB	instr.h	/^        F3_SB     = 0b000,$/;"	e	enum:Opcode::parts
+F3_SH	instr.h	/^        F3_SH     = 0b001,$/;"	e	enum:Opcode::parts
+F3_SLL	instr.h	/^        F3_SLL    = 0b001,$/;"	e	enum:Opcode::parts
+F3_SLLI	instr.h	/^        F3_SLLI   = 0b001,$/;"	e	enum:Opcode::parts
+F3_SLT	instr.h	/^        F3_SLT    = 0b010,$/;"	e	enum:Opcode::parts
+F3_SLTI	instr.h	/^        F3_SLTI   = 0b010,$/;"	e	enum:Opcode::parts
+F3_SLTIU	instr.h	/^        F3_SLTIU  = 0b011,$/;"	e	enum:Opcode::parts
+F3_SLTU	instr.h	/^        F3_SLTU   = 0b011,$/;"	e	enum:Opcode::parts
+F3_SRA	instr.h	/^        F3_SRA    = 0b101,$/;"	e	enum:Opcode::parts
+F3_SRL	instr.h	/^        F3_SRL    = 0b101,$/;"	e	enum:Opcode::parts
+F3_SRLI	instr.h	/^        F3_SRLI   = 0b101,$/;"	e	enum:Opcode::parts
+F3_SUB	instr.h	/^        F3_SUB    = 0b000,$/;"	e	enum:Opcode::parts
+F3_SW	instr.h	/^        F3_SW     = 0b010,$/;"	e	enum:Opcode::parts
+F3_SYS	instr.h	/^        F3_SYS     = 0b000,$/;"	e	enum:Opcode::parts
+F3_XOR	instr.h	/^        F3_XOR    = 0b100,$/;"	e	enum:Opcode::parts
+F3_XORI	instr.h	/^        F3_XORI   = 0b100,$/;"	e	enum:Opcode::parts
+F5_AMOADD_W	instr.h	/^        F5_AMOADD_W   = 0b00000,$/;"	e	enum:Opcode::parts
+F5_AMOAND_W	instr.h	/^        F5_AMOAND_W   = 0b01100,$/;"	e	enum:Opcode::parts
+F5_AMOMAXU_W	instr.h	/^        F5_AMOMAXU_W  = 0b11100,$/;"	e	enum:Opcode::parts
+F5_AMOMAX_W	instr.h	/^        F5_AMOMAX_W   = 0b10100,$/;"	e	enum:Opcode::parts
+F5_AMOMINU_W	instr.h	/^        F5_AMOMINU_W  = 0b11000,$/;"	e	enum:Opcode::parts
+F5_AMOMIN_W	instr.h	/^        F5_AMOMIN_W   = 0b10000,$/;"	e	enum:Opcode::parts
+F5_AMOOR_W	instr.h	/^        F5_AMOOR_W    = 0b01000,$/;"	e	enum:Opcode::parts
+F5_AMOSWAP_W	instr.h	/^        F5_AMOSWAP_W  = 0b00001,$/;"	e	enum:Opcode::parts
+F5_AMOXOR_W	instr.h	/^        F5_AMOXOR_W   = 0b00100,$/;"	e	enum:Opcode::parts
+F5_LR_W	instr.h	/^        F5_LR_W       = 0b00010,$/;"	e	enum:Opcode::parts
+F5_SC_W	instr.h	/^        F5_SC_W       = 0b00011,$/;"	e	enum:Opcode::parts
+F7_ADD	instr.h	/^        F7_ADD    = 0b0000000,$/;"	e	enum:Opcode::parts
+F7_MUL	instr.h	/^        F7_MUL    = 0b0000001,$/;"	e	enum:Opcode::parts
+F7_SFENCE_VMA	instr.h	/^        F7_SFENCE_VMA = 0b0001001,$/;"	e	enum:Opcode::parts
+F7_SRAI	instr.h	/^        F7_SRAI   = 0b0100000,$/;"	e	enum:Opcode::parts
+F7_SRLI	instr.h	/^        F7_SRLI   = 0b0000000,$/;"	e	enum:Opcode::parts
+F7_SUB	instr.h	/^        F7_SUB    = 0b0100000,$/;"	e	enum:Opcode::parts
+FENCE	instr.h	/^        FENCE,$/;"	e	enum:Opcode::mapping
+FILTER_REG_ADDR	sensor.h	/^        FILTER_REG_ADDR = 0x84,$/;"	e	enum:SimpleSensor::__anon04f723b50103
+FILTER_REG_ADDR	sensor2.h	/^        FILTER_REG_ADDR = 0x84,$/;"	e	enum:SimpleSensor2::__anona3dba4470103
+FLASH_ADDR_REG	flash.h	/^    static const unsigned int FLASH_ADDR_REG = 0;$/;"	m	struct:Flashcontroller	typeref:typename:const unsigned int
+FLASH_SIZE_REG	flash.h	/^    static const unsigned int FLASH_SIZE_REG = sizeof(uint64_t);$/;"	m	struct:Flashcontroller	typeref:typename:const unsigned int
+FRAME_SIZE	ethernet.h	/^	static const uint16_t FRAME_SIZE = MTU_SIZE + 14;$/;"	m	struct:EthernetDevice	typeref:typename:const uint16_t
+Flashcontroller	flash.h	/^    Flashcontroller(sc_module_name, string& filepath)$/;"	f	struct:Flashcontroller
+Flashcontroller	flash.h	/^struct Flashcontroller : public sc_core::sc_module {$/;"	s
+GPIO	sifive/gpio.h	/^    GPIO(sc_core::sc_module_name) {$/;"	f	struct:GPIO
+GPIO	sifive/gpio.h	/^struct GPIO : public sc_core::sc_module {$/;"	s
+HFROSCCFG_REG_ADDR	sifive/prci.h	/^        HFROSCCFG_REG_ADDR = 0x0,$/;"	e	enum:PRCI::__anon0a929e5e0103
+HFXOSCCFG_REG_ADDR	sifive/prci.h	/^        HFXOSCCFG_REG_ADDR = 0x4,$/;"	e	enum:PRCI::__anon0a929e5e0103
+HitBreakpoint	iss.h	/^    HitBreakpoint,$/;"	e	enum:CoreExecStatus
+IE_REG_ADDR	sifive/uart.h	/^        IE_REG_ADDR = 0x10,$/;"	e	enum:UART::__anon1511316c0103
+IF_NAME	ethernet.cpp	/^static const char IF_NAME[] = "tap0";$/;"	v	typeref:typename:const char[]	file:
+INCLUDE_CSR_MIXIN	csr.h	/^#define INCLUDE_CSR_MIXIN	/;"	d
+IOF_EN_REG_ADDR	sifive/gpio.h	/^        IOF_EN_REG_ADDR  = 0x038,$/;"	e	enum:GPIO::__anonf573637f0103
+IOF_SEL_REG_ADDR	sifive/gpio.h	/^        IOF_SEL_REG_ADDR = 0x03C$/;"	e	enum:GPIO::__anonf573637f0103
+IP_REG_ADDR	sifive/uart.h	/^        IP_REG_ADDR = 0x14,$/;"	e	enum:UART::__anon1511316c0103
+ISS	iss.h	/^    ISS()$/;"	f	struct:ISS
+ISS	iss.h	/^struct ISS : public sc_core::sc_module,$/;"	s
+I_imm	instr.h	/^    inline int32_t I_imm() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+InstrMemoryProxy	iss.h	/^    InstrMemoryProxy(direct_memory_interface &dmi, tlm_utils::tlm_quantumkeeper &keeper)$/;"	f	struct:InstrMemoryProxy
+InstrMemoryProxy	iss.h	/^struct InstrMemoryProxy : public instr_memory_interface {$/;"	s
+Instruction	instr.h	/^    Instruction(uint32_t instr)$/;"	f	struct:Instruction
+Instruction	instr.h	/^struct Instruction {$/;"	s
+InstructionFactory	instr.cpp	/^struct InstructionFactory {$/;"	s	file:
+Internal	csr.h	/^    enum Internal {$/;"	g	struct:csr_base
+JAL	instr.cpp	/^    static T JAL(unsigned rd, int J_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+JAL	instr.h	/^        JAL,$/;"	e	enum:Opcode::mapping
+JALR	instr.cpp	/^    static T JALR(unsigned rd, unsigned rs1, int I_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+JALR	instr.h	/^        JALR,$/;"	e	enum:Opcode::mapping
+J_imm	instr.h	/^    inline int32_t J_imm() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+L0	csr.h	/^            unsigned L0: 1;             \/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:1
+LB	instr.h	/^        LB,$/;"	e	enum:Opcode::mapping
+LBU	instr.h	/^        LBU,$/;"	e	enum:Opcode::mapping
+LEN_ADDR	dma.h	/^        LEN_ADDR = 8,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0203
+LFROSCCFG_REG_ADDR	sifive/aon.h	/^        LFROSCCFG_REG_ADDR = 0x70,$/;"	e	enum:AON::__anon260ac9ee0103
+LH	instr.h	/^        LH,$/;"	e	enum:Opcode::mapping
+LHU	instr.h	/^        LHU,$/;"	e	enum:Opcode::mapping
+LR_W	instr.h	/^        LR_W,$/;"	e	enum:Opcode::mapping
+LUI	instr.cpp	/^    static T LUI(unsigned rd, int U_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+LUI	instr.h	/^        LUI = 1,$/;"	e	enum:Opcode::mapping
+LW	instr.cpp	/^    static T LW(unsigned rd, unsigned rs1, int I_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+LW	instr.h	/^        LW,$/;"	e	enum:Opcode::mapping
+LocalRouter	tlm_map.h	/^    struct LocalRouter {$/;"	s	namespace:vp::map
+MACHINE_BITS	csr.h	/^        MACHINE_BITS = 0x03,		\/\/ 0b11$/;"	e	enum:csr_base::Internal
+MAC_HIGH_REG_ADDR	ethernet.h	/^	static const uint16_t MAC_HIGH_REG_ADDR     = SEND_SIZE_REG_ADDR    + sizeof(uint32_t);$/;"	m	struct:EthernetDevice	typeref:typename:const uint16_t
+MAC_LOW_REG_ADDR	ethernet.h	/^	static const uint16_t MAC_LOW_REG_ADDR      = MAC_HIGH_REG_ADDR     + sizeof(uint32_t);$/;"	m	struct:EthernetDevice	typeref:typename:const uint16_t
+MODE_BITS	csr.h	/^        MODE_BITS = 0x300, 			\/\/ addr[9:8]$/;"	e	enum:csr_base::Internal
+MRET	instr.h	/^        MRET,$/;"	e	enum:Opcode::mapping
+MTU_SIZE	ethernet.h	/^    static const uint16_t MTU_SIZE   = 1500;$/;"	m	struct:EthernetDevice	typeref:typename:const uint16_t
+MUL	instr.h	/^        MUL,$/;"	e	enum:Opcode::mapping
+MULH	instr.h	/^        MULH,$/;"	e	enum:Opcode::mapping
+MULHSU	instr.h	/^        MULHSU,$/;"	e	enum:Opcode::mapping
+MULHU	instr.h	/^        MULHU,$/;"	e	enum:Opcode::mapping
+Machine	csr.h	/^        Machine = 3,$/;"	e	enum:csr_base::PrivilegeLevel
+Machine	csr.h	/^        Machine = 4,$/;"	e	enum:csr_base::AccessMode
+Mode	csr.h	/^    enum Mode {$/;"	g	struct:csr_mtvec
+NUMBER_OF_INSTRUCTIONS	instr.h	/^        NUMBER_OF_INSTRUCTIONS$/;"	e	enum:Opcode::mapping
+NUM_REGS	iss.h	/^        NUM_REGS = 32$/;"	e	enum:RegFile::__anon0fac0c2a0103
+OP_ADD	instr.h	/^        OP_ADD    = 0b0110011,$/;"	e	enum:Opcode::parts
+OP_ADDI	instr.h	/^        OP_ADDI   = 0b0010011,$/;"	e	enum:Opcode::parts
+OP_ADDR	dma.h	/^        OP_ADDR  = 12,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0203
+OP_AMO	instr.h	/^        OP_AMO        = 0b0101111,$/;"	e	enum:Opcode::parts
+OP_AUIPC	instr.h	/^        OP_AUIPC  = 0b0010111,$/;"	e	enum:Opcode::parts
+OP_BEQ	instr.h	/^        OP_BEQ    = 0b1100011,$/;"	e	enum:Opcode::parts
+OP_ECALL	instr.h	/^        OP_ECALL   = 0b1110011,$/;"	e	enum:Opcode::parts
+OP_FENCE	instr.h	/^        OP_FENCE   = 0b0001111,$/;"	e	enum:Opcode::parts
+OP_JAL	instr.h	/^        OP_JAL    = 0b1101111,$/;"	e	enum:Opcode::parts
+OP_JALR	instr.h	/^        OP_JALR   = 0b1100111,$/;"	e	enum:Opcode::parts
+OP_LB	instr.h	/^        OP_LB     = 0b0000011,$/;"	e	enum:Opcode::parts
+OP_LUI	instr.h	/^        OP_LUI    = 0b0110111,$/;"	e	enum:Opcode::parts
+OP_MEMCHR	dma.h	/^        OP_MEMCHR = 4,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0103
+OP_MEMCMP	dma.h	/^        OP_MEMCMP = 3,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0103
+OP_MEMCPY	dma.h	/^        OP_MEMCPY = 1,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0103
+OP_MEMMOVE	dma.h	/^        OP_MEMMOVE = 5,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0103
+OP_MEMSET	dma.h	/^        OP_MEMSET = 2,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0103
+OP_NOP	dma.h	/^        OP_NOP    = 0,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0103
+OP_SB	instr.h	/^        OP_SB     = 0b0100011,$/;"	e	enum:Opcode::parts
+OR	instr.cpp	/^    static T OR(unsigned rd, unsigned rs1, unsigned rs2) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+OR	instr.h	/^        OR,$/;"	e	enum:Opcode::mapping
+ORI	instr.h	/^        ORI,$/;"	e	enum:Opcode::mapping
+Opcode	instr.cpp	/^    enum Opcode {$/;"	g	namespace:Compressed	file:
+Opcode	instr.h	/^namespace Opcode {$/;"	n
+Options	main.cpp	/^struct Options {$/;"	s	file:
+Options	sifive/sifive_main.cpp	/^struct Options {$/;"	s	file:
+PLIC	plic.h	/^    PLIC(sc_core::sc_module_name) {$/;"	f	struct:PLIC
+PLIC	plic.h	/^struct PLIC : public sc_core::sc_module, public interrupt_gateway {$/;"	s
+PLLCFG_REG_ADDR	sifive/prci.h	/^        PLLCFG_REG_ADDR = 0x8,$/;"	e	enum:PRCI::__anon0a929e5e0103
+PLLOUTDIV_REG_ADDR	sifive/prci.h	/^        PLLOUTDIV_REG_ADDR = 0xC,$/;"	e	enum:PRCI::__anon0a929e5e0103
+PRCI	sifive/prci.h	/^    PRCI(sc_core::sc_module_name) {$/;"	f	struct:PRCI
+PRCI	sifive/prci.h	/^struct PRCI : public sc_core::sc_module {$/;"	s
+PT_DYNAMIC	elf_loader.h	/^    PT_DYNAMIC  = 2,$/;"	e	enum:Elf32_PhdrType
+PT_INTERP	elf_loader.h	/^    PT_INTERP   = 3,$/;"	e	enum:Elf32_PhdrType
+PT_LOAD	elf_loader.h	/^    PT_LOAD     = 1,$/;"	e	enum:Elf32_PhdrType
+PT_NOTE	elf_loader.h	/^    PT_NOTE     = 4,$/;"	e	enum:Elf32_PhdrType
+PT_NULL	elf_loader.h	/^    PT_NULL     = 0,$/;"	e	enum:Elf32_PhdrType
+PT_PHDR	elf_loader.h	/^    PT_PHDR     = 6$/;"	e	enum:Elf32_PhdrType
+PT_SHLIB	elf_loader.h	/^    PT_SHLIB    = 5,$/;"	e	enum:Elf32_PhdrType
+PortMapping	bus.h	/^    PortMapping(uint64_t start, uint64_t end)$/;"	f	struct:PortMapping
+PortMapping	bus.h	/^struct PortMapping {$/;"	s
+PrivilegeLevel	csr.h	/^    enum class PrivilegeLevel {$/;"	g	struct:csr_base
+R0	csr.h	/^            unsigned R0: 1;             \/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:1
+READONLY_BITS	csr.h	/^        READONLY_BITS = 0x03,		\/\/ 0b11$/;"	e	enum:csr_base::Internal
+RECEIVE_DST_REG_ADDR	ethernet.h	/^	static const uint16_t RECEIVE_DST_REG_ADDR  = RECEIVE_SIZE_REG_ADDR + sizeof(uint32_t);$/;"	m	struct:EthernetDevice	typeref:typename:const uint16_t
+RECEIVE_SIZE_REG_ADDR	ethernet.h	/^	static const uint16_t RECEIVE_SIZE_REG_ADDR = STATUS_REG_ADDR       + sizeof(uint32_t);$/;"	m	struct:EthernetDevice	typeref:typename:const uint16_t
+RECV_OPERATION	ethernet.h	/^		RECV_OPERATION = 1,$/;"	e	enum:EthernetDevice::__anon01a0be7a0103
+REG_MIN	iss.h	/^        REG_MIN = INT32_MIN,$/;"	e	enum:ISS::__anon0fac0c2a0203
+REM	instr.h	/^        REM,$/;"	e	enum:Opcode::mapping
+REMU	instr.h	/^        REMU,$/;"	e	enum:Opcode::mapping
+RISCV_ISA_BASIC_TIMER_H	basic_timer.h	/^#define RISCV_ISA_BASIC_TIMER_H$/;"	d
+RISCV_ISA_BUS_H	bus.h	/^#define RISCV_ISA_BUS_H$/;"	d
+RISCV_ISA_CLINT_H	clint.h	/^#define RISCV_ISA_CLINT_H$/;"	d
+RISCV_ISA_CSR_INFO_H	csr.h	/^#define RISCV_ISA_CSR_INFO_H$/;"	d
+RISCV_ISA_DMA_H	dma.h	/^#define RISCV_ISA_DMA_H$/;"	d
+RISCV_ISA_ELF_LOADER_H	elf_loader.h	/^#define RISCV_ISA_ELF_LOADER_H$/;"	d
+RISCV_ISA_GDB_STUB_H	gdb_stub.h	/^#define RISCV_ISA_GDB_STUB_H$/;"	d
+RISCV_ISA_INSTR_H	instr.h	/^#define RISCV_ISA_INSTR_H$/;"	d
+RISCV_ISA_IRQCTL_H	plic.h	/^#define RISCV_ISA_IRQCTL_H$/;"	d
+RISCV_ISA_IRQ_IF_H	irq_if.h	/^#define RISCV_ISA_IRQ_IF_H$/;"	d
+RISCV_ISA_ISS_H	iss.h	/^#define RISCV_ISA_ISS_H$/;"	d
+RISCV_ISA_MEMORY_H	memory.h	/^#define RISCV_ISA_MEMORY_H$/;"	d
+RISCV_ISA_RANDOM_SOURCE_H	random_source.h	/^#define RISCV_ISA_RANDOM_SOURCE_H$/;"	d
+RISCV_ISA_SENSOR2_H	sensor2.h	/^#define RISCV_ISA_SENSOR2_H$/;"	d
+RISCV_ISA_SENSOR_H	sensor.h	/^#define RISCV_ISA_SENSOR_H$/;"	d
+RISCV_ISA_SYSCALL_H	syscall.h	/^#define RISCV_ISA_SYSCALL_H$/;"	d
+RISCV_ISA_TERMINAL_H	terminal.h	/^#define RISCV_ISA_TERMINAL_H$/;"	d
+RISCV_TLM_MAP_H	tlm_map.h	/^#define RISCV_TLM_MAP_H$/;"	d
+RISCV_VP_AON_H	sifive/aon.h	/^#define RISCV_VP_AON_H$/;"	d
+RISCV_VP_ETHERNET_H	ethernet.h	/^#define RISCV_VP_ETHERNET_H$/;"	d
+RISCV_VP_GPIO_H	sifive/gpio.h	/^#define RISCV_VP_GPIO_H$/;"	d
+RISCV_VP_PRCI_H	sifive/prci.h	/^#define RISCV_VP_PRCI_H$/;"	d
+RISCV_VP_SPI_H	sifive/spi.h	/^#define RISCV_VP_SPI_H$/;"	d
+RISCV_VP_UART_H	sifive/uart.h	/^#define RISCV_VP_UART_H$/;"	d
+RW_BITS	csr.h	/^        RW_BITS = 0xc00,   			\/\/ addr[11:10]$/;"	e	enum:csr_base::Internal
+RXCTRL_REG_ADDR	sifive/uart.h	/^        RXCTRL_REG_ADDR = 0xC,$/;"	e	enum:UART::__anon1511316c0103
+RXDATA_REG_ADDR	sifive/uart.h	/^        RXDATA_REG_ADDR = 0x4,$/;"	e	enum:UART::__anon1511316c0103
+RandomSource	random_source.h	/^    RandomSource(sc_core::sc_module_name) {$/;"	f	struct:RandomSource
+RandomSource	random_source.h	/^struct RandomSource : public sc_core::sc_module {$/;"	s
+Read	csr.h	/^        Read  = 8,$/;"	e	enum:csr_base::AccessMode
+Reg32	sifive/uart.h	/^    Reg32(uint32_t n)$/;"	f	struct:Reg32
+Reg32	sifive/uart.h	/^struct Reg32 {$/;"	s
+Reg32Field	sifive/uart.h	/^    Reg32Field(Reg32 *owner, unsigned start, unsigned end)$/;"	f	struct:Reg32Field
+Reg32Field	sifive/uart.h	/^struct Reg32Field {$/;"	s
+RegFile	iss.h	/^    RegFile() {$/;"	f	struct:RegFile
+RegFile	iss.h	/^    RegFile(const RegFile &other) {$/;"	f	struct:RegFile
+RegFile	iss.h	/^struct RegFile {$/;"	s
+RegisterMapping	tlm_map.h	/^    struct RegisterMapping : public AbstractMapping {$/;"	s	namespace:vp::map
+Reserved	csr.h	/^        Reserved = 2,$/;"	e	enum:csr_base::PrivilegeLevel
+Runnable	iss.h	/^    Runnable,$/;"	e	enum:CoreExecStatus
+SB	instr.h	/^        SB,$/;"	e	enum:Opcode::mapping
+SCALER_REG_ADDR	sensor.h	/^        SCALER_REG_ADDR = 0x80,$/;"	e	enum:SimpleSensor::__anon04f723b50103
+SCALER_REG_ADDR	sensor2.h	/^        SCALER_REG_ADDR = 0x80,$/;"	e	enum:SimpleSensor2::__anona3dba4470103
+SCKDIV_REG_ADDR	sifive/spi.h	/^        SCKDIV_REG_ADDR = 0x0,$/;"	e	enum:SPI::__anon2750fa1c0103
+SC_W	instr.h	/^        SC_W,$/;"	e	enum:Opcode::mapping
+SEND_OPERATION	ethernet.h	/^		SEND_OPERATION = 2,$/;"	e	enum:EthernetDevice::__anon01a0be7a0103
+SEND_SIZE_REG_ADDR	ethernet.h	/^	static const uint16_t SEND_SIZE_REG_ADDR    = SEND_SRC_REG_ADDR     + sizeof(uint32_t);$/;"	m	struct:EthernetDevice	typeref:typename:const uint16_t
+SEND_SRC_REG_ADDR	ethernet.h	/^	static const uint16_t SEND_SRC_REG_ADDR     = RECEIVE_DST_REG_ADDR  + sizeof(uint32_t);$/;"	m	struct:EthernetDevice	typeref:typename:const uint16_t
+SFENCE_VMA	instr.h	/^        SFENCE_VMA,$/;"	e	enum:Opcode::mapping
+SH	instr.h	/^        SH,$/;"	e	enum:Opcode::mapping
+SLL	instr.h	/^        SLL,$/;"	e	enum:Opcode::mapping
+SLLI	instr.cpp	/^    static T SLLI(unsigned rd, unsigned rs1, unsigned shamt) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+SLLI	instr.h	/^        SLLI,$/;"	e	enum:Opcode::mapping
+SLT	instr.h	/^        SLT,$/;"	e	enum:Opcode::mapping
+SLTI	instr.h	/^        SLTI,$/;"	e	enum:Opcode::mapping
+SLTIU	instr.h	/^        SLTIU,$/;"	e	enum:Opcode::mapping
+SLTU	instr.h	/^        SLTU,$/;"	e	enum:Opcode::mapping
+SPI	sifive/spi.h	/^    SPI(sc_core::sc_module_name) {$/;"	f	struct:SPI
+SPI	sifive/spi.h	/^struct SPI : public sc_core::sc_module {$/;"	s
+SRA	instr.h	/^        SRA,$/;"	e	enum:Opcode::mapping
+SRAI	instr.cpp	/^    static T SRAI(unsigned rd, unsigned rs1, unsigned shamt) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+SRAI	instr.h	/^        SRAI,$/;"	e	enum:Opcode::mapping
+SRC_ADDR	dma.h	/^        SRC_ADDR = 0,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0203
+SRET	instr.h	/^        SRET,$/;"	e	enum:Opcode::mapping
+SRL	instr.h	/^        SRL,$/;"	e	enum:Opcode::mapping
+SRLI	instr.cpp	/^    static T SRLI(unsigned rd, unsigned rs1, unsigned shamt) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+SRLI	instr.h	/^        SRLI,$/;"	e	enum:Opcode::mapping
+STATUS_REG_ADDR	ethernet.h	/^    static const uint16_t STATUS_REG_ADDR       = 0x00;$/;"	m	struct:EthernetDevice	typeref:typename:const uint16_t
+STAT_ADDR	dma.h	/^        STAT_ADDR  = 16,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0203
+SUB	instr.cpp	/^    static T SUB(unsigned rd, unsigned rs1, unsigned rs2) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+SUB	instr.h	/^        SUB,$/;"	e	enum:Opcode::mapping
+SUPERVISOR_BITS	csr.h	/^        SUPERVISOR_BITS = 0x01,		\/\/ 0b01$/;"	e	enum:csr_base::Internal
+SW	instr.cpp	/^    static T SW(unsigned rs1, unsigned rs2, int S_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+SW	instr.h	/^        SW,$/;"	e	enum:Opcode::mapping
+SYS_CHECK	ethernet.cpp	/^#define SYS_CHECK(/;"	d	file:
+SYS_access	syscall.h	/^#define SYS_access /;"	d
+SYS_brk	syscall.h	/^#define SYS_brk /;"	d
+SYS_chdir	syscall.h	/^#define SYS_chdir /;"	d
+SYS_close	syscall.h	/^#define SYS_close /;"	d
+SYS_dup	syscall.h	/^#define SYS_dup /;"	d
+SYS_exit	syscall.h	/^#define SYS_exit /;"	d
+SYS_exit_group	syscall.h	/^#define SYS_exit_group /;"	d
+SYS_faccessat	syscall.h	/^#define SYS_faccessat /;"	d
+SYS_fcntl	syscall.h	/^#define SYS_fcntl /;"	d
+SYS_fstat	syscall.h	/^#define SYS_fstat /;"	d
+SYS_fstatat	syscall.h	/^#define SYS_fstatat /;"	d
+SYS_getcwd	syscall.h	/^#define SYS_getcwd /;"	d
+SYS_getdents	syscall.h	/^#define SYS_getdents /;"	d
+SYS_getegid	syscall.h	/^#define SYS_getegid /;"	d
+SYS_geteuid	syscall.h	/^#define SYS_geteuid /;"	d
+SYS_getgid	syscall.h	/^#define SYS_getgid /;"	d
+SYS_getmainvars	syscall.h	/^#define SYS_getmainvars /;"	d
+SYS_getpid	syscall.h	/^#define SYS_getpid /;"	d
+SYS_gettimeofday	syscall.h	/^#define SYS_gettimeofday /;"	d
+SYS_getuid	syscall.h	/^#define SYS_getuid /;"	d
+SYS_host_error	syscall.h	/^#define SYS_host_error /;"	d
+SYS_host_test_fail	syscall.h	/^#define SYS_host_test_fail /;"	d
+SYS_host_test_pass	syscall.h	/^#define SYS_host_test_pass /;"	d
+SYS_kill	syscall.h	/^#define SYS_kill /;"	d
+SYS_link	syscall.h	/^#define SYS_link /;"	d
+SYS_lseek	syscall.h	/^#define SYS_lseek /;"	d
+SYS_lstat	syscall.h	/^#define SYS_lstat /;"	d
+SYS_mkdir	syscall.h	/^#define SYS_mkdir /;"	d
+SYS_mmap	syscall.h	/^#define SYS_mmap /;"	d
+SYS_mremap	syscall.h	/^#define SYS_mremap /;"	d
+SYS_munmap	syscall.h	/^#define SYS_munmap /;"	d
+SYS_open	syscall.h	/^#define SYS_open /;"	d
+SYS_openat	syscall.h	/^#define SYS_openat /;"	d
+SYS_pread	syscall.h	/^#define SYS_pread /;"	d
+SYS_pwrite	syscall.h	/^#define SYS_pwrite /;"	d
+SYS_read	syscall.h	/^#define SYS_read /;"	d
+SYS_rt_sigaction	syscall.h	/^#define SYS_rt_sigaction /;"	d
+SYS_stat	syscall.h	/^#define SYS_stat /;"	d
+SYS_time	syscall.h	/^#define SYS_time /;"	d
+SYS_times	syscall.h	/^#define SYS_times /;"	d
+SYS_uname	syscall.h	/^#define SYS_uname /;"	d
+SYS_unlink	syscall.h	/^#define SYS_unlink /;"	d
+SYS_write	syscall.h	/^#define SYS_write /;"	d
+SYS_writev	syscall.h	/^#define SYS_writev /;"	d
+S_imm	instr.h	/^    inline int32_t S_imm() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+SimpleBus	bus.h	/^    SimpleBus(sc_core::sc_module_name) {$/;"	f	struct:SimpleBus
+SimpleBus	bus.h	/^struct SimpleBus : sc_core::sc_module {$/;"	s
+SimpleDMA	dma.h	/^    SimpleDMA(sc_core::sc_module_name, uint32_t irq_number)$/;"	f	struct:SimpleDMA
+SimpleDMA	dma.h	/^struct SimpleDMA : public sc_core::sc_module {$/;"	s
+SimpleMRAM	mram.h	/^    SimpleMRAM(sc_module_name, string& filepath, uint32_t size)$/;"	f	struct:SimpleMRAM
+SimpleMRAM	mram.h	/^struct SimpleMRAM : public sc_core::sc_module {$/;"	s
+SimpleMemory	memory.h	/^    SimpleMemory(sc_core::sc_module_name, uint32_t size)$/;"	f	struct:SimpleMemory
+SimpleMemory	memory.h	/^struct SimpleMemory : public sc_core::sc_module {$/;"	s
+SimpleSensor	sensor.h	/^    SimpleSensor(sc_core::sc_module_name, uint32_t irq_number)$/;"	f	struct:SimpleSensor
+SimpleSensor	sensor.h	/^struct SimpleSensor : public sc_core::sc_module {$/;"	s
+SimpleSensor2	sensor2.h	/^    SimpleSensor2(sc_core::sc_module_name, uint32_t irq_number)$/;"	f	struct:SimpleSensor2
+SimpleSensor2	sensor2.h	/^struct SimpleSensor2 : public sc_core::sc_module {$/;"	s
+SimpleTerminal	terminal.h	/^    SimpleTerminal(sc_core::sc_module_name) {$/;"	f	struct:SimpleTerminal
+SimpleTerminal	terminal.h	/^struct SimpleTerminal : public sc_core::sc_module {$/;"	s
+Supervisor	csr.h	/^        Supervisor = 1,$/;"	e	enum:csr_base::PrivilegeLevel
+Supervisor	csr.h	/^        Supervisor = 2,$/;"	e	enum:csr_base::AccessMode
+SyscallHandler	syscall.h	/^struct SyscallHandler {$/;"	s
+T	instr.cpp	/^    typedef Instruction T;$/;"	t	struct:InstructionFactory	typeref:typename:Instruction	file:
+TARGET_SIGNAL_ABRT	gdb_stub.cpp	/^    TARGET_SIGNAL_ABRT = 6,$/;"	e	enum:target_signal	file:
+TARGET_SIGNAL_BUS	gdb_stub.cpp	/^    TARGET_SIGNAL_BUS = 10,$/;"	e	enum:target_signal	file:
+TARGET_SIGNAL_EMT	gdb_stub.cpp	/^    TARGET_SIGNAL_EMT = 7,$/;"	e	enum:target_signal	file:
+TARGET_SIGNAL_FIRST	gdb_stub.cpp	/^    TARGET_SIGNAL_FIRST = 0,$/;"	e	enum:target_signal	file:
+TARGET_SIGNAL_FPE	gdb_stub.cpp	/^    TARGET_SIGNAL_FPE = 8,$/;"	e	enum:target_signal	file:
+TARGET_SIGNAL_HUP	gdb_stub.cpp	/^    TARGET_SIGNAL_HUP = 1,$/;"	e	enum:target_signal	file:
+TARGET_SIGNAL_ILL	gdb_stub.cpp	/^    TARGET_SIGNAL_ILL = 4,$/;"	e	enum:target_signal	file:
+TARGET_SIGNAL_INT	gdb_stub.cpp	/^    TARGET_SIGNAL_INT = 2,$/;"	e	enum:target_signal	file:
+TARGET_SIGNAL_KILL	gdb_stub.cpp	/^    TARGET_SIGNAL_KILL = 9,$/;"	e	enum:target_signal	file:
+TARGET_SIGNAL_QUIT	gdb_stub.cpp	/^    TARGET_SIGNAL_QUIT = 3,$/;"	e	enum:target_signal	file:
+TARGET_SIGNAL_SEGV	gdb_stub.cpp	/^    TARGET_SIGNAL_SEGV = 11,$/;"	e	enum:target_signal	file:
+TARGET_SIGNAL_TRAP	gdb_stub.cpp	/^    TARGET_SIGNAL_TRAP = 5,$/;"	e	enum:target_signal	file:
+TXCTRL_REG_ADDR	sifive/uart.h	/^        TXCTRL_REG_ADDR = 0x8,$/;"	e	enum:UART::__anon1511316c0103
+TXDATA_REG_ADDR	sifive/uart.h	/^        TXDATA_REG_ADDR = 0x0,$/;"	e	enum:UART::__anon1511316c0103
+Terminated	iss.h	/^    Terminated,$/;"	e	enum:CoreExecStatus
+UART	sifive/uart.h	/^    UART(sc_core::sc_module_name) {$/;"	f	struct:UART
+UART	sifive/uart.h	/^struct UART : public sc_core::sc_module {$/;"	s
+UNDEF	instr.h	/^        UNDEF = 0,$/;"	e	enum:Opcode::mapping
+UNIMPLEMENTED	csr.h	/^            unsigned UNIMPLEMENTED: 24;	\/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:24
+URET	instr.h	/^        URET,$/;"	e	enum:Opcode::mapping
+USER_BITS	csr.h	/^        USER_BITS = 0x00,			\/\/ 0b00$/;"	e	enum:csr_base::Internal
+U_imm	instr.h	/^    inline int32_t U_imm() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+User	csr.h	/^        User = 0,$/;"	e	enum:csr_base::PrivilegeLevel
+User	csr.h	/^        User = 1,$/;"	e	enum:csr_base::AccessMode
+VIRTUAL_MAC_ADDRESS	ethernet.h	/^    uint8_t* VIRTUAL_MAC_ADDRESS = reinterpret_cast<uint8_t*>(mac);$/;"	m	struct:EthernetDevice	typeref:typename:uint8_t *
+Vectored	csr.h	/^        Vectored = 1$/;"	e	enum:csr_mtvec::Mode
+W0	csr.h	/^            unsigned W0: 1;             \/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:1
+WFI	instr.h	/^        WFI,$/;"	e	enum:Opcode::mapping
+Write	csr.h	/^        Write = 16$/;"	e	enum:csr_base::AccessMode
+X0	csr.h	/^            unsigned X0: 1;             \/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:1
+XOR	instr.cpp	/^    static T XOR(unsigned rd, unsigned rs1, unsigned rs2) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+XOR	instr.h	/^        XOR,$/;"	e	enum:Opcode::mapping
+XORI	instr.h	/^        XORI,$/;"	e	enum:Opcode::mapping
+__anon01a0be7a0103	ethernet.h	/^	{$/;"	g	struct:EthernetDevice	typeref:typename:uint16_t
+__anon04f723b50103	sensor.h	/^    enum {$/;"	g	struct:SimpleSensor
+__anon0a929e5e0103	sifive/prci.h	/^    enum {$/;"	g	struct:PRCI
+__anon0f3f74e3010a	csr.h	/^    union {$/;"	u	struct:csr_misa
+__anon0f3f74e30208	csr.h	/^        struct {$/;"	s	union:csr_misa::__anon0f3f74e3010a
+__anon0f3f74e3030a	csr.h	/^    union {$/;"	u	struct:csr_mvendorid
+__anon0f3f74e30408	csr.h	/^        struct {$/;"	s	union:csr_mvendorid::__anon0f3f74e3030a
+__anon0f3f74e3050a	csr.h	/^    union {$/;"	u	struct:csr_mstatus
+__anon0f3f74e30608	csr.h	/^        struct {$/;"	s	union:csr_mstatus::__anon0f3f74e3050a
+__anon0f3f74e3070a	csr.h	/^    union {$/;"	u	struct:csr_mtvec
+__anon0f3f74e30808	csr.h	/^        struct {$/;"	s	union:csr_mtvec::__anon0f3f74e3070a
+__anon0f3f74e3090a	csr.h	/^    union {$/;"	u	struct:csr_mie
+__anon0f3f74e30a08	csr.h	/^        struct {$/;"	s	union:csr_mie::__anon0f3f74e3090a
+__anon0f3f74e30b0a	csr.h	/^    union {$/;"	u	struct:csr_mip
+__anon0f3f74e30c08	csr.h	/^        struct {$/;"	s	union:csr_mip::__anon0f3f74e30b0a
+__anon0f3f74e30d0a	csr.h	/^    union {$/;"	u	struct:csr_mepc
+__anon0f3f74e30e0a	csr.h	/^    union {$/;"	u	struct:csr_mcause
+__anon0f3f74e30f08	csr.h	/^        struct {$/;"	s	union:csr_mcause::__anon0f3f74e30e0a
+__anon0f3f74e3100a	csr.h	/^    union {$/;"	u	struct:csr_satp
+__anon0f3f74e31108	csr.h	/^        struct {$/;"	s	union:csr_satp::__anon0f3f74e3100a
+__anon0f3f74e3120a	csr.h	/^    union {$/;"	u	struct:csr_pmpcfg
+__anon0f3f74e31308	csr.h	/^        struct {$/;"	s	union:csr_pmpcfg::__anon0f3f74e3120a
+__anon0f3f74e3140a	csr.h	/^    union {$/;"	u	struct:csr_64
+__anon0f3f74e31508	csr.h	/^        struct {$/;"	s	union:csr_64::__anon0f3f74e3140a
+__anon0f4dfacd0103	dma.h	/^    enum {$/;"	g	struct:SimpleDMA
+__anon0f4dfacd0203	dma.h	/^    enum {$/;"	g	struct:SimpleDMA
+__anon0fac0c2a0103	iss.h	/^    enum {$/;"	g	struct:RegFile
+__anon0fac0c2a0203	iss.h	/^    enum {$/;"	g	struct:ISS
+__anon125702650102	tlm_map.h	/^            auto fn = [cmd,&r,new_vptr]() {$/;"	f	function:vp::map::RegisterMapping::try_handle	file:
+__anon14fe60e30103	plic.h	/^    enum {$/;"	g	struct:PLIC
+__anon1511316c0103	sifive/uart.h	/^    enum {$/;"	g	struct:UART
+__anon260ac9ee0103	sifive/aon.h	/^    enum {$/;"	g	struct:AON
+__anon2750fa1c0103	sifive/spi.h	/^    enum {$/;"	g	struct:SPI
+__anona3dba4470103	sensor2.h	/^    enum {$/;"	g	struct:SimpleSensor2
+__anonb27d0f69010a	flash.h	/^    {$/;"	u	struct:Flashcontroller
+__anonb27d0f69020a	flash.h	/^    {$/;"	u	struct:Flashcontroller
+__anonb7fc41480108	elf_loader.h	/^typedef struct {$/;"	s
+__anonb7fc41480208	elf_loader.h	/^typedef struct {$/;"	s
+__anonb7fc41480308	elf_loader.h	/^typedef struct {$/;"	s
+__anonb7fc41480408	elf_loader.h	/^typedef struct {$/;"	s
+__anonc1289fd1010a	display.hpp	/^	{$/;"	u	struct:Display
+__anonf573637f0103	sifive/gpio.h	/^    enum {$/;"	g	struct:GPIO
+__glibc_reserved	syscall.cpp	/^    int32_t __glibc_reserved[2];$/;"	m	struct:rv32g_stat	typeref:typename:int32_t[2]	file:
+__pad1	syscall.cpp	/^    uint64_t __pad1;$/;"	m	struct:rv32g_stat	typeref:typename:uint64_t	file:
+__pad2	syscall.cpp	/^    int32_t __pad2;$/;"	m	struct:rv32g_stat	typeref:typename:int32_t	file:
+_compute_and_get_current_cycles	iss.h	/^    uint64_t _compute_and_get_current_cycles() {$/;"	f	struct:ISS	typeref:typename:uint64_t
+_copy_block	dma.h	/^    void _copy_block(uint32_t off, uint32_t n) {$/;"	f	struct:SimpleDMA	typeref:typename:void
+_copy_timespec	syscall.cpp	/^void _copy_timespec(rv32g_timespec *dst, timespec *src) {$/;"	f	typeref:typename:void
+_do_transaction	iss.h	/^    inline void _do_transaction(tlm::tlm_command cmd, uint64_t addr, uint8_t *data, unsigned num/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+_get_access_mode	csr.h	/^    AccessMode _get_access_mode() {$/;"	f	struct:csr_base	typeref:typename:AccessMode
+_load_data	iss.h	/^    inline T _load_data(addr_t addr) {$/;"	f	struct:CombinedMemoryInterface	typeref:typename:T
+_load_data	iss.h	/^    inline T _load_data(addr_t addr) {$/;"	f	struct:DataMemoryProxy	typeref:typename:T
+_perform_memcpy	dma.h	/^    void _perform_memcpy() {$/;"	f	struct:SimpleDMA	typeref:typename:void
+_register	csr.h	/^    T *_register(T *p) {$/;"	f	struct:csr_table	typeref:typename:T *
+_store_data	iss.h	/^    inline void _store_data(addr_t addr, T value) {$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+_store_data	iss.h	/^    inline void _store_data(addr_t addr, T value) {$/;"	f	struct:DataMemoryProxy	typeref:typename:void
+_wiri0	csr.h	/^            unsigned _wiri0: 2;         \/\/ WIRI$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:2
+a0	iss.h	/^        a0 = x10,$/;"	e	enum:RegFile::e
+a1	iss.h	/^        a1 = x11,$/;"	e	enum:RegFile::e
+a2	iss.h	/^        a2 = x12,$/;"	e	enum:RegFile::e
+a3	iss.h	/^        a3 = x13,$/;"	e	enum:RegFile::e
+a4	iss.h	/^        a4 = x14,$/;"	e	enum:RegFile::e
+a5	iss.h	/^        a5 = x15,$/;"	e	enum:RegFile::e
+a6	iss.h	/^        a6 = x16,$/;"	e	enum:RegFile::e
+a7	iss.h	/^        a7 = x17,$/;"	e	enum:RegFile::e
+access_delay	iss.h	/^    sc_core::sc_time access_delay = clock_cycle * 2;$/;"	m	struct:InstrMemoryProxy	typeref:typename:sc_core::sc_time
+access_delay	iss.h	/^    sc_core::sc_time access_delay = clock_cycle * 4;$/;"	m	struct:DataMemoryProxy	typeref:typename:sc_core::sc_time
+access_mode	tlm_map.h	/^    struct access_mode {$/;"	s	namespace:vp::map
+active	flash.h	/^	bool active;$/;"	m	struct:Blockbuffer	typeref:typename:bool
+add_register_bank	tlm_map.h	/^        RegisterMapping &add_register_bank(const std::vector<reg_mapping_t> &regs) {$/;"	f	struct:vp::map::LocalRouter	typeref:typename:RegisterMapping &
+add_start_end_mapping	tlm_map.h	/^        AddressMapping &add_start_end_mapping(uint64_t start, uint64_t end, const access_mode &m/;"	f	struct:vp::map::LocalRouter	typeref:typename:AddressMapping &
+add_start_size_mapping	tlm_map.h	/^        AddressMapping &add_start_size_mapping(uint64_t start, uint32_t size, const access_mode /;"	f	struct:vp::map::LocalRouter	typeref:typename:AddressMapping &
+addr	csr.h	/^    uint32_t addr;$/;"	m	struct:csr_base	typeref:typename:uint32_t
+addr	gdb_stub.cpp	/^    unsigned addr;$/;"	m	struct:breakpoint_t	typeref:typename:unsigned	file:
+addr	tlm_map.h	/^        uint64_t addr;$/;"	m	struct:vp::map::reg_mapping_t	typeref:typename:uint64_t
+addr_t	iss.h	/^    typedef uint32_t addr_t;$/;"	t	struct:CombinedMemoryInterface	typeref:typename:uint32_t
+addr_t	iss.h	/^    typedef uint32_t addr_t;$/;"	t	struct:DataMemoryProxy	typeref:typename:uint32_t
+addr_t	main.cpp	/^    typedef unsigned int addr_t;$/;"	t	struct:Options	typeref:typename:unsigned int	file:
+addr_t	sifive/sifive_main.cpp	/^    typedef unsigned int addr_t;$/;"	t	struct:Options	typeref:typename:unsigned int	file:
+addr_to_csr	csr.h	/^    std::map<uint32_t, csr_base*> addr_to_csr;$/;"	m	struct:csr_table	typeref:typename:std::map<uint32_t,csr_base * >
+addr_to_reg	clint.h	/^    std::unordered_map<uint64_t, uint32_t *> addr_to_reg;$/;"	m	struct:CLINT	typeref:typename:std::unordered_map<uint64_t,uint32_t * >
+addr_to_reg	dma.h	/^    std::unordered_map<uint64_t, uint32_t *> addr_to_reg;$/;"	m	struct:SimpleDMA	typeref:typename:std::unordered_map<uint64_t,uint32_t * >
+addr_to_reg	sensor.h	/^    std::unordered_map<uint64_t, uint32_t *> addr_to_reg;$/;"	m	struct:SimpleSensor	typeref:typename:std::unordered_map<uint64_t,uint32_t * >
+addr_to_reg	tlm_map.h	/^        std::unordered_map<uint64_t, reg_mapping_t> addr_to_reg;$/;"	m	struct:vp::map::RegisterMapping	typeref:typename:std::unordered_map<uint64_t,reg_mapping_t>
+addressRange	display.hpp	/^	static const size_t addressRange = sizeof(Framebuffer);$/;"	m	struct:Display	typeref:typename:const size_t
+allow_read	tlm_map.h	/^        bool allow_read = true;$/;"	m	struct:vp::map::access_mode	typeref:typename:bool
+allow_write	tlm_map.h	/^        bool allow_write = true;$/;"	m	struct:vp::map::access_mode	typeref:typename:bool
+any_pending	csr.h	/^    inline bool any_pending() {$/;"	f	struct:csr_mip	typeref:typename:bool
+aon_end_addr	sifive/sifive_main.cpp	/^    addr_t aon_end_addr       = 0x10007FFF;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+aon_start_addr	sifive/sifive_main.cpp	/^    addr_t aon_start_addr     = 0x10000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+aq	instr.h	/^    inline bool aq() {$/;"	f	struct:Instruction	typeref:typename:bool
+arp_eth_header	ethernet.h	/^struct arp_eth_header {$/;"	s
+asInt	flash.h	/^    	uint64_t asInt;$/;"	m	union:Flashcontroller::__anonb27d0f69010a	typeref:typename:uint64_t
+asInt	flash.h	/^    	uint64_t asInt;$/;"	m	union:Flashcontroller::__anonb27d0f69020a	typeref:typename:uint64_t
+asRaw	flash.h	/^    	uint8_t asRaw[8];$/;"	m	union:Flashcontroller::__anonb27d0f69010a	typeref:typename:uint8_t[8]
+asRaw	flash.h	/^    	uint8_t asRaw[8];$/;"	m	union:Flashcontroller::__anonb27d0f69020a	typeref:typename:uint8_t[8]
+asid	csr.h	/^            unsigned asid: 9;   \/\/ WARL$/;"	m	struct:csr_satp::__anon0f3f74e3100a::__anon0f3f74e31108	typeref:typename:unsigned:9
+at	csr.h	/^    csr_base &at(uint32_t addr) {$/;"	f	struct:csr_table	typeref:typename:csr_base &
+bank	csr.h	/^            unsigned bank: 25;$/;"	m	struct:csr_mvendorid::__anon0f3f74e3030a::__anon0f3f74e30408	typeref:typename:unsigned:25
+base	csr.h	/^            unsigned base: 30;	\/\/ WARL$/;"	m	struct:csr_mtvec::__anon0f3f74e3070a::__anon0f3f74e30808	typeref:typename:unsigned:30
+blockBuf	flash.h	/^    Blockbuffer<BLOCKSIZE>* blockBuf;$/;"	m	struct:Flashcontroller	typeref:typename:Blockbuffer<BLOCKSIZE> *
+blockbufRaw	flash.h	/^    uint8_t blockbufRaw[sizeof(Blockbuffer<BLOCKSIZE>)];$/;"	m	struct:Flashcontroller	typeref:typename:uint8_t[]
+breakpoint_t	gdb_stub.cpp	/^struct breakpoint_t {$/;"	s	file:
+breakpoints	iss.h	/^    std::unordered_set<uint32_t> breakpoints;$/;"	m	struct:ISS	typeref:typename:std::unordered_set<uint32_t>
+buf	display.hpp	/^		Framebuffer* buf;$/;"	m	union:Display::__anonc1289fd1010a	typeref:typename:Framebuffer *
+buf	flash.h	/^	uint8_t buf[width];$/;"	m	struct:Blockbuffer	typeref:typename:uint8_t[]
+buffer	dma.h	/^    std::array<uint8_t, 64> buffer;$/;"	m	struct:SimpleDMA	typeref:typename:std::array<uint8_t,64>
+bufsize	gdb_stub.h	/^    static constexpr size_t bufsize = 1024 * 8;$/;"	m	struct:DebugCoreRunner	typeref:typename:size_t
+bus_read	tlm_map.h	/^        uint32_t bus_read() {$/;"	f	struct:vp::map::reg_mapping_t	typeref:typename:uint32_t
+bus_write	tlm_map.h	/^        void bus_write(uint32_t new_value) {$/;"	f	struct:vp::map::reg_mapping_t	typeref:typename:void
+c_b12	instr.h	/^    inline uint32_t c_b12() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_f2_high	instr.h	/^    inline uint32_t c_f2_high() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_f2_low	instr.h	/^    inline uint32_t c_f2_low() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_format	instr.h	/^    inline uint32_t c_format() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_imm	instr.h	/^    inline uint32_t c_imm() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_opcode	instr.h	/^    inline uint32_t c_opcode() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_rd	instr.h	/^    inline uint32_t c_rd() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_rd_small	instr.h	/^    inline uint32_t c_rd_small() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_rs2	instr.h	/^    inline uint32_t c_rs2() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_rs2_small	instr.h	/^    inline uint32_t c_rs2_small() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_uimm	instr.h	/^    inline uint32_t c_uimm() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+callback_t	tlm_map.h	/^        typedef std::function<void ()> callback_t;$/;"	t	struct:vp::map::RegisterMapping
+callback_t	tlm_map.h	/^        typedef std::function<void ()> callback_t;$/;"	t	struct:vp::map::register_access_t
+can_read	tlm_map.h	/^        bool can_read() {$/;"	f	struct:vp::map::access_mode	typeref:typename:bool
+can_write	tlm_map.h	/^        bool can_write() {$/;"	f	struct:vp::map::access_mode	typeref:typename:bool
+check_and_post_process	main.cpp	/^    Options &check_and_post_process() {$/;"	f	struct:Options	typeref:typename:Options &	file:
+check_and_post_process	sifive/sifive_main.cpp	/^    Options &check_and_post_process() {$/;"	f	struct:Options	typeref:typename:Options &	file:
+clear	flash.h	/^	void clear()$/;"	f	struct:Blockbuffer	typeref:typename:void
+clear_bits	csr.h	/^    void clear_bits(int32_t mask, PrivilegeLevel access_level=PrivilegeLevel::Machine) {$/;"	f	struct:csr_base	typeref:typename:void
+clint	iss.h	/^    clint_if *clint;$/;"	m	struct:ISS	typeref:typename:clint_if *
+clint_end_addr	main.cpp	/^    addr_t clint_end_addr     = 0x0200ffff;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+clint_end_addr	sifive/sifive_main.cpp	/^    addr_t clint_end_addr     = 0x0200FFFF;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+clint_if	clint.h	/^struct clint_if {$/;"	s
+clint_start_addr	main.cpp	/^    addr_t clint_start_addr   = 0x02000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+clint_start_addr	sifive/sifive_main.cpp	/^    addr_t clint_start_addr   = 0x02000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+clock_cycle	clint.h	/^    sc_core::sc_time clock_cycle = sc_core::sc_time(10, sc_core::SC_NS);$/;"	m	struct:CLINT	typeref:typename:sc_core::sc_time
+clock_cycle	iss.h	/^    sc_core::sc_time clock_cycle = sc_core::sc_time(10, sc_core::SC_NS);$/;"	m	struct:DataMemoryProxy	typeref:typename:sc_core::sc_time
+clock_cycle	iss.h	/^    sc_core::sc_time clock_cycle = sc_core::sc_time(10, sc_core::SC_NS);$/;"	m	struct:InstrMemoryProxy	typeref:typename:sc_core::sc_time
+clock_cycle	plic.h	/^    sc_core::sc_time clock_cycle;$/;"	m	struct:PLIC	typeref:typename:sc_core::sc_time
+compute_checksum_string	gdb_stub.cpp	/^std::string compute_checksum_string(const std::string &msg) {$/;"	f	typeref:typename:std::string
+contains	bus.h	/^    bool contains(uint64_t addr) {$/;"	f	struct:PortMapping	typeref:typename:bool
+core	gdb_stub.h	/^    ISS &core;$/;"	m	struct:DebugCoreRunner	typeref:typename:ISS &
+core	iss.h	/^    ISS &core;$/;"	m	struct:DirectCoreRunner	typeref:typename:ISS &
+createSM	display.cpp	/^void Display::createSM()$/;"	f	class:Display	typeref:typename:void
+csr	instr.h	/^    inline uint32_t csr() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+csr_32	csr.h	/^struct csr_32 : public csr_base {$/;"	s
+csr_64	csr.h	/^struct csr_64 {$/;"	s
+csr_64_high	csr.h	/^    csr_64_high(csr_64 &obj, uint32_t addr, const char *name)$/;"	f	struct:csr_64_high
+csr_64_high	csr.h	/^struct csr_64_high : public csr_base {$/;"	s
+csr_64_low	csr.h	/^    csr_64_low(csr_64 &obj, uint32_t addr, const char *name)$/;"	f	struct:csr_64_low
+csr_64_low	csr.h	/^struct csr_64_low : public csr_base {$/;"	s
+csr_addresses	csr.h	/^enum csr_addresses {$/;"	g
+csr_base	csr.h	/^    csr_base(uint32_t addr, const char *name)$/;"	f	struct:csr_base
+csr_base	csr.h	/^struct csr_base {$/;"	s
+csr_mcause	csr.h	/^struct csr_mcause : public csr_base {$/;"	s
+csr_mepc	csr.h	/^struct csr_mepc : public csr_base {$/;"	s
+csr_mie	csr.h	/^struct csr_mie : public csr_base {$/;"	s
+csr_mip	csr.h	/^struct csr_mip : public csr_base {$/;"	s
+csr_misa	csr.h	/^    csr_misa(uint32_t addr, const char *name)$/;"	f	struct:csr_misa
+csr_misa	csr.h	/^struct csr_misa : public csr_base {$/;"	s
+csr_mstatus	csr.h	/^struct csr_mstatus : public csr_base {$/;"	s
+csr_mtvec	csr.h	/^struct csr_mtvec : public csr_base {$/;"	s
+csr_mvendorid	csr.h	/^struct csr_mvendorid : public csr_base {$/;"	s
+csr_pmpcfg	csr.h	/^struct csr_pmpcfg : public csr_base {$/;"	s
+csr_satp	csr.h	/^struct csr_satp : public csr_base {$/;"	s
+csr_table	csr.h	/^struct csr_table {$/;"	s
+csr_update_and_get	iss.h	/^    csr_base &csr_update_and_get(uint32_t addr) {$/;"	f	struct:ISS	typeref:typename:csr_base &
+csrs	iss.h	/^    csr_table csrs;$/;"	m	struct:ISS	typeref:typename:csr_table
+cycle_time	iss.h	/^    sc_core::sc_time cycle_time;$/;"	m	struct:ISS	typeref:typename:sc_core::sc_time
+data	instr.h	/^    inline uint32_t data() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+data	memory.h	/^    uint8_t *data;$/;"	m	struct:SimpleMemory	typeref:typename:uint8_t *
+data_frame	sensor.h	/^    std::array<uint8_t, 64> data_frame;$/;"	m	struct:SimpleSensor	typeref:typename:std::array<uint8_t,64>
+data_frame	sensor2.h	/^    std::array<uint8_t, 64> data_frame;$/;"	m	struct:SimpleSensor2	typeref:typename:std::array<uint8_t,64>
+data_frame_access_callback	sensor2.h	/^    void data_frame_access_callback(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:SimpleSensor2	typeref:typename:void
+data_memory_interface	iss.h	/^struct data_memory_interface {$/;"	s
+debug_memory_mapping	gdb_stub.h	/^struct debug_memory_mapping {$/;"	s
+debug_mode	iss.h	/^    bool debug_mode = false;$/;"	m	struct:ISS	typeref:typename:bool
+decode	bus.h	/^    unsigned decode(uint64_t addr) {$/;"	f	struct:SimpleBus	typeref:typename:unsigned
+decode_and_expand_compressed	instr.cpp	/^Opcode::mapping Instruction::decode_and_expand_compressed() {$/;"	f	class:Instruction	typeref:typename:Opcode::mapping
+decode_compressed	instr.cpp	/^Compressed::Opcode decode_compressed(Instruction &instr) {$/;"	f	typeref:typename:Compressed::Opcode
+decode_normal	instr.cpp	/^Opcode::mapping Instruction::decode_normal() {$/;"	f	class:Instruction	typeref:typename:Opcode::mapping
+delay	tlm_map.h	/^        sc_core::sc_time &delay;$/;"	m	struct:vp::map::register_access_t	typeref:typename:sc_core::sc_time &
+direct_memory_interface	iss.h	/^struct direct_memory_interface {$/;"	s
+dirty	flash.h	/^	bool dirty;$/;"	m	struct:Blockbuffer	typeref:typename:bool
+disabled	ethernet.h	/^    bool disabled;$/;"	m	struct:EthernetDevice	typeref:typename:bool
+display_end_addr	main.cpp	/^    addr_t display_end_addr   = display_start_addr + Display::addressRange;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+display_start_addr	main.cpp	/^    addr_t display_start_addr = 0x72000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+div	sifive/uart.h	/^    uint32_t div = 0;$/;"	m	struct:UART	typeref:typename:uint32_t
+dma_end_addr	main.cpp	/^    addr_t dma_end_addr       = 0x70001000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+dma_start_addr	main.cpp	/^    addr_t dma_start_addr     = 0x70000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+dmi	iss.h	/^    direct_memory_interface &dmi;$/;"	m	struct:DataMemoryProxy	typeref:typename:direct_memory_interface &
+dmi	iss.h	/^    direct_memory_interface &dmi;$/;"	m	struct:InstrMemoryProxy	typeref:typename:direct_memory_interface &
+do_transaction	dma.h	/^    void do_transaction(tlm::tlm_command cmd, uint64_t addr, uint8_t *data, unsigned num_bytes) /;"	f	struct:SimpleDMA	typeref:typename:void
+dram_end_addr	sifive/sifive_main.cpp	/^    addr_t dram_end_addr      = dram_start_addr + dram_size - 1;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+dram_size	sifive/sifive_main.cpp	/^    addr_t dram_size          = 1024*16;  \/\/ 16 KB dram$/;"	m	struct:Options	typeref:typename:addr_t	file:
+dram_start_addr	sifive/sifive_main.cpp	/^    addr_t dram_start_addr    = 0x80000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+drawLine	display.cpp	/^void Display::drawLine(Framebuffer::Type type, PointF from, PointF to, Color color)$/;"	f	class:Display	typeref:typename:void
+dst	dma.h	/^    uint32_t dst  = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
+dump_ethernet_frame	ethernet.cpp	/^void dump_ethernet_frame(uint8_t *buf, size_t size, bool verbose = false) {$/;"	f	typeref:typename:void
+e	iss.h	/^    enum e {$/;"	g	struct:RegFile
+e_ehsize	elf_loader.h	/^    Elf32_Half	e_ehsize;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_entry	elf_loader.h	/^    Elf32_Addr	e_entry;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Addr
+e_flags	elf_loader.h	/^    Elf32_Word	e_flags;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Word
+e_ident	elf_loader.h	/^    uint8_t		e_ident[ELF_NIDENT];$/;"	m	struct:__anonb7fc41480108	typeref:typename:uint8_t[]
+e_machine	elf_loader.h	/^    Elf32_Half	e_machine;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_phentsize	elf_loader.h	/^    Elf32_Half	e_phentsize;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_phnum	elf_loader.h	/^    Elf32_Half	e_phnum;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_phoff	elf_loader.h	/^    Elf32_Off	e_phoff;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Off
+e_run	plic.h	/^    sc_core::sc_event e_run;$/;"	m	struct:PLIC	typeref:typename:sc_core::sc_event
+e_shentsize	elf_loader.h	/^    Elf32_Half	e_shentsize;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_shnum	elf_loader.h	/^    Elf32_Half	e_shnum;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_shoff	elf_loader.h	/^    Elf32_Off	e_shoff;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Off
+e_shstrndx	elf_loader.h	/^    Elf32_Half	e_shstrndx;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_type	elf_loader.h	/^    Elf32_Half	e_type;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_version	elf_loader.h	/^    Elf32_Word	e_version;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Word
+eip	plic.h	/^    bool eip = false;$/;"	m	struct:PLIC	typeref:typename:bool
+elf	elf_loader.h	/^    boost::iostreams::mapped_file_source elf;$/;"	m	struct:ELFLoader	typeref:typename:boost::iostreams::mapped_file_source
+enabled_mask	plic.h	/^    uint64_t enabled_mask = -1;$/;"	m	struct:PLIC	typeref:typename:uint64_t
+end	bus.h	/^    uint64_t end;$/;"	m	struct:PortMapping	typeref:typename:uint64_t
+end	sifive/uart.h	/^    unsigned end;$/;"	m	struct:Reg32Field	typeref:typename:unsigned
+end	tlm_map.h	/^        uint64_t end;$/;"	m	struct:vp::map::AddressMapping	typeref:typename:uint64_t
+ensure	csr.h	/^inline void ensure(bool cond) {$/;"	f	typeref:typename:void
+ethernet_end_addr	main.cpp	/^    addr_t ethernet_end_addr  = ethernet_start_addr + 1500;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+ethernet_start_addr	main.cpp	/^    addr_t ethernet_start_addr= 0x30000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+exception_code	csr.h	/^            unsigned exception_code: 31;	\/\/ WLRL$/;"	m	struct:csr_mcause::__anon0f3f74e30e0a::__anon0f3f74e30f08	typeref:typename:unsigned:31
+exec_step	iss.h	/^    Opcode::mapping exec_step() {$/;"	f	struct:ISS	typeref:typename:Opcode::mapping
+execute_memory_access	tlm_map.h	/^    inline void execute_memory_access(tlm::tlm_generic_payload &trans, uint8_t *local_memory) {$/;"	f	namespace:vp::map	typeref:typename:void
+execute_syscall	syscall.cpp	/^int SyscallHandler::execute_syscall(ulong n, ulong _a0, ulong _a1, ulong _a2, ulong _a3) {$/;"	f	class:SyscallHandler	typeref:typename:int
+expand_compressed	instr.cpp	/^Opcode::mapping expand_compressed(Instruction &instr, Compressed::Opcode op) {$/;"	f	typeref:typename:Opcode::mapping
+extensions	csr.h	/^            unsigned extensions: 26;$/;"	m	struct:csr_misa::__anon0f3f74e3010a::__anon0f3f74e30208	typeref:typename:unsigned:26
+external_interrupt_target	irq_if.h	/^struct external_interrupt_target {$/;"	s
+fd	flash.h	/^	int fd;$/;"	m	struct:Blockbuffer	typeref:typename:int
+file	mram.h	/^    fstream file;$/;"	m	struct:SimpleMRAM	typeref:typename:fstream
+filename	elf_loader.h	/^    const char *filename;$/;"	m	struct:ELFLoader	typeref:typename:const char *
+fillFrame	display.cpp	/^void Display::fillFrame(Framebuffer::Type type, Color color)$/;"	f	class:Display	typeref:typename:void
+filter	sensor.h	/^    uint32_t filter = 0;$/;"	m	struct:SimpleSensor	typeref:typename:uint32_t
+filter	sensor2.h	/^    uint32_t filter = 0;$/;"	m	struct:SimpleSensor2	typeref:typename:uint32_t
+flash_device	main.cpp	/^    std::string flash_device;$/;"	m	struct:Options	typeref:typename:std::string	file:
+flash_end_addr	main.cpp	/^    addr_t flash_end_addr     = flash_start_addr + Flashcontroller::ADDR_SPACE;	\/\/Usually 528 /;"	m	struct:Options	typeref:typename:addr_t	file:
+flash_end_addr	sifive/sifive_main.cpp	/^    addr_t flash_end_addr     = flash_start_addr + flash_size - 1;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+flash_size	sifive/sifive_main.cpp	/^    addr_t flash_size         = 1024*1024*512;  \/\/ 512 MB flash$/;"	m	struct:Options	typeref:typename:addr_t	file:
+flash_start_addr	main.cpp	/^    addr_t flash_start_addr   = 0x71000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+flash_start_addr	sifive/sifive_main.cpp	/^    addr_t flash_start_addr   = 0x20000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+fn	tlm_map.h	/^        callback_t fn;$/;"	m	struct:vp::map::register_access_t	typeref:typename:callback_t
+fn_transport_t	tlm_map.h	/^        typedef std::function<void (tlm::tlm_generic_payload &, sc_core::sc_time &)> fn_transpor/;"	t	struct:vp::map::AddressMapping
+fp	iss.h	/^        fp = x8,$/;"	e	enum:RegFile::e
+frame	display.hpp	/^	} frame;$/;"	m	struct:Display	typeref:union:Display::__anonc1289fd1010a
+fs	csr.h	/^            unsigned fs: 2;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:2
+funct12	instr.h	/^    inline int32_t funct12() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+funct3	instr.h	/^    inline int32_t funct3() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+funct5	instr.h	/^    inline int32_t funct5() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+funct7	instr.h	/^    inline int32_t funct7() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+gateway_incoming_interrupt	plic.h	/^    void gateway_incoming_interrupt(uint32_t irq_id) {$/;"	f	struct:PLIC	typeref:typename:void
+getData	flash.h	/^	void getData(uint8_t* target, uint16_t pos, uint16_t length)$/;"	f	struct:Blockbuffer	typeref:typename:void
+get_base_address	csr.h	/^    uint32_t get_base_address() {$/;"	f	struct:csr_mtvec	typeref:typename:uint32_t
+get_begin_signature_address	elf_loader.h	/^    uint32_t get_begin_signature_address() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
+get_direct_mem_ptr	memory.h	/^    bool get_direct_mem_ptr(tlm::tlm_generic_payload &trans, tlm::tlm_dmi &dmi) {$/;"	f	struct:SimpleMemory	typeref:typename:bool
+get_end_signature_address	elf_loader.h	/^    uint32_t get_end_signature_address() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
+get_entrypoint	elf_loader.h	/^    uint32_t get_entrypoint() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
+get_heap_addr	elf_loader.h	/^    uint32_t get_heap_addr() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
+get_load_sections	elf_loader.h	/^    std::vector<const Elf32_Phdr *> get_load_sections() {$/;"	f	struct:ELFLoader	typeref:typename:std::vector<const Elf32_Phdr * >
+get_max_heap_memory_consumption	syscall.h	/^    uint32_t get_max_heap_memory_consumption() {$/;"	f	struct:SyscallHandler	typeref:typename:uint32_t
+get_memory_end	elf_loader.h	/^    uint32_t get_memory_end() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
+get_section	elf_loader.h	/^    const Elf32_Shdr *get_section(const char *section_name) {$/;"	f	struct:ELFLoader	typeref:typename:const Elf32_Shdr *
+get_section_string_table	elf_loader.h	/^    const char *get_section_string_table() {$/;"	f	struct:ELFLoader	typeref:typename:const char *
+get_symbol	elf_loader.h	/^    const Elf32_Sym *get_symbol(const char *symbol_name) {$/;"	f	struct:ELFLoader	typeref:typename:const Elf32_Sym *
+get_symbol_string_table	elf_loader.h	/^    const char *get_symbol_string_table() {$/;"	f	struct:ELFLoader	typeref:typename:const char *
+global_to_local	bus.h	/^    uint64_t global_to_local(uint64_t addr) {$/;"	f	struct:PortMapping	typeref:typename:uint64_t
+gp	iss.h	/^        gp = x3,$/;"	e	enum:RegFile::e
+gpio0_end_addr	sifive/sifive_main.cpp	/^    addr_t gpio0_end_addr     = 0x10012FFF;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+gpio0_start_addr	sifive/sifive_main.cpp	/^    addr_t gpio0_start_addr   = 0x10012000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+guest_address_to_host_pointer	syscall.h	/^    uint8_t *guest_address_to_host_pointer(uintptr_t addr) {$/;"	f	struct:SyscallHandler	typeref:typename:uint8_t *
+guest_long	syscall.cpp	/^typedef reg_t guest_long;$/;"	t	typeref:typename:reg_t	file:
+guest_to_host_pointer	syscall.h	/^    uint8_t *guest_to_host_pointer(void *p) {$/;"	f	struct:SyscallHandler	typeref:typename:uint8_t *
+handle_gdb_loop	gdb_stub.cpp	/^void DebugCoreRunner::handle_gdb_loop(int conn) {$/;"	f	class:DebugCoreRunner	typeref:typename:void
+handler	tlm_map.h	/^        fn_transport_t handler;$/;"	m	struct:vp::map::AddressMapping	typeref:typename:fn_transport_t
+handler	tlm_map.h	/^        handler_t handler;$/;"	m	struct:vp::map::RegisterMapping	typeref:typename:handler_t
+handler_t	tlm_map.h	/^        typedef std::function<void (const register_access_t &)> handler_t;$/;"	t	struct:vp::map::RegisterMapping
+has_frame	ethernet.h	/^    bool has_frame;$/;"	m	struct:EthernetDevice	typeref:typename:bool
+has_pending_enabled_interrupts	iss.h	/^    bool has_pending_enabled_interrupts() {$/;"	f	struct:ISS	typeref:typename:bool
+hdr	elf_loader.h	/^    const Elf32_Ehdr *hdr;$/;"	m	struct:ELFLoader	typeref:typename:const Elf32_Ehdr *
+hfrosccfg	sifive/prci.h	/^    uint32_t hfrosccfg = 0;$/;"	m	struct:PRCI	typeref:typename:uint32_t
+hfxosccfg	sifive/prci.h	/^    uint32_t hfxosccfg = 0;$/;"	m	struct:PRCI	typeref:typename:uint32_t
+high	csr.h	/^            int32_t high;$/;"	m	struct:csr_64::__anon0f3f74e3140a::__anon0f3f74e31508	typeref:typename:int32_t
+hlen	ethernet.h	/^    uint8_t hlen;$/;"	m	struct:arp_eth_header	typeref:typename:uint8_t
+hp	syscall.h	/^    uint32_t hp = 0;        \/\/ heap pointer$/;"	m	struct:SyscallHandler	typeref:typename:uint32_t
+htype	ethernet.h	/^    uint16_t htype;$/;"	m	struct:arp_eth_header	typeref:typename:uint16_t
+ie	sifive/uart.h	/^    uint32_t ie = 0;$/;"	m	struct:UART	typeref:typename:uint32_t
+increment	csr.h	/^    void increment() {$/;"	f	struct:csr_64	typeref:typename:void
+init	csr.h	/^    void init() {$/;"	f	struct:csr_misa	typeref:typename:void
+init	iss.h	/^    void init(instr_memory_interface *instr_mem, data_memory_interface *data_mem, clint_if *clin/;"	f	struct:ISS	typeref:typename:void
+init	syscall.h	/^    void init(uint8_t *host_memory_pointer, uint32_t mem_start_address, uint32_t heap_pointer_ad/;"	f	struct:SyscallHandler	typeref:typename:void
+init_network	ethernet.cpp	/^void EthernetDevice::init_network(std::string clonedev) {$/;"	f	class:EthernetDevice	typeref:typename:void
+input_program	main.cpp	/^    std::string input_program;$/;"	m	struct:Options	typeref:typename:std::string	file:
+input_program	sifive/sifive_main.cpp	/^    std::string input_program;$/;"	m	struct:Options	typeref:typename:std::string	file:
+instr	instr.h	/^    int32_t instr;$/;"	m	struct:Instruction	typeref:typename:int32_t
+instr_cycles	iss.h	/^    std::array<sc_core::sc_time, Opcode::NUMBER_OF_INSTRUCTIONS> instr_cycles;$/;"	m	struct:ISS	typeref:typename:std::array<sc_core::sc_time,Opcode::NUMBER_OF_INSTRUCTIONS>
+instr_mem	iss.h	/^    instr_memory_interface *instr_mem;$/;"	m	struct:ISS	typeref:typename:instr_memory_interface *
+instr_memory_interface	iss.h	/^struct instr_memory_interface {$/;"	s
+interfaceIdx	ethernet.h	/^    int interfaceIdx = 0;$/;"	m	struct:EthernetDevice	typeref:typename:int
+interrupt	csr.h	/^            unsigned interrupt: 1;$/;"	m	struct:csr_mcause::__anon0f3f74e30e0a::__anon0f3f74e30f08	typeref:typename:unsigned:1
+interrupt_gateway	irq_if.h	/^struct interrupt_gateway {$/;"	s
+interrupt_priorities	plic.h	/^    std::unordered_map<uint32_t, uint32_t> interrupt_priorities;    \/\/ maps id (lower higher p/;"	m	struct:PLIC	typeref:typename:std::unordered_map<uint32_t,uint32_t>
+iobuf	gdb_stub.h	/^    char* iobuf;$/;"	m	struct:DebugCoreRunner	typeref:typename:char *
+iof_en	sifive/gpio.h	/^    uint32_t iof_en = 0;$/;"	m	struct:GPIO	typeref:typename:uint32_t
+iof_sel	sifive/gpio.h	/^    uint32_t iof_sel = 0;$/;"	m	struct:GPIO	typeref:typename:uint32_t
+ip	sifive/uart.h	/^    uint32_t ip = 0;$/;"	m	struct:UART	typeref:typename:uint32_t
+irq_event	clint.h	/^    sc_core::sc_event irq_event;$/;"	m	struct:CLINT	typeref:typename:sc_core::sc_event
+irq_number	basic_timer.h	/^    uint32_t irq_number = 0;$/;"	m	struct:BasicTimer	typeref:typename:uint32_t
+irq_number	dma.h	/^    uint32_t irq_number = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
+irq_number	ethernet.h	/^    uint32_t irq_number = 0;$/;"	m	struct:EthernetDevice	typeref:typename:uint32_t
+irq_number	sensor.h	/^    uint32_t irq_number = 0;$/;"	m	struct:SimpleSensor	typeref:typename:uint32_t
+irq_number	sensor2.h	/^    uint32_t irq_number = 0;$/;"	m	struct:SimpleSensor2	typeref:typename:uint32_t
+isPacketForUs	ethernet.cpp	/^bool EthernetDevice::isPacketForUs(uint8_t* packet, ssize_t size)$/;"	f	class:EthernetDevice	typeref:typename:bool
+is_any_watchpoint_or_hw_breakpoint	gdb_stub.cpp	/^bool is_any_watchpoint_or_hw_breakpoint(const std::string &msg) {$/;"	f	typeref:typename:bool
+is_compressed	instr.h	/^    inline bool is_compressed() {$/;"	f	struct:Instruction	typeref:typename:bool
+is_readonly	tlm_map.h	/^        bool is_readonly() {$/;"	f	struct:vp::map::access_mode	typeref:typename:bool
+isock	dma.h	/^    tlm_utils::simple_initiator_socket<SimpleDMA> isock;$/;"	m	struct:SimpleDMA	typeref:typename:tlm_utils::simple_initiator_socket<SimpleDMA>
+isock	iss.h	/^    tlm_utils::simple_initiator_socket<CombinedMemoryInterface> isock;$/;"	m	struct:CombinedMemoryInterface	typeref:typename:tlm_utils::simple_initiator_socket<CombinedMemoryInterface>
+isocks	bus.h	/^    std::array<tlm_utils::simple_initiator_socket<SimpleBus>, NR_OF_TARGETS> isocks;$/;"	m	struct:SimpleBus	typeref:typename:std::array<tlm_utils::simple_initiator_socket<SimpleBus>,NR_OF_TARGETS>
+kind	gdb_stub.cpp	/^    int kind;$/;"	m	struct:breakpoint_t	typeref:typename:int	file:
+last_pc	iss.h	/^    uint32_t last_pc;$/;"	m	struct:ISS	typeref:typename:uint32_t
+len	dma.h	/^    uint32_t len  = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
+level	csr.h	/^    PrivilegeLevel level;$/;"	m	struct:csr_base	typeref:typename:PrivilegeLevel
+load_byte	iss.h	/^    int32_t load_byte(addr_t addr) { return _load_data<int8_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
+load_byte	iss.h	/^    virtual int32_t load_byte(addr_t addr) { return _load_data<int8_t>(addr); }$/;"	f	struct:DataMemoryProxy	typeref:typename:int32_t
+load_executable_image	elf_loader.h	/^    void load_executable_image(uint8_t *dst, uint32_t size, uint32_t offset) {$/;"	f	struct:ELFLoader	typeref:typename:void
+load_half	iss.h	/^    int32_t load_half(addr_t addr) { return _load_data<int16_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
+load_half	iss.h	/^    virtual int32_t load_half(addr_t addr) { return _load_data<int16_t>(addr); }$/;"	f	struct:DataMemoryProxy	typeref:typename:int32_t
+load_instr	iss.h	/^    int32_t load_instr(addr_t addr) { return _load_data<int32_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
+load_instr	iss.h	/^    virtual int32_t load_instr(uint32_t pc) override {$/;"	f	struct:InstrMemoryProxy	typeref:typename:int32_t
+load_ubyte	iss.h	/^    uint32_t load_ubyte(addr_t addr) { return _load_data<uint8_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:uint32_t
+load_ubyte	iss.h	/^    virtual uint32_t load_ubyte(addr_t addr) { return _load_data<uint8_t>(addr); }$/;"	f	struct:DataMemoryProxy	typeref:typename:uint32_t
+load_uhalf	iss.h	/^    uint32_t load_uhalf(addr_t addr) { return _load_data<uint16_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:uint32_t
+load_uhalf	iss.h	/^    virtual uint32_t load_uhalf(addr_t addr) { return _load_data<uint16_t>(addr); }$/;"	f	struct:DataMemoryProxy	typeref:typename:uint32_t
+load_word	iss.h	/^    int32_t load_word(addr_t addr) { return _load_data<int32_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
+load_word	iss.h	/^    virtual int32_t load_word(addr_t addr) { return _load_data<int32_t>(addr); }$/;"	f	struct:DataMemoryProxy	typeref:typename:int32_t
+low	csr.h	/^            int32_t low;$/;"	m	struct:csr_64::__anon0f3f74e3140a::__anon0f3f74e31508	typeref:typename:int32_t
+lrw_marked	iss.h	/^    uint32_t lrw_marked = 0;$/;"	m	struct:ISS	typeref:typename:uint32_t
+mDeviceNumBlocks	flash.h	/^    } mDeviceNumBlocks;$/;"	m	struct:Flashcontroller	typeref:union:Flashcontroller::__anonb27d0f69020a
+mFiledescriptor	flash.h	/^    int mFiledescriptor;$/;"	m	struct:Flashcontroller	typeref:typename:int
+mFilepath	flash.h	/^    string mFilepath;$/;"	m	struct:Flashcontroller	typeref:typename:string
+mFilepath	mram.h	/^    string mFilepath;$/;"	m	struct:SimpleMRAM	typeref:typename:string
+mSize	mram.h	/^    uint32_t mSize;$/;"	m	struct:SimpleMRAM	typeref:typename:uint32_t
+mTargetBlock	flash.h	/^    } mTargetBlock;$/;"	m	struct:Flashcontroller	typeref:union:Flashcontroller::__anonb27d0f69010a
+mac	ethernet.h	/^    uint32_t mac[2];$/;"	m	struct:EthernetDevice	typeref:typename:uint32_t[2]
+make_readonly	tlm_map.h	/^        static access_mode make_readonly() {$/;"	f	struct:vp::map::access_mode	typeref:typename:access_mode
+make_writeonly	tlm_map.h	/^        static access_mode make_writeonly() {$/;"	f	struct:vp::map::access_mode	typeref:typename:access_mode
+map	tlm_map.h	/^namespace vp { namespace map {$/;"	n	namespace:vp
+mapping	instr.h	/^    enum mapping {$/;"	g	namespace:Opcode
+maps	tlm_map.h	/^        std::vector<AbstractMapping *> maps;$/;"	m	struct:vp::map::LocalRouter	typeref:typename:std::vector<AbstractMapping * >
+marchid	csr.h	/^    csr_32 *marchid = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+mask	tlm_map.h	/^        uint32_t mask    = 0xffffffff;$/;"	m	struct:vp::map::reg_mapping_t	typeref:typename:uint32_t
+max_heap	syscall.h	/^    uint32_t max_heap = 0;$/;"	m	struct:SyscallHandler	typeref:typename:uint32_t
+mcause	csr.h	/^    csr_mcause *mcause = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mcause *
+medeleg	csr.h	/^    csr_32 *medeleg = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+meie	csr.h	/^            unsigned meie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+meip	csr.h	/^            unsigned meip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+mem	ethernet.h	/^    uint8_t *mem = nullptr;$/;"	m	struct:EthernetDevice	typeref:typename:uint8_t *
+mem	gdb_stub.h	/^    uint8_t *mem;$/;"	m	struct:debug_memory_mapping	typeref:typename:uint8_t *
+mem	iss.h	/^    data_memory_interface *mem;$/;"	m	struct:ISS	typeref:typename:data_memory_interface *
+mem	iss.h	/^    uint8_t *mem;$/;"	m	struct:direct_memory_interface	typeref:typename:uint8_t *
+mem	syscall.h	/^    uint8_t *mem = 0;       \/\/ direct pointer to start of guest memory in host memory$/;"	m	struct:SyscallHandler	typeref:typename:uint8_t *
+mem_end_addr	main.cpp	/^    addr_t mem_end_addr       = mem_start_addr + mem_size - 1;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+mem_offset	gdb_stub.h	/^    uint32_t mem_offset;$/;"	m	struct:debug_memory_mapping	typeref:typename:uint32_t
+mem_offset	syscall.h	/^    uint32_t mem_offset;    \/\/ start address of the memory as mapped into the address space$/;"	m	struct:SyscallHandler	typeref:typename:uint32_t
+mem_size	gdb_stub.h	/^    uint32_t mem_size;$/;"	m	struct:debug_memory_mapping	typeref:typename:uint32_t
+mem_size	main.cpp	/^    addr_t mem_size           = 1024*1024*32;  \/\/ 32 MB ram, to place it before the CLINT and /;"	m	struct:Options	typeref:typename:addr_t	file:
+mem_start_addr	main.cpp	/^    addr_t mem_start_addr     = 0x00000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+memory	gdb_stub.h	/^    debug_memory_mapping memory;$/;"	m	struct:DebugCoreRunner	typeref:typename:debug_memory_mapping
+memory_access_t	gdb_stub.cpp	/^struct memory_access_t {$/;"	s	file:
+mepc	csr.h	/^    csr_mepc *mepc = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mepc *
+mhartid	csr.h	/^    csr_32 *mhartid = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+mideleg	csr.h	/^    csr_32 *mideleg = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+mie	csr.h	/^            unsigned mie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+mie	csr.h	/^    csr_mie *mie = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mie *
+mimpid	csr.h	/^    csr_32 *mimpid = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+mip	csr.h	/^    csr_mip *mip = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mip *
+misa	csr.h	/^    csr_misa *misa = 0;$/;"	m	struct:csr_table	typeref:typename:csr_misa *
+mode	csr.h	/^            unsigned mode: 1;	\/\/ WARL$/;"	m	struct:csr_satp::__anon0f3f74e3100a::__anon0f3f74e31108	typeref:typename:unsigned:1
+mode	csr.h	/^            unsigned mode: 2;	\/\/ WARL$/;"	m	struct:csr_mtvec::__anon0f3f74e3070a::__anon0f3f74e30808	typeref:typename:unsigned:2
+mode	csr.h	/^    AccessMode mode;$/;"	m	struct:csr_base	typeref:typename:AccessMode
+mode	tlm_map.h	/^        access_mode mode = read_write;$/;"	m	struct:vp::map::reg_mapping_t	typeref:typename:access_mode
+mode	tlm_map.h	/^        access_mode mode;$/;"	m	struct:vp::map::AddressMapping	typeref:typename:access_mode
+mpie	csr.h	/^            unsigned mpie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+mpp	csr.h	/^            unsigned mpp: 2;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:2
+mprv	csr.h	/^            unsigned mprv: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+mram_end_addr	main.cpp	/^    addr_t mram_end_addr      = mram_start_addr + mram_size - 1;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+mram_image	main.cpp	/^    std::string mram_image;$/;"	m	struct:Options	typeref:typename:std::string	file:
+mram_size	main.cpp	/^    addr_t mram_size		  = 0x10000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+mram_start_addr	main.cpp	/^    addr_t mram_start_addr    = 0x60000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+mscratch	csr.h	/^    csr_32 *mscratch = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+msie	csr.h	/^            unsigned msie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+msip	csr.h	/^            unsigned msip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+mstatus	csr.h	/^    csr_mstatus *mstatus = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mstatus *
+mtie	csr.h	/^            unsigned mtie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+mtime	clint.h	/^    uint64_t mtime = 0;$/;"	m	struct:CLINT	typeref:typename:uint64_t
+mtimecmp	clint.h	/^    uint64_t mtimecmp = 0;  \/\/ zero means unused$/;"	m	struct:CLINT	typeref:typename:uint64_t
+mtip	csr.h	/^            unsigned mtip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+mtval	csr.h	/^    csr_32 *mtval = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+mtvec	csr.h	/^    csr_mtvec *mtvec = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mtvec *
+mvendorid	csr.h	/^    csr_mvendorid *mvendorid = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mvendorid *
+mxl	csr.h	/^            unsigned mxl: 2;$/;"	m	struct:csr_misa::__anon0f3f74e3010a::__anon0f3f74e30208	typeref:typename:unsigned:2
+mxr	csr.h	/^            unsigned mxr: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+name	csr.h	/^    const char *name;$/;"	m	struct:csr_base	typeref:typename:const char *
+nbytes	gdb_stub.cpp	/^    int nbytes;$/;"	m	struct:memory_access_t	typeref:typename:int	file:
+network_device	main.cpp	/^    std::string network_device;$/;"	m	struct:Options	typeref:typename:std::string	file:
+next_memory	iss.h	/^    data_memory_interface *next_memory;$/;"	m	struct:DataMemoryProxy	typeref:typename:data_memory_interface *
+nibble_to_hex	gdb_stub.cpp	/^char nibble_to_hex[16] = {$/;"	v	typeref:typename:char[16]
+nv	tlm_map.h	/^        uint32_t nv;$/;"	m	struct:vp::map::register_access_t	typeref:typename:uint32_t
+offs	flash.h	/^	uint64_t offs;$/;"	m	struct:Blockbuffer	typeref:typename:uint64_t
+offset	csr.h	/^            unsigned offset: 7;$/;"	m	struct:csr_mvendorid::__anon0f3f74e3030a::__anon0f3f74e30408	typeref:typename:unsigned:7
+offset	iss.h	/^    uint32_t offset;$/;"	m	struct:direct_memory_interface	typeref:typename:uint32_t
+op	dma.h	/^    uint32_t op   = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
+opcode	instr.h	/^    inline int32_t opcode() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+oper	ethernet.h	/^    uint16_t oper;$/;"	m	struct:arp_eth_header	typeref:typename:uint16_t
+operator =	sifive/uart.h	/^    Reg32 operator =(uint32_t n) {$/;"	f	struct:Reg32	typeref:typename:Reg32
+operator []	iss.h	/^    int32_t &operator [](const uint32_t idx) {$/;"	f	struct:RegFile	typeref:typename:int32_t &
+operator uint32_t	sifive/uart.h	/^    operator uint32_t() const {$/;"	f	struct:Reg32
+owner	sifive/uart.h	/^    Reg32 *owner;$/;"	m	struct:Reg32Field	typeref:typename:Reg32 *
+p_align	elf_loader.h	/^    Elf32_Word	p_align;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Word
+p_filesz	elf_loader.h	/^    Elf32_Word	p_filesz;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Word
+p_flags	elf_loader.h	/^    Elf32_Word	p_flags;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Word
+p_memsz	elf_loader.h	/^    Elf32_Word	p_memsz;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Word
+p_offset	elf_loader.h	/^    Elf32_Off	p_offset;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Off
+p_paddr	elf_loader.h	/^    Elf32_Addr	p_paddr;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Addr
+p_type	elf_loader.h	/^    Elf32_Word	p_type;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Word
+p_vaddr	elf_loader.h	/^    Elf32_Addr	p_vaddr;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Addr
+parse_breakpoint	gdb_stub.cpp	/^breakpoint_t parse_breakpoint(const std::string &msg) {$/;"	f	typeref:typename:breakpoint_t
+parse_command_line_arguments	main.cpp	/^Options parse_command_line_arguments(int argc, char **argv) {$/;"	f	typeref:typename:Options
+parse_command_line_arguments	sifive/sifive_main.cpp	/^Options parse_command_line_arguments(int argc, char **argv) {$/;"	f	typeref:typename:Options
+parse_memory_access	gdb_stub.cpp	/^memory_access_t parse_memory_access(const std::string &msg) {$/;"	f	typeref:typename:memory_access_t
+parts	instr.h	/^    enum parts {$/;"	g	namespace:Opcode
+pc	iss.h	/^    uint32_t pc;$/;"	m	struct:ISS	typeref:typename:uint32_t
+pending_interrupts	plic.h	/^    uint64_t pending_interrupts = 0;$/;"	m	struct:PLIC	typeref:typename:uint64_t
+performance_and_sync_update	iss.h	/^    void performance_and_sync_update(Opcode::mapping executed_op) {$/;"	f	struct:ISS	typeref:typename:void
+plen	ethernet.h	/^    uint8_t  plen;$/;"	m	struct:arp_eth_header	typeref:typename:uint8_t
+plic	basic_timer.h	/^    interrupt_gateway *plic = 0;$/;"	m	struct:BasicTimer	typeref:typename:interrupt_gateway *
+plic	dma.h	/^    interrupt_gateway *plic = 0;$/;"	m	struct:SimpleDMA	typeref:typename:interrupt_gateway *
+plic	ethernet.h	/^    interrupt_gateway *plic = 0;$/;"	m	struct:EthernetDevice	typeref:typename:interrupt_gateway *
+plic	sensor.h	/^    interrupt_gateway *plic = 0;$/;"	m	struct:SimpleSensor	typeref:typename:interrupt_gateway *
+plic	sensor2.h	/^    interrupt_gateway *plic = 0;$/;"	m	struct:SimpleSensor2	typeref:typename:interrupt_gateway *
+plic_end_addr	main.cpp	/^    addr_t plic_end_addr      = 0x40001000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+plic_end_addr	sifive/sifive_main.cpp	/^    addr_t plic_end_addr      = 0x0FFFFFFF;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+plic_start_addr	main.cpp	/^    addr_t plic_start_addr    = 0x40000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+plic_start_addr	sifive/sifive_main.cpp	/^    addr_t plic_start_addr    = 0x0C000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+pllcfg	sifive/prci.h	/^    uint32_t pllcfg = 0;$/;"	m	struct:PRCI	typeref:typename:uint32_t
+plloutdiv	sifive/prci.h	/^    uint32_t plloutdiv = 0;$/;"	m	struct:PRCI	typeref:typename:uint32_t
+pmpaddr0	csr.h	/^    csr_32 *pmpaddr0 = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+pmpcfg0	csr.h	/^    csr_pmpcfg *pmpcfg0 = 0;$/;"	m	struct:csr_table	typeref:typename:csr_pmpcfg *
+ports	bus.h	/^    std::array<PortMapping *, NR_OF_TARGETS> ports;$/;"	m	struct:SimpleBus	typeref:typename:std::array<PortMapping *,NR_OF_TARGETS>
+ppn	csr.h	/^            unsigned ppn: 22;   \/\/ WARL$/;"	m	struct:csr_satp::__anon0f3f74e3100a::__anon0f3f74e31108	typeref:typename:unsigned:22
+prci_end_addr	sifive/sifive_main.cpp	/^    addr_t prci_end_addr      = 0x1000FFFF;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+prci_start_addr	sifive/sifive_main.cpp	/^    addr_t prci_start_addr    = 0x10008000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+printDec	ethernet.cpp	/^void printDec(const unsigned char* buf, const uint32_t len)$/;"	f	typeref:typename:void
+printHex	ethernet.cpp	/^void printHex(const unsigned char* buf, const uint32_t len)$/;"	f	typeref:typename:void
+priority_threshold	plic.h	/^    uint32_t priority_threshold = 0;$/;"	m	struct:PLIC	typeref:typename:uint32_t
+ptype	ethernet.h	/^    uint16_t ptype;$/;"	m	struct:arp_eth_header	typeref:typename:uint16_t
+quadrant	instr.h	/^    inline uint32_t quadrant() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+quantum_keeper	iss.h	/^    tlm_utils::tlm_quantumkeeper &quantum_keeper;$/;"	m	struct:CombinedMemoryInterface	typeref:typename:tlm_utils::tlm_quantumkeeper &
+quantum_keeper	iss.h	/^    tlm_utils::tlm_quantumkeeper &quantum_keeper;$/;"	m	struct:DataMemoryProxy	typeref:typename:tlm_utils::tlm_quantumkeeper &
+quantum_keeper	iss.h	/^    tlm_utils::tlm_quantumkeeper &quantum_keeper;$/;"	m	struct:InstrMemoryProxy	typeref:typename:tlm_utils::tlm_quantumkeeper &
+quantum_keeper	iss.h	/^    tlm_utils::tlm_quantumkeeper quantum_keeper;$/;"	m	struct:ISS	typeref:typename:tlm_utils::tlm_quantumkeeper
+ra	iss.h	/^        ra = x1,$/;"	e	enum:RegFile::e
+raw	display.hpp	/^		uint8_t* raw;$/;"	m	union:Display::__anonc1289fd1010a	typeref:typename:uint8_t *
+rd	instr.h	/^    inline uint32_t rd() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+read	csr.h	/^    int32_t read(PrivilegeLevel access_level=PrivilegeLevel::Machine) {$/;"	f	struct:csr_base	typeref:typename:int32_t
+read	iss.h	/^    int32_t read(uint32_t index) {$/;"	f	struct:RegFile	typeref:typename:int32_t
+read	tlm_map.h	/^        bool read;$/;"	m	struct:vp::map::register_access_t	typeref:typename:bool
+readBlock	flash.h	/^	void readBlock(uint64_t blockOffset)$/;"	f	struct:Blockbuffer	typeref:typename:void
+read_data	memory.h	/^    void read_data(unsigned addr, uint8_t *dst, unsigned num_bytes) {$/;"	f	struct:SimpleMemory	typeref:typename:void
+read_data	mram.h	/^    void read_data(unsigned addr, uint8_t *dst, unsigned num_bytes) {$/;"	f	struct:SimpleMRAM	typeref:typename:void
+read_memory	gdb_stub.cpp	/^std::string debug_memory_mapping::read_memory(unsigned start, int nbytes) {$/;"	f	class:debug_memory_mapping	typeref:typename:std::string
+read_only	tlm_map.h	/^    constexpr access_mode read_only = {true, false};$/;"	v	namespace:vp::map	typeref:typename:access_mode
+read_write	tlm_map.h	/^    constexpr access_mode read_write = {true, true};$/;"	v	namespace:vp::map	typeref:typename:access_mode
+receive_dst	ethernet.h	/^    uint32_t receive_dst = 0;$/;"	m	struct:EthernetDevice	typeref:typename:uint32_t
+receive_packet	gdb_stub.cpp	/^std::string DebugCoreRunner::receive_packet(int conn) {$/;"	f	class:DebugCoreRunner	typeref:typename:std::string
+receive_size	ethernet.h	/^    uint32_t receive_size = 0;$/;"	m	struct:EthernetDevice	typeref:typename:uint32_t
+recv_frame_buf	ethernet.h	/^	uint8_t recv_frame_buf[FRAME_SIZE];$/;"	m	struct:EthernetDevice	typeref:typename:uint8_t[]
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mcause::__anon0f3f74e30e0a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mepc::__anon0f3f74e30d0a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mie::__anon0f3f74e3090a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mip::__anon0f3f74e30b0a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_misa::__anon0f3f74e3010a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mstatus::__anon0f3f74e3050a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mtvec::__anon0f3f74e3070a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mvendorid::__anon0f3f74e3030a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_pmpcfg::__anon0f3f74e3120a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_satp::__anon0f3f74e3100a	typeref:typename:int32_t
+reg	csr.h	/^        int64_t reg = 0;$/;"	m	union:csr_64::__anon0f3f74e3140a	typeref:typename:int64_t
+reg	csr.h	/^    int32_t reg = 0;$/;"	m	struct:csr_32	typeref:typename:int32_t
+reg_mapping_t	tlm_map.h	/^    struct reg_mapping_t {$/;"	s	namespace:vp::map
+reg_t	syscall.cpp	/^typedef int32_t reg_t;$/;"	t	typeref:typename:int32_t	file:
+regfile	gdb_stub.h	/^    RegFile &regfile;$/;"	m	struct:DebugCoreRunner	typeref:typename:RegFile &
+register_access_callback	ethernet.h	/^    void register_access_callback(const vp::map::register_access_t &r) {$/;"	f	struct:EthernetDevice	typeref:typename:void
+register_access_callback	sensor2.h	/^    void register_access_callback(const vp::map::register_access_t &r) {$/;"	f	struct:SimpleSensor2	typeref:typename:void
+register_access_callback	sifive/gpio.h	/^    void register_access_callback(const vp::map::register_access_t &r) {$/;"	f	struct:GPIO	typeref:typename:void
+register_access_callback	sifive/prci.h	/^    void register_access_callback(const vp::map::register_access_t &r) {$/;"	f	struct:PRCI	typeref:typename:void
+register_access_callback	sifive/spi.h	/^    void register_access_callback(const vp::map::register_access_t &r) {$/;"	f	struct:SPI	typeref:typename:void
+register_access_callback	sifive/uart.h	/^    void register_access_callback(const vp::map::register_access_t &r) {$/;"	f	struct:UART	typeref:typename:void
+register_access_t	tlm_map.h	/^    struct register_access_t {$/;"	s	namespace:vp::map
+register_handler	tlm_map.h	/^        AddressMapping &register_handler(AddressMapping::fn_transport_t fn) {$/;"	f	struct:vp::map::AddressMapping	typeref:typename:AddressMapping &
+register_handler	tlm_map.h	/^        AddressMapping &register_handler(Module *this_, MemberFun fn) {$/;"	f	struct:vp::map::AddressMapping	typeref:typename:AddressMapping &
+register_handler	tlm_map.h	/^        RegisterMapping &register_handler(Module *this_, MemberFun fn) {$/;"	f	struct:vp::map::RegisterMapping	typeref:typename:RegisterMapping &
+register_handler	tlm_map.h	/^        RegisterMapping &register_handler(RegisterMapping::handler_t fn) {$/;"	f	struct:vp::map::RegisterMapping	typeref:typename:RegisterMapping &
+regs	iss.h	/^    RegFile regs;$/;"	m	struct:ISS	typeref:typename:RegFile
+regs	iss.h	/^    int32_t regs[NUM_REGS];$/;"	m	struct:RegFile	typeref:typename:int32_t[]
+return_from_trap_handler	iss.h	/^    void return_from_trap_handler() {$/;"	f	struct:ISS	typeref:typename:void
+riscv-vp	CMakeLists.txt	/^add_executable(riscv-vp$/;"	t
+rl	instr.h	/^    inline bool rl() {$/;"	f	struct:Instruction	typeref:typename:bool
+router	ethernet.h	/^    vp::map::LocalRouter router;$/;"	m	struct:EthernetDevice	typeref:typename:vp::map::LocalRouter
+router	sensor2.h	/^    vp::map::LocalRouter router;$/;"	m	struct:SimpleSensor2	typeref:typename:vp::map::LocalRouter
+router	sifive/gpio.h	/^    vp::map::LocalRouter router;$/;"	m	struct:GPIO	typeref:typename:vp::map::LocalRouter
+router	sifive/prci.h	/^    vp::map::LocalRouter router;$/;"	m	struct:PRCI	typeref:typename:vp::map::LocalRouter
+router	sifive/spi.h	/^    vp::map::LocalRouter router;$/;"	m	struct:SPI	typeref:typename:vp::map::LocalRouter
+router	sifive/uart.h	/^    vp::map::LocalRouter router;$/;"	m	struct:UART	typeref:typename:vp::map::LocalRouter
+rs1	instr.h	/^    inline uint32_t rs1() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+rs2	instr.h	/^    inline uint32_t rs2() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+run	basic_timer.h	/^    void run() {$/;"	f	struct:BasicTimer	typeref:typename:void
+run	clint.h	/^    void run() {$/;"	f	struct:CLINT	typeref:typename:void
+run	dma.h	/^    void run() {$/;"	f	struct:SimpleDMA	typeref:typename:void
+run	ethernet.h	/^    void run() {$/;"	f	struct:EthernetDevice	typeref:typename:void
+run	gdb_stub.cpp	/^void DebugCoreRunner::run() {$/;"	f	class:DebugCoreRunner	typeref:typename:void
+run	iss.h	/^    void run() {$/;"	f	struct:DirectCoreRunner	typeref:typename:void
+run	iss.h	/^    void run() {$/;"	f	struct:ISS	typeref:typename:void
+run	plic.h	/^    void run() {$/;"	f	struct:PLIC	typeref:typename:void
+run	sensor.h	/^    void run() {$/;"	f	struct:SimpleSensor	typeref:typename:void
+run	sensor2.h	/^    void run() {$/;"	f	struct:SimpleSensor2	typeref:typename:void
+run_event	dma.h	/^    sc_core::sc_event run_event;$/;"	m	struct:SimpleDMA	typeref:typename:sc_core::sc_event
+run_event	ethernet.h	/^    sc_core::sc_event run_event;$/;"	m	struct:EthernetDevice	typeref:typename:sc_core::sc_event
+run_event	sensor.h	/^    sc_core::sc_event run_event;$/;"	m	struct:SimpleSensor	typeref:typename:sc_core::sc_event
+run_event	sensor2.h	/^    sc_core::sc_event run_event;$/;"	m	struct:SimpleSensor2	typeref:typename:sc_core::sc_event
+run_step	iss.h	/^    void run_step() {$/;"	f	struct:ISS	typeref:typename:void
+rv32g_stat	syscall.cpp	/^struct rv32g_stat$/;"	s	file:
+rv32g_time_t	syscall.cpp	/^typedef int32_t rv32g_time_t;$/;"	t	typeref:typename:int32_t	file:
+rv32g_timespec	syscall.cpp	/^struct rv32g_timespec {$/;"	s	file:
+rx_fifo	sifive/uart.h	/^    std::deque<uint8_t> rx_fifo;$/;"	m	struct:UART	typeref:typename:std::deque<uint8_t>
+rxctrl	sifive/uart.h	/^    uint32_t rxctrl = 0;$/;"	m	struct:UART	typeref:typename:uint32_t
+rxdata	sifive/uart.h	/^    uint32_t rxdata = 0;$/;"	m	struct:UART	typeref:typename:uint32_t
+s0	iss.h	/^        s0 = x8,$/;"	e	enum:RegFile::e
+s1	iss.h	/^        s1 = x9,$/;"	e	enum:RegFile::e
+s10	iss.h	/^        s10 = x26,$/;"	e	enum:RegFile::e
+s11	iss.h	/^        s11 = x27,$/;"	e	enum:RegFile::e
+s2	iss.h	/^        s2 = x18,$/;"	e	enum:RegFile::e
+s3	iss.h	/^        s3 = x19,$/;"	e	enum:RegFile::e
+s4	iss.h	/^        s4 = x20,$/;"	e	enum:RegFile::e
+s5	iss.h	/^        s5 = x21,$/;"	e	enum:RegFile::e
+s6	iss.h	/^        s6 = x22,$/;"	e	enum:RegFile::e
+s7	iss.h	/^        s7 = x23,$/;"	e	enum:RegFile::e
+s8	iss.h	/^        s8 = x24,$/;"	e	enum:RegFile::e
+s9	iss.h	/^        s9 = x25,$/;"	e	enum:RegFile::e
+satp	csr.h	/^    csr_satp *satp = 0;$/;"	m	struct:csr_table	typeref:typename:csr_satp *
+sc_main	main.cpp	/^int sc_main(int argc, char **argv) {$/;"	f	typeref:typename:int
+sc_main	sifive/sifive_main.cpp	/^int sc_main(int argc, char **argv) {$/;"	f	typeref:typename:int
+scaler	clint.h	/^    static constexpr uint64_t scaler = 1000000;    \/\/ scale from PS resolution (default in Sys/;"	m	struct:CLINT	typeref:typename:uint64_t
+scaler	sensor.h	/^    uint32_t scaler = 25;$/;"	m	struct:SimpleSensor	typeref:typename:uint32_t
+scaler	sensor2.h	/^    uint32_t scaler = 25;$/;"	m	struct:SimpleSensor2	typeref:typename:uint32_t
+sckdiv	sifive/spi.h	/^    uint32_t sckdiv = 0;$/;"	m	struct:SPI	typeref:typename:uint32_t
+sd	csr.h	/^            unsigned sd: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+seie	csr.h	/^            unsigned seie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+seip	csr.h	/^            unsigned seip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+send_packet	gdb_stub.cpp	/^void DebugCoreRunner::send_packet(int conn, const std::string &msg) {$/;"	f	class:DebugCoreRunner	typeref:typename:void
+send_raw	gdb_stub.cpp	/^void send_raw(int conn, const std::string &msg) {$/;"	f	typeref:typename:void
+send_raw_frame	ethernet.cpp	/^void EthernetDevice::send_raw_frame() {$/;"	f	class:EthernetDevice	typeref:typename:void
+send_size	ethernet.h	/^    uint32_t send_size = 0;$/;"	m	struct:EthernetDevice	typeref:typename:uint32_t
+send_src	ethernet.h	/^    uint32_t send_src = 0;$/;"	m	struct:EthernetDevice	typeref:typename:uint32_t
+sender_ip	ethernet.h	/^    uint8_t sender_ip[4];$/;"	m	struct:arp_eth_header	typeref:typename:uint8_t[4]
+sender_mac	ethernet.h	/^    uint8_t sender_mac[6];$/;"	m	struct:arp_eth_header	typeref:typename:uint8_t[6]
+sensor2_end_addr	main.cpp	/^    addr_t sensor2_end_addr   = 0x50004000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+sensor2_start_addr	main.cpp	/^    addr_t sensor2_start_addr = 0x50002000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+sensor_end_addr	main.cpp	/^    addr_t sensor_end_addr    = 0x50001000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+sensor_start_addr	main.cpp	/^    addr_t sensor_start_addr  = 0x50000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+setData	flash.h	/^	void setData(const uint8_t* source, uint16_t pos, uint16_t length)$/;"	f	struct:Blockbuffer	typeref:typename:void
+setPos	flash.h	/^	void setPos(uint64_t blockOffset)$/;"	f	struct:Blockbuffer	typeref:typename:void
+set_bits	csr.h	/^    void set_bits(int32_t mask, PrivilegeLevel access_level=PrivilegeLevel::Machine) {$/;"	f	struct:csr_base	typeref:typename:void
+setup	csr.h	/^    void setup() {$/;"	f	struct:csr_table	typeref:typename:void
+sh_addr	elf_loader.h	/^    Elf32_Addr	sh_addr;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Addr
+sh_addralign	elf_loader.h	/^    Elf32_Word	sh_addralign;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_entsize	elf_loader.h	/^    Elf32_Word	sh_entsize;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_flags	elf_loader.h	/^    Elf32_Word	sh_flags;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_info	elf_loader.h	/^    Elf32_Word	sh_info;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_link	elf_loader.h	/^    Elf32_Word	sh_link;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_name	elf_loader.h	/^    Elf32_Word	sh_name;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_offset	elf_loader.h	/^    Elf32_Off	sh_offset;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Off
+sh_size	elf_loader.h	/^    Elf32_Word	sh_size;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_type	elf_loader.h	/^    Elf32_Word	sh_type;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+shall_exit	syscall.h	/^    bool shall_exit = false;$/;"	m	struct:SyscallHandler	typeref:typename:bool
+shamt	instr.h	/^    inline uint32_t shamt() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+shamt	iss.h	/^    uint32_t shamt(uint32_t index) {$/;"	f	struct:RegFile	typeref:typename:uint32_t
+show	iss.h	/^    void show() {$/;"	f	struct:ISS	typeref:typename:void
+show	iss.h	/^    void show() {$/;"	f	struct:RegFile	typeref:typename:void
+show	main.cpp	/^    void show() {$/;"	f	struct:Options	typeref:typename:void	file:
+show	sifive/sifive_main.cpp	/^    void show() {$/;"	f	struct:Options	typeref:typename:void	file:
+sie	csr.h	/^            unsigned sie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+sifive-vp	sifive/CMakeLists.txt	/^add_executable(sifive-vp$/;"	t
+size	iss.h	/^    uint32_t size;$/;"	m	struct:direct_memory_interface	typeref:typename:uint32_t
+size	memory.h	/^    uint32_t size;$/;"	m	struct:SimpleMemory	typeref:typename:uint32_t
+sockfd	ethernet.h	/^    int sockfd = 0;$/;"	m	struct:EthernetDevice	typeref:typename:int
+sp	iss.h	/^        sp = x2,$/;"	e	enum:RegFile::e
+spi0_end_addr	sifive/sifive_main.cpp	/^    addr_t spi0_end_addr      = 0x10014FFF;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+spi0_start_addr	sifive/sifive_main.cpp	/^    addr_t spi0_start_addr    = 0x10014000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+spie	csr.h	/^            unsigned spie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+spp	csr.h	/^            unsigned spp: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+src	dma.h	/^    uint32_t src  = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
+ssie	csr.h	/^            unsigned ssie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+ssip	csr.h	/^            unsigned ssip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+st_atim	syscall.cpp	/^    rv32g_timespec st_atim;$/;"	m	struct:rv32g_stat	typeref:typename:rv32g_timespec	file:
+st_blksize	syscall.cpp	/^    int32_t st_blksize;$/;"	m	struct:rv32g_stat	typeref:typename:int32_t	file:
+st_blocks	syscall.cpp	/^    int64_t st_blocks;$/;"	m	struct:rv32g_stat	typeref:typename:int64_t	file:
+st_ctim	syscall.cpp	/^    rv32g_timespec st_ctim;$/;"	m	struct:rv32g_stat	typeref:typename:rv32g_timespec	file:
+st_dev	syscall.cpp	/^    uint64_t st_dev;$/;"	m	struct:rv32g_stat	typeref:typename:uint64_t	file:
+st_gid	syscall.cpp	/^    uint32_t st_gid;$/;"	m	struct:rv32g_stat	typeref:typename:uint32_t	file:
+st_info	elf_loader.h	/^    unsigned char st_info;$/;"	m	struct:__anonb7fc41480408	typeref:typename:unsigned char
+st_ino	syscall.cpp	/^    uint64_t st_ino;$/;"	m	struct:rv32g_stat	typeref:typename:uint64_t	file:
+st_mode	syscall.cpp	/^    uint32_t st_mode;$/;"	m	struct:rv32g_stat	typeref:typename:uint32_t	file:
+st_mtim	syscall.cpp	/^    rv32g_timespec st_mtim;$/;"	m	struct:rv32g_stat	typeref:typename:rv32g_timespec	file:
+st_name	elf_loader.h	/^    Elf32_Word st_name;$/;"	m	struct:__anonb7fc41480408	typeref:typename:Elf32_Word
+st_nlink	syscall.cpp	/^    uint32_t st_nlink;$/;"	m	struct:rv32g_stat	typeref:typename:uint32_t	file:
+st_other	elf_loader.h	/^    unsigned char st_other;$/;"	m	struct:__anonb7fc41480408	typeref:typename:unsigned char
+st_rdev	syscall.cpp	/^    uint64_t st_rdev;$/;"	m	struct:rv32g_stat	typeref:typename:uint64_t	file:
+st_shndx	elf_loader.h	/^    Elf32_Half st_shndx;$/;"	m	struct:__anonb7fc41480408	typeref:typename:Elf32_Half
+st_size	elf_loader.h	/^    Elf32_Word st_size;$/;"	m	struct:__anonb7fc41480408	typeref:typename:Elf32_Word
+st_size	syscall.cpp	/^    int64_t st_size;$/;"	m	struct:rv32g_stat	typeref:typename:int64_t	file:
+st_uid	syscall.cpp	/^    uint32_t st_uid;$/;"	m	struct:rv32g_stat	typeref:typename:uint32_t	file:
+st_value	elf_loader.h	/^    Elf32_Addr st_value;$/;"	m	struct:__anonb7fc41480408	typeref:typename:Elf32_Addr
+start	bus.h	/^    uint64_t start;$/;"	m	struct:PortMapping	typeref:typename:uint64_t
+start	gdb_stub.cpp	/^    unsigned start;$/;"	m	struct:memory_access_t	typeref:typename:unsigned	file:
+start	sifive/uart.h	/^    unsigned start;$/;"	m	struct:Reg32Field	typeref:typename:unsigned
+start	tlm_map.h	/^        uint64_t start;$/;"	m	struct:vp::map::AddressMapping	typeref:typename:uint64_t
+start_heap	syscall.h	/^    uint32_t start_heap = 0;$/;"	m	struct:SyscallHandler	typeref:typename:uint32_t
+stat	dma.h	/^    uint32_t stat = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
+status	ethernet.h	/^    uint32_t status = 0;$/;"	m	struct:EthernetDevice	typeref:typename:uint32_t
+status	iss.h	/^    CoreExecStatus status = CoreExecStatus::Runnable;$/;"	m	struct:ISS	typeref:typename:CoreExecStatus
+stie	csr.h	/^            unsigned stie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+stip	csr.h	/^            unsigned stip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+store_byte	iss.h	/^    virtual void store_byte(addr_t addr, uint8_t value) { _store_data(addr, value); }$/;"	f	struct:DataMemoryProxy	typeref:typename:void
+store_byte	iss.h	/^    void store_byte(addr_t addr, uint8_t value) { _store_data(addr, value); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+store_half	iss.h	/^    virtual void store_half(addr_t addr, uint16_t value) { _store_data(addr, value); }$/;"	f	struct:DataMemoryProxy	typeref:typename:void
+store_half	iss.h	/^    void store_half(addr_t addr, uint16_t value) { _store_data(addr, value); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+store_word	iss.h	/^    virtual void store_word(addr_t addr, uint32_t value) { _store_data(addr, value); }$/;"	f	struct:DataMemoryProxy	typeref:typename:void
+store_word	iss.h	/^    void store_word(addr_t addr, uint32_t value) { _store_data(addr, value); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+sum	csr.h	/^            unsigned sum: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+swap_byte_order	gdb_stub.cpp	/^uint32_t swap_byte_order(uint32_t n) {$/;"	f	typeref:typename:uint32_t
+switch_to_trap_handler	iss.h	/^    void switch_to_trap_handler() {$/;"	f	struct:ISS	typeref:typename:void
+sys	iss.h	/^    SyscallHandler *sys;$/;"	m	struct:ISS	typeref:typename:SyscallHandler *
+sys_brk	syscall.cpp	/^int sys_brk(SyscallHandler *sys, void *addr) {$/;"	f	typeref:typename:int
+sys_close	syscall.cpp	/^int sys_close(int fd) {$/;"	f	typeref:typename:int
+sys_fstat	syscall.cpp	/^int sys_fstat(SyscallHandler *sys, int fd, rv32g_stat *s_addr) {$/;"	f	typeref:typename:int
+sys_gettimeofday	syscall.cpp	/^int sys_gettimeofday(SyscallHandler *sys, struct timeval *tp, void *tzp) {$/;"	f	typeref:typename:int
+sys_lseek	syscall.cpp	/^int sys_lseek(int fd, off_t offset, int whence) {$/;"	f	typeref:typename:int
+sys_open	syscall.cpp	/^int sys_open(SyscallHandler *sys, const char *pathname, int flags, mode_t mode) {$/;"	f	typeref:typename:int
+sys_read	syscall.cpp	/^int sys_read(SyscallHandler *sys, int fd, void *buf, size_t count) {$/;"	f	typeref:typename:int
+sys_time	syscall.cpp	/^int sys_time(SyscallHandler *sys, rv32g_time_t *tloc) {$/;"	f	typeref:typename:int
+sys_write	syscall.cpp	/^int sys_write(SyscallHandler *sys, int fd, const void *buf, size_t count) {$/;"	f	typeref:typename:int
+t0	iss.h	/^        t0 = x5,$/;"	e	enum:RegFile::e
+t1	iss.h	/^        t1 = x6,$/;"	e	enum:RegFile::e
+t2	iss.h	/^        t2 = x7,$/;"	e	enum:RegFile::e
+t3	iss.h	/^        t3 = x28,$/;"	e	enum:RegFile::e
+t4	iss.h	/^        t4 = x29,$/;"	e	enum:RegFile::e
+t5	iss.h	/^        t5 = x30,$/;"	e	enum:RegFile::e
+t6	iss.h	/^        t6 = x31,$/;"	e	enum:RegFile::e
+target	csr.h	/^    csr_64 &target;$/;"	m	struct:csr_64_high	typeref:typename:csr_64 &
+target	csr.h	/^    csr_64 &target;$/;"	m	struct:csr_64_low	typeref:typename:csr_64 &
+target_hart	clint.h	/^    timer_interrupt_target *target_hart = nullptr;$/;"	m	struct:CLINT	typeref:typename:timer_interrupt_target *
+target_hart	plic.h	/^    external_interrupt_target *target_hart = nullptr;$/;"	m	struct:PLIC	typeref:typename:external_interrupt_target *
+target_ip	ethernet.h	/^    uint8_t target_ip[4];$/;"	m	struct:arp_eth_header	typeref:typename:uint8_t[4]
+target_mac	ethernet.h	/^    uint8_t target_mac[6];$/;"	m	struct:arp_eth_header	typeref:typename:uint8_t[6]
+target_signal	gdb_stub.cpp	/^enum target_signal {$/;"	g	file:
+term_end_addr	main.cpp	/^    addr_t term_end_addr      = term_start_addr + 16;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+term_start_addr	main.cpp	/^    addr_t term_start_addr    = 0x20000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+test_signature	main.cpp	/^    std::string test_signature;$/;"	m	struct:Options	typeref:typename:std::string	file:
+timer_interrupt_target	irq_if.h	/^struct timer_interrupt_target {$/;"	s
+tlm_global_quantum	main.cpp	/^    unsigned int tlm_global_quantum = 10;$/;"	m	struct:Options	typeref:typename:unsigned int	file:
+tlm_global_quantum	sifive/sifive_main.cpp	/^    unsigned int tlm_global_quantum = 10;$/;"	m	struct:Options	typeref:typename:unsigned int	file:
+tp	iss.h	/^        tp = x4,$/;"	e	enum:RegFile::e
+transport	bus.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:SimpleBus	typeref:typename:void
+transport	clint.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:CLINT	typeref:typename:void
+transport	display.cpp	/^void Display::transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay)$/;"	f	class:Display	typeref:typename:void
+transport	dma.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:SimpleDMA	typeref:typename:void
+transport	ethernet.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:EthernetDevice	typeref:typename:void
+transport	flash.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:Flashcontroller	typeref:typename:void
+transport	memory.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:SimpleMemory	typeref:typename:void
+transport	mram.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:SimpleMRAM	typeref:typename:void
+transport	plic.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:PLIC	typeref:typename:void
+transport	random_source.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:RandomSource	typeref:typename:void
+transport	sensor.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:SimpleSensor	typeref:typename:void
+transport	sensor2.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:SimpleSensor2	typeref:typename:void
+transport	sifive/aon.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:AON	typeref:typename:void
+transport	sifive/gpio.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:GPIO	typeref:typename:void
+transport	sifive/prci.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:PRCI	typeref:typename:void
+transport	sifive/spi.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:SPI	typeref:typename:void
+transport	sifive/uart.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:UART	typeref:typename:void
+transport	terminal.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:SimpleTerminal	typeref:typename:void
+transport	tlm_map.h	/^        void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:vp::map::LocalRouter	typeref:typename:void
+trigger_external_interrupt	iss.h	/^    virtual void trigger_external_interrupt() override {$/;"	f	struct:ISS	typeref:typename:void
+trigger_timer_interrupt	iss.h	/^    virtual void trigger_timer_interrupt(bool status) override {$/;"	f	struct:ISS	typeref:typename:void
+try_handle	tlm_map.h	/^        bool try_handle(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:vp::map::AddressMapping	typeref:typename:bool
+try_handle	tlm_map.h	/^        bool try_handle(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:vp::map::RegisterMapping	typeref:typename:bool
+try_recv_raw_frame	ethernet.cpp	/^bool EthernetDevice::try_recv_raw_frame() {$/;"	f	class:EthernetDevice	typeref:typename:bool
+tsock	clint.h	/^    tlm_utils::simple_target_socket<CLINT> tsock;$/;"	m	struct:CLINT	typeref:typename:tlm_utils::simple_target_socket<CLINT>
+tsock	display.hpp	/^	simple_target_socket<Display> tsock;$/;"	m	struct:Display	typeref:typename:simple_target_socket<Display>
+tsock	dma.h	/^    tlm_utils::simple_target_socket<SimpleDMA> tsock;$/;"	m	struct:SimpleDMA	typeref:typename:tlm_utils::simple_target_socket<SimpleDMA>
+tsock	ethernet.h	/^    tlm_utils::simple_target_socket<EthernetDevice> tsock;$/;"	m	struct:EthernetDevice	typeref:typename:tlm_utils::simple_target_socket<EthernetDevice>
+tsock	flash.h	/^    simple_target_socket<Flashcontroller> tsock;$/;"	m	struct:Flashcontroller	typeref:typename:simple_target_socket<Flashcontroller>
+tsock	memory.h	/^    tlm_utils::simple_target_socket<SimpleMemory> tsock;$/;"	m	struct:SimpleMemory	typeref:typename:tlm_utils::simple_target_socket<SimpleMemory>
+tsock	mram.h	/^    simple_target_socket<SimpleMRAM> tsock;$/;"	m	struct:SimpleMRAM	typeref:typename:simple_target_socket<SimpleMRAM>
+tsock	plic.h	/^    tlm_utils::simple_target_socket<PLIC> tsock;$/;"	m	struct:PLIC	typeref:typename:tlm_utils::simple_target_socket<PLIC>
+tsock	random_source.h	/^    tlm_utils::simple_target_socket<RandomSource> tsock;$/;"	m	struct:RandomSource	typeref:typename:tlm_utils::simple_target_socket<RandomSource>
+tsock	sensor.h	/^    tlm_utils::simple_target_socket<SimpleSensor> tsock;$/;"	m	struct:SimpleSensor	typeref:typename:tlm_utils::simple_target_socket<SimpleSensor>
+tsock	sensor2.h	/^    tlm_utils::simple_target_socket<SimpleSensor2> tsock;$/;"	m	struct:SimpleSensor2	typeref:typename:tlm_utils::simple_target_socket<SimpleSensor2>
+tsock	sifive/aon.h	/^    tlm_utils::simple_target_socket<AON> tsock;$/;"	m	struct:AON	typeref:typename:tlm_utils::simple_target_socket<AON>
+tsock	sifive/gpio.h	/^    tlm_utils::simple_target_socket<GPIO> tsock;$/;"	m	struct:GPIO	typeref:typename:tlm_utils::simple_target_socket<GPIO>
+tsock	sifive/prci.h	/^    tlm_utils::simple_target_socket<PRCI> tsock;$/;"	m	struct:PRCI	typeref:typename:tlm_utils::simple_target_socket<PRCI>
+tsock	sifive/spi.h	/^    tlm_utils::simple_target_socket<SPI> tsock;$/;"	m	struct:SPI	typeref:typename:tlm_utils::simple_target_socket<SPI>
+tsock	sifive/uart.h	/^    tlm_utils::simple_target_socket<UART> tsock;$/;"	m	struct:UART	typeref:typename:tlm_utils::simple_target_socket<UART>
+tsock	terminal.h	/^    tlm_utils::simple_target_socket<SimpleTerminal> tsock;$/;"	m	struct:SimpleTerminal	typeref:typename:tlm_utils::simple_target_socket<SimpleTerminal>
+tsocks	bus.h	/^    std::array<tlm_utils::simple_target_socket<SimpleBus>, NR_OF_INITIATORS> tsocks;$/;"	m	struct:SimpleBus	typeref:typename:std::array<tlm_utils::simple_target_socket<SimpleBus>,NR_OF_INITIATORS>
+tv_nsec	syscall.cpp	/^    int32_t tv_nsec;$/;"	m	struct:rv32g_timespec	typeref:typename:int32_t	file:
+tv_sec	syscall.cpp	/^    int32_t tv_sec;$/;"	m	struct:rv32g_timespec	typeref:typename:int32_t	file:
+tvm	csr.h	/^            unsigned tvm: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+tw	csr.h	/^            unsigned tw: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+tx_fifo	sifive/uart.h	/^    std::deque<uint8_t> tx_fifo;$/;"	m	struct:UART	typeref:typename:std::deque<uint8_t>
+txctrl	sifive/uart.h	/^    uint32_t txctrl = 0;$/;"	m	struct:UART	typeref:typename:uint32_t
+txdata	sifive/uart.h	/^    uint32_t txdata = 0;$/;"	m	struct:UART	typeref:typename:uint32_t
+txr	csr.h	/^            unsigned txr: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+uart0_end_addr	sifive/sifive_main.cpp	/^    addr_t uart0_end_addr     = 0x10013FFF;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+uart0_start_addr	sifive/sifive_main.cpp	/^    addr_t uart0_start_addr   = 0x10013000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+ueie	csr.h	/^            unsigned ueie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+ueip	csr.h	/^            unsigned ueip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+uie	csr.h	/^            unsigned uie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+ulong	syscall.h	/^    typedef unsigned long int ulong;$/;"	t	struct:SyscallHandler	typeref:typename:unsigned long int
+unchecked_read	csr.h	/^    virtual int32_t unchecked_read() override {$/;"	f	struct:csr_64_high	typeref:typename:int32_t
+unchecked_read	csr.h	/^    virtual int32_t unchecked_read() override {$/;"	f	struct:csr_64_low	typeref:typename:int32_t
+unchecked_read	csr.h	/^    virtual int32_t unchecked_read() override {$/;"	f	struct:csr_mtvec	typeref:typename:int32_t
+unchecked_write	csr.h	/^    virtual void unchecked_write(int32_t val) override {$/;"	f	struct:csr_64_high	typeref:typename:void
+unchecked_write	csr.h	/^    virtual void unchecked_write(int32_t val) override {$/;"	f	struct:csr_64_low	typeref:typename:void
+unchecked_write	csr.h	/^    virtual void unchecked_write(int32_t val) override {$/;"	f	struct:csr_mtvec	typeref:typename:void
+update_and_get_mtime	clint.h	/^    uint64_t update_and_get_mtime() override {$/;"	f	struct:CLINT	typeref:typename:uint64_t
+upie	csr.h	/^            unsigned upie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+use_data_dmi	main.cpp	/^    bool use_data_dmi = false;$/;"	m	struct:Options	typeref:typename:bool	file:
+use_data_dmi	sifive/sifive_main.cpp	/^    bool use_data_dmi = false;$/;"	m	struct:Options	typeref:typename:bool	file:
+use_debug_runner	main.cpp	/^    bool use_debug_runner = false;$/;"	m	struct:Options	typeref:typename:bool	file:
+use_instr_dmi	main.cpp	/^    bool use_instr_dmi = false;$/;"	m	struct:Options	typeref:typename:bool	file:
+use_instr_dmi	sifive/sifive_main.cpp	/^    bool use_instr_dmi = false;$/;"	m	struct:Options	typeref:typename:bool	file:
+usie	csr.h	/^            unsigned usie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+usip	csr.h	/^            unsigned usip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+utie	csr.h	/^            unsigned utie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+utip	csr.h	/^            unsigned utip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+value	sifive/uart.h	/^    uint32_t value;$/;"	m	struct:Reg32	typeref:typename:uint32_t
+value	tlm_map.h	/^        uint32_t value() {$/;"	f	struct:vp::map::reg_mapping_t	typeref:typename:uint32_t
+vp	tlm_map.h	/^namespace vp { namespace map {$/;"	n
+vptr	tlm_map.h	/^        uint32_t *vptr;$/;"	m	struct:vp::map::reg_mapping_t	typeref:typename:uint32_t *
+vptr	tlm_map.h	/^        uint32_t *vptr;$/;"	m	struct:vp::map::register_access_t	typeref:typename:uint32_t *
+wfi_event	iss.h	/^    sc_core::sc_event wfi_event;$/;"	m	struct:ISS	typeref:typename:sc_core::sc_event
+wiri	csr.h	/^            unsigned wiri: 4;$/;"	m	struct:csr_misa::__anon0f3f74e3010a::__anon0f3f74e30208	typeref:typename:unsigned:4
+wiri1	csr.h	/^            unsigned wiri1: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+wiri2	csr.h	/^            unsigned wiri2: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+wiri3	csr.h	/^            unsigned wiri3: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+wiri4	csr.h	/^            unsigned wiri4: 20;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:20
+wpri1	csr.h	/^            unsigned wpri1: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+wpri1	csr.h	/^            unsigned wpri1: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+wpri2	csr.h	/^            unsigned wpri2: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+wpri2	csr.h	/^            unsigned wpri2: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+wpri3	csr.h	/^            unsigned wpri3: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+wpri3	csr.h	/^            unsigned wpri3: 2;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:2
+wpri4	csr.h	/^            unsigned wpri4: 20;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:20
+wpri4	csr.h	/^            unsigned wpri4: 8;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:8
+write	csr.h	/^    void write(int32_t val, PrivilegeLevel access_level=PrivilegeLevel::Machine) {$/;"	f	struct:csr_base	typeref:typename:void
+write	iss.h	/^    void write(uint32_t index, int32_t value) {$/;"	f	struct:RegFile	typeref:typename:void
+write	tlm_map.h	/^        bool write;$/;"	m	struct:vp::map::register_access_t	typeref:typename:bool
+writeBlock	flash.h	/^	void writeBlock(uint64_t blockOffset)$/;"	f	struct:Blockbuffer	typeref:typename:void
+write_data	memory.h	/^    void write_data(unsigned addr, uint8_t *src, unsigned num_bytes) {$/;"	f	struct:SimpleMemory	typeref:typename:void
+write_data	mram.h	/^    void write_data(unsigned addr, uint8_t *src, unsigned num_bytes) {$/;"	f	struct:SimpleMRAM	typeref:typename:void
+write_memory	gdb_stub.cpp	/^void debug_memory_mapping::write_memory(unsigned start, int nbytes, const std::string &data) {$/;"	f	class:debug_memory_mapping	typeref:typename:void
+write_only	tlm_map.h	/^    constexpr access_mode write_only = {false, true};$/;"	v	namespace:vp::map	typeref:typename:access_mode
+x0	iss.h	/^        x0 = 0,$/;"	e	enum:RegFile::e
+x1	iss.h	/^        x1,$/;"	e	enum:RegFile::e
+x10	iss.h	/^        x10,$/;"	e	enum:RegFile::e
+x11	iss.h	/^        x11,$/;"	e	enum:RegFile::e
+x12	iss.h	/^        x12,$/;"	e	enum:RegFile::e
+x13	iss.h	/^        x13,$/;"	e	enum:RegFile::e
+x14	iss.h	/^        x14,$/;"	e	enum:RegFile::e
+x15	iss.h	/^        x15,$/;"	e	enum:RegFile::e
+x16	iss.h	/^        x16,$/;"	e	enum:RegFile::e
+x17	iss.h	/^        x17,$/;"	e	enum:RegFile::e
+x18	iss.h	/^        x18,$/;"	e	enum:RegFile::e
+x19	iss.h	/^        x19,$/;"	e	enum:RegFile::e
+x2	iss.h	/^        x2,$/;"	e	enum:RegFile::e
+x20	iss.h	/^        x20,$/;"	e	enum:RegFile::e
+x21	iss.h	/^        x21,$/;"	e	enum:RegFile::e
+x22	iss.h	/^        x22,$/;"	e	enum:RegFile::e
+x23	iss.h	/^        x23,$/;"	e	enum:RegFile::e
+x24	iss.h	/^        x24,$/;"	e	enum:RegFile::e
+x25	iss.h	/^        x25,$/;"	e	enum:RegFile::e
+x26	iss.h	/^        x26,$/;"	e	enum:RegFile::e
+x27	iss.h	/^        x27,$/;"	e	enum:RegFile::e
+x28	iss.h	/^        x28,$/;"	e	enum:RegFile::e
+x29	iss.h	/^        x29,$/;"	e	enum:RegFile::e
+x3	iss.h	/^        x3,$/;"	e	enum:RegFile::e
+x30	iss.h	/^        x30,$/;"	e	enum:RegFile::e
+x31	iss.h	/^        x31,$/;"	e	enum:RegFile::e
+x4	iss.h	/^        x4,$/;"	e	enum:RegFile::e
+x5	iss.h	/^        x5,$/;"	e	enum:RegFile::e
+x6	iss.h	/^        x6,$/;"	e	enum:RegFile::e
+x7	iss.h	/^        x7,$/;"	e	enum:RegFile::e
+x8	iss.h	/^        x8,$/;"	e	enum:RegFile::e
+x9	iss.h	/^        x9,$/;"	e	enum:RegFile::e
+xs	csr.h	/^            unsigned xs: 2;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:2
+zero	iss.h	/^        zero = x0,$/;"	e	enum:RegFile::e
+zero_memory	gdb_stub.cpp	/^std::string debug_memory_mapping::zero_memory(int nbytes) {$/;"	f	class:debug_memory_mapping	typeref:typename:std::string
+zimm	instr.h	/^    inline uint32_t zimm() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+~AbstractMapping	tlm_map.h	/^        virtual ~AbstractMapping() {}$/;"	f	struct:vp::map::AbstractMapping
+~DebugCoreRunner	gdb_stub.h	/^    ~DebugCoreRunner()$/;"	f	struct:DebugCoreRunner
+~Flashcontroller	flash.h	/^    ~Flashcontroller()$/;"	f	struct:Flashcontroller
+~LocalRouter	tlm_map.h	/^        ~LocalRouter() {$/;"	f	struct:vp::map::LocalRouter
+~SimpleMRAM	mram.h	/^    ~SimpleMRAM()$/;"	f	struct:SimpleMRAM
+~clint_if	clint.h	/^    virtual ~clint_if() {}$/;"	f	struct:clint_if
+~csr_base	csr.h	/^    virtual ~csr_base() {}$/;"	f	struct:csr_base
+~data_memory_interface	iss.h	/^    virtual ~data_memory_interface() {}$/;"	f	struct:data_memory_interface
+~external_interrupt_target	irq_if.h	/^    virtual ~external_interrupt_target() {}$/;"	f	struct:external_interrupt_target
+~instr_memory_interface	iss.h	/^    virtual ~instr_memory_interface() {}$/;"	f	struct:instr_memory_interface
+~interrupt_gateway	irq_if.h	/^    virtual ~interrupt_gateway() {}$/;"	f	struct:interrupt_gateway
+~timer_interrupt_target	irq_if.h	/^    virtual ~timer_interrupt_target() {}$/;"	f	struct:timer_interrupt_target

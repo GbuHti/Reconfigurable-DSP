@@ -1,0 +1,137 @@
+Makefile:14: ../core/syscall.cpp ../core/clint_if.cpp ../core/instr.cpp ../core/loadelf.cpp ../core/main.cpp
+Makefile:15: syscall.o clint_if.o instr.o loadelf.o main.o
+clint_if.o: In function `std::iterator_traits<char*>::iterator_category std::__iterator_category<char*>(char* const&)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: multiple definition of `_copy_timespec(rv32g_timespec*, timespec*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: first defined here
+clint_if.o: In function `std::bad_cast::bad_cast(std::bad_cast const&)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: multiple definition of `sys_fstat(SyscallHandler*, int, rv32g_stat*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: first defined here
+clint_if.o: In function `sys_gettimeofday(SyscallHandler*, timeval*, void*)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: multiple definition of `sys_gettimeofday(SyscallHandler*, timeval*, void*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: first defined here
+clint_if.o: In function `sys_brk(SyscallHandler*, void*)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: multiple definition of `sys_brk(SyscallHandler*, void*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: first defined here
+clint_if.o: In function `sys_write(SyscallHandler*, int, void const*, unsigned long)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: multiple definition of `sys_write(SyscallHandler*, int, void const*, unsigned long)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: first defined here
+clint_if.o: In function `sys_read(SyscallHandler*, int, void*, unsigned long)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: multiple definition of `sys_read(SyscallHandler*, int, void*, unsigned long)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: first defined here
+clint_if.o: In function `sys_lseek(int, long, int)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: multiple definition of `sys_lseek(int, long, int)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: first defined here
+clint_if.o: In function `sys_open(SyscallHandler*, char const*, int, unsigned int)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: multiple definition of `sys_open(SyscallHandler*, char const*, int, unsigned int)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: first defined here
+clint_if.o: In function `sys_close(int)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: multiple definition of `sys_close(int)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: first defined here
+clint_if.o: In function `sys_time(SyscallHandler*, int*)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: multiple definition of `sys_time(SyscallHandler*, int*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: first defined here
+clint_if.o: In function `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: multiple definition of `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: first defined here
+instr.o: In function `std::iterator_traits<char*>::iterator_category std::__iterator_category<char*>(char* const&)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: multiple definition of `_copy_timespec(rv32g_timespec*, timespec*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: first defined here
+instr.o: In function `std::bad_cast::bad_cast(std::bad_cast const&)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: multiple definition of `sys_fstat(SyscallHandler*, int, rv32g_stat*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: first defined here
+instr.o: In function `sys_gettimeofday(SyscallHandler*, timeval*, void*)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: multiple definition of `sys_gettimeofday(SyscallHandler*, timeval*, void*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: first defined here
+instr.o: In function `sys_brk(SyscallHandler*, void*)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: multiple definition of `sys_brk(SyscallHandler*, void*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: first defined here
+instr.o: In function `sys_write(SyscallHandler*, int, void const*, unsigned long)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: multiple definition of `sys_write(SyscallHandler*, int, void const*, unsigned long)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: first defined here
+instr.o: In function `sys_read(SyscallHandler*, int, void*, unsigned long)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: multiple definition of `sys_read(SyscallHandler*, int, void*, unsigned long)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: first defined here
+instr.o: In function `sys_lseek(int, long, int)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: multiple definition of `sys_lseek(int, long, int)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: first defined here
+instr.o: In function `sys_open(SyscallHandler*, char const*, int, unsigned int)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: multiple definition of `sys_open(SyscallHandler*, char const*, int, unsigned int)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: first defined here
+instr.o: In function `sys_close(int)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: multiple definition of `sys_close(int)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: first defined here
+instr.o: In function `sys_time(SyscallHandler*, int*)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: multiple definition of `sys_time(SyscallHandler*, int*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: first defined here
+instr.o: In function `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: multiple definition of `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: first defined here
+loadelf.o: In function `std::iterator_traits<char*>::iterator_category std::__iterator_category<char*>(char* const&)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: multiple definition of `_copy_timespec(rv32g_timespec*, timespec*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: first defined here
+loadelf.o: In function `std::bad_cast::bad_cast(std::bad_cast const&)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: multiple definition of `sys_fstat(SyscallHandler*, int, rv32g_stat*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: first defined here
+loadelf.o: In function `sys_gettimeofday(SyscallHandler*, timeval*, void*)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: multiple definition of `sys_gettimeofday(SyscallHandler*, timeval*, void*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: first defined here
+loadelf.o: In function `sys_brk(SyscallHandler*, void*)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: multiple definition of `sys_brk(SyscallHandler*, void*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: first defined here
+loadelf.o: In function `sys_write(SyscallHandler*, int, void const*, unsigned long)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: multiple definition of `sys_write(SyscallHandler*, int, void const*, unsigned long)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: first defined here
+loadelf.o: In function `sys_read(SyscallHandler*, int, void*, unsigned long)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: multiple definition of `sys_read(SyscallHandler*, int, void*, unsigned long)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: first defined here
+loadelf.o: In function `sys_lseek(int, long, int)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: multiple definition of `sys_lseek(int, long, int)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: first defined here
+loadelf.o: In function `sys_open(SyscallHandler*, char const*, int, unsigned int)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: multiple definition of `sys_open(SyscallHandler*, char const*, int, unsigned int)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: first defined here
+loadelf.o: In function `sys_close(int)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: multiple definition of `sys_close(int)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: first defined here
+loadelf.o: In function `sys_time(SyscallHandler*, int*)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: multiple definition of `sys_time(SyscallHandler*, int*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: first defined here
+loadelf.o: In function `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: multiple definition of `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: first defined here
+main.o: In function `std::iterator_traits<char*>::iterator_category std::__iterator_category<char*>(char* const&)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: multiple definition of `_copy_timespec(rv32g_timespec*, timespec*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: first defined here
+main.o: In function `std::bad_cast::bad_cast(std::bad_cast const&)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: multiple definition of `sys_fstat(SyscallHandler*, int, rv32g_stat*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: first defined here
+main.o: In function `sys_gettimeofday(SyscallHandler*, timeval*, void*)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: multiple definition of `sys_gettimeofday(SyscallHandler*, timeval*, void*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: first defined here
+main.o: In function `sys_brk(SyscallHandler*, void*)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: multiple definition of `sys_brk(SyscallHandler*, void*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: first defined here
+main.o: In function `sys_write(SyscallHandler*, int, void const*, unsigned long)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: multiple definition of `sys_write(SyscallHandler*, int, void const*, unsigned long)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: first defined here
+main.o: In function `sys_read(SyscallHandler*, int, void*, unsigned long)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: multiple definition of `sys_read(SyscallHandler*, int, void*, unsigned long)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: first defined here
+main.o: In function `sys_lseek(int, long, int)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: multiple definition of `sys_lseek(int, long, int)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: first defined here
+main.o: In function `sys_open(SyscallHandler*, char const*, int, unsigned int)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: multiple definition of `sys_open(SyscallHandler*, char const*, int, unsigned int)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: first defined here
+main.o: In function `sys_close(int)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: multiple definition of `sys_close(int)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: first defined here
+main.o: In function `sys_time(SyscallHandler*, int*)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: multiple definition of `sys_time(SyscallHandler*, int*)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: first defined here
+main.o: In function `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: multiple definition of `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)'
+syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: first defined here
+/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/ld: cannot find -lsystemc
+collect2: error: ld returned 1 exit status
+make: *** [soc] Error 1

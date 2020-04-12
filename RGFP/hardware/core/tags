@@ -1,0 +1,725 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+A0	csr.h	/^            unsigned A0: 2;             \/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:2
+ADD	instr.cpp	/^    static T ADD(unsigned rd, unsigned rs1, unsigned rs2) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+ADD	instr.h	/^    ADD,$/;"	e	enum:Opcode::mapping
+ADDI	instr.cpp	/^    static T ADDI(unsigned rd, unsigned rs1, int I_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+ADDI	instr.h	/^    ADDI,$/;"	e	enum:Opcode::mapping
+AMOADD_W	instr.h	/^    AMOADD_W,$/;"	e	enum:Opcode::mapping
+AMOAND_W	instr.h	/^    AMOAND_W,$/;"	e	enum:Opcode::mapping
+AMOMAXU_W	instr.h	/^    AMOMAXU_W,$/;"	e	enum:Opcode::mapping
+AMOMAX_W	instr.h	/^    AMOMAX_W,$/;"	e	enum:Opcode::mapping
+AMOMINU_W	instr.h	/^    AMOMINU_W,$/;"	e	enum:Opcode::mapping
+AMOMIN_W	instr.h	/^    AMOMIN_W,$/;"	e	enum:Opcode::mapping
+AMOOR_W	instr.h	/^    AMOOR_W,$/;"	e	enum:Opcode::mapping
+AMOSWAP_W	instr.h	/^    AMOSWAP_W,$/;"	e	enum:Opcode::mapping
+AMOXOR_W	instr.h	/^    AMOXOR_W,$/;"	e	enum:Opcode::mapping
+AND	instr.cpp	/^    static T AND(unsigned rd, unsigned rs1, unsigned rs2) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+AND	instr.h	/^    AND,$/;"	e	enum:Opcode::mapping
+ANDI	instr.cpp	/^    static T ANDI(unsigned rd, unsigned rs1, int I_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+ANDI	instr.h	/^    ANDI,$/;"	e	enum:Opcode::mapping
+AUIPC	instr.h	/^    AUIPC,$/;"	e	enum:Opcode::mapping
+BEQ	instr.cpp	/^    static T BEQ(unsigned rs1, unsigned rs2, int B_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+BEQ	instr.h	/^    BEQ,$/;"	e	enum:Opcode::mapping
+BGE	instr.h	/^    BGE,$/;"	e	enum:Opcode::mapping
+BGEU	instr.h	/^    BGEU,$/;"	e	enum:Opcode::mapping
+BIT_RANGE	instr.h	/^#define BIT_RANGE(/;"	d
+BIT_SINGLE	instr.h	/^#define BIT_SINGLE(/;"	d
+BIT_SINGLE_P1	instr.h	/^#define BIT_SINGLE_P1(/;"	d
+BIT_SINGLE_PN	instr.h	/^#define BIT_SINGLE_PN(/;"	d
+BIT_SLICE	instr.h	/^#define BIT_SLICE(/;"	d
+BLT	instr.h	/^    BLT,$/;"	e	enum:Opcode::mapping
+BLTU	instr.h	/^    BLTU,$/;"	e	enum:Opcode::mapping
+BNE	instr.cpp	/^    static T BNE(unsigned rs1, unsigned rs2, int B_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+BNE	instr.h	/^    BNE,$/;"	e	enum:Opcode::mapping
+B_imm	instr.h	/^    inline int32_t B_imm() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+CLINT_IF_H	clint_if.h	/^#define CLINT_IF_H$/;"	d
+CSRRC	instr.h	/^    CSRRC,$/;"	e	enum:Opcode::mapping
+CSRRCI	instr.h	/^    CSRRCI,$/;"	e	enum:Opcode::mapping
+CSRRS	instr.h	/^    CSRRS,$/;"	e	enum:Opcode::mapping
+CSRRSI	instr.h	/^    CSRRSI,$/;"	e	enum:Opcode::mapping
+CSRRW	instr.h	/^    CSRRW,$/;"	e	enum:Opcode::mapping
+CSRRWI	instr.h	/^    CSRRWI,$/;"	e	enum:Opcode::mapping
+CSR_CYCLEH_ADDR	csr.h	/^    CSR_CYCLEH_ADDR = 0xC80,$/;"	e	enum:csr_addresses
+CSR_CYCLE_ADDR	csr.h	/^    CSR_CYCLE_ADDR = 0xC00,$/;"	e	enum:csr_addresses
+CSR_H	csr.h	/^#define CSR_H$/;"	d
+CSR_INSTRETH_ADDR	csr.h	/^    CSR_INSTRETH_ADDR = 0xC82,$/;"	e	enum:csr_addresses
+CSR_INSTRET_ADDR	csr.h	/^    CSR_INSTRET_ADDR = 0xC02,$/;"	e	enum:csr_addresses
+CSR_MARCHID_ADDR	csr.h	/^    CSR_MARCHID_ADDR = 0xF12,$/;"	e	enum:csr_addresses
+CSR_MCAUSE_ADDR	csr.h	/^    CSR_MCAUSE_ADDR = 0x342,$/;"	e	enum:csr_addresses
+CSR_MCYCLEH_ADDR	csr.h	/^    CSR_MCYCLEH_ADDR = 0xB80,$/;"	e	enum:csr_addresses
+CSR_MCYCLE_ADDR	csr.h	/^    CSR_MCYCLE_ADDR = 0xB00,$/;"	e	enum:csr_addresses
+CSR_MEPC_ADDR	csr.h	/^    CSR_MEPC_ADDR = 0x341,$/;"	e	enum:csr_addresses
+CSR_MHARTID_ADDR	csr.h	/^    CSR_MHARTID_ADDR = 0xF14,$/;"	e	enum:csr_addresses
+CSR_MIE_ADDR	csr.h	/^    CSR_MIE_ADDR = 0x304,$/;"	e	enum:csr_addresses
+CSR_MIMPID_ADDR	csr.h	/^    CSR_MIMPID_ADDR = 0xF13,$/;"	e	enum:csr_addresses
+CSR_MINSTRETH_ADDR	csr.h	/^    CSR_MINSTRETH_ADDR = 0xB82,$/;"	e	enum:csr_addresses
+CSR_MINSTRET_ADDR	csr.h	/^    CSR_MINSTRET_ADDR = 0xB02,$/;"	e	enum:csr_addresses
+CSR_MIP_ADDR	csr.h	/^    CSR_MIP_ADDR = 0x344,$/;"	e	enum:csr_addresses
+CSR_MISA_ADDR	csr.h	/^    CSR_MISA_ADDR = 0x301,$/;"	e	enum:csr_addresses
+CSR_MSCRATCH_ADDR	csr.h	/^    CSR_MSCRATCH_ADDR = 0x340,$/;"	e	enum:csr_addresses
+CSR_MSTATUS_ADDR	csr.h	/^    CSR_MSTATUS_ADDR = 0x300,$/;"	e	enum:csr_addresses
+CSR_MTIMEH_ADDR	csr.h	/^    CSR_MTIMEH_ADDR  = 0xB81,$/;"	e	enum:csr_addresses
+CSR_MTIME_ADDR	csr.h	/^    CSR_MTIME_ADDR  = 0xB01,$/;"	e	enum:csr_addresses
+CSR_MTVAL_ADDR	csr.h	/^    CSR_MTVAL_ADDR = 0x343,$/;"	e	enum:csr_addresses
+CSR_MTVEC_ADDR	csr.h	/^    CSR_MTVEC_ADDR = 0x305,$/;"	e	enum:csr_addresses
+CSR_MVENDORID_ADDR	csr.h	/^    CSR_MVENDORID_ADDR = 0xF11,$/;"	e	enum:csr_addresses
+CSR_TABLE_ADD_COUNTER_64	csr.h	/^#define CSR_TABLE_ADD_COUNTER_64(/;"	d
+CSR_TABLE_DEFINE_COUNTER	csr.h	/^#define CSR_TABLE_DEFINE_COUNTER(/;"	d
+CSR_TIMEH_ADDR	csr.h	/^    CSR_TIMEH_ADDR  = 0xC81,$/;"	e	enum:csr_addresses
+CSR_TIME_ADDR	csr.h	/^    CSR_TIME_ADDR  = 0xC01,$/;"	e	enum:csr_addresses
+C_ADD	instr.cpp	/^        C_ADD,$/;"	e	enum:Compressed::Opcode	file:
+C_ADDI	instr.cpp	/^        C_ADDI,$/;"	e	enum:Compressed::Opcode	file:
+C_ADDI16SP	instr.cpp	/^        C_ADDI16SP,$/;"	e	enum:Compressed::Opcode	file:
+C_ADDI16SP_NZIMM	instr.cpp	/^int32_t C_ADDI16SP_NZIMM(int32_t n) {$/;"	f	typeref:typename:int32_t
+C_ADDI4SPN	instr.cpp	/^        C_ADDI4SPN,$/;"	e	enum:Compressed::Opcode	file:
+C_ADDI4SPN_NZUIMM	instr.cpp	/^unsigned C_ADDI4SPN_NZUIMM(uint32_t n) {$/;"	f	typeref:typename:unsigned
+C_AND	instr.cpp	/^        C_AND,$/;"	e	enum:Compressed::Opcode	file:
+C_ANDI	instr.cpp	/^        C_ANDI,$/;"	e	enum:Compressed::Opcode	file:
+C_BEQZ	instr.cpp	/^        C_BEQZ,$/;"	e	enum:Compressed::Opcode	file:
+C_BNEZ	instr.cpp	/^        C_BNEZ,$/;"	e	enum:Compressed::Opcode	file:
+C_BRANCH_IMM	instr.cpp	/^int32_t C_BRANCH_IMM(int32_t n) {$/;"	f	typeref:typename:int32_t
+C_EBREAK	instr.cpp	/^        C_EBREAK,$/;"	e	enum:Compressed::Opcode	file:
+C_Illegal	instr.cpp	/^        C_Illegal,$/;"	e	enum:Compressed::Opcode	file:
+C_J	instr.cpp	/^        C_J,$/;"	e	enum:Compressed::Opcode	file:
+C_JAL	instr.cpp	/^        C_JAL,$/;"	e	enum:Compressed::Opcode	file:
+C_JALR	instr.cpp	/^        C_JALR,$/;"	e	enum:Compressed::Opcode	file:
+C_JAL_IMM	instr.cpp	/^int32_t C_JAL_IMM(int32_t n) {$/;"	f	typeref:typename:int32_t
+C_JR	instr.cpp	/^        C_JR,$/;"	e	enum:Compressed::Opcode	file:
+C_J_IMM	instr.cpp	/^int32_t C_J_IMM(int32_t n) {$/;"	f	typeref:typename:int32_t
+C_LI	instr.cpp	/^        C_LI,$/;"	e	enum:Compressed::Opcode	file:
+C_LUI	instr.cpp	/^        C_LUI,$/;"	e	enum:Compressed::Opcode	file:
+C_LUI_NZIMM	instr.cpp	/^int32_t C_LUI_NZIMM(int32_t n) {$/;"	f	typeref:typename:int32_t
+C_LW	instr.cpp	/^        C_LW,$/;"	e	enum:Compressed::Opcode	file:
+C_LWSP	instr.cpp	/^        C_LWSP,$/;"	e	enum:Compressed::Opcode	file:
+C_LWSP_UIMM	instr.cpp	/^uint32_t C_LWSP_UIMM(uint32_t n) {$/;"	f	typeref:typename:uint32_t
+C_LW_UIMM	instr.cpp	/^unsigned C_LW_UIMM(uint32_t n) {$/;"	f	typeref:typename:unsigned
+C_MV	instr.cpp	/^        C_MV,$/;"	e	enum:Compressed::Opcode	file:
+C_NOP	instr.cpp	/^        C_NOP,$/;"	e	enum:Compressed::Opcode	file:
+C_OR	instr.cpp	/^        C_OR,$/;"	e	enum:Compressed::Opcode	file:
+C_Reserved	instr.cpp	/^        C_Reserved,$/;"	e	enum:Compressed::Opcode	file:
+C_SLLI	instr.cpp	/^        C_SLLI,$/;"	e	enum:Compressed::Opcode	file:
+C_SRAI	instr.cpp	/^        C_SRAI,$/;"	e	enum:Compressed::Opcode	file:
+C_SRLI	instr.cpp	/^        C_SRLI,$/;"	e	enum:Compressed::Opcode	file:
+C_SUB	instr.cpp	/^        C_SUB,$/;"	e	enum:Compressed::Opcode	file:
+C_SW	instr.cpp	/^        C_SW,$/;"	e	enum:Compressed::Opcode	file:
+C_SWSP	instr.cpp	/^        C_SWSP,$/;"	e	enum:Compressed::Opcode	file:
+C_SWSP_UIMM	instr.cpp	/^uint32_t C_SWSP_UIMM(uint32_t n) {$/;"	f	typeref:typename:uint32_t
+C_SW_UIMM	instr.cpp	/^unsigned C_SW_UIMM(uint32_t n) {$/;"	f	typeref:typename:unsigned
+C_XOR	instr.cpp	/^        C_XOR,$/;"	e	enum:Compressed::Opcode	file:
+Clint	clint_if.h	/^	Clint(sc_core::sc_module_name, timer_interrupt_target * target)$/;"	f	struct:Clint
+Clint	clint_if.h	/^struct Clint: public clint_if, $/;"	s
+CombinedMemoryInterface	mem_if.h	/^    CombinedMemoryInterface(sc_core::sc_module_name, tlm_utils::tlm_quantumkeeper &keeper)$/;"	f	struct:CombinedMemoryInterface
+CombinedMemoryInterface	mem_if.h	/^struct CombinedMemoryInterface : public sc_core::sc_module,$/;"	s
+Compressed	instr.cpp	/^namespace Compressed {$/;"	n	file:
+CoreExecStatus	iss.h	/^enum class CoreExecStatus {$/;"	g
+DIV	instr.h	/^    DIV,$/;"	e	enum:Opcode::mapping
+DIVU	instr.h	/^    DIVU,$/;"	e	enum:Opcode::mapping
+Direct	csr.h	/^        Direct = 0,$/;"	e	enum:csr_mtvec::Mode
+DirectCoreRunner	iss.h	/^    DirectCoreRunner(ISS &core)$/;"	f	struct:DirectCoreRunner
+DirectCoreRunner	iss.h	/^struct DirectCoreRunner : public sc_core::sc_module {$/;"	s
+EBREAK	instr.cpp	/^    static T EBREAK() {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+EBREAK	instr.h	/^    EBREAK,$/;"	e	enum:Opcode::mapping
+ECALL	instr.h	/^    ECALL,$/;"	e	enum:Opcode::mapping
+EXTRACT_SIGN_BIT	instr.h	/^#define EXTRACT_SIGN_BIT(/;"	d
+F12_EBREAK	instr.h	/^        F12_EBREAK = 0b000000000001,$/;"	e	enum:Opcode::parts
+F12_ECALL	instr.h	/^        F12_ECALL  = 0b000000000000,$/;"	e	enum:Opcode::parts
+F12_MRET	instr.h	/^        F12_MRET   = 0b001100000010,$/;"	e	enum:Opcode::parts
+F12_SRET	instr.h	/^        F12_SRET   = 0b000100000010,$/;"	e	enum:Opcode::parts
+F12_URET	instr.h	/^                F12_URET   = 0b000000000010,$/;"	e	enum:Opcode::parts
+F12_WFI	instr.h	/^        F12_WFI    = 0b000100000101,$/;"	e	enum:Opcode::parts
+F3_ADD	instr.h	/^        F3_ADD    = 0b000,$/;"	e	enum:Opcode::parts
+F3_ADDI	instr.h	/^        F3_ADDI   = 0b000,$/;"	e	enum:Opcode::parts
+F3_AND	instr.h	/^        F3_AND    = 0b111,$/;"	e	enum:Opcode::parts
+F3_ANDI	instr.h	/^        F3_ANDI   = 0b111,$/;"	e	enum:Opcode::parts
+F3_BEQ	instr.h	/^        F3_BEQ    = 0b000,$/;"	e	enum:Opcode::parts
+F3_BGE	instr.h	/^        F3_BGE    = 0b101,$/;"	e	enum:Opcode::parts
+F3_BGEU	instr.h	/^        F3_BGEU   = 0b111,$/;"	e	enum:Opcode::parts
+F3_BLT	instr.h	/^        F3_BLT    = 0b100,$/;"	e	enum:Opcode::parts
+F3_BLTU	instr.h	/^        F3_BLTU   = 0b110,$/;"	e	enum:Opcode::parts
+F3_BNE	instr.h	/^        F3_BNE    = 0b001,$/;"	e	enum:Opcode::parts
+F3_CSRRC	instr.h	/^        F3_CSRRC   = 0b011,$/;"	e	enum:Opcode::parts
+F3_CSRRCI	instr.h	/^        F3_CSRRCI  = 0b111,$/;"	e	enum:Opcode::parts
+F3_CSRRS	instr.h	/^        F3_CSRRS   = 0b010,$/;"	e	enum:Opcode::parts
+F3_CSRRSI	instr.h	/^        F3_CSRRSI  = 0b110,$/;"	e	enum:Opcode::parts
+F3_CSRRW	instr.h	/^                F3_CSRRW   = 0b001,$/;"	e	enum:Opcode::parts
+F3_CSRRWI	instr.h	/^        F3_CSRRWI  = 0b101,$/;"	e	enum:Opcode::parts
+F3_DIV	instr.h	/^        F3_DIV    = 0b100,$/;"	e	enum:Opcode::parts
+F3_DIVU	instr.h	/^        F3_DIVU   = 0b101,$/;"	e	enum:Opcode::parts
+F3_JALR	instr.h	/^        F3_JALR   = 0b000,$/;"	e	enum:Opcode::parts
+F3_LB	instr.h	/^        F3_LB     = 0b000,$/;"	e	enum:Opcode::parts
+F3_LBU	instr.h	/^        F3_LBU    = 0b100,$/;"	e	enum:Opcode::parts
+F3_LH	instr.h	/^        F3_LH     = 0b001,$/;"	e	enum:Opcode::parts
+F3_LHU	instr.h	/^        F3_LHU    = 0b101,$/;"	e	enum:Opcode::parts
+F3_LW	instr.h	/^        F3_LW     = 0b010,$/;"	e	enum:Opcode::parts
+F3_MUL	instr.h	/^        F3_MUL    = 0b000,$/;"	e	enum:Opcode::parts
+F3_MULH	instr.h	/^        F3_MULH   = 0b001,$/;"	e	enum:Opcode::parts
+F3_MULHSU	instr.h	/^        F3_MULHSU = 0b010,$/;"	e	enum:Opcode::parts
+F3_MULHU	instr.h	/^        F3_MULHU  = 0b011,$/;"	e	enum:Opcode::parts
+F3_OR	instr.h	/^        F3_OR     = 0b110,$/;"	e	enum:Opcode::parts
+F3_ORI	instr.h	/^        F3_ORI    = 0b110,$/;"	e	enum:Opcode::parts
+F3_REM	instr.h	/^        F3_REM    = 0b110,$/;"	e	enum:Opcode::parts
+F3_REMU	instr.h	/^        F3_REMU   = 0b111,$/;"	e	enum:Opcode::parts
+F3_SB	instr.h	/^        F3_SB     = 0b000,$/;"	e	enum:Opcode::parts
+F3_SH	instr.h	/^        F3_SH     = 0b001,$/;"	e	enum:Opcode::parts
+F3_SLL	instr.h	/^        F3_SLL    = 0b001,$/;"	e	enum:Opcode::parts
+F3_SLLI	instr.h	/^        F3_SLLI   = 0b001,$/;"	e	enum:Opcode::parts
+F3_SLT	instr.h	/^        F3_SLT    = 0b010,$/;"	e	enum:Opcode::parts
+F3_SLTI	instr.h	/^        F3_SLTI   = 0b010,$/;"	e	enum:Opcode::parts
+F3_SLTIU	instr.h	/^        F3_SLTIU  = 0b011,$/;"	e	enum:Opcode::parts
+F3_SLTU	instr.h	/^        F3_SLTU   = 0b011,$/;"	e	enum:Opcode::parts
+F3_SRA	instr.h	/^        F3_SRA    = 0b101,$/;"	e	enum:Opcode::parts
+F3_SRL	instr.h	/^        F3_SRL    = 0b101,$/;"	e	enum:Opcode::parts
+F3_SRLI	instr.h	/^        F3_SRLI   = 0b101,$/;"	e	enum:Opcode::parts
+F3_SUB	instr.h	/^        F3_SUB    = 0b000,$/;"	e	enum:Opcode::parts
+F3_SW	instr.h	/^        F3_SW     = 0b010,$/;"	e	enum:Opcode::parts
+F3_SYS	instr.h	/^        F3_SYS     = 0b000,$/;"	e	enum:Opcode::parts
+F3_XOR	instr.h	/^        F3_XOR    = 0b100,$/;"	e	enum:Opcode::parts
+F3_XORI	instr.h	/^        F3_XORI   = 0b100,$/;"	e	enum:Opcode::parts
+F5_AMOADD_W	instr.h	/^        F5_AMOADD_W   = 0b00000,$/;"	e	enum:Opcode::parts
+F5_AMOAND_W	instr.h	/^        F5_AMOAND_W   = 0b01100,$/;"	e	enum:Opcode::parts
+F5_AMOMAXU_W	instr.h	/^        F5_AMOMAXU_W  = 0b11100,$/;"	e	enum:Opcode::parts
+F5_AMOMAX_W	instr.h	/^        F5_AMOMAX_W   = 0b10100,$/;"	e	enum:Opcode::parts
+F5_AMOMINU_W	instr.h	/^        F5_AMOMINU_W  = 0b11000,$/;"	e	enum:Opcode::parts
+F5_AMOMIN_W	instr.h	/^        F5_AMOMIN_W   = 0b10000,$/;"	e	enum:Opcode::parts
+F5_AMOOR_W	instr.h	/^        F5_AMOOR_W    = 0b01000,$/;"	e	enum:Opcode::parts
+F5_AMOSWAP_W	instr.h	/^        F5_AMOSWAP_W  = 0b00001,$/;"	e	enum:Opcode::parts
+F5_AMOXOR_W	instr.h	/^        F5_AMOXOR_W   = 0b00100,$/;"	e	enum:Opcode::parts
+F5_LR_W	instr.h	/^        F5_LR_W       = 0b00010,$/;"	e	enum:Opcode::parts
+F5_SC_W	instr.h	/^        F5_SC_W       = 0b00011,$/;"	e	enum:Opcode::parts
+F7_ADD	instr.h	/^        F7_ADD    = 0b0000000,$/;"	e	enum:Opcode::parts
+F7_MUL	instr.h	/^        F7_MUL    = 0b0000001,$/;"	e	enum:Opcode::parts
+F7_SFENCE_VMA	instr.h	/^        F7_SFENCE_VMA = 0b0001001,$/;"	e	enum:Opcode::parts
+F7_SRAI	instr.h	/^        F7_SRAI   = 0b0100000,$/;"	e	enum:Opcode::parts
+F7_SRLI	instr.h	/^        F7_SRLI   = 0b0000000,$/;"	e	enum:Opcode::parts
+F7_SUB	instr.h	/^        F7_SUB    = 0b0100000,$/;"	e	enum:Opcode::parts
+FENCE	instr.h	/^    FENCE,$/;"	e	enum:Opcode::mapping
+HitBreakpoint	iss.h	/^    HitBreakpoint,$/;"	e	enum:CoreExecStatus
+INCLUDE_CSR_MIXIN	csr.h	/^#define INCLUDE_CSR_MIXIN	/;"	d
+INSTR_H	instr.h	/^#define INSTR_H$/;"	d
+IRQ_IF_H	irq_if.h	/^#define IRQ_IF_H$/;"	d
+ISS	iss.h	/^    ISS()$/;"	f	struct:ISS
+ISS	iss.h	/^struct ISS : public sc_core::sc_module,$/;"	s
+ISS_H	iss.h	/^#define ISS_H$/;"	d
+I_imm	instr.h	/^    inline int32_t I_imm() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+Instruction	instr.h	/^    Instruction(uint32_t instr)$/;"	f	struct:Instruction
+Instruction	instr.h	/^struct Instruction $/;"	s
+InstructionFactory	instr.cpp	/^struct InstructionFactory $/;"	s	file:
+JAL	instr.cpp	/^    static T JAL(unsigned rd, int J_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+JAL	instr.h	/^    JAL,$/;"	e	enum:Opcode::mapping
+JALR	instr.cpp	/^    static T JALR(unsigned rd, unsigned rs1, int I_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+JALR	instr.h	/^    JALR,$/;"	e	enum:Opcode::mapping
+J_imm	instr.h	/^    inline int32_t J_imm() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+L0	csr.h	/^            unsigned L0: 1;             \/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:1
+LB	instr.h	/^    LB,$/;"	e	enum:Opcode::mapping
+LBU	instr.h	/^    LBU,$/;"	e	enum:Opcode::mapping
+LH	instr.h	/^    LH,$/;"	e	enum:Opcode::mapping
+LHU	instr.h	/^    LHU,$/;"	e	enum:Opcode::mapping
+LR_W	instr.h	/^    LR_W,$/;"	e	enum:Opcode::mapping
+LUI	instr.cpp	/^    static T LUI(unsigned rd, int U_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+LUI	instr.h	/^    LUI = 1,$/;"	e	enum:Opcode::mapping
+LW	instr.cpp	/^    static T LW(unsigned rd, unsigned rs1, int I_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+LW	instr.h	/^    LW,$/;"	e	enum:Opcode::mapping
+MEM_IF	mem_if.h	/^#define MEM_IF$/;"	d
+MRET	instr.h	/^    MRET,$/;"	e	enum:Opcode::mapping
+MUL	instr.h	/^    MUL,$/;"	e	enum:Opcode::mapping
+MULH	instr.h	/^    MULH,$/;"	e	enum:Opcode::mapping
+MULHSU	instr.h	/^    MULHSU,$/;"	e	enum:Opcode::mapping
+MULHU	instr.h	/^    MULHU,$/;"	e	enum:Opcode::mapping
+Mode	csr.h	/^    enum Mode {$/;"	g	struct:csr_mtvec
+NUMBER_OF_INSTRUCTIONS	instr.h	/^    NUMBER_OF_INSTRUCTIONS$/;"	e	enum:Opcode::mapping
+NUM_REGS	regfile.h	/^        NUM_REGS = 32$/;"	e	enum:RegFile::__anonf5c575790103
+OP_ADD	instr.h	/^        OP_ADD    = 0b0110011,$/;"	e	enum:Opcode::parts
+OP_ADDI	instr.h	/^        OP_ADDI   = 0b0010011,$/;"	e	enum:Opcode::parts
+OP_AMO	instr.h	/^        OP_AMO        = 0b0101111,$/;"	e	enum:Opcode::parts
+OP_AUIPC	instr.h	/^        OP_AUIPC  = 0b0010111,$/;"	e	enum:Opcode::parts
+OP_BEQ	instr.h	/^        OP_BEQ    = 0b1100011,$/;"	e	enum:Opcode::parts
+OP_ECALL	instr.h	/^        OP_ECALL   = 0b1110011,$/;"	e	enum:Opcode::parts
+OP_FENCE	instr.h	/^        OP_FENCE   = 0b0001111,$/;"	e	enum:Opcode::parts
+OP_JAL	instr.h	/^        OP_JAL    = 0b1101111,$/;"	e	enum:Opcode::parts
+OP_JALR	instr.h	/^        OP_JALR   = 0b1100111,$/;"	e	enum:Opcode::parts
+OP_LB	instr.h	/^        OP_LB     = 0b0000011,$/;"	e	enum:Opcode::parts
+OP_LUI	instr.h	/^        OP_LUI    = 0b0110111,$/;"	e	enum:Opcode::parts
+OP_SB	instr.h	/^        OP_SB     = 0b0100011,$/;"	e	enum:Opcode::parts
+OR	instr.cpp	/^    static T OR(unsigned rd, unsigned rs1, unsigned rs2) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+OR	instr.h	/^    OR,$/;"	e	enum:Opcode::mapping
+ORI	instr.h	/^    ORI,$/;"	e	enum:Opcode::mapping
+Opcode	instr.cpp	/^   enum Opcode $/;"	g	namespace:Compressed	file:
+Opcode	instr.h	/^namespace Opcode {$/;"	n
+R0	csr.h	/^            unsigned R0: 1;             \/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:1
+REGFILE_H	regfile.h	/^#define REGFILE_H$/;"	d
+REG_MIN	iss.h	/^        REG_MIN = INT32_MIN,$/;"	e	enum:ISS::__anon0fac0c2a0103
+REM	instr.h	/^    REM,$/;"	e	enum:Opcode::mapping
+REMU	instr.h	/^    REMU,$/;"	e	enum:Opcode::mapping
+RegFile	regfile.h	/^    RegFile() {$/;"	f	struct:RegFile
+RegFile	regfile.h	/^    RegFile(const RegFile &other) {$/;"	f	struct:RegFile
+RegFile	regfile.h	/^struct RegFile $/;"	s
+Runnable	iss.h	/^    Runnable,$/;"	e	enum:CoreExecStatus
+SB	instr.h	/^    SB,$/;"	e	enum:Opcode::mapping
+SC_W	instr.h	/^    SC_W,$/;"	e	enum:Opcode::mapping
+SFENCE_VMA	instr.h	/^    SFENCE_VMA,$/;"	e	enum:Opcode::mapping
+SH	instr.h	/^    SH,$/;"	e	enum:Opcode::mapping
+SLL	instr.h	/^    SLL,$/;"	e	enum:Opcode::mapping
+SLLI	instr.cpp	/^    static T SLLI(unsigned rd, unsigned rs1, unsigned shamt) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+SLLI	instr.h	/^    SLLI,$/;"	e	enum:Opcode::mapping
+SLT	instr.h	/^    SLT,$/;"	e	enum:Opcode::mapping
+SLTI	instr.h	/^    SLTI,$/;"	e	enum:Opcode::mapping
+SLTIU	instr.h	/^    SLTIU,$/;"	e	enum:Opcode::mapping
+SLTU	instr.h	/^    SLTU,$/;"	e	enum:Opcode::mapping
+SRA	instr.h	/^    SRA,$/;"	e	enum:Opcode::mapping
+SRAI	instr.cpp	/^    static T SRAI(unsigned rd, unsigned rs1, unsigned shamt) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+SRAI	instr.h	/^    SRAI,$/;"	e	enum:Opcode::mapping
+SRET	instr.h	/^    SRET,$/;"	e	enum:Opcode::mapping
+SRL	instr.h	/^    SRL,$/;"	e	enum:Opcode::mapping
+SRLI	instr.cpp	/^    static T SRLI(unsigned rd, unsigned rs1, unsigned shamt) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+SRLI	instr.h	/^    SRLI,$/;"	e	enum:Opcode::mapping
+SUB	instr.cpp	/^    static T SUB(unsigned rd, unsigned rs1, unsigned rs2) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+SUB	instr.h	/^    SUB,$/;"	e	enum:Opcode::mapping
+SW	instr.cpp	/^    static T SW(unsigned rs1, unsigned rs2, int S_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+SW	instr.h	/^    SW,$/;"	e	enum:Opcode::mapping
+SYSCALL_H	syscall.h	/^#define SYSCALL_H$/;"	d
+SYS_access	syscall.h	/^#define SYS_access /;"	d
+SYS_brk	syscall.h	/^#define SYS_brk /;"	d
+SYS_chdir	syscall.h	/^#define SYS_chdir /;"	d
+SYS_close	syscall.h	/^#define SYS_close /;"	d
+SYS_dup	syscall.h	/^#define SYS_dup /;"	d
+SYS_exit	syscall.h	/^#define SYS_exit /;"	d
+SYS_exit_group	syscall.h	/^#define SYS_exit_group /;"	d
+SYS_faccessat	syscall.h	/^#define SYS_faccessat /;"	d
+SYS_fcntl	syscall.h	/^#define SYS_fcntl /;"	d
+SYS_fstat	syscall.h	/^#define SYS_fstat /;"	d
+SYS_fstatat	syscall.h	/^#define SYS_fstatat /;"	d
+SYS_getcwd	syscall.h	/^#define SYS_getcwd /;"	d
+SYS_getdents	syscall.h	/^#define SYS_getdents /;"	d
+SYS_getegid	syscall.h	/^#define SYS_getegid /;"	d
+SYS_geteuid	syscall.h	/^#define SYS_geteuid /;"	d
+SYS_getgid	syscall.h	/^#define SYS_getgid /;"	d
+SYS_getmainvars	syscall.h	/^#define SYS_getmainvars /;"	d
+SYS_getpid	syscall.h	/^#define SYS_getpid /;"	d
+SYS_gettimeofday	syscall.h	/^#define SYS_gettimeofday /;"	d
+SYS_getuid	syscall.h	/^#define SYS_getuid /;"	d
+SYS_host_error	syscall.h	/^#define SYS_host_error /;"	d
+SYS_host_test_fail	syscall.h	/^#define SYS_host_test_fail /;"	d
+SYS_host_test_pass	syscall.h	/^#define SYS_host_test_pass /;"	d
+SYS_kill	syscall.h	/^#define SYS_kill /;"	d
+SYS_link	syscall.h	/^#define SYS_link /;"	d
+SYS_lseek	syscall.h	/^#define SYS_lseek /;"	d
+SYS_lstat	syscall.h	/^#define SYS_lstat /;"	d
+SYS_mkdir	syscall.h	/^#define SYS_mkdir /;"	d
+SYS_mmap	syscall.h	/^#define SYS_mmap /;"	d
+SYS_mremap	syscall.h	/^#define SYS_mremap /;"	d
+SYS_munmap	syscall.h	/^#define SYS_munmap /;"	d
+SYS_open	syscall.h	/^#define SYS_open /;"	d
+SYS_openat	syscall.h	/^#define SYS_openat /;"	d
+SYS_pread	syscall.h	/^#define SYS_pread /;"	d
+SYS_pwrite	syscall.h	/^#define SYS_pwrite /;"	d
+SYS_read	syscall.h	/^#define SYS_read /;"	d
+SYS_rt_sigaction	syscall.h	/^#define SYS_rt_sigaction /;"	d
+SYS_stat	syscall.h	/^#define SYS_stat /;"	d
+SYS_time	syscall.h	/^#define SYS_time /;"	d
+SYS_times	syscall.h	/^#define SYS_times /;"	d
+SYS_uname	syscall.h	/^#define SYS_uname /;"	d
+SYS_unlink	syscall.h	/^#define SYS_unlink /;"	d
+SYS_write	syscall.h	/^#define SYS_write /;"	d
+SYS_writev	syscall.h	/^#define SYS_writev /;"	d
+S_imm	instr.h	/^    inline int32_t S_imm() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+SyscallHandler	syscall.h	/^struct SyscallHandler$/;"	s
+T	instr.cpp	/^    typedef Instruction T;$/;"	t	struct:InstructionFactory	typeref:typename:Instruction	file:
+Terminated	iss.h	/^    Terminated,$/;"	e	enum:CoreExecStatus
+UNDEF	instr.h	/^    UNDEF = 0,$/;"	e	enum:Opcode::mapping
+UNIMPLEMENTED	csr.h	/^            unsigned UNIMPLEMENTED: 24;	\/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:24
+URET	instr.h	/^    URET,$/;"	e	enum:Opcode::mapping
+U_imm	instr.h	/^    inline int32_t U_imm() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+Vectored	csr.h	/^        Vectored = 1$/;"	e	enum:csr_mtvec::Mode
+W0	csr.h	/^            unsigned W0: 1;             \/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:1
+WFI	instr.h	/^    WFI,$/;"	e	enum:Opcode::mapping
+X0	csr.h	/^            unsigned X0: 1;             \/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:1
+XOR	instr.cpp	/^    static T XOR(unsigned rd, unsigned rs1, unsigned rs2) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
+XOR	instr.h	/^    XOR,$/;"	e	enum:Opcode::mapping
+XORI	instr.h	/^    XORI,$/;"	e	enum:Opcode::mapping
+__anon0f3f74e3010a	csr.h	/^    union {$/;"	u	struct:csr_misa
+__anon0f3f74e30208	csr.h	/^        struct {$/;"	s	union:csr_misa::__anon0f3f74e3010a
+__anon0f3f74e3030a	csr.h	/^    union {$/;"	u	struct:csr_mvendorid
+__anon0f3f74e30408	csr.h	/^        struct {$/;"	s	union:csr_mvendorid::__anon0f3f74e3030a
+__anon0f3f74e3050a	csr.h	/^    union {$/;"	u	struct:csr_mstatus
+__anon0f3f74e30608	csr.h	/^        struct {$/;"	s	union:csr_mstatus::__anon0f3f74e3050a
+__anon0f3f74e3070a	csr.h	/^    union {$/;"	u	struct:csr_mtvec
+__anon0f3f74e30808	csr.h	/^        struct {$/;"	s	union:csr_mtvec::__anon0f3f74e3070a
+__anon0f3f74e3090a	csr.h	/^    union {$/;"	u	struct:csr_mie
+__anon0f3f74e30a08	csr.h	/^        struct {$/;"	s	union:csr_mie::__anon0f3f74e3090a
+__anon0f3f74e30b0a	csr.h	/^    union {$/;"	u	struct:csr_mip
+__anon0f3f74e30c08	csr.h	/^        struct {$/;"	s	union:csr_mip::__anon0f3f74e30b0a
+__anon0f3f74e30d0a	csr.h	/^    union {$/;"	u	struct:csr_mepc
+__anon0f3f74e30e0a	csr.h	/^    union {$/;"	u	struct:csr_mcause
+__anon0f3f74e30f08	csr.h	/^        struct {$/;"	s	union:csr_mcause::__anon0f3f74e30e0a
+__anon0f3f74e3100a	csr.h	/^    union {$/;"	u	struct:csr_satp
+__anon0f3f74e31108	csr.h	/^        struct {$/;"	s	union:csr_satp::__anon0f3f74e3100a
+__anon0f3f74e3120a	csr.h	/^    union {$/;"	u	struct:csr_pmpcfg
+__anon0f3f74e31308	csr.h	/^        struct {$/;"	s	union:csr_pmpcfg::__anon0f3f74e3120a
+__anon0f3f74e3140a	csr.h	/^    union {$/;"	u	struct:csr_64
+__anon0f3f74e31508	csr.h	/^        struct {$/;"	s	union:csr_64::__anon0f3f74e3140a
+__anon0fac0c2a0103	iss.h	/^    enum {$/;"	g	struct:ISS
+__anonf5c575790103	regfile.h	/^    enum {$/;"	g	struct:RegFile
+__glibc_reserved	syscall.cpp	/^    int32_t __glibc_reserved[2];$/;"	m	struct:rv32g_stat	typeref:typename:int32_t[2]	file:
+__pad1	syscall.cpp	/^    uint64_t __pad1;$/;"	m	struct:rv32g_stat	typeref:typename:uint64_t	file:
+__pad2	syscall.cpp	/^    int32_t __pad2;$/;"	m	struct:rv32g_stat	typeref:typename:int32_t	file:
+_compute_and_get_current_cycles	iss.h	/^    uint64_t _compute_and_get_current_cycles() {$/;"	f	struct:ISS	typeref:typename:uint64_t
+_copy_timespec	syscall.cpp	/^void _copy_timespec(rv32g_timespec *dst, timespec *src) {$/;"	f	typeref:typename:void
+_do_transaction	mem_if.h	/^    inline void _do_transaction(tlm::tlm_command cmd, uint64_t addr, uint8_t *data, unsigned num/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+_load_data	mem_if.h	/^    inline T _load_data(addr_t addr) {$/;"	f	struct:CombinedMemoryInterface	typeref:typename:T
+_register	csr.h	/^    T *_register(T *p) {$/;"	f	struct:csr_table	typeref:typename:T *
+_store_data	mem_if.h	/^    inline void _store_data(addr_t addr, T value) {$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+_wiri0	csr.h	/^            unsigned _wiri0: 2;         \/\/ WIRI$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:2
+a0	regfile.h	/^        a0 = x10,$/;"	e	enum:RegFile::e
+a1	regfile.h	/^        a1 = x11,$/;"	e	enum:RegFile::e
+a2	regfile.h	/^        a2 = x12,$/;"	e	enum:RegFile::e
+a3	regfile.h	/^        a3 = x13,$/;"	e	enum:RegFile::e
+a4	regfile.h	/^        a4 = x14,$/;"	e	enum:RegFile::e
+a5	regfile.h	/^        a5 = x15,$/;"	e	enum:RegFile::e
+a6	regfile.h	/^        a6 = x16,$/;"	e	enum:RegFile::e
+a7	regfile.h	/^        a7 = x17,$/;"	e	enum:RegFile::e
+addr	csr.h	/^    uint32_t addr;$/;"	m	struct:csr_base	typeref:typename:uint32_t
+addr_t	mem_if.h	/^    typedef uint32_t addr_t;$/;"	t	struct:CombinedMemoryInterface	typeref:typename:uint32_t
+addr_to_csr	csr.h	/^    std::map<uint32_t, csr_base*> addr_to_csr;$/;"	m	struct:csr_table	typeref:typename:std::map<uint32_t,csr_base * >
+addr_to_reg	clint_if.h	/^		std::map<uint64_t, uint32_t *> addr_to_reg;$/;"	m	struct:Clint	typeref:typename:std::map<uint64_t,uint32_t * >
+any_pending	csr.h	/^    inline bool any_pending() {$/;"	f	struct:csr_mip	typeref:typename:bool
+aq	instr.h	/^    inline bool aq() {$/;"	f	struct:Instruction	typeref:typename:bool
+asid	csr.h	/^            unsigned asid: 9;   \/\/ WARL$/;"	m	struct:csr_satp::__anon0f3f74e3100a::__anon0f3f74e31108	typeref:typename:unsigned:9
+at	csr.h	/^    csr_base &at(uint32_t addr) {$/;"	f	struct:csr_table	typeref:typename:csr_base &
+b_transport	clint_if.cpp	/^void Clint::b_transport(tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)$/;"	f	class:Clint	typeref:typename:void
+bank	csr.h	/^            unsigned bank: 25;$/;"	m	struct:csr_mvendorid::__anon0f3f74e3030a::__anon0f3f74e30408	typeref:typename:unsigned:25
+base	csr.h	/^            unsigned base: 30;	\/\/ WARL$/;"	m	struct:csr_mtvec::__anon0f3f74e3070a::__anon0f3f74e30808	typeref:typename:unsigned:30
+breakpoints	iss.h	/^    std::unordered_set<uint32_t> breakpoints;$/;"	m	struct:ISS	typeref:typename:std::unordered_set<uint32_t>
+c_b12	instr.h	/^    inline uint32_t c_b12() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_f2_high	instr.h	/^    inline uint32_t c_f2_high() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_f2_low	instr.h	/^    inline uint32_t c_f2_low() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_format	instr.h	/^    inline uint32_t c_format() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_imm	instr.h	/^    inline uint32_t c_imm() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_opcode	instr.h	/^    inline uint32_t c_opcode() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_rd	instr.h	/^    inline uint32_t c_rd() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_rd_small	instr.h	/^    inline uint32_t c_rd_small() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_rs2	instr.h	/^    inline uint32_t c_rs2() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_rs2_small	instr.h	/^    inline uint32_t c_rs2_small() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+c_uimm	instr.h	/^    inline uint32_t c_uimm() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+clear_bits	csr.h	/^    void clear_bits(int32_t mask) {$/;"	f	struct:csr_base	typeref:typename:void
+clint	iss.h	/^    clint_if *clint;$/;"	m	struct:ISS	typeref:typename:clint_if *
+clint_if	clint_if.h	/^struct clint_if$/;"	s
+clock_cycle	clint_if.h	/^	sc_core::sc_time clock_cycle = sc_core::sc_time(10, sc_core::SC_NS);$/;"	m	struct:Clint	typeref:typename:sc_core::sc_time
+core	iss.h	/^    ISS &core;$/;"	m	struct:DirectCoreRunner	typeref:typename:ISS &
+csr	instr.h	/^    inline uint32_t csr() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+csr_32	csr.h	/^struct csr_32 : public csr_base {$/;"	s
+csr_64	csr.h	/^struct csr_64 {$/;"	s
+csr_64_high	csr.h	/^    csr_64_high(csr_64 &obj, uint32_t addr, const char *name)$/;"	f	struct:csr_64_high
+csr_64_high	csr.h	/^struct csr_64_high : public csr_base {$/;"	s
+csr_64_low	csr.h	/^    csr_64_low(csr_64 &obj, uint32_t addr, const char *name)$/;"	f	struct:csr_64_low
+csr_64_low	csr.h	/^struct csr_64_low : public csr_base {$/;"	s
+csr_addresses	csr.h	/^enum csr_addresses {$/;"	g
+csr_base	csr.h	/^    csr_base(uint32_t addr, const char *name)$/;"	f	struct:csr_base
+csr_base	csr.h	/^struct csr_base {$/;"	s
+csr_mcause	csr.h	/^struct csr_mcause : public csr_base {$/;"	s
+csr_mepc	csr.h	/^struct csr_mepc : public csr_base {$/;"	s
+csr_mie	csr.h	/^struct csr_mie : public csr_base {$/;"	s
+csr_mip	csr.h	/^struct csr_mip : public csr_base {$/;"	s
+csr_misa	csr.h	/^    csr_misa(uint32_t addr, const char *name)$/;"	f	struct:csr_misa
+csr_misa	csr.h	/^struct csr_misa : public csr_base {$/;"	s
+csr_mstatus	csr.h	/^struct csr_mstatus : public csr_base {$/;"	s
+csr_mtvec	csr.h	/^struct csr_mtvec : public csr_base {$/;"	s
+csr_mvendorid	csr.h	/^struct csr_mvendorid : public csr_base {$/;"	s
+csr_pmpcfg	csr.h	/^struct csr_pmpcfg : public csr_base {$/;"	s
+csr_satp	csr.h	/^struct csr_satp : public csr_base {$/;"	s
+csr_table	csr.h	/^struct csr_table {$/;"	s
+csr_update_and_get	iss.h	/^    csr_base &csr_update_and_get(uint32_t addr) {$/;"	f	struct:ISS	typeref:typename:csr_base &
+csrs	iss.h	/^    csr_table csrs;$/;"	m	struct:ISS	typeref:typename:csr_table
+cycle_time	iss.h	/^    sc_core::sc_time cycle_time;$/;"	m	struct:ISS	typeref:typename:sc_core::sc_time
+data	instr.h	/^    inline uint32_t data() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+data_memory_interface	mem_if.h	/^struct data_memory_interface$/;"	s
+debug_mode	iss.h	/^    bool debug_mode = false;$/;"	m	struct:ISS	typeref:typename:bool
+decode_and_expand_compressed	instr.cpp	/^Opcode::mapping Instruction::decode_and_expand_compressed() $/;"	f	class:Instruction	typeref:typename:Opcode::mapping
+decode_compressed	instr.cpp	/^Compressed::Opcode decode_compressed(Instruction &instr) $/;"	f	typeref:typename:Compressed::Opcode
+decode_normal	instr.cpp	/^Opcode::mapping Instruction::decode_normal() $/;"	f	class:Instruction	typeref:typename:Opcode::mapping
+e	regfile.h	/^    enum e {$/;"	g	struct:RegFile
+ensure	csr.h	/^inline void ensure(bool cond) {$/;"	f	typeref:typename:void
+exception_code	csr.h	/^            unsigned exception_code: 31;	\/\/ WLRL$/;"	m	struct:csr_mcause::__anon0f3f74e30e0a::__anon0f3f74e30f08	typeref:typename:unsigned:31
+exec_step	iss.h	/^    Opcode::mapping exec_step() {$/;"	f	struct:ISS	typeref:typename:Opcode::mapping
+execute_syscall	syscall.cpp	/^int SyscallHandler::execute_syscall(ulong n, ulong _a0, ulong _a1, ulong _a2, ulong _a3) {$/;"	f	class:SyscallHandler	typeref:typename:int
+expand_compressed	instr.cpp	/^Opcode::mapping expand_compressed(Instruction &instr, Compressed::Opcode op) $/;"	f	typeref:typename:Opcode::mapping
+extensions	csr.h	/^            unsigned extensions: 26;$/;"	m	struct:csr_misa::__anon0f3f74e3010a::__anon0f3f74e30208	typeref:typename:unsigned:26
+external_interrupt_target	irq_if.h	/^struct external_interrupt_target {$/;"	s
+fp	regfile.h	/^        fp = x8,$/;"	e	enum:RegFile::e
+fs	csr.h	/^            unsigned fs: 2;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:2
+funct12	instr.h	/^    inline int32_t funct12() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+funct3	instr.h	/^    inline int32_t funct3() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+funct5	instr.h	/^    inline int32_t funct5() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+funct7	instr.h	/^    inline int32_t funct7() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+get_base_address	csr.h	/^    uint32_t get_base_address() {$/;"	f	struct:csr_mtvec	typeref:typename:uint32_t
+get_max_heap_memory_consumption	syscall.h	/^	uint32_t  get_max_heap_memory_consumption()$/;"	f	struct:SyscallHandler	typeref:typename:uint32_t
+gp	regfile.h	/^        gp = x3,$/;"	e	enum:RegFile::e
+guest_address_to_host_pointer	syscall.h	/^	uint8_t * guest_address_to_host_pointer(uintptr_t addr)$/;"	f	struct:SyscallHandler	typeref:typename:uint8_t *
+guest_long	syscall.cpp	/^typedef reg_t guest_long;$/;"	t	typeref:typename:reg_t	file:
+guest_to_host_pointer	syscall.h	/^	uint8_t * guest_to_host_pointer(void *p)$/;"	f	struct:SyscallHandler	typeref:typename:uint8_t *
+has_pending_enabled_interrupts	iss.h	/^    bool has_pending_enabled_interrupts() {$/;"	f	struct:ISS	typeref:typename:bool
+high	csr.h	/^            int32_t high;$/;"	m	struct:csr_64::__anon0f3f74e3140a::__anon0f3f74e31508	typeref:typename:int32_t
+hp	syscall.h	/^	uint32_t	hp = 0; \/\/ heap pointer$/;"	m	struct:SyscallHandler	typeref:typename:uint32_t
+increment	csr.h	/^    void increment() {$/;"	f	struct:csr_64	typeref:typename:void
+init	csr.h	/^    void init() {$/;"	f	struct:csr_misa	typeref:typename:void
+init	iss.h	/^    void init(instr_memory_interface *instr_mem, data_memory_interface *data_mem, clint_if *clin/;"	f	struct:ISS	typeref:typename:void
+init	syscall.h	/^	void init(uint8_t *host_memory_pointer, uint32_t mem_start_address, uint32_t heap_pointer_addre/;"	f	struct:SyscallHandler	typeref:typename:void
+instr	instr.h	/^    int32_t instr;$/;"	m	struct:Instruction	typeref:typename:int32_t
+instr_cycles	iss.h	/^    std::array<sc_core::sc_time, Opcode::NUMBER_OF_INSTRUCTIONS> instr_cycles;$/;"	m	struct:ISS	typeref:typename:std::array<sc_core::sc_time,Opcode::NUMBER_OF_INSTRUCTIONS>
+instr_mem	iss.h	/^    instr_memory_interface *instr_mem;$/;"	m	struct:ISS	typeref:typename:instr_memory_interface *
+instr_memory_interface	mem_if.h	/^struct instr_memory_interface$/;"	s
+interrupt	csr.h	/^            unsigned interrupt: 1;$/;"	m	struct:csr_mcause::__anon0f3f74e30e0a::__anon0f3f74e30f08	typeref:typename:unsigned:1
+interrupt_gateway	irq_if.h	/^struct interrupt_gateway {$/;"	s
+irq_event	clint_if.h	/^	sc_event irq_event;$/;"	m	struct:Clint	typeref:typename:sc_event
+is_compressed	instr.h	/^    inline bool is_compressed() {$/;"	f	struct:Instruction	typeref:typename:bool
+isock	mem_if.h	/^    tlm_utils::simple_initiator_socket<CombinedMemoryInterface> isock;$/;"	m	struct:CombinedMemoryInterface	typeref:typename:tlm_utils::simple_initiator_socket<CombinedMemoryInterface>
+last_pc	iss.h	/^    uint32_t last_pc;$/;"	m	struct:ISS	typeref:typename:uint32_t
+load_byte	mem_if.h	/^    int32_t load_byte(addr_t addr) { return _load_data<int8_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
+load_half	mem_if.h	/^    int32_t load_half(addr_t addr) { return _load_data<int16_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
+load_instr	mem_if.h	/^    int32_t load_instr(addr_t addr) { return _load_data<int32_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
+load_ubyte	mem_if.h	/^    uint32_t load_ubyte(addr_t addr) { return _load_data<uint8_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:uint32_t
+load_uhalf	mem_if.h	/^    uint32_t load_uhalf(addr_t addr) { return _load_data<uint16_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:uint32_t
+load_word	mem_if.h	/^    int32_t load_word(addr_t addr) { return _load_data<int32_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
+low	csr.h	/^            int32_t low;$/;"	m	struct:csr_64::__anon0f3f74e3140a::__anon0f3f74e31508	typeref:typename:int32_t
+lrw_marked	iss.h	/^    uint32_t lrw_marked = 0;$/;"	m	struct:ISS	typeref:typename:uint32_t
+m_target	clint_if.h	/^	timer_interrupt_target * m_target;	$/;"	m	struct:Clint	typeref:typename:timer_interrupt_target *
+mapping	instr.h	/^enum mapping $/;"	g	namespace:Opcode
+marchid	csr.h	/^    csr_32 *marchid = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+max_heap	syscall.h	/^	uint32_t max_heap   = 0;$/;"	m	struct:SyscallHandler	typeref:typename:uint32_t
+mcause	csr.h	/^    csr_mcause *mcause = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mcause *
+medeleg	csr.h	/^    csr_32 *medeleg = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+meie	csr.h	/^            unsigned meie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+meip	csr.h	/^            unsigned meip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+mem	iss.h	/^    data_memory_interface *mem;$/;"	m	struct:ISS	typeref:typename:data_memory_interface *
+mem	syscall.h	/^	uint8_t		*mem = 0;	\/\/ direct pointer to start of guest memory  int host memory$/;"	m	struct:SyscallHandler	typeref:typename:uint8_t *
+mem_offset	syscall.h	/^	uint32_t	mem_offset; \/\/start address of the memory as mapped into the address space$/;"	m	struct:SyscallHandler	typeref:typename:uint32_t
+mepc	csr.h	/^    csr_mepc *mepc = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mepc *
+mhartid	csr.h	/^    csr_32 *mhartid = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+mideleg	csr.h	/^    csr_32 *mideleg = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+mie	csr.h	/^            unsigned mie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+mie	csr.h	/^    csr_mie *mie = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mie *
+mimpid	csr.h	/^    csr_32 *mimpid = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+mip	csr.h	/^    csr_mip *mip = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mip *
+misa	csr.h	/^    csr_misa *misa = 0;$/;"	m	struct:csr_table	typeref:typename:csr_misa *
+mode	csr.h	/^            unsigned mode: 1;	\/\/ WARL$/;"	m	struct:csr_satp::__anon0f3f74e3100a::__anon0f3f74e31108	typeref:typename:unsigned:1
+mode	csr.h	/^            unsigned mode: 2;	\/\/ WARL$/;"	m	struct:csr_mtvec::__anon0f3f74e3070a::__anon0f3f74e30808	typeref:typename:unsigned:2
+mpie	csr.h	/^            unsigned mpie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+mpp	csr.h	/^            unsigned mpp: 2;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:2
+mprv	csr.h	/^            unsigned mprv: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+mscratch	csr.h	/^    csr_32 *mscratch = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+msie	csr.h	/^            unsigned msie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+msip	csr.h	/^            unsigned msip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+mstatus	csr.h	/^    csr_mstatus *mstatus = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mstatus *
+mtie	csr.h	/^            unsigned mtie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+mtime	clint_if.h	/^		uint64_t mtime;$/;"	m	struct:Clint	typeref:typename:uint64_t
+mtimecmp	clint_if.h	/^		uint64_t mtimecmp;$/;"	m	struct:Clint	typeref:typename:uint64_t
+mtip	csr.h	/^            unsigned mtip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+mtval	csr.h	/^    csr_32 *mtval = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+mtvec	csr.h	/^    csr_mtvec *mtvec = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mtvec *
+mvendorid	csr.h	/^    csr_mvendorid *mvendorid = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mvendorid *
+mxl	csr.h	/^            unsigned mxl: 2;$/;"	m	struct:csr_misa::__anon0f3f74e3010a::__anon0f3f74e30208	typeref:typename:unsigned:2
+mxr	csr.h	/^            unsigned mxr: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+name	csr.h	/^    const char *name;$/;"	m	struct:csr_base	typeref:typename:const char *
+offset	csr.h	/^            unsigned offset: 7;$/;"	m	struct:csr_mvendorid::__anon0f3f74e3030a::__anon0f3f74e30408	typeref:typename:unsigned:7
+opcode	instr.h	/^    inline int32_t opcode() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+operator []	regfile.h	/^    int32_t &operator [](const uint32_t idx) { \/\/这里为什么要重载[] ？regs本身是数/;"	f	struct:RegFile	typeref:typename:int32_t &
+parts	instr.h	/^    enum parts $/;"	g	namespace:Opcode
+pc	iss.h	/^    uint32_t pc;$/;"	m	struct:ISS	typeref:typename:uint32_t
+performance_and_sync_update	iss.h	/^    void performance_and_sync_update(Opcode::mapping executed_op) {$/;"	f	struct:ISS	typeref:typename:void
+pmpaddr0	csr.h	/^    csr_32 *pmpaddr0 = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
+pmpcfg0	csr.h	/^    csr_pmpcfg *pmpcfg0 = 0;$/;"	m	struct:csr_table	typeref:typename:csr_pmpcfg *
+ppn	csr.h	/^            unsigned ppn: 22;   \/\/ WARL$/;"	m	struct:csr_satp::__anon0f3f74e3100a::__anon0f3f74e31108	typeref:typename:unsigned:22
+quadrant	instr.h	/^    inline uint32_t quadrant() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+quantum_keeper	iss.h	/^    tlm_utils::tlm_quantumkeeper quantum_keeper;$/;"	m	struct:ISS	typeref:typename:tlm_utils::tlm_quantumkeeper
+quantum_keeper	mem_if.h	/^    tlm_utils::tlm_quantumkeeper &quantum_keeper;$/;"	m	struct:CombinedMemoryInterface	typeref:typename:tlm_utils::tlm_quantumkeeper &
+ra	regfile.h	/^        ra = x1,$/;"	e	enum:RegFile::e
+rd	instr.h	/^    inline uint32_t rd() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+read	csr.h	/^	int32_t read()$/;"	f	struct:csr_base	typeref:typename:int32_t
+read	regfile.h	/^    int32_t read(uint32_t index) {$/;"	f	struct:RegFile	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mcause::__anon0f3f74e30e0a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mepc::__anon0f3f74e30d0a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mie::__anon0f3f74e3090a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mip::__anon0f3f74e30b0a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_misa::__anon0f3f74e3010a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mstatus::__anon0f3f74e3050a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mtvec::__anon0f3f74e3070a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mvendorid::__anon0f3f74e3030a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_pmpcfg::__anon0f3f74e3120a	typeref:typename:int32_t
+reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_satp::__anon0f3f74e3100a	typeref:typename:int32_t
+reg	csr.h	/^        int64_t reg = 0;$/;"	m	union:csr_64::__anon0f3f74e3140a	typeref:typename:int64_t
+reg	csr.h	/^    int32_t reg = 0;$/;"	m	struct:csr_32	typeref:typename:int32_t
+reg_t	syscall.cpp	/^typedef int32_t reg_t;$/;"	t	typeref:typename:int32_t	file:
+regs	iss.h	/^    RegFile regs;$/;"	m	struct:ISS	typeref:typename:RegFile
+regs	regfile.h	/^    int32_t regs[NUM_REGS];$/;"	m	struct:RegFile	typeref:typename:int32_t[]
+return_from_trap_handler	iss.h	/^    void return_from_trap_handler() {$/;"	f	struct:ISS	typeref:typename:void
+rl	instr.h	/^    inline bool rl() {$/;"	f	struct:Instruction	typeref:typename:bool
+rs1	instr.h	/^    inline uint32_t rs1() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+rs2	instr.h	/^    inline uint32_t rs2() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+run	clint_if.cpp	/^void Clint::run()$/;"	f	class:Clint	typeref:typename:void
+run	iss.h	/^    void run() {$/;"	f	struct:DirectCoreRunner	typeref:typename:void
+run	iss.h	/^    void run() {$/;"	f	struct:ISS	typeref:typename:void
+run_step	iss.h	/^    void run_step() {$/;"	f	struct:ISS	typeref:typename:void
+rv32g_stat	syscall.cpp	/^struct rv32g_stat$/;"	s	file:
+rv32g_time_t	syscall.cpp	/^typedef int32_t rv32g_time_t;$/;"	t	typeref:typename:int32_t	file:
+rv32g_timespec	syscall.cpp	/^struct rv32g_timespec {$/;"	s	file:
+s0	regfile.h	/^        s0 = x8,$/;"	e	enum:RegFile::e
+s1	regfile.h	/^        s1 = x9,$/;"	e	enum:RegFile::e
+s10	regfile.h	/^        s10 = x26,$/;"	e	enum:RegFile::e
+s11	regfile.h	/^        s11 = x27,$/;"	e	enum:RegFile::e
+s2	regfile.h	/^        s2 = x18,$/;"	e	enum:RegFile::e
+s3	regfile.h	/^        s3 = x19,$/;"	e	enum:RegFile::e
+s4	regfile.h	/^        s4 = x20,$/;"	e	enum:RegFile::e
+s5	regfile.h	/^        s5 = x21,$/;"	e	enum:RegFile::e
+s6	regfile.h	/^        s6 = x22,$/;"	e	enum:RegFile::e
+s7	regfile.h	/^        s7 = x23,$/;"	e	enum:RegFile::e
+s8	regfile.h	/^        s8 = x24,$/;"	e	enum:RegFile::e
+s9	regfile.h	/^        s9 = x25,$/;"	e	enum:RegFile::e
+satp	csr.h	/^    csr_satp *satp = 0;$/;"	m	struct:csr_table	typeref:typename:csr_satp *
+scaler	clint_if.h	/^	static constexpr uint64_t scaler = 1000000;$/;"	m	struct:Clint	typeref:typename:uint64_t
+sd	csr.h	/^            unsigned sd: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+seie	csr.h	/^            unsigned seie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+seip	csr.h	/^            unsigned seip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+set_bits	csr.h	/^    void set_bits(int32_t mask) {$/;"	f	struct:csr_base	typeref:typename:void
+setup	csr.h	/^    void setup() {$/;"	f	struct:csr_table	typeref:typename:void
+shall_exit	syscall.h	/^	bool  shall_exit;$/;"	m	struct:SyscallHandler	typeref:typename:bool
+shamt	instr.h	/^    inline uint32_t shamt() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+shamt	regfile.h	/^    uint32_t shamt(uint32_t index) {$/;"	f	struct:RegFile	typeref:typename:uint32_t
+show	iss.h	/^    void show() {$/;"	f	struct:ISS	typeref:typename:void
+show	regfile.h	/^    void show() {$/;"	f	struct:RegFile	typeref:typename:void
+sie	csr.h	/^            unsigned sie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+sp	regfile.h	/^        sp = x2,$/;"	e	enum:RegFile::e
+spie	csr.h	/^            unsigned spie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+spp	csr.h	/^            unsigned spp: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+ssie	csr.h	/^            unsigned ssie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+ssip	csr.h	/^            unsigned ssip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+st_atim	syscall.cpp	/^    rv32g_timespec st_atim;$/;"	m	struct:rv32g_stat	typeref:typename:rv32g_timespec	file:
+st_blksize	syscall.cpp	/^    int32_t st_blksize;$/;"	m	struct:rv32g_stat	typeref:typename:int32_t	file:
+st_blocks	syscall.cpp	/^    int64_t st_blocks;$/;"	m	struct:rv32g_stat	typeref:typename:int64_t	file:
+st_ctim	syscall.cpp	/^    rv32g_timespec st_ctim;$/;"	m	struct:rv32g_stat	typeref:typename:rv32g_timespec	file:
+st_dev	syscall.cpp	/^    uint64_t st_dev;$/;"	m	struct:rv32g_stat	typeref:typename:uint64_t	file:
+st_gid	syscall.cpp	/^    uint32_t st_gid;$/;"	m	struct:rv32g_stat	typeref:typename:uint32_t	file:
+st_ino	syscall.cpp	/^    uint64_t st_ino;$/;"	m	struct:rv32g_stat	typeref:typename:uint64_t	file:
+st_mode	syscall.cpp	/^    uint32_t st_mode;$/;"	m	struct:rv32g_stat	typeref:typename:uint32_t	file:
+st_mtim	syscall.cpp	/^    rv32g_timespec st_mtim;$/;"	m	struct:rv32g_stat	typeref:typename:rv32g_timespec	file:
+st_nlink	syscall.cpp	/^    uint32_t st_nlink;$/;"	m	struct:rv32g_stat	typeref:typename:uint32_t	file:
+st_rdev	syscall.cpp	/^    uint64_t st_rdev;$/;"	m	struct:rv32g_stat	typeref:typename:uint64_t	file:
+st_size	syscall.cpp	/^    int64_t st_size;$/;"	m	struct:rv32g_stat	typeref:typename:int64_t	file:
+st_uid	syscall.cpp	/^    uint32_t st_uid;$/;"	m	struct:rv32g_stat	typeref:typename:uint32_t	file:
+start_heap	syscall.h	/^	uint32_t start_heap = 0;$/;"	m	struct:SyscallHandler	typeref:typename:uint32_t
+status	iss.h	/^    CoreExecStatus status = CoreExecStatus::Runnable;$/;"	m	struct:ISS	typeref:typename:CoreExecStatus
+stie	csr.h	/^            unsigned stie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+stip	csr.h	/^            unsigned stip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+store_byte	mem_if.h	/^    void store_byte(addr_t addr, uint8_t value) { _store_data(addr, value); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+store_half	mem_if.h	/^    void store_half(addr_t addr, uint16_t value) { _store_data(addr, value); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+store_word	mem_if.h	/^    void store_word(addr_t addr, uint32_t value) { _store_data(addr, value); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+sum	csr.h	/^            unsigned sum: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+switch_to_trap_handler	iss.h	/^    void switch_to_trap_handler() {$/;"	f	struct:ISS	typeref:typename:void
+sys	iss.h	/^    SyscallHandler *sys;$/;"	m	struct:ISS	typeref:typename:SyscallHandler *
+sys_brk	syscall.cpp	/^int sys_brk(SyscallHandler *sys, void *addr) {$/;"	f	typeref:typename:int
+sys_close	syscall.cpp	/^int sys_close(int fd) {$/;"	f	typeref:typename:int
+sys_fstat	syscall.cpp	/^int sys_fstat(SyscallHandler *sys, int fd, rv32g_stat *s_addr) {$/;"	f	typeref:typename:int
+sys_gettimeofday	syscall.cpp	/^int sys_gettimeofday(SyscallHandler *sys, struct timeval *tp, void *tzp) {$/;"	f	typeref:typename:int
+sys_lseek	syscall.cpp	/^int sys_lseek(int fd, off_t offset, int whence) {$/;"	f	typeref:typename:int
+sys_open	syscall.cpp	/^int sys_open(SyscallHandler *sys, const char *pathname, int flags, mode_t mode) {$/;"	f	typeref:typename:int
+sys_read	syscall.cpp	/^int sys_read(SyscallHandler *sys, int fd, void *buf, size_t count) {$/;"	f	typeref:typename:int
+sys_time	syscall.cpp	/^int sys_time(SyscallHandler *sys, rv32g_time_t *tloc) {$/;"	f	typeref:typename:int
+sys_write	syscall.cpp	/^int sys_write(SyscallHandler *sys, int fd, const void *buf, size_t count) {$/;"	f	typeref:typename:int
+t0	regfile.h	/^        t0 = x5,$/;"	e	enum:RegFile::e
+t1	regfile.h	/^        t1 = x6,$/;"	e	enum:RegFile::e
+t2	regfile.h	/^        t2 = x7,$/;"	e	enum:RegFile::e
+t3	regfile.h	/^        t3 = x28,$/;"	e	enum:RegFile::e
+t4	regfile.h	/^        t4 = x29,$/;"	e	enum:RegFile::e
+t5	regfile.h	/^        t5 = x30,$/;"	e	enum:RegFile::e
+t6	regfile.h	/^        t6 = x31,$/;"	e	enum:RegFile::e
+target	csr.h	/^    csr_64 &target;$/;"	m	struct:csr_64_high	typeref:typename:csr_64 &
+target	csr.h	/^    csr_64 &target;$/;"	m	struct:csr_64_low	typeref:typename:csr_64 &
+timer_interrupt_target	irq_if.h	/^struct timer_interrupt_target {$/;"	s
+tp	regfile.h	/^        tp = x4,$/;"	e	enum:RegFile::e
+trigger_external_interrupt	iss.h	/^    virtual void trigger_external_interrupt() override {$/;"	f	struct:ISS	typeref:typename:void
+trigger_timer_interrupt	iss.h	/^    virtual void trigger_timer_interrupt(bool status) override {$/;"	f	struct:ISS	typeref:typename:void
+tsock	clint_if.h	/^	tlm_utils::simple_target_socket<Clint> tsock;$/;"	m	struct:Clint	typeref:typename:tlm_utils::simple_target_socket<Clint>
+tv_nsec	syscall.cpp	/^    int32_t tv_nsec;$/;"	m	struct:rv32g_timespec	typeref:typename:int32_t	file:
+tv_sec	syscall.cpp	/^    int32_t tv_sec;$/;"	m	struct:rv32g_timespec	typeref:typename:int32_t	file:
+tvm	csr.h	/^            unsigned tvm: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+tw	csr.h	/^            unsigned tw: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+txr	csr.h	/^            unsigned txr: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+ueie	csr.h	/^            unsigned ueie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+ueip	csr.h	/^            unsigned ueip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+uie	csr.h	/^            unsigned uie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+ulong	syscall.h	/^	typedef unsigned long int ulong;$/;"	t	struct:SyscallHandler	typeref:typename:unsigned long int
+unchecked_read	csr.h	/^    virtual int32_t unchecked_read() override {$/;"	f	struct:csr_64_high	typeref:typename:int32_t
+unchecked_read	csr.h	/^    virtual int32_t unchecked_read() override {$/;"	f	struct:csr_64_low	typeref:typename:int32_t
+unchecked_read	csr.h	/^    virtual int32_t unchecked_read() override {$/;"	f	struct:csr_mtvec	typeref:typename:int32_t
+unchecked_write	csr.h	/^    virtual void unchecked_write(int32_t val) override {$/;"	f	struct:csr_64_high	typeref:typename:void
+unchecked_write	csr.h	/^    virtual void unchecked_write(int32_t val) override {$/;"	f	struct:csr_64_low	typeref:typename:void
+unchecked_write	csr.h	/^    virtual void unchecked_write(int32_t val) override {$/;"	f	struct:csr_mtvec	typeref:typename:void
+update_and_get_mtime	clint_if.cpp	/^uint64_t Clint::update_and_get_mtime() $/;"	f	class:Clint	typeref:typename:uint64_t
+upie	csr.h	/^            unsigned upie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+usie	csr.h	/^            unsigned usie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+usip	csr.h	/^            unsigned usip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+utie	csr.h	/^            unsigned utie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+utip	csr.h	/^            unsigned utip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+wfi_event	iss.h	/^    sc_core::sc_event wfi_event;$/;"	m	struct:ISS	typeref:typename:sc_core::sc_event
+wiri	csr.h	/^            unsigned wiri: 4;$/;"	m	struct:csr_misa::__anon0f3f74e3010a::__anon0f3f74e30208	typeref:typename:unsigned:4
+wiri1	csr.h	/^            unsigned wiri1: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+wiri2	csr.h	/^            unsigned wiri2: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+wiri3	csr.h	/^            unsigned wiri3: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
+wiri4	csr.h	/^            unsigned wiri4: 20;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:20
+wpri1	csr.h	/^            unsigned wpri1: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+wpri1	csr.h	/^            unsigned wpri1: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+wpri2	csr.h	/^            unsigned wpri2: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+wpri2	csr.h	/^            unsigned wpri2: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+wpri3	csr.h	/^            unsigned wpri3: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
+wpri3	csr.h	/^            unsigned wpri3: 2;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:2
+wpri4	csr.h	/^            unsigned wpri4: 20;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:20
+wpri4	csr.h	/^            unsigned wpri4: 8;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:8
+write	csr.h	/^	void write(int32_t val)$/;"	f	struct:csr_base	typeref:typename:void
+write	regfile.h	/^    void write(uint32_t index, int32_t value) {$/;"	f	struct:RegFile	typeref:typename:void
+x0	regfile.h	/^        x0 = 0,$/;"	e	enum:RegFile::e
+x1	regfile.h	/^        x1,$/;"	e	enum:RegFile::e
+x10	regfile.h	/^        x10,$/;"	e	enum:RegFile::e
+x11	regfile.h	/^        x11,$/;"	e	enum:RegFile::e
+x12	regfile.h	/^        x12,$/;"	e	enum:RegFile::e
+x13	regfile.h	/^        x13,$/;"	e	enum:RegFile::e
+x14	regfile.h	/^        x14,$/;"	e	enum:RegFile::e
+x15	regfile.h	/^        x15,$/;"	e	enum:RegFile::e
+x16	regfile.h	/^        x16,$/;"	e	enum:RegFile::e
+x17	regfile.h	/^        x17,$/;"	e	enum:RegFile::e
+x18	regfile.h	/^        x18,$/;"	e	enum:RegFile::e
+x19	regfile.h	/^        x19,$/;"	e	enum:RegFile::e
+x2	regfile.h	/^        x2,$/;"	e	enum:RegFile::e
+x20	regfile.h	/^        x20,$/;"	e	enum:RegFile::e
+x21	regfile.h	/^        x21,$/;"	e	enum:RegFile::e
+x22	regfile.h	/^        x22,$/;"	e	enum:RegFile::e
+x23	regfile.h	/^        x23,$/;"	e	enum:RegFile::e
+x24	regfile.h	/^        x24,$/;"	e	enum:RegFile::e
+x25	regfile.h	/^        x25,$/;"	e	enum:RegFile::e
+x26	regfile.h	/^        x26,$/;"	e	enum:RegFile::e
+x27	regfile.h	/^        x27,$/;"	e	enum:RegFile::e
+x28	regfile.h	/^        x28,$/;"	e	enum:RegFile::e
+x29	regfile.h	/^        x29,$/;"	e	enum:RegFile::e
+x3	regfile.h	/^        x3,$/;"	e	enum:RegFile::e
+x30	regfile.h	/^        x30,$/;"	e	enum:RegFile::e
+x31	regfile.h	/^        x31,$/;"	e	enum:RegFile::e
+x4	regfile.h	/^        x4,$/;"	e	enum:RegFile::e
+x5	regfile.h	/^        x5,$/;"	e	enum:RegFile::e
+x6	regfile.h	/^        x6,$/;"	e	enum:RegFile::e
+x7	regfile.h	/^        x7,$/;"	e	enum:RegFile::e
+x8	regfile.h	/^        x8,$/;"	e	enum:RegFile::e
+x9	regfile.h	/^        x9,$/;"	e	enum:RegFile::e
+xs	csr.h	/^            unsigned xs: 2;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:2
+zero	regfile.h	/^        zero = x0,$/;"	e	enum:RegFile::e
+zimm	instr.h	/^    inline uint32_t zimm() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+~clint_if	clint_if.h	/^	~clint_if() $/;"	f	struct:clint_if
+~csr_base	csr.h	/^    virtual ~csr_base() {}$/;"	f	struct:csr_base
+~data_memory_interface	mem_if.h	/^	virtual ~data_memory_interface()$/;"	f	struct:data_memory_interface
+~external_interrupt_target	irq_if.h	/^    virtual ~external_interrupt_target() {}$/;"	f	struct:external_interrupt_target
+~instr_memory_interface	mem_if.h	/^	virtual ~instr_memory_interface()$/;"	f	struct:instr_memory_interface
+~interrupt_gateway	irq_if.h	/^    virtual ~interrupt_gateway() {}$/;"	f	struct:interrupt_gateway
+~timer_interrupt_target	irq_if.h	/^    virtual ~timer_interrupt_target() {}$/;"	f	struct:timer_interrupt_target

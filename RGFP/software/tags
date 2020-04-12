@@ -1,0 +1,466 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+$(ASM_OBJs)	small-c/Makefile	/^$(ASM_OBJs):$(ASM_SRCs)$/;"	t
+$(C_OBJs)	small-c/Makefile	/^$(C_OBJs):$(C_SRCs)$/;"	t
+$(OBJs)	small-c/Makefile	/^$(OBJs):$(ASM_OBJs) $(C_OBJs)$/;"	t
+$(TARGET)	small-c/Makefile	/^$(TARGET):$(OBJs)$/;"	t
+A	c++-lib/main.cpp	/^	A(int a, int b)$/;"	f	struct:A	file:
+A	c++-lib/main.cpp	/^struct A {$/;"	s	file:
+ACTIVE	simple-scheduler/main.c	/^	ACTIVE,$/;"	e	enum:state_t	file:
+ACTIVE	simple-scheduler/no-clib/main.c	/^	ACTIVE,$/;"	e	enum:state_t	file:
+ASM_OBJs	small-c/Makefile	/^ASM_OBJs = $(ASM_SRCs:%.S=%.o)$/;"	m
+ASM_SRCs	small-c/Makefile	/^ASM_SRCs = $(wildcard *.S)$/;"	m
+B	c++-lib/main.cpp	/^struct B : public A {$/;"	s	file:
+BLOCKSIZE	flashTest/main.cpp	/^static constexpr unsigned int BLOCKSIZE = 512;$/;"	v	typeref:typename:unsigned int	file:
+CLINT_BASE	basic-dma/irq.c	/^#define CLINT_BASE /;"	d	file:
+CLINT_BASE	clock-ticks/irq.c	/^#define CLINT_BASE /;"	d	file:
+CLINT_BASE	simple-sensor/irq.c	/^#define CLINT_BASE /;"	d	file:
+CXX	small-c/Makefile	/^CXX = $(PREFIX)gcc$/;"	m
+CXX_FLAGS	small-c/Makefile	/^CXX_FLAGS = -march=rv32i -mabi=ilp32 -nostartfiles -g$/;"	m
+C_OBJs	small-c/Makefile	/^C_OBJs = $(C_SRCs:%.c=%.o)$/;"	m
+C_SRCs	small-c/Makefile	/^C_SRCs = $(wildcard *.c)$/;"	m
+DATA_ADDR	flashTest/main.cpp	/^static constexpr unsigned int DATA_ADDR = FLASH_SIZE_REG + sizeof(uint64_t);$/;"	v	typeref:typename:unsigned int	file:
+DMA_DST_ADDR	basic-dma/main.c	/^static volatile uint32_t * const DMA_DST_ADDR  = (uint32_t * const)0x70000004;$/;"	v	typeref:typename:volatile uint32_t * const	file:
+DMA_LEN_ADDR	basic-dma/main.c	/^static volatile uint32_t * const DMA_LEN_ADDR  = (uint32_t * const)0x70000008;$/;"	v	typeref:typename:volatile uint32_t * const	file:
+DMA_OP_ADDR	basic-dma/main.c	/^static volatile uint32_t * const DMA_OP_ADDR   = (uint32_t * const)0x7000000C;$/;"	v	typeref:typename:volatile uint32_t * const	file:
+DMA_OP_MEMCPY	basic-dma/main.c	/^static const uint32_t DMA_OP_MEMCPY = 1;$/;"	v	typeref:typename:const uint32_t	file:
+DMA_OP_NOP	basic-dma/main.c	/^static const uint32_t DMA_OP_NOP = 0;$/;"	v	typeref:typename:const uint32_t	file:
+DMA_SRC_ADDR	basic-dma/main.c	/^static volatile uint32_t * const DMA_SRC_ADDR  = (uint32_t * const)0x70000000;$/;"	v	typeref:typename:volatile uint32_t * const	file:
+DMA_STAT_ADDR	basic-dma/main.c	/^static volatile uint32_t * const DMA_STAT_ADDR = (uint32_t * const)0x70000010;$/;"	v	typeref:typename:volatile uint32_t * const	file:
+FINISHED	simple-scheduler/main.c	/^	FINISHED$/;"	e	enum:state_t	file:
+FINISHED	simple-scheduler/no-clib/main.c	/^	FINISHED$/;"	e	enum:state_t	file:
+FLASH_ADDR_REG	flashTest/main.cpp	/^static constexpr unsigned int FLASH_ADDR_REG = 0;$/;"	v	typeref:typename:unsigned int	file:
+FLASH_CONTROLLER	flashTest/main.cpp	/^static uint8_t* volatile const FLASH_CONTROLLER = (uint8_t* volatile const)(0x71000000);$/;"	v	typeref:typename:uint8_t * volatile const	file:
+FLASH_SIZE_REG	flashTest/main.cpp	/^static constexpr unsigned int FLASH_SIZE_REG = sizeof(uint64_t);$/;"	v	typeref:typename:unsigned int	file:
+IRQ_TABLE_NUM_ENTRIES	basic-dma/irq.c	/^#define IRQ_TABLE_NUM_ENTRIES /;"	d	file:
+IRQ_TABLE_NUM_ENTRIES	clock-ticks/irq.c	/^#define IRQ_TABLE_NUM_ENTRIES /;"	d	file:
+IRQ_TABLE_NUM_ENTRIES	simple-sensor/irq.c	/^#define IRQ_TABLE_NUM_ENTRIES /;"	d	file:
+LOAD	basic-dma/bootstrap.S	/^#define LOAD /;"	d	file:
+LOAD	basic-dma/bootstrap.S	/^LOAD	x1, 0x0(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x10, 9 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x11, 10 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x12, 11 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x13, 12 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x14, 13 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x15, 14 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x16, 15 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x17, 16 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x28, 27 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x29, 28 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x30, 29 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x31, 30 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x4, 3 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x5, 4 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x6, 5 * REGBYTES(sp)$/;"	l
+LOAD	basic-dma/bootstrap.S	/^LOAD	x7, 6 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^#define LOAD /;"	d	file:
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x1, 0x0(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x10, 9 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x11, 10 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x12, 11 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x13, 12 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x14, 13 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x15, 14 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x16, 15 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x17, 16 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x28, 27 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x29, 28 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x30, 29 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x31, 30 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x4, 3 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x5, 4 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x6, 5 * REGBYTES(sp)$/;"	l
+LOAD	clock-ticks/bootstrap.S	/^LOAD	x7, 6 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^#define LOAD /;"	d	file:
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x1, 0x0(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x10, 9 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x11, 10 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x12, 11 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x13, 12 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x14, 13 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x15, 14 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x16, 15 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x17, 16 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x28, 27 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x29, 28 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x30, 29 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x31, 30 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x4, 3 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x5, 4 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x6, 5 * REGBYTES(sp)$/;"	l
+LOAD	simple-sensor/bootstrap.S	/^LOAD	x7, 6 * REGBYTES(sp)$/;"	l
+MRAM_SIZE	mramTest/main.cpp	/^static const unsigned int MRAM_SIZE = 0x0FFFFFFF;$/;"	v	typeref:typename:const unsigned int	file:
+MRAM_START_ADDR	mramTest/main.cpp	/^static char* const MRAM_START_ADDR = reinterpret_cast<char* const>(0x60000000);$/;"	v	typeref:typename:char * const	file:
+OBJs	small-c/Makefile	/^OBJs = $(ASM_OBJs) $(C_OBJs)$/;"	m
+PLIC_CLAIM_AND_RESPONSE_REGISTER	basic-dma/irq.c	/^static volatile uint32_t * const PLIC_CLAIM_AND_RESPONSE_REGISTER = (uint32_t * const)0x40000004/;"	v	typeref:typename:volatile uint32_t * const	file:
+PLIC_CLAIM_AND_RESPONSE_REGISTER	clock-ticks/irq.c	/^static volatile uint32_t * const PLIC_CLAIM_AND_RESPONSE_REGISTER = (uint32_t * const)0x40000004/;"	v	typeref:typename:volatile uint32_t * const	file:
+PLIC_CLAIM_AND_RESPONSE_REGISTER	simple-sensor/irq.c	/^static volatile uint32_t * const PLIC_CLAIM_AND_RESPONSE_REGISTER = (uint32_t * const)0x40000004/;"	v	typeref:typename:volatile uint32_t * const	file:
+PREFIX	small-c/Makefile	/^PREFIX = riscv32-unknown-elf-$/;"	m
+REGBYTES	basic-dma/bootstrap.S	/^#define REGBYTES /;"	d	file:
+REGBYTES	clock-ticks/bootstrap.S	/^#define REGBYTES /;"	d	file:
+REGBYTES	simple-sensor/bootstrap.S	/^#define REGBYTES /;"	d	file:
+REG_S0	simple-scheduler/main.c	/^#define REG_S0 /;"	d	file:
+REG_S0	simple-scheduler/no-clib/main.c	/^#define REG_S0 /;"	d	file:
+REG_SP	simple-scheduler/main.c	/^#define REG_SP /;"	d	file:
+REG_SP	simple-scheduler/no-clib/main.c	/^#define REG_SP /;"	d	file:
+RISCV_MACHINE_EXTERNAL_INTERRUPT	basic-dma/irq.c	/^#define RISCV_MACHINE_EXTERNAL_INTERRUPT /;"	d	file:
+RISCV_MACHINE_EXTERNAL_INTERRUPT	clock-ticks/irq.c	/^#define RISCV_MACHINE_EXTERNAL_INTERRUPT /;"	d	file:
+RISCV_MACHINE_EXTERNAL_INTERRUPT	simple-sensor/irq.c	/^#define RISCV_MACHINE_EXTERNAL_INTERRUPT /;"	d	file:
+RISCV_MACHINE_SOFTWARE_INTERRUPT	basic-dma/irq.c	/^#define RISCV_MACHINE_SOFTWARE_INTERRUPT /;"	d	file:
+RISCV_MACHINE_SOFTWARE_INTERRUPT	clock-ticks/irq.c	/^#define RISCV_MACHINE_SOFTWARE_INTERRUPT /;"	d	file:
+RISCV_MACHINE_SOFTWARE_INTERRUPT	simple-sensor/irq.c	/^#define RISCV_MACHINE_SOFTWARE_INTERRUPT /;"	d	file:
+RISCV_MACHINE_TIMER_INTERRUPT	basic-dma/irq.c	/^#define RISCV_MACHINE_TIMER_INTERRUPT /;"	d	file:
+RISCV_MACHINE_TIMER_INTERRUPT	clock-ticks/irq.c	/^#define RISCV_MACHINE_TIMER_INTERRUPT /;"	d	file:
+RISCV_MACHINE_TIMER_INTERRUPT	simple-sensor/irq.c	/^#define RISCV_MACHINE_TIMER_INTERRUPT /;"	d	file:
+SENSOR_FILTER_REG_ADDR	simple-sensor/main.c	/^static volatile uint32_t * const SENSOR_FILTER_REG_ADDR = (uint32_t * const)0x50000084;$/;"	v	typeref:typename:volatile uint32_t * const	file:
+SENSOR_INPUT_ADDR	simple-sensor/main.c	/^static volatile char * const SENSOR_INPUT_ADDR = (char * const)0x50000000;$/;"	v	typeref:typename:volatile char * const	file:
+SENSOR_SCALER_REG_ADDR	simple-sensor/main.c	/^static volatile uint32_t * const SENSOR_SCALER_REG_ADDR = (uint32_t * const)0x50000080;$/;"	v	typeref:typename:volatile uint32_t * const	file:
+SRCs	small-c/Makefile	/^SRCs = $(ASM_SRCs) $(C_SRCs)$/;"	m
+START	simple-scheduler/main.c	/^	START,$/;"	e	enum:state_t	file:
+START	simple-scheduler/no-clib/main.c	/^	START,$/;"	e	enum:state_t	file:
+STORE	basic-dma/bootstrap.S	/^#define STORE /;"	d	file:
+STORE	basic-dma/bootstrap.S	/^STORE	x1, 0x0(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x10, 9 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x11, 10 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x12, 11 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x13, 12 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x14, 13 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x15, 14 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x16, 15 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x17, 16 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x28, 27 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x29, 28 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x30, 29 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x31, 30 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x4, 3 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x5, 4 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x6, 5 * REGBYTES(sp)$/;"	l
+STORE	basic-dma/bootstrap.S	/^STORE	x7, 6 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^#define STORE /;"	d	file:
+STORE	clock-ticks/bootstrap.S	/^STORE	x1, 0x0(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x10, 9 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x11, 10 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x12, 11 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x13, 12 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x14, 13 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x15, 14 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x16, 15 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x17, 16 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x28, 27 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x29, 28 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x30, 29 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x31, 30 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x4, 3 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x5, 4 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x6, 5 * REGBYTES(sp)$/;"	l
+STORE	clock-ticks/bootstrap.S	/^STORE	x7, 6 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^#define STORE /;"	d	file:
+STORE	simple-sensor/bootstrap.S	/^STORE	x1, 0x0(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x10, 9 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x11, 10 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x12, 11 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x13, 12 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x14, 13 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x15, 14 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x16, 15 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x17, 16 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x28, 27 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x29, 28 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x30, 29 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x31, 30 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x4, 3 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x5, 4 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x6, 5 * REGBYTES(sp)$/;"	l
+STORE	simple-sensor/bootstrap.S	/^STORE	x7, 6 * REGBYTES(sp)$/;"	l
+TARGET	small-c/Makefile	/^TARGET = $(notdir $(PWD))$/;"	m
+TERMINAL_ADDR	basic-dma/main.c	/^static volatile char * const TERMINAL_ADDR = (char * const)0x20000000;$/;"	v	typeref:typename:volatile char * const	file:
+TERMINAL_ADDR	simple-sensor/main.c	/^static volatile char * const TERMINAL_ADDR = (char * const)0x20000000;$/;"	v	typeref:typename:volatile char * const	file:
+UNKNOWN	simple-scheduler/main.c	/^	UNKNOWN,$/;"	e	enum:state_t	file:
+UNKNOWN	simple-scheduler/no-clib/main.c	/^	UNKNOWN,$/;"	e	enum:state_t	file:
+__RISCV_IRQ_H__	basic-dma/irq.h	/^#define __RISCV_IRQ_H__$/;"	d
+__RISCV_IRQ_H__	clock-ticks/irq.h	/^#define __RISCV_IRQ_H__$/;"	d
+__RISCV_IRQ_H__	simple-sensor/irq.h	/^#define __RISCV_IRQ_H__$/;"	d
+__anon7494b2200108	simple-scheduler/main.c	/^typedef struct {$/;"	s	file:
+__anon7494b2200208	simple-scheduler/main.c	/^typedef struct {$/;"	s	file:
+__anon8b1959530108	simple-scheduler/no-clib/main.c	/^typedef struct {$/;"	s	file:
+__anon8b1959530208	simple-scheduler/no-clib/main.c	/^typedef struct {$/;"	s	file:
+_resume	simple-scheduler/cor.S	/^	_resume:$/;"	l
+_resume	simple-scheduler/no-clib/cor.S	/^	_resume:$/;"	l
+_start	basic-asm/sum.S	/^_start:$/;"	l
+_start	basic-c/bootstrap.S	/^_start:$/;"	l
+_start	basic-debug/bootstrap.S	/^_start:$/;"	l
+_start	basic-dma/bootstrap.S	/^_start:$/;"	l
+_start	clock-ticks/bootstrap.S	/^_start:$/;"	l
+_start	simple-scheduler/no-clib/bootstrap.S	/^_start:$/;"	l
+_start	simple-sensor/bootstrap.S	/^_start:$/;"	l
+_start	small-c/bootstrap.S	/^_start:$/;"	l
+a	c++-lib/main.cpp	/^	int a;$/;"	m	struct:A	typeref:typename:int	file:
+activeWait	simple-display/main.cpp	/^void activeWait(float factor = 0.5)$/;"	f	typeref:typename:void
+active_context	simple-scheduler/main.c	/^context_t *active_context;$/;"	v	typeref:typename:context_t *
+active_context	simple-scheduler/no-clib/main.c	/^context_t *active_context;$/;"	v	typeref:typename:context_t *
+add	basic-asm/sum.S	/^add a2,a2,a0$/;"	l
+addi	basic-asm/sum.S	/^addi a0,a0,1$/;"	l
+addi	basic-dma/bootstrap.S	/^addi	sp, sp, REGBYTES * 32$/;"	l
+addi	basic-dma/bootstrap.S	/^addi    sp, sp, -REGBYTES * 32$/;"	l
+addi	clock-ticks/bootstrap.S	/^addi	sp, sp, REGBYTES * 32$/;"	l
+addi	clock-ticks/bootstrap.S	/^addi    sp, sp, -REGBYTES * 32$/;"	l
+addi	simple-sensor/bootstrap.S	/^addi	sp, sp, REGBYTES * 32$/;"	l
+addi	simple-sensor/bootstrap.S	/^addi    sp, sp, -REGBYTES * 32$/;"	l
+all	basic-asm/Makefile	/^all : sum.o$/;"	t
+all	basic-c/Makefile	/^all : main.c sum.c bootstrap.S$/;"	t
+all	basic-debug/Makefile	/^all : main.c bootstrap.S$/;"	t
+all	basic-dma/Makefile	/^all : main.c irq.c irq.h bootstrap.S$/;"	t
+all	basic-gcov/Makefile	/^all : main.c$/;"	t
+all	c++-lib/Makefile	/^all : main.cpp$/;"	t
+all	clock-ticks/Makefile	/^all : main.c irq.c irq.h bootstrap.S$/;"	t
+all	flashTest/Makefile	/^all : main.cpp$/;"	t
+all	mramTest/Makefile	/^all : main.cpp$/;"	t
+all	printf/Makefile	/^all : main.c$/;"	t
+all	simple-display/Makefile	/^all : main.cpp libDisplay.cpp$/;"	t
+all	simple-scheduler/Makefile	/^all : main.c$/;"	t
+all	simple-scheduler/no-clib/Makefile	/^all : main.c$/;"	t
+all	simple-sensor/Makefile	/^all : main.c irq.c irq.h bootstrap.S$/;"	t
+all	sys-read/Makefile	/^all : main.c$/;"	t
+applyFrame	simple-display/libDisplay.cpp	/^	void applyFrame()$/;"	f	namespace:display	typeref:typename:void
+arg	simple-scheduler/main.c	/^	void *arg;$/;"	m	struct:__anon7494b2200208	typeref:typename:void *	file:
+arg	simple-scheduler/no-clib/main.c	/^	void *arg;$/;"	m	struct:__anon8b1959530208	typeref:typename:void *	file:
+b	c++-lib/main.cpp	/^	int b;$/;"	m	struct:A	typeref:typename:int	file:
+bar	c++-lib/main.cpp	/^	virtual int bar() {$/;"	f	struct:A	typeref:typename:int	file:
+bgt	basic-asm/sum.S	/^bgt a0,a1,end$/;"	l
+clean	basic-asm/Makefile	/^clean:$/;"	t
+clean	basic-c/Makefile	/^clean:$/;"	t
+clean	basic-debug/Makefile	/^clean:$/;"	t
+clean	basic-dma/Makefile	/^clean:$/;"	t
+clean	basic-gcov/Makefile	/^clean:$/;"	t
+clean	c++-lib/Makefile	/^clean:$/;"	t
+clean	clock-ticks/Makefile	/^clean:$/;"	t
+clean	flashTest/Makefile	/^clean:$/;"	t
+clean	mramTest/Makefile	/^clean:$/;"	t
+clean	printf/Makefile	/^clean:$/;"	t
+clean	simple-display/Makefile	/^clean: removeSHMEM$/;"	t
+clean	simple-scheduler/Makefile	/^clean:$/;"	t
+clean	simple-scheduler/no-clib/Makefile	/^clean:$/;"	t
+clean	simple-sensor/Makefile	/^clean:$/;"	t
+clean	small-c/Makefile	/^clean:$/;"	t
+clean	sys-read/Makefile	/^clean:$/;"	t
+context_t	simple-scheduler/main.c	/^} context_t;$/;"	t	typeref:struct:__anon7494b2200108	file:
+context_t	simple-scheduler/no-clib/main.c	/^} context_t;$/;"	t	typeref:struct:__anon8b1959530108	file:
+contextswitch	simple-scheduler/cor.S	/^contextswitch:$/;"	l
+contextswitch	simple-scheduler/no-clib/cor.S	/^contextswitch:$/;"	l
+coroutine_entry	simple-scheduler/cor.S	/^coroutine_entry:$/;"	l
+coroutine_entry	simple-scheduler/no-clib/cor.S	/^coroutine_entry:$/;"	l
+coroutine_t	simple-scheduler/main.c	/^} coroutine_t;$/;"	t	typeref:struct:__anon7494b2200208	file:
+coroutine_t	simple-scheduler/no-clib/main.c	/^} coroutine_t;$/;"	t	typeref:struct:__anon8b1959530208	file:
+create_coroutine	simple-scheduler/main.c	/^coroutine_t *create_coroutine(entrypoint_t fn, void *arg) {$/;"	f	typeref:typename:coroutine_t *
+create_coroutine	simple-scheduler/no-clib/main.c	/^coroutine_t *create_coroutine(entrypoint_t fn, void *arg) {$/;"	f	typeref:typename:coroutine_t *
+csrr	basic-dma/bootstrap.S	/^csrr    a0, mcause$/;"	l
+csrr	clock-ticks/bootstrap.S	/^csrr    a0, mcause$/;"	l
+csrr	simple-sensor/bootstrap.S	/^csrr    a0, mcause$/;"	l
+csrsi	simple-sensor/bootstrap.S	/^csrsi mstatus, 8$/;"	l
+csrw	basic-dma/bootstrap.S	/^csrw mie, t1$/;"	l
+csrw	basic-dma/bootstrap.S	/^csrw mtvec, t0$/;"	l
+csrw	clock-ticks/bootstrap.S	/^csrw mie, t1$/;"	l
+csrw	clock-ticks/bootstrap.S	/^csrw mtvec, t0$/;"	l
+csrw	simple-sensor/bootstrap.S	/^csrw mie, t1$/;"	l
+csrw	simple-sensor/bootstrap.S	/^csrw mtvec, t0$/;"	l
+csrwi	basic-dma/bootstrap.S	/^csrwi mstatus, 8$/;"	l
+csrwi	clock-ticks/bootstrap.S	/^csrwi mstatus, 8$/;"	l
+ctx	simple-scheduler/main.c	/^	context_t ctx;$/;"	m	struct:__anon7494b2200208	typeref:typename:context_t	file:
+ctx	simple-scheduler/no-clib/main.c	/^	context_t ctx;$/;"	m	struct:__anon8b1959530208	typeref:typename:context_t	file:
+display	simple-display/libDisplay.cpp	/^namespace display$/;"	n	file:
+display	simple-display/libDisplay.hpp	/^namespace display$/;"	n
+dma_completed	basic-dma/main.c	/^_Bool dma_completed = 0;$/;"	v	typeref:typename:_Bool
+dma_irq_handler	basic-dma/main.c	/^void dma_irq_handler() {$/;"	f	typeref:typename:void
+drawBackground	simple-display/main.cpp	/^void drawBackground()$/;"	f	typeref:typename:void
+drawFunnyBar	simple-display/main.cpp	/^void drawFunnyBar(bool horizontal = false)$/;"	f	typeref:typename:void
+drawFunnyRects	simple-display/main.cpp	/^void drawFunnyRects()$/;"	f	typeref:typename:void
+drawLine	simple-display/libDisplay.cpp	/^	void drawLine(Framebuffer::Type frame, PointF from, PointF to, Color color)$/;"	f	namespace:display	typeref:typename:void
+drawRect	simple-display/libDisplay.cpp	/^	void drawRect(Framebuffer::Type frame, PointF ol, PointF ur, Color color)$/;"	f	namespace:display	typeref:typename:void
+dump-code	basic-asm/Makefile	/^dump-code: all$/;"	t
+dump-code	basic-debug/Makefile	/^dump-code: all$/;"	t
+dump-code	basic-dma/Makefile	/^dump-code: all$/;"	t
+dump-code	basic-gcov/Makefile	/^dump-code: all$/;"	t
+dump-code	c++-lib/Makefile	/^dump-code: all$/;"	t
+dump-code	clock-ticks/Makefile	/^dump-code: all$/;"	t
+dump-code	flashTest/Makefile	/^dump-code: all$/;"	t
+dump-code	mramTest/Makefile	/^dump-code: all$/;"	t
+dump-code	printf/Makefile	/^dump-code: all$/;"	t
+dump-code	simple-display/Makefile	/^dump-code: all$/;"	t
+dump-code	simple-scheduler/Makefile	/^dump-code: all$/;"	t
+dump-code	simple-scheduler/no-clib/Makefile	/^dump-code: all$/;"	t
+dump-code	simple-sensor/Makefile	/^dump-code: all$/;"	t
+dump-code	sys-read/Makefile	/^dump-code: all$/;"	t
+dump-comment	basic-dma/Makefile	/^dump-comment: all$/;"	t
+dump-comment	clock-ticks/Makefile	/^dump-comment: all$/;"	t
+dump-comment	simple-sensor/Makefile	/^dump-comment: all$/;"	t
+dump-coverage	basic-gcov/Makefile	/^dump-coverage: main.gcda$/;"	t
+dump-dwarf-info	basic-debug/Makefile	/^dump-dwarf-info: all$/;"	t
+dump-elf	basic-asm/Makefile	/^dump-elf: all$/;"	t
+dump-elf	basic-debug/Makefile	/^dump-elf: all$/;"	t
+dump-elf	basic-dma/Makefile	/^dump-elf: all$/;"	t
+dump-elf	basic-gcov/Makefile	/^dump-elf: all$/;"	t
+dump-elf	c++-lib/Makefile	/^dump-elf: all$/;"	t
+dump-elf	clock-ticks/Makefile	/^dump-elf: all$/;"	t
+dump-elf	flashTest/Makefile	/^dump-elf: all$/;"	t
+dump-elf	mramTest/Makefile	/^dump-elf: all$/;"	t
+dump-elf	printf/Makefile	/^dump-elf: all$/;"	t
+dump-elf	simple-display/Makefile	/^dump-elf: all$/;"	t
+dump-elf	simple-scheduler/Makefile	/^dump-elf: all$/;"	t
+dump-elf	simple-scheduler/no-clib/Makefile	/^dump-elf: all$/;"	t
+dump-elf	simple-sensor/Makefile	/^dump-elf: all$/;"	t
+dump-elf	sys-read/Makefile	/^dump-elf: all$/;"	t
+dump_sensor_data	simple-sensor/main.c	/^void dump_sensor_data() {$/;"	f	typeref:typename:void
+ecall	basic-asm/sum.S	/^ecall$/;"	l
+ecall	basic-c/bootstrap.S	/^ecall$/;"	l
+ecall	basic-debug/bootstrap.S	/^ecall$/;"	l
+ecall	basic-dma/bootstrap.S	/^ecall$/;"	l
+ecall	clock-ticks/bootstrap.S	/^ecall$/;"	l
+ecall	simple-scheduler/no-clib/bootstrap.S	/^ecall$/;"	l
+ecall	simple-sensor/bootstrap.S	/^ecall$/;"	l
+ecall	small-c/bootstrap.S	/^ecall$/;"	l
+entry	simple-scheduler/main.c	/^	entrypoint_t entry;$/;"	m	struct:__anon7494b2200208	typeref:typename:entrypoint_t	file:
+entry	simple-scheduler/no-clib/main.c	/^	entrypoint_t entry;$/;"	m	struct:__anon8b1959530208	typeref:typename:entrypoint_t	file:
+entrypoint_t	simple-scheduler/main.c	/^typedef void (*entrypoint_t)(void *);$/;"	t	typeref:typename:void (*)(void *)	file:
+entrypoint_t	simple-scheduler/no-clib/main.c	/^typedef void (*entrypoint_t)(void *);$/;"	t	typeref:typename:void (*)(void *)	file:
+f	basic-debug/main.c	/^int f(int a, int b) {$/;"	f	typeref:typename:int
+fillFrame	simple-display/libDisplay.cpp	/^	void fillFrame(Framebuffer::Type frame, Color color)$/;"	f	namespace:display	typeref:typename:void
+fillRect	simple-display/libDisplay.cpp	/^	void fillRect(Framebuffer::Type frame, PointF ol, PointF ur, Color color)$/;"	f	namespace:display	typeref:typename:void
+foo	c++-lib/main.cpp	/^	virtual int foo() override {$/;"	f	struct:B	typeref:typename:int	file:
+framebuffer	simple-display/main.cpp	/^Framebuffer* volatile const framebuffer = (Framebuffer* volatile const)(0x72000000);$/;"	v	typeref:typename:Framebuffer * volatile const
+free_coroutine	simple-scheduler/main.c	/^void free_coroutine(coroutine_t *cor) {$/;"	f	typeref:typename:void
+free_coroutine	simple-scheduler/no-clib/main.c	/^void free_coroutine(coroutine_t *cor) {$/;"	f	typeref:typename:void
+fromRGB	simple-display/libDisplay.hpp	/^inline Color fromRGB(uint8_t r, uint8_t g, uint8_t b)$/;"	f	typeref:typename:Color
+function_A	simple-scheduler/main.c	/^void function_A(void *arg) {$/;"	f	typeref:typename:void
+function_A	simple-scheduler/no-clib/main.c	/^void function_A(void *arg) {$/;"	f	typeref:typename:void
+function_B	simple-scheduler/main.c	/^void function_B(void *arg) {$/;"	f	typeref:typename:void
+function_B	simple-scheduler/no-clib/main.c	/^void function_B(void *arg) {$/;"	f	typeref:typename:void
+getRandomColor	simple-display/main.cpp	/^Color getRandomColor()$/;"	f	typeref:typename:Color
+getRandomPoint	simple-display/main.cpp	/^Point getRandomPoint()$/;"	f	typeref:typename:Point
+has_sensor_data	simple-sensor/main.c	/^_Bool has_sensor_data = 0;$/;"	v	typeref:typename:_Bool
+irq_empty_handler	basic-dma/irq.c	/^static void irq_empty_handler() {}$/;"	f	typeref:typename:void	file:
+irq_empty_handler	clock-ticks/irq.c	/^static void irq_empty_handler() {}$/;"	f	typeref:typename:void	file:
+irq_empty_handler	simple-sensor/irq.c	/^static void irq_empty_handler() {}$/;"	f	typeref:typename:void	file:
+irq_handler_t	basic-dma/irq.h	/^typedef void (*irq_handler_t)(void);$/;"	t	typeref:typename:void (*)(void)
+irq_handler_t	clock-ticks/irq.h	/^typedef void (*irq_handler_t)(void);$/;"	t	typeref:typename:void (*)(void)
+irq_handler_t	simple-sensor/irq.h	/^typedef void (*irq_handler_t)(void);$/;"	t	typeref:typename:void (*)(void)
+irq_handler_table	basic-dma/irq.c	/^static irq_handler_t irq_handler_table[IRQ_TABLE_NUM_ENTRIES] = { [ 0 ... IRQ_TABLE_NUM_ENTRIES-/;"	v	typeref:typename:irq_handler_t[]	file:
+irq_handler_table	clock-ticks/irq.c	/^static irq_handler_t irq_handler_table[IRQ_TABLE_NUM_ENTRIES] = { [ 0 ... IRQ_TABLE_NUM_ENTRIES-/;"	v	typeref:typename:irq_handler_t[]	file:
+irq_handler_table	simple-sensor/irq.c	/^static irq_handler_t irq_handler_table[IRQ_TABLE_NUM_ENTRIES] = { [ 0 ... IRQ_TABLE_NUM_ENTRIES-/;"	v	typeref:typename:irq_handler_t[]	file:
+j	basic-asm/sum.S	/^j loop$/;"	l
+jal	basic-c/bootstrap.S	/^jal main$/;"	l
+jal	basic-debug/bootstrap.S	/^jal main$/;"	l
+jal	basic-dma/bootstrap.S	/^jal     level_1_interrupt_handler$/;"	l
+jal	basic-dma/bootstrap.S	/^jal main$/;"	l
+jal	clock-ticks/bootstrap.S	/^jal     level_1_interrupt_handler$/;"	l
+jal	clock-ticks/bootstrap.S	/^jal main$/;"	l
+jal	simple-scheduler/no-clib/bootstrap.S	/^jal main$/;"	l
+jal	simple-sensor/bootstrap.S	/^jal     level_1_interrupt_handler$/;"	l
+jal	simple-sensor/bootstrap.S	/^jal main$/;"	l
+jal	small-c/bootstrap.S	/^jal main$/;"	l
+la	basic-dma/bootstrap.S	/^la t0, level_0_interrupt_handler$/;"	l
+la	clock-ticks/bootstrap.S	/^la t0, level_0_interrupt_handler$/;"	l
+la	simple-sensor/bootstrap.S	/^la t0, level_0_interrupt_handler$/;"	l
+launch_coroutine	simple-scheduler/main.c	/^void launch_coroutine(coroutine_t *cor) {$/;"	f	typeref:typename:void
+launch_coroutine	simple-scheduler/no-clib/main.c	/^void launch_coroutine(coroutine_t *cor) {$/;"	f	typeref:typename:void
+level_0_interrupt_handler	basic-dma/bootstrap.S	/^level_0_interrupt_handler:$/;"	l
+level_0_interrupt_handler	clock-ticks/bootstrap.S	/^level_0_interrupt_handler:$/;"	l
+level_0_interrupt_handler	simple-sensor/bootstrap.S	/^level_0_interrupt_handler:$/;"	l
+level_1_interrupt_handler	basic-dma/irq.c	/^void level_1_interrupt_handler(uint32_t cause) {$/;"	f	typeref:typename:void
+level_1_interrupt_handler	clock-ticks/irq.c	/^void level_1_interrupt_handler(uint32_t cause) {$/;"	f	typeref:typename:void
+level_1_interrupt_handler	simple-sensor/irq.c	/^void level_1_interrupt_handler(uint32_t cause) {$/;"	f	typeref:typename:void
+li	basic-asm/sum.S	/^li a0,0$/;"	l
+li	basic-asm/sum.S	/^li a0,50$/;"	l
+li	basic-asm/sum.S	/^li a1,100$/;"	l
+li	basic-asm/sum.S	/^li a2,0$/;"	l
+li	basic-asm/sum.S	/^li a7,93$/;"	l
+li	basic-c/bootstrap.S	/^li a0,0$/;"	l
+li	basic-c/bootstrap.S	/^li a7,93$/;"	l
+li	basic-debug/bootstrap.S	/^li a0,0$/;"	l
+li	basic-debug/bootstrap.S	/^li a7,93$/;"	l
+li	basic-dma/bootstrap.S	/^li a0,0$/;"	l
+li	basic-dma/bootstrap.S	/^li a7,93$/;"	l
+li	basic-dma/bootstrap.S	/^li t1, 0x888$/;"	l
+li	clock-ticks/bootstrap.S	/^li a0,0$/;"	l
+li	clock-ticks/bootstrap.S	/^li a7,93$/;"	l
+li	clock-ticks/bootstrap.S	/^li t1, 0x888$/;"	l
+li	simple-scheduler/no-clib/bootstrap.S	/^li a0,0$/;"	l
+li	simple-scheduler/no-clib/bootstrap.S	/^li a7,93$/;"	l
+li	simple-scheduler/no-clib/bootstrap.S	/^li sp, 8000000$/;"	l
+li	simple-sensor/bootstrap.S	/^li a0,0$/;"	l
+li	simple-sensor/bootstrap.S	/^li a7,93$/;"	l
+li	simple-sensor/bootstrap.S	/^li t1, 0x888$/;"	l
+li	small-c/bootstrap.S	/^li a0,0$/;"	l
+li	small-c/bootstrap.S	/^li a7,93$/;"	l
+loop	basic-asm/sum.S	/^loop:$/;"	l
+main	basic-c/main.c	/^int main() {$/;"	f	typeref:typename:int
+main	basic-debug/main.c	/^int main() {$/;"	f	typeref:typename:int
+main	basic-dma/main.c	/^int main() {$/;"	f	typeref:typename:int
+main	basic-gcov/main.c	/^int main() {$/;"	f	typeref:typename:int
+main	c++-lib/main.cpp	/^int main() {$/;"	f	typeref:typename:int
+main	clock-ticks/main.c	/^int main() {$/;"	f	typeref:typename:int
+main	flashTest/main.cpp	/^int main() {$/;"	f	typeref:typename:int
+main	mramTest/main.cpp	/^int main() {$/;"	f	typeref:typename:int
+main	printf/main.c	/^int main(int argc, char **argv) {$/;"	f	typeref:typename:int
+main	simple-display/main.cpp	/^int main()$/;"	f	typeref:typename:int
+main	simple-scheduler/main.c	/^int main() {$/;"	f	typeref:typename:int
+main	simple-scheduler/no-clib/main.c	/^int main() {$/;"	f	typeref:typename:int
+main	simple-sensor/main.c	/^int main() {$/;"	f	typeref:typename:int
+main	small-c/main.c	/^int main(){$/;"	f	typeref:typename:int
+main	sys-read/main.c	/^int main(int argc, char **argv) {$/;"	f	typeref:typename:int
+main.gcda	basic-gcov/Makefile	/^main.gcda : all$/;"	t
+main_context	simple-scheduler/main.c	/^context_t main_context;$/;"	v	typeref:typename:context_t
+main_context	simple-scheduler/no-clib/main.c	/^context_t main_context;$/;"	v	typeref:typename:context_t
+mret	basic-dma/bootstrap.S	/^mret$/;"	l
+mret	clock-ticks/bootstrap.S	/^mret$/;"	l
+mret	simple-sensor/bootstrap.S	/^mret$/;"	l
+mtime	basic-dma/irq.c	/^volatile uint64_t* mtime =   (uint64_t*)(CLINT_BASE + 0xbff8);$/;"	v	typeref:typename:volatile uint64_t *
+mtime	clock-ticks/irq.c	/^volatile uint64_t* mtime =   (uint64_t*)(CLINT_BASE + 0xbff8);$/;"	v	typeref:typename:volatile uint64_t *
+mtime	simple-sensor/irq.c	/^volatile uint64_t* mtime =   (uint64_t*)(CLINT_BASE + 0xbff8);$/;"	v	typeref:typename:volatile uint64_t *
+mtimecmp	basic-dma/irq.c	/^volatile uint64_t* mtimecmp = (uint64_t*)(CLINT_BASE + 0x4000);$/;"	v	typeref:typename:volatile uint64_t *
+mtimecmp	clock-ticks/irq.c	/^volatile uint64_t* mtimecmp = (uint64_t*)(CLINT_BASE + 0x4000);$/;"	v	typeref:typename:volatile uint64_t *
+mtimecmp	simple-sensor/irq.c	/^volatile uint64_t* mtimecmp = (uint64_t*)(CLINT_BASE + 0x4000);$/;"	v	typeref:typename:volatile uint64_t *
+num_ticks	clock-ticks/main.c	/^unsigned int num_ticks = 0;$/;"	v	typeref:typename:unsigned int
+pc	simple-scheduler/main.c	/^	uint32_t pc;$/;"	m	struct:__anon7494b2200108	typeref:typename:uint32_t	file:
+pc	simple-scheduler/no-clib/main.c	/^	uint32_t pc;$/;"	m	struct:__anon8b1959530108	typeref:typename:uint32_t	file:
+progressBar	simple-display/main.cpp	/^void progressBar(bool horizontal, PointF base, PointF extent, Color fg, Color bg, float completi/;"	f	typeref:typename:void
+readFlash	flashTest/main.cpp	/^void readFlash(char* dst, uint64_t addr, size_t len)$/;"	f	typeref:typename:void
+register_interrupt_handler	basic-dma/irq.c	/^void register_interrupt_handler(uint32_t irq_id, irq_handler_t fn) {$/;"	f	typeref:typename:void
+register_interrupt_handler	clock-ticks/irq.c	/^void register_interrupt_handler(uint32_t irq_id, irq_handler_t fn) {$/;"	f	typeref:typename:void
+register_interrupt_handler	simple-sensor/irq.c	/^void register_interrupt_handler(uint32_t irq_id, irq_handler_t fn) {$/;"	f	typeref:typename:void
+register_timer_interrupt_handler	basic-dma/irq.c	/^void register_timer_interrupt_handler(irq_handler_t fn) {$/;"	f	typeref:typename:void
+register_timer_interrupt_handler	clock-ticks/irq.c	/^void register_timer_interrupt_handler(irq_handler_t fn) {$/;"	f	typeref:typename:void
+register_timer_interrupt_handler	simple-sensor/irq.c	/^void register_timer_interrupt_handler(irq_handler_t fn) {$/;"	f	typeref:typename:void
+regs	simple-scheduler/main.c	/^	uint32_t regs[31];$/;"	m	struct:__anon7494b2200108	typeref:typename:uint32_t[31]	file:
+regs	simple-scheduler/no-clib/main.c	/^	uint32_t regs[31];$/;"	m	struct:__anon8b1959530108	typeref:typename:uint32_t[31]	file:
+removeSHMEM	simple-display/Makefile	/^removeSHMEM:$/;"	t
+sensor_irq_handler	simple-sensor/main.c	/^void sensor_irq_handler() {$/;"	f	typeref:typename:void
+setPixel	simple-display/libDisplay.cpp	/^	void setPixel(Framebuffer::Type frame, Point pixel, Color color)$/;"	f	namespace:display	typeref:typename:void
+setTargetBlock	flashTest/main.cpp	/^void setTargetBlock(uint64_t addr)$/;"	f	typeref:typename:void
+set_next_timer_interrupt	clock-ticks/main.c	/^static void set_next_timer_interrupt() {$/;"	f	typeref:typename:void	file:
+stack	simple-scheduler/main.c	/^	uint8_t stack[16384];$/;"	m	struct:__anon7494b2200208	typeref:typename:uint8_t[16384]	file:
+stack	simple-scheduler/no-clib/main.c	/^	uint8_t stack[16384];$/;"	m	struct:__anon8b1959530208	typeref:typename:uint8_t[16384]	file:
+stat	simple-scheduler/main.c	/^	enum state_t stat;$/;"	m	struct:__anon7494b2200208	typeref:enum:state_t	file:
+stat	simple-scheduler/no-clib/main.c	/^	enum state_t stat;$/;"	m	struct:__anon8b1959530208	typeref:enum:state_t	file:
+state_t	simple-scheduler/main.c	/^enum state_t {$/;"	g	file:
+state_t	simple-scheduler/no-clib/main.c	/^enum state_t {$/;"	g	file:
+sum	basic-c/sum.c	/^int sum(int end) {$/;"	f	typeref:typename:int
+sum.o	basic-asm/Makefile	/^sum.o : sum.S$/;"	t
+switch_to_coroutine	simple-scheduler/main.c	/^void switch_to_coroutine(coroutine_t *cor) {$/;"	f	typeref:typename:void
+switch_to_coroutine	simple-scheduler/no-clib/main.c	/^void switch_to_coroutine(coroutine_t *cor) {$/;"	f	typeref:typename:void
+switch_to_scheduler	simple-scheduler/main.c	/^void switch_to_scheduler() {$/;"	f	typeref:typename:void
+switch_to_scheduler	simple-scheduler/no-clib/main.c	/^void switch_to_scheduler() {$/;"	f	typeref:typename:void
+timer_irq_handler	basic-dma/irq.c	/^static irq_handler_t timer_irq_handler = 0;$/;"	v	typeref:typename:irq_handler_t	file:
+timer_irq_handler	clock-ticks/irq.c	/^static irq_handler_t timer_irq_handler = 0;$/;"	v	typeref:typename:irq_handler_t	file:
+timer_irq_handler	clock-ticks/main.c	/^void timer_irq_handler() {$/;"	f	typeref:typename:void
+timer_irq_handler	simple-sensor/irq.c	/^static irq_handler_t timer_irq_handler = 0;$/;"	v	typeref:typename:irq_handler_t	file:
+writeFlash	flashTest/main.cpp	/^void writeFlash(const char* src, uint64_t addr, size_t len)$/;"	f	typeref:typename:void
+x	basic-c/main.c	/^int x = 5;$/;"	v	typeref:typename:int
+x	basic-debug/main.c	/^int x = 5;$/;"	v	typeref:typename:int
+y	basic-c/main.c	/^int y;$/;"	v	typeref:typename:int
+y	basic-debug/main.c	/^int y;$/;"	v	typeref:typename:int
