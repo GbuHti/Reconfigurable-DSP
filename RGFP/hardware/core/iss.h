@@ -529,9 +529,17 @@ struct ISS : public sc_core::sc_module,
         return op;
     }
 
+
+	/**
+	 * @brief 计算当前的运行周期
+	 * 计算方法：周期数 = 运行时间/周期时间
+	 * @param 无
+	 * @return uint64_t
+	 * @note 运行时间 = local time + sc_time_stamp()
+	 */
     uint64_t _compute_and_get_current_cycles() {
         // Note: result is based on the default time resolution of SystemC (1 PS)
-        sc_core::sc_time now = quantum_keeper.get_current_time();
+        sc_core::sc_time now = quantum_keeper.get_current_time(); //local time + sc_time_stamp()
 
         assert (now % cycle_time == sc_core::SC_ZERO_TIME);
         assert (now.value() % cycle_time.value() == 0);
@@ -541,6 +549,12 @@ struct ISS : public sc_core::sc_module,
         return num_cycles;
     }
 
+	/** 
+	 * @brief 访问CSR寄存器
+	 * @param CSR寄存器地址
+	 * @return csr_base &
+	 * 当访问一些实时更新的CSR寄存器时，需要先更新，然后再送出
+	 */
     csr_base &csr_update_and_get(uint32_t addr) {
         switch (addr) {
             case CSR_TIME_ADDR:
@@ -647,8 +661,8 @@ struct ISS : public sc_core::sc_module,
         auto new_cycles = instr_cycles[executed_op];
 
         quantum_keeper.inc(new_cycles);
-        if (quantum_keeper.need_sync()) {
-            quantum_keeper.sync();
+        if (quantum_keeper.need_sync()) { ///< 判断时间片是否已经用完
+            quantum_keeper.sync();        ///< 同步，将多个已经完成的transaction的delay形成的local time同步掉。
         }
     }
 

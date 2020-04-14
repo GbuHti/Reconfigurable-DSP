@@ -44,9 +44,9 @@ void b_transport(tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)
 	tlm::tlm_command cmd = gp.get_command();
 
 	if(cmd == tlm::TLM_READ_COMMAND){
-		write_data(addr, data_ptr, len);	
+		read_data(addr, data_ptr, len);	
 	}else if ( cmd == tlm::TLM_WRITE_COMMAND){
-		read_data(addr, data_ptr, len);
+		write_data(addr, data_ptr, len);
 	}else {
 		assert(false && "Memory: unsupport command");
 	}

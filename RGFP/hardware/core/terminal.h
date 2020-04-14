@@ -18,7 +18,7 @@ struct Terminal : public sc_core::sc_module {
         sc_assert (trans.get_command() == tlm::TLM_WRITE_COMMAND);
         sc_assert (trans.get_data_length() == 1);
 
-        std::cout << "Terminnal:" << (int)*trans.get_data_ptr() << std::endl;
+        std::cout << "Terminnal:" << (char)*trans.get_data_ptr() << std::endl;
 //		std::cout << (char)*trans.get_data_ptr();
     }
 };

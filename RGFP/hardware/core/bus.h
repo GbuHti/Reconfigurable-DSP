@@ -62,13 +62,13 @@ struct Bus: public sc_core::sc_module
 		assert(false && "unable to find target port!!");
 	}
 
-	void b_transport( tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)
+	void b_transport(int id, tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)
 	{
 		uint64_t addr = gp.get_address();	
-		unsigned id = decode(addr);
+		unsigned tsock_id = decode(addr);
 			
-		gp.set_address(ports[id]->global_to_local(addr));
-		isock[id].b_transport(gp,delay);
+		gp.set_address(ports[tsock_id]->global_to_local(addr));
+		isock[tsock_id]->b_transport(gp,delay);
 		
 	}
 };

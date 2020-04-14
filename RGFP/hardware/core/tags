@@ -38,7 +38,10 @@ BLT	instr.h	/^    BLT,$/;"	e	enum:Opcode::mapping
 BLTU	instr.h	/^    BLTU,$/;"	e	enum:Opcode::mapping
 BNE	instr.cpp	/^    static T BNE(unsigned rs1, unsigned rs2, int B_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
 BNE	instr.h	/^    BNE,$/;"	e	enum:Opcode::mapping
+BUS_H	bus.h	/^#define BUS_H$/;"	d
 B_imm	instr.h	/^    inline int32_t B_imm() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+Bus	bus.h	/^	Bus(sc_core::sc_module_name name)$/;"	f	struct:Bus
+Bus	bus.h	/^struct Bus: public sc_core::sc_module$/;"	s
 CLINT_IF_H	clint_if.h	/^#define CLINT_IF_H$/;"	d
 CSRRC	instr.h	/^    CSRRC,$/;"	e	enum:Opcode::mapping
 CSRRCI	instr.h	/^    CSRRCI,$/;"	e	enum:Opcode::mapping
@@ -121,13 +124,27 @@ Compressed	instr.cpp	/^namespace Compressed {$/;"	n	file:
 CoreExecStatus	iss.h	/^enum class CoreExecStatus {$/;"	g
 DIV	instr.h	/^    DIV,$/;"	e	enum:Opcode::mapping
 DIVU	instr.h	/^    DIVU,$/;"	e	enum:Opcode::mapping
+DST_ADDR	dma.h	/^        DST_ADDR = 4,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0203
 Direct	csr.h	/^        Direct = 0,$/;"	e	enum:csr_mtvec::Mode
 DirectCoreRunner	iss.h	/^    DirectCoreRunner(ISS &core)$/;"	f	struct:DirectCoreRunner
 DirectCoreRunner	iss.h	/^struct DirectCoreRunner : public sc_core::sc_module {$/;"	s
 EBREAK	instr.cpp	/^    static T EBREAK() {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
 EBREAK	instr.h	/^    EBREAK,$/;"	e	enum:Opcode::mapping
 ECALL	instr.h	/^    ECALL,$/;"	e	enum:Opcode::mapping
+ELFLoader	elf_loader.h	/^    ELFLoader(const char *filename)$/;"	f	struct:ELFLoader
+ELFLoader	elf_loader.h	/^struct ELFLoader {$/;"	s
+ELF_NIDENT	elf_loader.h	/^#define ELF_NIDENT /;"	d
 EXTRACT_SIGN_BIT	instr.h	/^#define EXTRACT_SIGN_BIT(/;"	d
+Elf32_Addr	elf_loader.h	/^typedef uint32_t Elf32_Addr;	\/\/ Unsigned address$/;"	t	typeref:typename:uint32_t
+Elf32_Ehdr	elf_loader.h	/^} Elf32_Ehdr;$/;"	t	typeref:struct:__anonb7fc41480108
+Elf32_Half	elf_loader.h	/^typedef uint16_t Elf32_Half;	\/\/ Unsigned half int$/;"	t	typeref:typename:uint16_t
+Elf32_Off	elf_loader.h	/^typedef uint32_t Elf32_Off;	    \/\/ Unsigned offset$/;"	t	typeref:typename:uint32_t
+Elf32_Phdr	elf_loader.h	/^} Elf32_Phdr;$/;"	t	typeref:struct:__anonb7fc41480208
+Elf32_PhdrType	elf_loader.h	/^enum Elf32_PhdrType {$/;"	g
+Elf32_Shdr	elf_loader.h	/^} Elf32_Shdr;$/;"	t	typeref:struct:__anonb7fc41480308
+Elf32_Sword	elf_loader.h	/^typedef int32_t  Elf32_Sword;	\/\/ Signed int$/;"	t	typeref:typename:int32_t
+Elf32_Sym	elf_loader.h	/^} Elf32_Sym;$/;"	t	typeref:struct:__anonb7fc41480408
+Elf32_Word	elf_loader.h	/^typedef uint32_t Elf32_Word;	\/\/ Unsigned int$/;"	t	typeref:typename:uint32_t
 F12_EBREAK	instr.h	/^        F12_EBREAK = 0b000000000001,$/;"	e	enum:Opcode::parts
 F12_ECALL	instr.h	/^        F12_ECALL  = 0b000000000000,$/;"	e	enum:Opcode::parts
 F12_MRET	instr.h	/^        F12_MRET   = 0b001100000010,$/;"	e	enum:Opcode::parts
@@ -219,6 +236,7 @@ J_imm	instr.h	/^    inline int32_t J_imm() {$/;"	f	struct:Instruction	typeref:ty
 L0	csr.h	/^            unsigned L0: 1;             \/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:1
 LB	instr.h	/^    LB,$/;"	e	enum:Opcode::mapping
 LBU	instr.h	/^    LBU,$/;"	e	enum:Opcode::mapping
+LEN_ADDR	dma.h	/^        LEN_ADDR = 8,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0203
 LH	instr.h	/^    LH,$/;"	e	enum:Opcode::mapping
 LHU	instr.h	/^    LHU,$/;"	e	enum:Opcode::mapping
 LR_W	instr.h	/^    LR_W,$/;"	e	enum:Opcode::mapping
@@ -226,17 +244,21 @@ LUI	instr.cpp	/^    static T LUI(unsigned rd, int U_imm) {$/;"	f	struct:Instruct
 LUI	instr.h	/^    LUI = 1,$/;"	e	enum:Opcode::mapping
 LW	instr.cpp	/^    static T LW(unsigned rd, unsigned rs1, int I_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
 LW	instr.h	/^    LW,$/;"	e	enum:Opcode::mapping
+MEMORY_H	memory.h	/^#define MEMORY_H$/;"	d
 MEM_IF	mem_if.h	/^#define MEM_IF$/;"	d
 MRET	instr.h	/^    MRET,$/;"	e	enum:Opcode::mapping
 MUL	instr.h	/^    MUL,$/;"	e	enum:Opcode::mapping
 MULH	instr.h	/^    MULH,$/;"	e	enum:Opcode::mapping
 MULHSU	instr.h	/^    MULHSU,$/;"	e	enum:Opcode::mapping
 MULHU	instr.h	/^    MULHU,$/;"	e	enum:Opcode::mapping
+Memory	memory.h	/^	Memory(sc_core::sc_module_name name, uint32_t size)$/;"	f	struct:Memory
+Memory	memory.h	/^struct Memory:public sc_core::sc_module$/;"	s
 Mode	csr.h	/^    enum Mode {$/;"	g	struct:csr_mtvec
 NUMBER_OF_INSTRUCTIONS	instr.h	/^    NUMBER_OF_INSTRUCTIONS$/;"	e	enum:Opcode::mapping
 NUM_REGS	regfile.h	/^        NUM_REGS = 32$/;"	e	enum:RegFile::__anonf5c575790103
 OP_ADD	instr.h	/^        OP_ADD    = 0b0110011,$/;"	e	enum:Opcode::parts
 OP_ADDI	instr.h	/^        OP_ADDI   = 0b0010011,$/;"	e	enum:Opcode::parts
+OP_ADDR	dma.h	/^        OP_ADDR  = 12,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0203
 OP_AMO	instr.h	/^        OP_AMO        = 0b0101111,$/;"	e	enum:Opcode::parts
 OP_AUIPC	instr.h	/^        OP_AUIPC  = 0b0010111,$/;"	e	enum:Opcode::parts
 OP_BEQ	instr.h	/^        OP_BEQ    = 0b1100011,$/;"	e	enum:Opcode::parts
@@ -246,17 +268,35 @@ OP_JAL	instr.h	/^        OP_JAL    = 0b1101111,$/;"	e	enum:Opcode::parts
 OP_JALR	instr.h	/^        OP_JALR   = 0b1100111,$/;"	e	enum:Opcode::parts
 OP_LB	instr.h	/^        OP_LB     = 0b0000011,$/;"	e	enum:Opcode::parts
 OP_LUI	instr.h	/^        OP_LUI    = 0b0110111,$/;"	e	enum:Opcode::parts
+OP_MEMCHR	dma.h	/^        OP_MEMCHR = 4,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0103
+OP_MEMCMP	dma.h	/^        OP_MEMCMP = 3,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0103
+OP_MEMCPY	dma.h	/^        OP_MEMCPY = 1,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0103
+OP_MEMMOVE	dma.h	/^        OP_MEMMOVE = 5,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0103
+OP_MEMSET	dma.h	/^        OP_MEMSET = 2,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0103
+OP_NOP	dma.h	/^        OP_NOP    = 0,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0103
 OP_SB	instr.h	/^        OP_SB     = 0b0100011,$/;"	e	enum:Opcode::parts
 OR	instr.cpp	/^    static T OR(unsigned rd, unsigned rs1, unsigned rs2) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
 OR	instr.h	/^    OR,$/;"	e	enum:Opcode::mapping
 ORI	instr.h	/^    ORI,$/;"	e	enum:Opcode::mapping
 Opcode	instr.cpp	/^   enum Opcode $/;"	g	namespace:Compressed	file:
 Opcode	instr.h	/^namespace Opcode {$/;"	n
+Options	main.cpp	/^struct Options {$/;"	s	file:
+PT_DYNAMIC	elf_loader.h	/^    PT_DYNAMIC  = 2,$/;"	e	enum:Elf32_PhdrType
+PT_INTERP	elf_loader.h	/^    PT_INTERP   = 3,$/;"	e	enum:Elf32_PhdrType
+PT_LOAD	elf_loader.h	/^    PT_LOAD     = 1,$/;"	e	enum:Elf32_PhdrType
+PT_NOTE	elf_loader.h	/^    PT_NOTE     = 4,$/;"	e	enum:Elf32_PhdrType
+PT_NULL	elf_loader.h	/^    PT_NULL     = 0,$/;"	e	enum:Elf32_PhdrType
+PT_PHDR	elf_loader.h	/^    PT_PHDR     = 6$/;"	e	enum:Elf32_PhdrType
+PT_SHLIB	elf_loader.h	/^    PT_SHLIB    = 5,$/;"	e	enum:Elf32_PhdrType
+PortMapping	bus.h	/^	PortMapping(uint64_t start, uint64_t end)	$/;"	f	struct:PortMapping
+PortMapping	bus.h	/^struct PortMapping$/;"	s
 R0	csr.h	/^            unsigned R0: 1;             \/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:1
 REGFILE_H	regfile.h	/^#define REGFILE_H$/;"	d
 REG_MIN	iss.h	/^        REG_MIN = INT32_MIN,$/;"	e	enum:ISS::__anon0fac0c2a0103
 REM	instr.h	/^    REM,$/;"	e	enum:Opcode::mapping
 REMU	instr.h	/^    REMU,$/;"	e	enum:Opcode::mapping
+RISCV_ISA_DMA_H	dma.h	/^#define RISCV_ISA_DMA_H$/;"	d
+RISCV_ISA_ELF_LOADER_H	elf_loader.h	/^#define RISCV_ISA_ELF_LOADER_H$/;"	d
 RegFile	regfile.h	/^    RegFile() {$/;"	f	struct:RegFile
 RegFile	regfile.h	/^    RegFile(const RegFile &other) {$/;"	f	struct:RegFile
 RegFile	regfile.h	/^struct RegFile $/;"	s
@@ -275,10 +315,12 @@ SLTU	instr.h	/^    SLTU,$/;"	e	enum:Opcode::mapping
 SRA	instr.h	/^    SRA,$/;"	e	enum:Opcode::mapping
 SRAI	instr.cpp	/^    static T SRAI(unsigned rd, unsigned rs1, unsigned shamt) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
 SRAI	instr.h	/^    SRAI,$/;"	e	enum:Opcode::mapping
+SRC_ADDR	dma.h	/^        SRC_ADDR = 0,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0203
 SRET	instr.h	/^    SRET,$/;"	e	enum:Opcode::mapping
 SRL	instr.h	/^    SRL,$/;"	e	enum:Opcode::mapping
 SRLI	instr.cpp	/^    static T SRLI(unsigned rd, unsigned rs1, unsigned shamt) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
 SRLI	instr.h	/^    SRLI,$/;"	e	enum:Opcode::mapping
+STAT_ADDR	dma.h	/^        STAT_ADDR  = 16,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0203
 SUB	instr.cpp	/^    static T SUB(unsigned rd, unsigned rs1, unsigned rs2) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
 SUB	instr.h	/^    SUB,$/;"	e	enum:Opcode::mapping
 SW	instr.cpp	/^    static T SW(unsigned rs1, unsigned rs2, int S_imm) {$/;"	f	struct:InstructionFactory	typeref:typename:T	file:
@@ -329,8 +371,13 @@ SYS_unlink	syscall.h	/^#define SYS_unlink /;"	d
 SYS_write	syscall.h	/^#define SYS_write /;"	d
 SYS_writev	syscall.h	/^#define SYS_writev /;"	d
 S_imm	instr.h	/^    inline int32_t S_imm() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+SimpleDMA	dma.h	/^    SimpleDMA(sc_core::sc_module_name, uint32_t irq_number)$/;"	f	struct:SimpleDMA
+SimpleDMA	dma.h	/^struct SimpleDMA : public sc_core::sc_module {$/;"	s
 SyscallHandler	syscall.h	/^struct SyscallHandler$/;"	s
 T	instr.cpp	/^    typedef Instruction T;$/;"	t	struct:InstructionFactory	typeref:typename:Instruction	file:
+TERMINAL_H	terminal.h	/^#define TERMINAL_H$/;"	d
+Terminal	terminal.h	/^    Terminal(sc_core::sc_module_name) {$/;"	f	struct:Terminal
+Terminal	terminal.h	/^struct Terminal : public sc_core::sc_module {$/;"	s
 Terminated	iss.h	/^    Terminated,$/;"	e	enum:CoreExecStatus
 UNDEF	instr.h	/^    UNDEF = 0,$/;"	e	enum:Opcode::mapping
 UNIMPLEMENTED	csr.h	/^            unsigned UNIMPLEMENTED: 24;	\/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:24
@@ -364,15 +411,23 @@ __anon0f3f74e3120a	csr.h	/^    union {$/;"	u	struct:csr_pmpcfg
 __anon0f3f74e31308	csr.h	/^        struct {$/;"	s	union:csr_pmpcfg::__anon0f3f74e3120a
 __anon0f3f74e3140a	csr.h	/^    union {$/;"	u	struct:csr_64
 __anon0f3f74e31508	csr.h	/^        struct {$/;"	s	union:csr_64::__anon0f3f74e3140a
+__anon0f4dfacd0103	dma.h	/^    enum {$/;"	g	struct:SimpleDMA
+__anon0f4dfacd0203	dma.h	/^    enum {$/;"	g	struct:SimpleDMA
 __anon0fac0c2a0103	iss.h	/^    enum {$/;"	g	struct:ISS
+__anonb7fc41480108	elf_loader.h	/^typedef struct {$/;"	s
+__anonb7fc41480208	elf_loader.h	/^typedef struct {$/;"	s
+__anonb7fc41480308	elf_loader.h	/^typedef struct {$/;"	s
+__anonb7fc41480408	elf_loader.h	/^typedef struct {$/;"	s
 __anonf5c575790103	regfile.h	/^    enum {$/;"	g	struct:RegFile
 __glibc_reserved	syscall.cpp	/^    int32_t __glibc_reserved[2];$/;"	m	struct:rv32g_stat	typeref:typename:int32_t[2]	file:
 __pad1	syscall.cpp	/^    uint64_t __pad1;$/;"	m	struct:rv32g_stat	typeref:typename:uint64_t	file:
 __pad2	syscall.cpp	/^    int32_t __pad2;$/;"	m	struct:rv32g_stat	typeref:typename:int32_t	file:
 _compute_and_get_current_cycles	iss.h	/^    uint64_t _compute_and_get_current_cycles() {$/;"	f	struct:ISS	typeref:typename:uint64_t
+_copy_block	dma.h	/^    void _copy_block(uint32_t off, uint32_t n) {$/;"	f	struct:SimpleDMA	typeref:typename:void
 _copy_timespec	syscall.cpp	/^void _copy_timespec(rv32g_timespec *dst, timespec *src) {$/;"	f	typeref:typename:void
 _do_transaction	mem_if.h	/^    inline void _do_transaction(tlm::tlm_command cmd, uint64_t addr, uint8_t *data, unsigned num/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
 _load_data	mem_if.h	/^    inline T _load_data(addr_t addr) {$/;"	f	struct:CombinedMemoryInterface	typeref:typename:T
+_perform_memcpy	dma.h	/^    void _perform_memcpy() {$/;"	f	struct:SimpleDMA	typeref:typename:void
 _register	csr.h	/^    T *_register(T *p) {$/;"	f	struct:csr_table	typeref:typename:T *
 _store_data	mem_if.h	/^    inline void _store_data(addr_t addr, T value) {$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
 _wiri0	csr.h	/^            unsigned _wiri0: 2;         \/\/ WIRI$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:2
@@ -385,17 +440,22 @@ a5	regfile.h	/^        a5 = x15,$/;"	e	enum:RegFile::e
 a6	regfile.h	/^        a6 = x16,$/;"	e	enum:RegFile::e
 a7	regfile.h	/^        a7 = x17,$/;"	e	enum:RegFile::e
 addr	csr.h	/^    uint32_t addr;$/;"	m	struct:csr_base	typeref:typename:uint32_t
+addr_t	main.cpp	/^	typedef unsigned int addr_t;$/;"	t	struct:Options	typeref:typename:unsigned int	file:
 addr_t	mem_if.h	/^    typedef uint32_t addr_t;$/;"	t	struct:CombinedMemoryInterface	typeref:typename:uint32_t
 addr_to_csr	csr.h	/^    std::map<uint32_t, csr_base*> addr_to_csr;$/;"	m	struct:csr_table	typeref:typename:std::map<uint32_t,csr_base * >
 addr_to_reg	clint_if.h	/^		std::map<uint64_t, uint32_t *> addr_to_reg;$/;"	m	struct:Clint	typeref:typename:std::map<uint64_t,uint32_t * >
+addr_to_reg	dma.h	/^    std::unordered_map<uint64_t, uint32_t *> addr_to_reg;$/;"	m	struct:SimpleDMA	typeref:typename:std::unordered_map<uint64_t,uint32_t * >
 any_pending	csr.h	/^    inline bool any_pending() {$/;"	f	struct:csr_mip	typeref:typename:bool
 aq	instr.h	/^    inline bool aq() {$/;"	f	struct:Instruction	typeref:typename:bool
 asid	csr.h	/^            unsigned asid: 9;   \/\/ WARL$/;"	m	struct:csr_satp::__anon0f3f74e3100a::__anon0f3f74e31108	typeref:typename:unsigned:9
 at	csr.h	/^    csr_base &at(uint32_t addr) {$/;"	f	struct:csr_table	typeref:typename:csr_base &
+b_transport	bus.h	/^	void b_transport(int id, tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)$/;"	f	struct:Bus	typeref:typename:void
 b_transport	clint_if.cpp	/^void Clint::b_transport(tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)$/;"	f	class:Clint	typeref:typename:void
+b_transport	memory.h	/^void b_transport(tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)$/;"	f	struct:Memory	typeref:typename:void
 bank	csr.h	/^            unsigned bank: 25;$/;"	m	struct:csr_mvendorid::__anon0f3f74e3030a::__anon0f3f74e30408	typeref:typename:unsigned:25
 base	csr.h	/^            unsigned base: 30;	\/\/ WARL$/;"	m	struct:csr_mtvec::__anon0f3f74e3070a::__anon0f3f74e30808	typeref:typename:unsigned:30
 breakpoints	iss.h	/^    std::unordered_set<uint32_t> breakpoints;$/;"	m	struct:ISS	typeref:typename:std::unordered_set<uint32_t>
+buffer	dma.h	/^    std::array<uint8_t, 64> buffer;$/;"	m	struct:SimpleDMA	typeref:typename:std::array<uint8_t,64>
 c_b12	instr.h	/^    inline uint32_t c_b12() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
 c_f2_high	instr.h	/^    inline uint32_t c_f2_high() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
 c_f2_low	instr.h	/^    inline uint32_t c_f2_low() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
@@ -407,10 +467,14 @@ c_rd_small	instr.h	/^    inline uint32_t c_rd_small() {$/;"	f	struct:Instruction
 c_rs2	instr.h	/^    inline uint32_t c_rs2() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
 c_rs2_small	instr.h	/^    inline uint32_t c_rs2_small() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
 c_uimm	instr.h	/^    inline uint32_t c_uimm() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
+check_and_post_process	main.cpp	/^	Options &check_and_post_process()$/;"	f	struct:Options	typeref:typename:Options &	file:
 clear_bits	csr.h	/^    void clear_bits(int32_t mask) {$/;"	f	struct:csr_base	typeref:typename:void
 clint	iss.h	/^    clint_if *clint;$/;"	m	struct:ISS	typeref:typename:clint_if *
+clint_end_addr	main.cpp	/^	addr_t clint_end_addr		= 0x0200ffff;$/;"	m	struct:Options	typeref:typename:addr_t	file:
 clint_if	clint_if.h	/^struct clint_if$/;"	s
+clint_start_addr	main.cpp	/^	addr_t clint_start_addr		= 0x02000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
 clock_cycle	clint_if.h	/^	sc_core::sc_time clock_cycle = sc_core::sc_time(10, sc_core::SC_NS);$/;"	m	struct:Clint	typeref:typename:sc_core::sc_time
+contains	bus.h	/^	bool contains(uint64_t addr)$/;"	f	struct:PortMapping	typeref:typename:bool
 core	iss.h	/^    ISS &core;$/;"	m	struct:DirectCoreRunner	typeref:typename:ISS &
 csr	instr.h	/^    inline uint32_t csr() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
 csr_32	csr.h	/^struct csr_32 : public csr_base {$/;"	s
@@ -440,10 +504,28 @@ cycle_time	iss.h	/^    sc_core::sc_time cycle_time;$/;"	m	struct:ISS	typeref:typ
 data	instr.h	/^    inline uint32_t data() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
 data_memory_interface	mem_if.h	/^struct data_memory_interface$/;"	s
 debug_mode	iss.h	/^    bool debug_mode = false;$/;"	m	struct:ISS	typeref:typename:bool
+decode	bus.h	/^	unsigned decode(uint64_t addr)$/;"	f	struct:Bus	typeref:typename:unsigned
 decode_and_expand_compressed	instr.cpp	/^Opcode::mapping Instruction::decode_and_expand_compressed() $/;"	f	class:Instruction	typeref:typename:Opcode::mapping
 decode_compressed	instr.cpp	/^Compressed::Opcode decode_compressed(Instruction &instr) $/;"	f	typeref:typename:Compressed::Opcode
 decode_normal	instr.cpp	/^Opcode::mapping Instruction::decode_normal() $/;"	f	class:Instruction	typeref:typename:Opcode::mapping
+do_transaction	dma.h	/^    void do_transaction(tlm::tlm_command cmd, uint64_t addr, uint8_t *data, unsigned num_bytes) /;"	f	struct:SimpleDMA	typeref:typename:void
+dst	dma.h	/^    uint32_t dst  = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
 e	regfile.h	/^    enum e {$/;"	g	struct:RegFile
+e_ehsize	elf_loader.h	/^    Elf32_Half	e_ehsize;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_entry	elf_loader.h	/^    Elf32_Addr	e_entry;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Addr
+e_flags	elf_loader.h	/^    Elf32_Word	e_flags;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Word
+e_ident	elf_loader.h	/^    uint8_t		e_ident[ELF_NIDENT];$/;"	m	struct:__anonb7fc41480108	typeref:typename:uint8_t[]
+e_machine	elf_loader.h	/^    Elf32_Half	e_machine;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_phentsize	elf_loader.h	/^    Elf32_Half	e_phentsize;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_phnum	elf_loader.h	/^    Elf32_Half	e_phnum;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_phoff	elf_loader.h	/^    Elf32_Off	e_phoff;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Off
+e_shentsize	elf_loader.h	/^    Elf32_Half	e_shentsize;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_shnum	elf_loader.h	/^    Elf32_Half	e_shnum;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_shoff	elf_loader.h	/^    Elf32_Off	e_shoff;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Off
+e_shstrndx	elf_loader.h	/^    Elf32_Half	e_shstrndx;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_type	elf_loader.h	/^    Elf32_Half	e_type;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
+e_version	elf_loader.h	/^    Elf32_Word	e_version;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Word
+elf	elf_loader.h	/^    boost::iostreams::mapped_file_source elf;$/;"	m	struct:ELFLoader	typeref:typename:boost::iostreams::mapped_file_source
 ensure	csr.h	/^inline void ensure(bool cond) {$/;"	f	typeref:typename:void
 exception_code	csr.h	/^            unsigned exception_code: 31;	\/\/ WLRL$/;"	m	struct:csr_mcause::__anon0f3f74e30e0a::__anon0f3f74e30f08	typeref:typename:unsigned:31
 exec_step	iss.h	/^    Opcode::mapping exec_step() {$/;"	f	struct:ISS	typeref:typename:Opcode::mapping
@@ -451,6 +533,7 @@ execute_syscall	syscall.cpp	/^int SyscallHandler::execute_syscall(ulong n, ulong
 expand_compressed	instr.cpp	/^Opcode::mapping expand_compressed(Instruction &instr, Compressed::Opcode op) $/;"	f	typeref:typename:Opcode::mapping
 extensions	csr.h	/^            unsigned extensions: 26;$/;"	m	struct:csr_misa::__anon0f3f74e3010a::__anon0f3f74e30208	typeref:typename:unsigned:26
 external_interrupt_target	irq_if.h	/^struct external_interrupt_target {$/;"	s
+filename	elf_loader.h	/^    const char *filename;$/;"	m	struct:ELFLoader	typeref:typename:const char *
 fp	regfile.h	/^        fp = x8,$/;"	e	enum:RegFile::e
 fs	csr.h	/^            unsigned fs: 2;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:2
 funct12	instr.h	/^    inline int32_t funct12() {$/;"	f	struct:Instruction	typeref:typename:int32_t
@@ -458,18 +541,31 @@ funct3	instr.h	/^    inline int32_t funct3() {$/;"	f	struct:Instruction	typeref:
 funct5	instr.h	/^    inline int32_t funct5() {$/;"	f	struct:Instruction	typeref:typename:int32_t
 funct7	instr.h	/^    inline int32_t funct7() {$/;"	f	struct:Instruction	typeref:typename:int32_t
 get_base_address	csr.h	/^    uint32_t get_base_address() {$/;"	f	struct:csr_mtvec	typeref:typename:uint32_t
+get_begin_signature_address	elf_loader.h	/^    uint32_t get_begin_signature_address() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
+get_end_signature_address	elf_loader.h	/^    uint32_t get_end_signature_address() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
+get_entrypoint	elf_loader.h	/^    uint32_t get_entrypoint() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
+get_heap_addr	elf_loader.h	/^    uint32_t get_heap_addr() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
+get_load_sections	elf_loader.h	/^    std::vector<const Elf32_Phdr *> get_load_sections() {$/;"	f	struct:ELFLoader	typeref:typename:std::vector<const Elf32_Phdr * >
 get_max_heap_memory_consumption	syscall.h	/^	uint32_t  get_max_heap_memory_consumption()$/;"	f	struct:SyscallHandler	typeref:typename:uint32_t
+get_memory_end	elf_loader.h	/^    uint32_t get_memory_end() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
+get_section	elf_loader.h	/^    const Elf32_Shdr *get_section(const char *section_name) { \/\/< 找到节头表中相关的节$/;"	f	struct:ELFLoader	typeref:typename:const Elf32_Shdr *
+get_section_string_table	elf_loader.h	/^    const char *get_section_string_table() {$/;"	f	struct:ELFLoader	typeref:typename:const char *
+get_symbol	elf_loader.h	/^    const Elf32_Sym *get_symbol(const char *symbol_name) {$/;"	f	struct:ELFLoader	typeref:typename:const Elf32_Sym *
+get_symbol_string_table	elf_loader.h	/^    const char *get_symbol_string_table() { \/\/< 找到符号表（符号表是ELF文件中诸多/;"	f	struct:ELFLoader	typeref:typename:const char *
+global_to_local	bus.h	/^	uint64_t global_to_local(uint64_t addr)$/;"	f	struct:PortMapping	typeref:typename:uint64_t
 gp	regfile.h	/^        gp = x3,$/;"	e	enum:RegFile::e
 guest_address_to_host_pointer	syscall.h	/^	uint8_t * guest_address_to_host_pointer(uintptr_t addr)$/;"	f	struct:SyscallHandler	typeref:typename:uint8_t *
 guest_long	syscall.cpp	/^typedef reg_t guest_long;$/;"	t	typeref:typename:reg_t	file:
 guest_to_host_pointer	syscall.h	/^	uint8_t * guest_to_host_pointer(void *p)$/;"	f	struct:SyscallHandler	typeref:typename:uint8_t *
 has_pending_enabled_interrupts	iss.h	/^    bool has_pending_enabled_interrupts() {$/;"	f	struct:ISS	typeref:typename:bool
+hdr	elf_loader.h	/^    const Elf32_Ehdr *hdr;$/;"	m	struct:ELFLoader	typeref:typename:const Elf32_Ehdr *
 high	csr.h	/^            int32_t high;$/;"	m	struct:csr_64::__anon0f3f74e3140a::__anon0f3f74e31508	typeref:typename:int32_t
 hp	syscall.h	/^	uint32_t	hp = 0; \/\/ heap pointer$/;"	m	struct:SyscallHandler	typeref:typename:uint32_t
 increment	csr.h	/^    void increment() {$/;"	f	struct:csr_64	typeref:typename:void
 init	csr.h	/^    void init() {$/;"	f	struct:csr_misa	typeref:typename:void
 init	iss.h	/^    void init(instr_memory_interface *instr_mem, data_memory_interface *data_mem, clint_if *clin/;"	f	struct:ISS	typeref:typename:void
 init	syscall.h	/^	void init(uint8_t *host_memory_pointer, uint32_t mem_start_address, uint32_t heap_pointer_addre/;"	f	struct:SyscallHandler	typeref:typename:void
+input_program	main.cpp	/^	std::string input_program;$/;"	m	struct:Options	typeref:typename:std::string	file:
 instr	instr.h	/^    int32_t instr;$/;"	m	struct:Instruction	typeref:typename:int32_t
 instr_cycles	iss.h	/^    std::array<sc_core::sc_time, Opcode::NUMBER_OF_INSTRUCTIONS> instr_cycles;$/;"	m	struct:ISS	typeref:typename:std::array<sc_core::sc_time,Opcode::NUMBER_OF_INSTRUCTIONS>
 instr_mem	iss.h	/^    instr_memory_interface *instr_mem;$/;"	m	struct:ISS	typeref:typename:instr_memory_interface *
@@ -477,10 +573,15 @@ instr_memory_interface	mem_if.h	/^struct instr_memory_interface$/;"	s
 interrupt	csr.h	/^            unsigned interrupt: 1;$/;"	m	struct:csr_mcause::__anon0f3f74e30e0a::__anon0f3f74e30f08	typeref:typename:unsigned:1
 interrupt_gateway	irq_if.h	/^struct interrupt_gateway {$/;"	s
 irq_event	clint_if.h	/^	sc_event irq_event;$/;"	m	struct:Clint	typeref:typename:sc_event
+irq_number	dma.h	/^    uint32_t irq_number = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
 is_compressed	instr.h	/^    inline bool is_compressed() {$/;"	f	struct:Instruction	typeref:typename:bool
+isock	bus.h	/^	tlm_utils::simple_initiator_socket_tagged<Bus> isock[NR_OF_TARGETS];$/;"	m	struct:Bus	typeref:typename:tlm_utils::simple_initiator_socket_tagged<Bus>[]
+isock	dma.h	/^    tlm_utils::simple_initiator_socket<SimpleDMA> isock;$/;"	m	struct:SimpleDMA	typeref:typename:tlm_utils::simple_initiator_socket<SimpleDMA>
 isock	mem_if.h	/^    tlm_utils::simple_initiator_socket<CombinedMemoryInterface> isock;$/;"	m	struct:CombinedMemoryInterface	typeref:typename:tlm_utils::simple_initiator_socket<CombinedMemoryInterface>
 last_pc	iss.h	/^    uint32_t last_pc;$/;"	m	struct:ISS	typeref:typename:uint32_t
+len	dma.h	/^    uint32_t len  = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
 load_byte	mem_if.h	/^    int32_t load_byte(addr_t addr) { return _load_data<int8_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
+load_executable_image	elf_loader.h	/^    void load_executable_image(uint8_t *dst, uint32_t size, uint32_t offset) {$/;"	f	struct:ELFLoader	typeref:typename:void
 load_half	mem_if.h	/^    int32_t load_half(addr_t addr) { return _load_data<int16_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
 load_instr	mem_if.h	/^    int32_t load_instr(addr_t addr) { return _load_data<int32_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
 load_ubyte	mem_if.h	/^    uint32_t load_ubyte(addr_t addr) { return _load_data<uint8_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:uint32_t
@@ -488,6 +589,10 @@ load_uhalf	mem_if.h	/^    uint32_t load_uhalf(addr_t addr) { return _load_data<u
 load_word	mem_if.h	/^    int32_t load_word(addr_t addr) { return _load_data<int32_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
 low	csr.h	/^            int32_t low;$/;"	m	struct:csr_64::__anon0f3f74e3140a::__anon0f3f74e31508	typeref:typename:int32_t
 lrw_marked	iss.h	/^    uint32_t lrw_marked = 0;$/;"	m	struct:ISS	typeref:typename:uint32_t
+m_data	memory.h	/^	uint8_t *m_data;$/;"	m	struct:Memory	typeref:typename:uint8_t *
+m_end	bus.h	/^	uint64_t m_end;$/;"	m	struct:PortMapping	typeref:typename:uint64_t
+m_size	memory.h	/^	uint32_t m_size;$/;"	m	struct:Memory	typeref:typename:uint32_t
+m_start	bus.h	/^	uint64_t m_start;$/;"	m	struct:PortMapping	typeref:typename:uint64_t
 m_target	clint_if.h	/^	timer_interrupt_target * m_target;	$/;"	m	struct:Clint	typeref:typename:timer_interrupt_target *
 mapping	instr.h	/^enum mapping $/;"	g	namespace:Opcode
 marchid	csr.h	/^    csr_32 *marchid = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
@@ -498,7 +603,10 @@ meie	csr.h	/^            unsigned meie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e30
 meip	csr.h	/^            unsigned meip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
 mem	iss.h	/^    data_memory_interface *mem;$/;"	m	struct:ISS	typeref:typename:data_memory_interface *
 mem	syscall.h	/^	uint8_t		*mem = 0;	\/\/ direct pointer to start of guest memory  int host memory$/;"	m	struct:SyscallHandler	typeref:typename:uint8_t *
+mem_end_addr	main.cpp	/^	addr_t mem_end_addr			= mem_start_addr + mem_size - 1;$/;"	m	struct:Options	typeref:typename:addr_t	file:
 mem_offset	syscall.h	/^	uint32_t	mem_offset; \/\/start address of the memory as mapped into the address space$/;"	m	struct:SyscallHandler	typeref:typename:uint32_t
+mem_size	main.cpp	/^	addr_t mem_size				= 1024*1024*32; \/\/32 MB ram$/;"	m	struct:Options	typeref:typename:addr_t	file:
+mem_start_addr	main.cpp	/^	addr_t mem_start_addr		= 0x00000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
 mepc	csr.h	/^    csr_mepc *mepc = 0;$/;"	m	struct:csr_table	typeref:typename:csr_mepc *
 mhartid	csr.h	/^    csr_32 *mhartid = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
 mideleg	csr.h	/^    csr_32 *mideleg = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
@@ -527,13 +635,25 @@ mxl	csr.h	/^            unsigned mxl: 2;$/;"	m	struct:csr_misa::__anon0f3f74e301
 mxr	csr.h	/^            unsigned mxr: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
 name	csr.h	/^    const char *name;$/;"	m	struct:csr_base	typeref:typename:const char *
 offset	csr.h	/^            unsigned offset: 7;$/;"	m	struct:csr_mvendorid::__anon0f3f74e3030a::__anon0f3f74e30408	typeref:typename:unsigned:7
+op	dma.h	/^    uint32_t op   = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
 opcode	instr.h	/^    inline int32_t opcode() {$/;"	f	struct:Instruction	typeref:typename:int32_t
 operator []	regfile.h	/^    int32_t &operator [](const uint32_t idx) { \/\/这里为什么要重载[] ？regs本身是数/;"	f	struct:RegFile	typeref:typename:int32_t &
+p_align	elf_loader.h	/^    Elf32_Word	p_align;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Word
+p_filesz	elf_loader.h	/^    Elf32_Word	p_filesz;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Word
+p_flags	elf_loader.h	/^    Elf32_Word	p_flags;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Word
+p_memsz	elf_loader.h	/^    Elf32_Word	p_memsz;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Word
+p_offset	elf_loader.h	/^    Elf32_Off	p_offset;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Off
+p_paddr	elf_loader.h	/^    Elf32_Addr	p_paddr;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Addr
+p_type	elf_loader.h	/^    Elf32_Word	p_type;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Word
+p_vaddr	elf_loader.h	/^    Elf32_Addr	p_vaddr;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Addr
+parse_command_line_arguments	main.cpp	/^Options parse_command_line_arguments(int argc, char **argv)$/;"	f	typeref:typename:Options
 parts	instr.h	/^    enum parts $/;"	g	namespace:Opcode
 pc	iss.h	/^    uint32_t pc;$/;"	m	struct:ISS	typeref:typename:uint32_t
 performance_and_sync_update	iss.h	/^    void performance_and_sync_update(Opcode::mapping executed_op) {$/;"	f	struct:ISS	typeref:typename:void
+plic	dma.h	/^    interrupt_gateway *plic = 0;$/;"	m	struct:SimpleDMA	typeref:typename:interrupt_gateway *
 pmpaddr0	csr.h	/^    csr_32 *pmpaddr0 = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
 pmpcfg0	csr.h	/^    csr_pmpcfg *pmpcfg0 = 0;$/;"	m	struct:csr_table	typeref:typename:csr_pmpcfg *
+ports	bus.h	/^	PortMapping * ports[NR_OF_TARGETS];$/;"	m	struct:Bus	typeref:typename:PortMapping * []
 ppn	csr.h	/^            unsigned ppn: 22;   \/\/ WARL$/;"	m	struct:csr_satp::__anon0f3f74e3100a::__anon0f3f74e31108	typeref:typename:unsigned:22
 quadrant	instr.h	/^    inline uint32_t quadrant() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
 quantum_keeper	iss.h	/^    tlm_utils::tlm_quantumkeeper quantum_keeper;$/;"	m	struct:ISS	typeref:typename:tlm_utils::tlm_quantumkeeper
@@ -542,6 +662,7 @@ ra	regfile.h	/^        ra = x1,$/;"	e	enum:RegFile::e
 rd	instr.h	/^    inline uint32_t rd() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
 read	csr.h	/^	int32_t read()$/;"	f	struct:csr_base	typeref:typename:int32_t
 read	regfile.h	/^    int32_t read(uint32_t index) {$/;"	f	struct:RegFile	typeref:typename:int32_t
+read_data	memory.h	/^void read_data(unsigned addr, uint8_t *dst, unsigned num_bytes) {$/;"	f	struct:Memory	typeref:typename:void
 reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mcause::__anon0f3f74e30e0a	typeref:typename:int32_t
 reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mepc::__anon0f3f74e30d0a	typeref:typename:int32_t
 reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mie::__anon0f3f74e3090a	typeref:typename:int32_t
@@ -562,8 +683,10 @@ rl	instr.h	/^    inline bool rl() {$/;"	f	struct:Instruction	typeref:typename:bo
 rs1	instr.h	/^    inline uint32_t rs1() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
 rs2	instr.h	/^    inline uint32_t rs2() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
 run	clint_if.cpp	/^void Clint::run()$/;"	f	class:Clint	typeref:typename:void
+run	dma.h	/^    void run() {$/;"	f	struct:SimpleDMA	typeref:typename:void
 run	iss.h	/^    void run() {$/;"	f	struct:DirectCoreRunner	typeref:typename:void
 run	iss.h	/^    void run() {$/;"	f	struct:ISS	typeref:typename:void
+run_event	dma.h	/^    sc_core::sc_event run_event;$/;"	m	struct:SimpleDMA	typeref:typename:sc_core::sc_event
 run_step	iss.h	/^    void run_step() {$/;"	f	struct:ISS	typeref:typename:void
 rv32g_stat	syscall.cpp	/^struct rv32g_stat$/;"	s	file:
 rv32g_time_t	syscall.cpp	/^typedef int32_t rv32g_time_t;$/;"	t	typeref:typename:int32_t	file:
@@ -581,13 +704,24 @@ s7	regfile.h	/^        s7 = x23,$/;"	e	enum:RegFile::e
 s8	regfile.h	/^        s8 = x24,$/;"	e	enum:RegFile::e
 s9	regfile.h	/^        s9 = x25,$/;"	e	enum:RegFile::e
 satp	csr.h	/^    csr_satp *satp = 0;$/;"	m	struct:csr_table	typeref:typename:csr_satp *
+sc_main	main.cpp	/^int sc_main(int argc, char **argv)$/;"	f	typeref:typename:int
 scaler	clint_if.h	/^	static constexpr uint64_t scaler = 1000000;$/;"	m	struct:Clint	typeref:typename:uint64_t
 sd	csr.h	/^            unsigned sd: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
 seie	csr.h	/^            unsigned seie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
 seip	csr.h	/^            unsigned seip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
 set_bits	csr.h	/^    void set_bits(int32_t mask) {$/;"	f	struct:csr_base	typeref:typename:void
 setup	csr.h	/^    void setup() {$/;"	f	struct:csr_table	typeref:typename:void
-shall_exit	syscall.h	/^	bool  shall_exit;$/;"	m	struct:SyscallHandler	typeref:typename:bool
+sh_addr	elf_loader.h	/^    Elf32_Addr	sh_addr;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Addr
+sh_addralign	elf_loader.h	/^    Elf32_Word	sh_addralign;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_entsize	elf_loader.h	/^    Elf32_Word	sh_entsize;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_flags	elf_loader.h	/^    Elf32_Word	sh_flags;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_info	elf_loader.h	/^    Elf32_Word	sh_info;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_link	elf_loader.h	/^    Elf32_Word	sh_link;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_name	elf_loader.h	/^    Elf32_Word	sh_name;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_offset	elf_loader.h	/^    Elf32_Off	sh_offset;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Off
+sh_size	elf_loader.h	/^    Elf32_Word	sh_size;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+sh_type	elf_loader.h	/^    Elf32_Word	sh_type;$/;"	m	struct:__anonb7fc41480308	typeref:typename:Elf32_Word
+shall_exit	syscall.h	/^	bool  shall_exit = false;$/;"	m	struct:SyscallHandler	typeref:typename:bool
 shamt	instr.h	/^    inline uint32_t shamt() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
 shamt	regfile.h	/^    uint32_t shamt(uint32_t index) {$/;"	f	struct:RegFile	typeref:typename:uint32_t
 show	iss.h	/^    void show() {$/;"	f	struct:ISS	typeref:typename:void
@@ -596,6 +730,7 @@ sie	csr.h	/^            unsigned sie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e
 sp	regfile.h	/^        sp = x2,$/;"	e	enum:RegFile::e
 spie	csr.h	/^            unsigned spie: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
 spp	csr.h	/^            unsigned spp: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
+src	dma.h	/^    uint32_t src  = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
 ssie	csr.h	/^            unsigned ssie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
 ssip	csr.h	/^            unsigned ssip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
 st_atim	syscall.cpp	/^    rv32g_timespec st_atim;$/;"	m	struct:rv32g_stat	typeref:typename:rv32g_timespec	file:
@@ -604,14 +739,21 @@ st_blocks	syscall.cpp	/^    int64_t st_blocks;$/;"	m	struct:rv32g_stat	typeref:t
 st_ctim	syscall.cpp	/^    rv32g_timespec st_ctim;$/;"	m	struct:rv32g_stat	typeref:typename:rv32g_timespec	file:
 st_dev	syscall.cpp	/^    uint64_t st_dev;$/;"	m	struct:rv32g_stat	typeref:typename:uint64_t	file:
 st_gid	syscall.cpp	/^    uint32_t st_gid;$/;"	m	struct:rv32g_stat	typeref:typename:uint32_t	file:
+st_info	elf_loader.h	/^    unsigned char st_info;$/;"	m	struct:__anonb7fc41480408	typeref:typename:unsigned char
 st_ino	syscall.cpp	/^    uint64_t st_ino;$/;"	m	struct:rv32g_stat	typeref:typename:uint64_t	file:
 st_mode	syscall.cpp	/^    uint32_t st_mode;$/;"	m	struct:rv32g_stat	typeref:typename:uint32_t	file:
 st_mtim	syscall.cpp	/^    rv32g_timespec st_mtim;$/;"	m	struct:rv32g_stat	typeref:typename:rv32g_timespec	file:
+st_name	elf_loader.h	/^    Elf32_Word st_name;$/;"	m	struct:__anonb7fc41480408	typeref:typename:Elf32_Word
 st_nlink	syscall.cpp	/^    uint32_t st_nlink;$/;"	m	struct:rv32g_stat	typeref:typename:uint32_t	file:
+st_other	elf_loader.h	/^    unsigned char st_other;$/;"	m	struct:__anonb7fc41480408	typeref:typename:unsigned char
 st_rdev	syscall.cpp	/^    uint64_t st_rdev;$/;"	m	struct:rv32g_stat	typeref:typename:uint64_t	file:
+st_shndx	elf_loader.h	/^    Elf32_Half st_shndx;$/;"	m	struct:__anonb7fc41480408	typeref:typename:Elf32_Half
+st_size	elf_loader.h	/^    Elf32_Word st_size;$/;"	m	struct:__anonb7fc41480408	typeref:typename:Elf32_Word
 st_size	syscall.cpp	/^    int64_t st_size;$/;"	m	struct:rv32g_stat	typeref:typename:int64_t	file:
 st_uid	syscall.cpp	/^    uint32_t st_uid;$/;"	m	struct:rv32g_stat	typeref:typename:uint32_t	file:
+st_value	elf_loader.h	/^    Elf32_Addr st_value;$/;"	m	struct:__anonb7fc41480408	typeref:typename:Elf32_Addr
 start_heap	syscall.h	/^	uint32_t start_heap = 0;$/;"	m	struct:SyscallHandler	typeref:typename:uint32_t
+stat	dma.h	/^    uint32_t stat = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
 status	iss.h	/^    CoreExecStatus status = CoreExecStatus::Runnable;$/;"	m	struct:ISS	typeref:typename:CoreExecStatus
 stie	csr.h	/^            unsigned stie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
 stip	csr.h	/^            unsigned stip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
@@ -639,11 +781,20 @@ t5	regfile.h	/^        t5 = x30,$/;"	e	enum:RegFile::e
 t6	regfile.h	/^        t6 = x31,$/;"	e	enum:RegFile::e
 target	csr.h	/^    csr_64 &target;$/;"	m	struct:csr_64_high	typeref:typename:csr_64 &
 target	csr.h	/^    csr_64 &target;$/;"	m	struct:csr_64_low	typeref:typename:csr_64 &
+term_end_addr	main.cpp	/^	addr_t term_end_addr		= term_start_addr + 16;$/;"	m	struct:Options	typeref:typename:addr_t	file:
+term_start_addr	main.cpp	/^	addr_t term_start_addr		= 0x20000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
 timer_interrupt_target	irq_if.h	/^struct timer_interrupt_target {$/;"	s
+tlm_global_quantum	main.cpp	/^	unsigned int tlm_global_quantum = 10;$/;"	m	struct:Options	typeref:typename:unsigned int	file:
 tp	regfile.h	/^        tp = x4,$/;"	e	enum:RegFile::e
+transport	dma.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:SimpleDMA	typeref:typename:void
+transport	terminal.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:Terminal	typeref:typename:void
 trigger_external_interrupt	iss.h	/^    virtual void trigger_external_interrupt() override {$/;"	f	struct:ISS	typeref:typename:void
 trigger_timer_interrupt	iss.h	/^    virtual void trigger_timer_interrupt(bool status) override {$/;"	f	struct:ISS	typeref:typename:void
+tsock	bus.h	/^	tlm_utils::simple_target_socket_tagged<Bus> tsock[NR_OF_INITIATORS];$/;"	m	struct:Bus	typeref:typename:tlm_utils::simple_target_socket_tagged<Bus>[]
 tsock	clint_if.h	/^	tlm_utils::simple_target_socket<Clint> tsock;$/;"	m	struct:Clint	typeref:typename:tlm_utils::simple_target_socket<Clint>
+tsock	dma.h	/^    tlm_utils::simple_target_socket<SimpleDMA> tsock;$/;"	m	struct:SimpleDMA	typeref:typename:tlm_utils::simple_target_socket<SimpleDMA>
+tsock	memory.h	/^	tlm_utils::simple_target_socket<Memory> tsock;$/;"	m	struct:Memory	typeref:typename:tlm_utils::simple_target_socket<Memory>
+tsock	terminal.h	/^    tlm_utils::simple_target_socket<Terminal> tsock;$/;"	m	struct:Terminal	typeref:typename:tlm_utils::simple_target_socket<Terminal>
 tv_nsec	syscall.cpp	/^    int32_t tv_nsec;$/;"	m	struct:rv32g_timespec	typeref:typename:int32_t	file:
 tv_sec	syscall.cpp	/^    int32_t tv_sec;$/;"	m	struct:rv32g_timespec	typeref:typename:int32_t	file:
 tvm	csr.h	/^            unsigned tvm: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
@@ -681,6 +832,7 @@ wpri4	csr.h	/^            unsigned wpri4: 20;$/;"	m	struct:csr_mie::__anon0f3f74
 wpri4	csr.h	/^            unsigned wpri4: 8;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:8
 write	csr.h	/^	void write(int32_t val)$/;"	f	struct:csr_base	typeref:typename:void
 write	regfile.h	/^    void write(uint32_t index, int32_t value) {$/;"	f	struct:RegFile	typeref:typename:void
+write_data	memory.h	/^void write_data(unsigned addr, uint8_t *src, unsigned num_bytes) {$/;"	f	struct:Memory	typeref:typename:void
 x0	regfile.h	/^        x0 = 0,$/;"	e	enum:RegFile::e
 x1	regfile.h	/^        x1,$/;"	e	enum:RegFile::e
 x10	regfile.h	/^        x10,$/;"	e	enum:RegFile::e

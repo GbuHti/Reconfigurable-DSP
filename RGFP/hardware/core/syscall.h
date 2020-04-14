@@ -62,7 +62,7 @@ struct SyscallHandler
 	uint8_t		*mem = 0;	// direct pointer to start of guest memory  int host memory
 	uint32_t	mem_offset; //start address of the memory as mapped into the address space
 	uint32_t	hp = 0; // heap pointer
-	bool  shall_exit;
+	bool  shall_exit = false;
 
 	uint32_t start_heap = 0;
 	uint32_t max_heap   = 0;

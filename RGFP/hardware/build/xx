@@ -1,137 +1,82 @@
-Makefile:14: ../core/syscall.cpp ../core/clint_if.cpp ../core/instr.cpp ../core/loadelf.cpp ../core/main.cpp
-Makefile:15: syscall.o clint_if.o instr.o loadelf.o main.o
-clint_if.o: In function `std::iterator_traits<char*>::iterator_category std::__iterator_category<char*>(char* const&)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: multiple definition of `_copy_timespec(rv32g_timespec*, timespec*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: first defined here
-clint_if.o: In function `std::bad_cast::bad_cast(std::bad_cast const&)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: multiple definition of `sys_fstat(SyscallHandler*, int, rv32g_stat*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: first defined here
-clint_if.o: In function `sys_gettimeofday(SyscallHandler*, timeval*, void*)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: multiple definition of `sys_gettimeofday(SyscallHandler*, timeval*, void*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: first defined here
-clint_if.o: In function `sys_brk(SyscallHandler*, void*)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: multiple definition of `sys_brk(SyscallHandler*, void*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: first defined here
-clint_if.o: In function `sys_write(SyscallHandler*, int, void const*, unsigned long)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: multiple definition of `sys_write(SyscallHandler*, int, void const*, unsigned long)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: first defined here
-clint_if.o: In function `sys_read(SyscallHandler*, int, void*, unsigned long)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: multiple definition of `sys_read(SyscallHandler*, int, void*, unsigned long)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: first defined here
-clint_if.o: In function `sys_lseek(int, long, int)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: multiple definition of `sys_lseek(int, long, int)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: first defined here
-clint_if.o: In function `sys_open(SyscallHandler*, char const*, int, unsigned int)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: multiple definition of `sys_open(SyscallHandler*, char const*, int, unsigned int)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: first defined here
-clint_if.o: In function `sys_close(int)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: multiple definition of `sys_close(int)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: first defined here
-clint_if.o: In function `sys_time(SyscallHandler*, int*)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: multiple definition of `sys_time(SyscallHandler*, int*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: first defined here
-clint_if.o: In function `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: multiple definition of `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: first defined here
-instr.o: In function `std::iterator_traits<char*>::iterator_category std::__iterator_category<char*>(char* const&)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: multiple definition of `_copy_timespec(rv32g_timespec*, timespec*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: first defined here
-instr.o: In function `std::bad_cast::bad_cast(std::bad_cast const&)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: multiple definition of `sys_fstat(SyscallHandler*, int, rv32g_stat*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: first defined here
-instr.o: In function `sys_gettimeofday(SyscallHandler*, timeval*, void*)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: multiple definition of `sys_gettimeofday(SyscallHandler*, timeval*, void*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: first defined here
-instr.o: In function `sys_brk(SyscallHandler*, void*)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: multiple definition of `sys_brk(SyscallHandler*, void*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: first defined here
-instr.o: In function `sys_write(SyscallHandler*, int, void const*, unsigned long)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: multiple definition of `sys_write(SyscallHandler*, int, void const*, unsigned long)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: first defined here
-instr.o: In function `sys_read(SyscallHandler*, int, void*, unsigned long)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: multiple definition of `sys_read(SyscallHandler*, int, void*, unsigned long)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: first defined here
-instr.o: In function `sys_lseek(int, long, int)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: multiple definition of `sys_lseek(int, long, int)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: first defined here
-instr.o: In function `sys_open(SyscallHandler*, char const*, int, unsigned int)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: multiple definition of `sys_open(SyscallHandler*, char const*, int, unsigned int)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: first defined here
-instr.o: In function `sys_close(int)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: multiple definition of `sys_close(int)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: first defined here
-instr.o: In function `sys_time(SyscallHandler*, int*)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: multiple definition of `sys_time(SyscallHandler*, int*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: first defined here
-instr.o: In function `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: multiple definition of `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: first defined here
-loadelf.o: In function `std::iterator_traits<char*>::iterator_category std::__iterator_category<char*>(char* const&)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: multiple definition of `_copy_timespec(rv32g_timespec*, timespec*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: first defined here
-loadelf.o: In function `std::bad_cast::bad_cast(std::bad_cast const&)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: multiple definition of `sys_fstat(SyscallHandler*, int, rv32g_stat*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: first defined here
-loadelf.o: In function `sys_gettimeofday(SyscallHandler*, timeval*, void*)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: multiple definition of `sys_gettimeofday(SyscallHandler*, timeval*, void*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: first defined here
-loadelf.o: In function `sys_brk(SyscallHandler*, void*)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: multiple definition of `sys_brk(SyscallHandler*, void*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: first defined here
-loadelf.o: In function `sys_write(SyscallHandler*, int, void const*, unsigned long)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: multiple definition of `sys_write(SyscallHandler*, int, void const*, unsigned long)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: first defined here
-loadelf.o: In function `sys_read(SyscallHandler*, int, void*, unsigned long)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: multiple definition of `sys_read(SyscallHandler*, int, void*, unsigned long)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: first defined here
-loadelf.o: In function `sys_lseek(int, long, int)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: multiple definition of `sys_lseek(int, long, int)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: first defined here
-loadelf.o: In function `sys_open(SyscallHandler*, char const*, int, unsigned int)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: multiple definition of `sys_open(SyscallHandler*, char const*, int, unsigned int)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: first defined here
-loadelf.o: In function `sys_close(int)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: multiple definition of `sys_close(int)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: first defined here
-loadelf.o: In function `sys_time(SyscallHandler*, int*)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: multiple definition of `sys_time(SyscallHandler*, int*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: first defined here
-loadelf.o: In function `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: multiple definition of `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: first defined here
-main.o: In function `std::iterator_traits<char*>::iterator_category std::__iterator_category<char*>(char* const&)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: multiple definition of `_copy_timespec(rv32g_timespec*, timespec*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:53: first defined here
-main.o: In function `std::bad_cast::bad_cast(std::bad_cast const&)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: multiple definition of `sys_fstat(SyscallHandler*, int, rv32g_stat*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:59: first defined here
-main.o: In function `sys_gettimeofday(SyscallHandler*, timeval*, void*)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: multiple definition of `sys_gettimeofday(SyscallHandler*, timeval*, void*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:82: first defined here
-main.o: In function `sys_brk(SyscallHandler*, void*)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: multiple definition of `sys_brk(SyscallHandler*, void*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:99: first defined here
-main.o: In function `sys_write(SyscallHandler*, int, void const*, unsigned long)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: multiple definition of `sys_write(SyscallHandler*, int, void const*, unsigned long)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:115: first defined here
-main.o: In function `sys_read(SyscallHandler*, int, void*, unsigned long)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: multiple definition of `sys_read(SyscallHandler*, int, void*, unsigned long)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:126: first defined here
-main.o: In function `sys_lseek(int, long, int)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: multiple definition of `sys_lseek(int, long, int)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:137: first defined here
-main.o: In function `sys_open(SyscallHandler*, char const*, int, unsigned int)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: multiple definition of `sys_open(SyscallHandler*, char const*, int, unsigned int)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:144: first defined here
-main.o: In function `sys_close(int)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: multiple definition of `sys_close(int)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:155: first defined here
-main.o: In function `sys_time(SyscallHandler*, int*)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: multiple definition of `sys_time(SyscallHandler*, int*)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:165: first defined here
-main.o: In function `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)':
-/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: multiple definition of `SyscallHandler::execute_syscall(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)'
-syscall.o:/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/syscall.cpp:181: first defined here
-/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/ld: cannot find -lsystemc
+Makefile:17: ../core/syscall.cpp ../core/clint_if.cpp ../core/instr.cpp ../core/loadelf.cpp ../core/main.cpp
+Makefile:18: syscall.o clint_if.o instr.o loadelf.o main.o
+main.o: In function `parse_command_line_arguments(int, char**)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:48: undefined reference to `boost::program_options::options_description::m_default_line_length'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:48: undefined reference to `boost::program_options::options_description::m_default_line_length'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:48: undefined reference to `boost::program_options::options_description::options_description(std::string const&, unsigned int, unsigned int)'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:50: undefined reference to `boost::program_options::options_description::add_options()'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:51: undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, char const*)'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:52: undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, boost::program_options::value_semantic const*, char const*)'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:53: undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, boost::program_options::value_semantic const*, char const*)'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:54: undefined reference to `boost::program_options::options_description_easy_init::operator()(char const*, boost::program_options::value_semantic const*, char const*)'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:56: undefined reference to `boost::program_options::positional_options_description::positional_options_description()'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:57: undefined reference to `boost::program_options::positional_options_description::add(char const*, int)'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:59: undefined reference to `boost::program_options::variables_map::variables_map()'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:60: undefined reference to `boost::program_options::store(boost::program_options::basic_parsed_options<char> const&, boost::program_options::variables_map&, bool)'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:64: undefined reference to `boost::program_options::operator<<(std::ostream&, boost::program_options::options_description const&)'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/main.cpp:67: undefined reference to `boost::program_options::notify(boost::program_options::variables_map&)'
+main.o: In function `ELFLoader::ELFLoader(char const*)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/elf_loader.h:94: undefined reference to `boost::iostreams::mapped_file_source::is_open() const'
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/elf_loader.h:96: undefined reference to `boost::iostreams::mapped_file_source::data() const'
+main.o: In function `ELFLoader::get_load_sections()':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/elf_loader.h:106: undefined reference to `boost::iostreams::mapped_file_source::data() const'
+main.o: In function `ELFLoader::load_executable_image(unsigned char*, unsigned int, unsigned int)':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/elf_loader.h:124: undefined reference to `boost::iostreams::mapped_file_source::data() const'
+main.o: In function `ELFLoader::get_memory_end()':
+/home/wdz/Reconfigurable-DSP/RGFP/hardware/build/../core/elf_loader.h:131: undefined reference to `boost::iostreams::mapped_file_source::data() const'
+main.o: In function `boost::program_options::error_with_option_name::~error_with_option_name()':
+/usr/include/boost/program_options/errors.hpp:118: undefined reference to `vtable for boost::program_options::error_with_option_name'
+main.o: In function `boost::program_options::validation_error::validation_error(boost::program_options::validation_error::kind_t, std::string const&, std::string const&, int)':
+/usr/include/boost/program_options/errors.hpp:372: undefined reference to `boost::program_options::validation_error::get_template(boost::program_options::validation_error::kind_t)'
+/usr/include/boost/program_options/errors.hpp:372: undefined reference to `boost::program_options::error_with_option_name::error_with_option_name(std::string const&, std::string const&, std::string const&, int)'
+main.o: In function `boost::program_options::value_semantic_codecvt_helper<char>::value_semantic_codecvt_helper()':
+/usr/include/boost/program_options/value_semantic.hpp:91: undefined reference to `vtable for boost::program_options::value_semantic_codecvt_helper<char>'
+main.o: In function `boost::program_options::value_semantic_codecvt_helper<char>::~value_semantic_codecvt_helper()':
+/usr/include/boost/program_options/value_semantic.hpp:91: undefined reference to `vtable for boost::program_options::value_semantic_codecvt_helper<char>'
+main.o: In function `boost::iostreams::mapped_file_source::mapped_file_source<char const*>(char const* const&, unsigned long, long)':
+/usr/include/boost/iostreams/device/mapped_file.hpp:392: undefined reference to `boost::iostreams::mapped_file_source::init()'
+main.o: In function `boost::program_options::basic_command_line_parser<char>::basic_command_line_parser(int, char const* const*)':
+/usr/include/boost/program_options/detail/parsers.hpp:43: undefined reference to `boost::program_options::detail::cmdline::cmdline(std::vector<std::string, std::allocator<std::string> > const&)'
+main.o: In function `boost::program_options::basic_command_line_parser<char>::options(boost::program_options::options_description const&)':
+/usr/include/boost/program_options/detail/parsers.hpp:51: undefined reference to `boost::program_options::detail::cmdline::set_options_description(boost::program_options::options_description const&)'
+main.o: In function `boost::program_options::basic_command_line_parser<char>::positional(boost::program_options::positional_options_description const&)':
+/usr/include/boost/program_options/detail/parsers.hpp:61: undefined reference to `boost::program_options::detail::cmdline::set_positional_options(boost::program_options::positional_options_description const&)'
+main.o: In function `boost::program_options::basic_command_line_parser<char>::run()':
+/usr/include/boost/program_options/detail/parsers.hpp:107: undefined reference to `boost::program_options::detail::cmdline::get_canonical_option_prefix()'
+/usr/include/boost/program_options/detail/parsers.hpp:108: undefined reference to `boost::program_options::detail::cmdline::run()'
+main.o: In function `std::vector<std::string, std::allocator<std::string> > boost::program_options::to_internal<std::string>(std::vector<std::string, std::allocator<std::string> > const&)':
+/usr/include/boost/program_options/detail/convert.hpp:79: undefined reference to `boost::program_options::to_internal(std::string const&)'
+main.o: In function `void boost::iostreams::mapped_file_source::open<boost::iostreams::detail::path>(boost::iostreams::basic_mapped_file_params<boost::iostreams::detail::path> const&)':
+/usr/include/boost/iostreams/device/mapped_file.hpp:406: undefined reference to `boost::iostreams::mapped_file_source::open_impl(boost::iostreams::basic_mapped_file_params<boost::iostreams::detail::path> const&)'
+main.o:(.rodata._ZTVN5boost15program_options11typed_valueISscEE[_ZTVN5boost15program_options11typed_valueISscEE]+0x38): undefined reference to `boost::program_options::value_semantic_codecvt_helper<char>::parse(boost::any&, std::vector<std::string, std::allocator<std::string> > const&, bool) const'
+main.o:(.rodata._ZTVN5boost15program_options11typed_valueIjcEE[_ZTVN5boost15program_options11typed_valueIjcEE]+0x38): undefined reference to `boost::program_options::value_semantic_codecvt_helper<char>::parse(boost::any&, std::vector<std::string, std::allocator<std::string> > const&, bool) const'
+main.o:(.rodata._ZTVN5boost15program_options20invalid_option_valueE[_ZTVN5boost15program_options20invalid_option_valueE]+0x20): undefined reference to `boost::program_options::error_with_option_name::what() const'
+main.o:(.rodata._ZTVN5boost15program_options20invalid_option_valueE[_ZTVN5boost15program_options20invalid_option_valueE]+0x30): undefined reference to `boost::program_options::error_with_option_name::substitute_placeholders(std::string const&) const'
+main.o:(.rodata._ZTVN5boost15program_options16validation_errorE[_ZTVN5boost15program_options16validation_errorE]+0x20): undefined reference to `boost::program_options::error_with_option_name::what() const'
+main.o:(.rodata._ZTVN5boost15program_options16validation_errorE[_ZTVN5boost15program_options16validation_errorE]+0x30): undefined reference to `boost::program_options::error_with_option_name::substitute_placeholders(std::string const&) const'
+main.o:(.rodata._ZTIN5boost15program_options11typed_valueISscEE[_ZTIN5boost15program_options11typed_valueISscEE]+0x18): undefined reference to `typeinfo for boost::program_options::value_semantic_codecvt_helper<char>'
+main.o:(.rodata._ZTIN5boost15program_options11typed_valueIjcEE[_ZTIN5boost15program_options11typed_valueIjcEE]+0x18): undefined reference to `typeinfo for boost::program_options::value_semantic_codecvt_helper<char>'
+main.o:(.rodata._ZTIN5boost15program_options16validation_errorE[_ZTIN5boost15program_options16validation_errorE]+0x10): undefined reference to `typeinfo for boost::program_options::error_with_option_name'
+main.o: In function `boost::program_options::variables_map::~variables_map()':
+/usr/include/boost/program_options/variables_map.hpp:146: undefined reference to `vtable for boost::program_options::variables_map'
+main.o: In function `boost::program_options::typed_value<std::string, char>::name() const':
+/usr/include/boost/program_options/detail/value_semantic.hpp:19: undefined reference to `boost::program_options::arg'
+main.o: In function `boost::program_options::typed_value<std::string, char>::xparse(boost::any&, std::vector<std::string, std::allocator<std::string> > const&) const':
+/usr/include/boost/program_options/detail/value_semantic.hpp:170: undefined reference to `boost::program_options::validate(boost::any&, std::vector<std::string, std::allocator<std::string> > const&, std::string*, int)'
+main.o: In function `boost::program_options::typed_value<unsigned int, char>::name() const':
+/usr/include/boost/program_options/detail/value_semantic.hpp:19: undefined reference to `boost::program_options::arg'
+main.o: In function `void boost::program_options::validate<unsigned int, char>(boost::any&, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, unsigned int*, long)':
+/usr/include/boost/program_options/detail/value_semantic.hpp:86: undefined reference to `boost::program_options::validators::check_first_occurrence(boost::any const&)'
+/usr/include/boost/program_options/detail/value_semantic.hpp:92: undefined reference to `boost::program_options::invalid_option_value::invalid_option_value(std::string const&)'
+main.o: In function `boost::program_options::error_with_option_name::error_with_option_name(boost::program_options::error_with_option_name const&)':
+/usr/include/boost/program_options/errors.hpp:88: undefined reference to `vtable for boost::program_options::error_with_option_name'
+main.o:(.rodata._ZTVN5boost16exception_detail10clone_implINS0_19error_info_injectorINS_15program_options16validation_errorEEEEE[_ZTVN5boost16exception_detail10clone_implINS0_19error_info_injectorINS_15program_options16validation_errorEEEEE]+0x28): undefined reference to `boost::program_options::error_with_option_name::what() const'
+main.o:(.rodata._ZTVN5boost16exception_detail10clone_implINS0_19error_info_injectorINS_15program_options16validation_errorEEEEE[_ZTVN5boost16exception_detail10clone_implINS0_19error_info_injectorINS_15program_options16validation_errorEEEEE]+0x38): undefined reference to `boost::program_options::error_with_option_name::substitute_placeholders(std::string const&) const'
+main.o:(.rodata._ZTVN5boost16exception_detail19error_info_injectorINS_15program_options16validation_errorEEE[_ZTVN5boost16exception_detail19error_info_injectorINS_15program_options16validation_errorEEE]+0x20): undefined reference to `boost::program_options::error_with_option_name::what() const'
+main.o:(.rodata._ZTVN5boost16exception_detail19error_info_injectorINS_15program_options16validation_errorEEE[_ZTVN5boost16exception_detail19error_info_injectorINS_15program_options16validation_errorEEE]+0x30): undefined reference to `boost::program_options::error_with_option_name::substitute_placeholders(std::string const&) const'
+main.o:(.rodata._ZTVN5boost16exception_detail10clone_implINS0_19error_info_injectorINS_15program_options20invalid_option_valueEEEEE[_ZTVN5boost16exception_detail10clone_implINS0_19error_info_injectorINS_15program_options20invalid_option_valueEEEEE]+0x28): undefined reference to `boost::program_options::error_with_option_name::what() const'
+main.o:(.rodata._ZTVN5boost16exception_detail10clone_implINS0_19error_info_injectorINS_15program_options20invalid_option_valueEEEEE[_ZTVN5boost16exception_detail10clone_implINS0_19error_info_injectorINS_15program_options20invalid_option_valueEEEEE]+0x38): undefined reference to `boost::program_options::error_with_option_name::substitute_placeholders(std::string const&) const'
+main.o:(.rodata._ZTVN5boost16exception_detail19error_info_injectorINS_15program_options20invalid_option_valueEEE[_ZTVN5boost16exception_detail19error_info_injectorINS_15program_options20invalid_option_valueEEE]+0x20): undefined reference to `boost::program_options::error_with_option_name::what() const'
+main.o:(.rodata._ZTVN5boost16exception_detail19error_info_injectorINS_15program_options20invalid_option_valueEEE[_ZTVN5boost16exception_detail19error_info_injectorINS_15program_options20invalid_option_valueEEE]+0x30): undefined reference to `boost::program_options::error_with_option_name::substitute_placeholders(std::string const&) const'
 collect2: error: ld returned 1 exit status
 make: *** [soc] Error 1
