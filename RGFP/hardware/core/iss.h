@@ -41,7 +41,7 @@ struct ISS : public sc_core::sc_module,
 
     sc_core::sc_event wfi_event;
 
-    tlm_utils::tlm_quantumkeeper quantum_keeper;
+//    tlm_utils::tlm_quantumkeeper quantum_keeper;
     sc_core::sc_time cycle_time;
     std::array<sc_core::sc_time, Opcode::NUMBER_OF_INSTRUCTIONS> instr_cycles;
 
@@ -52,11 +52,11 @@ struct ISS : public sc_core::sc_module,
     ISS()
         : sc_module(sc_core::sc_module_name("ISS")) {
 
-        sc_core::sc_time qt = tlm::tlm_global_quantum::instance().get();
+//        sc_core::sc_time qt = tlm::tlm_global_quantum::instance().get();
         cycle_time = sc_core::sc_time(10, sc_core::SC_NS);
 
-        assert (qt >= cycle_time);
-        assert (qt % cycle_time == sc_core::SC_ZERO_TIME);
+//        assert (qt >= cycle_time);
+//        assert (qt % cycle_time == sc_core::SC_ZERO_TIME);
 
         for (int i=0; i<Opcode::NUMBER_OF_INSTRUCTIONS; ++i)
             instr_cycles[i] = cycle_time;     // 所有指令的执行时间都是一个周期？-> 看下文
@@ -84,6 +84,7 @@ struct ISS : public sc_core::sc_module,
 
     Opcode::mapping exec_step() {
         auto mem_word = instr_mem->load_instr(pc);
+		sc_core::sc_time now = sc_time_stamp();
         Instruction instr(mem_word);
         Opcode::mapping op;
         if (instr.is_compressed()) {
@@ -539,7 +540,7 @@ struct ISS : public sc_core::sc_module,
 	 */
     uint64_t _compute_and_get_current_cycles() {
         // Note: result is based on the default time resolution of SystemC (1 PS)
-        sc_core::sc_time now = quantum_keeper.get_current_time(); //local time + sc_time_stamp()
+        sc_core::sc_time now = sc_core::sc_time_stamp(); 
 
         assert (now % cycle_time == sc_core::SC_ZERO_TIME);
         assert (now.value() % cycle_time.value() == 0);
@@ -660,10 +661,11 @@ struct ISS : public sc_core::sc_module,
 
         auto new_cycles = instr_cycles[executed_op];
 
-        quantum_keeper.inc(new_cycles);
-        if (quantum_keeper.need_sync()) { ///< 判断时间片是否已经用完
-            quantum_keeper.sync();        ///< 同步，将多个已经完成的transaction的delay形成的local time同步掉。
-        }
+		wait(new_cycles);
+//        quantum_keeper.inc(new_cycles);
+//        if (quantum_keeper.need_sync()) { ///< 判断时间片是否已经用完
+//            quantum_keeper.sync();        ///< 同步，将多个已经完成的transaction的delay形成的local time同步掉。
+//        }
     }
 
     void run_step() {
@@ -685,6 +687,7 @@ struct ISS : public sc_core::sc_module,
             status = CoreExecStatus::HitBreakpoint;
 
         performance_and_sync_update(op);
+		sc_core::sc_time now = sc_time_stamp();
     }
 
     void run() {
@@ -694,7 +697,7 @@ struct ISS : public sc_core::sc_module,
         } while (status == CoreExecStatus::Runnable);
 
         // force sync to make sure that no action is missed
-        quantum_keeper.sync();
+        //quantum_keeper.sync();
     }
 
     void show() {

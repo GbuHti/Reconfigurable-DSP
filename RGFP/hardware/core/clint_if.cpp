@@ -1,6 +1,6 @@
 #include "clint_if.h"
 
-void Clint::b_transport(tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)
+void Clint::operation(tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)
 {
 	tlm::tlm_command	cmd			= gp.get_command();
 	uint64_t			addr		= gp.get_address();
@@ -9,7 +9,7 @@ void Clint::b_transport(tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)
 	assert( gp.get_data_length() == 4);
 
 	delay += clock_cycle;
-	sc_core::sc_time now = sc_core::sc_time_stamp() + delay;
+	sc_core::sc_time now = sc_core::sc_time_stamp();
 
 	std::map<uint64_t, uint32_t *>::iterator it = addr_to_reg.find(addr);
 	if( it != addr_to_reg.end())
@@ -34,6 +34,11 @@ void Clint::b_transport(tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)
 	{
 		assert(false && "Wrong access address");	
 	}
+}
+
+sc_core::sc_time Clint::get_device_delay(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay)
+{
+	return delay += m_clint_delay;
 }
 
 uint64_t Clint::update_and_get_mtime() 

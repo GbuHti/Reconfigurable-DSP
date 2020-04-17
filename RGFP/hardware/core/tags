@@ -40,7 +40,7 @@ BNE	instr.cpp	/^    static T BNE(unsigned rs1, unsigned rs2, int B_imm) {$/;"	f	
 BNE	instr.h	/^    BNE,$/;"	e	enum:Opcode::mapping
 BUS_H	bus.h	/^#define BUS_H$/;"	d
 B_imm	instr.h	/^    inline int32_t B_imm() {$/;"	f	struct:Instruction	typeref:typename:int32_t
-Bus	bus.h	/^	Bus(sc_core::sc_module_name name)$/;"	f	struct:Bus
+Bus	bus.cpp	/^Bus<NR_OF_INITIATORS,NR_OF_TARGETS>::Bus(sc_core::sc_module_name name)$/;"	f	class:Bus
 Bus	bus.h	/^struct Bus: public sc_core::sc_module$/;"	s
 CLINT_IF_H	clint_if.h	/^#define CLINT_IF_H$/;"	d
 CSRRC	instr.h	/^    CSRRC,$/;"	e	enum:Opcode::mapping
@@ -116,15 +116,21 @@ C_SWSP	instr.cpp	/^        C_SWSP,$/;"	e	enum:Compressed::Opcode	file:
 C_SWSP_UIMM	instr.cpp	/^uint32_t C_SWSP_UIMM(uint32_t n) {$/;"	f	typeref:typename:uint32_t
 C_SW_UIMM	instr.cpp	/^unsigned C_SW_UIMM(uint32_t n) {$/;"	f	typeref:typename:unsigned
 C_XOR	instr.cpp	/^        C_XOR,$/;"	e	enum:Compressed::Opcode	file:
-Clint	clint_if.h	/^	Clint(sc_core::sc_module_name, timer_interrupt_target * target)$/;"	f	struct:Clint
+Clint	clint_if.h	/^	Clint$/;"	f	struct:Clint
 Clint	clint_if.h	/^struct Clint: public clint_if, $/;"	s
-CombinedMemoryInterface	mem_if.h	/^    CombinedMemoryInterface(sc_core::sc_module_name, tlm_utils::tlm_quantumkeeper &keeper)$/;"	f	struct:CombinedMemoryInterface
+CombinedMemoryInterface	mem_if.cpp	/^CombinedMemoryInterface::CombinedMemoryInterface(sc_core::sc_module_name name, sc_core::sc_time /;"	f	class:CombinedMemoryInterface
 CombinedMemoryInterface	mem_if.h	/^struct CombinedMemoryInterface : public sc_core::sc_module,$/;"	s
 Compressed	instr.cpp	/^namespace Compressed {$/;"	n	file:
+ConnectionInfo	bus.h	/^	struct ConnectionInfo {$/;"	s	struct:Bus
 CoreExecStatus	iss.h	/^enum class CoreExecStatus {$/;"	g
+DEVICE_H	device.h	/^#define DEVICE_H$/;"	d
+DEVICE_PROXY_H	device_proxy.h	/^#define DEVICE_PROXY_H$/;"	d
 DIV	instr.h	/^    DIV,$/;"	e	enum:Opcode::mapping
 DIVU	instr.h	/^    DIVU,$/;"	e	enum:Opcode::mapping
 DST_ADDR	dma.h	/^        DST_ADDR = 4,$/;"	e	enum:SimpleDMA::__anon0f4dfacd0203
+Device	device.h	/^struct Device$/;"	s
+DeviceProxy	device_proxy.cpp	/^DeviceProxy::DeviceProxy$/;"	f	class:DeviceProxy
+DeviceProxy	device_proxy.h	/^struct DeviceProxy:public sc_core::sc_module$/;"	s
 Direct	csr.h	/^        Direct = 0,$/;"	e	enum:csr_mtvec::Mode
 DirectCoreRunner	iss.h	/^    DirectCoreRunner(ISS &core)$/;"	f	struct:DirectCoreRunner
 DirectCoreRunner	iss.h	/^struct DirectCoreRunner : public sc_core::sc_module {$/;"	s
@@ -251,7 +257,7 @@ MUL	instr.h	/^    MUL,$/;"	e	enum:Opcode::mapping
 MULH	instr.h	/^    MULH,$/;"	e	enum:Opcode::mapping
 MULHSU	instr.h	/^    MULHSU,$/;"	e	enum:Opcode::mapping
 MULHU	instr.h	/^    MULHU,$/;"	e	enum:Opcode::mapping
-Memory	memory.h	/^	Memory(sc_core::sc_module_name name, uint32_t size)$/;"	f	struct:Memory
+Memory	memory.cpp	/^Memory::Memory$/;"	f	class:Memory
 Memory	memory.h	/^struct Memory:public sc_core::sc_module$/;"	s
 Mode	csr.h	/^    enum Mode {$/;"	g	struct:csr_mtvec
 NUMBER_OF_INSTRUCTIONS	instr.h	/^    NUMBER_OF_INSTRUCTIONS$/;"	e	enum:Opcode::mapping
@@ -288,6 +294,9 @@ PT_NOTE	elf_loader.h	/^    PT_NOTE     = 4,$/;"	e	enum:Elf32_PhdrType
 PT_NULL	elf_loader.h	/^    PT_NULL     = 0,$/;"	e	enum:Elf32_PhdrType
 PT_PHDR	elf_loader.h	/^    PT_PHDR     = 6$/;"	e	enum:Elf32_PhdrType
 PT_SHLIB	elf_loader.h	/^    PT_SHLIB    = 5,$/;"	e	enum:Elf32_PhdrType
+PendingTransactions	bus.h	/^	typedef std::map<tlm::tlm_generic_payload *, ConnectionInfo> PendingTransactions;$/;"	t	struct:Bus	typeref:typename:std::map<tlm::tlm_generic_payload *,ConnectionInfo>
+PendingTransactionsConstIterator	bus.h	/^	typedef typename PendingTransactions::const_iterator PendingTransactionsConstIterator;$/;"	t	struct:Bus	typeref:typename:PendingTransactions::const_iterator
+PendingTransactionsIterator	bus.h	/^	typedef typename PendingTransactions::iterator PendingTransactionsIterator;$/;"	t	struct:Bus	typeref:typename:PendingTransactions::iterator
 PortMapping	bus.h	/^	PortMapping(uint64_t start, uint64_t end)	$/;"	f	struct:PortMapping
 PortMapping	bus.h	/^struct PortMapping$/;"	s
 R0	csr.h	/^            unsigned R0: 1;             \/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:1
@@ -300,6 +309,8 @@ RISCV_ISA_ELF_LOADER_H	elf_loader.h	/^#define RISCV_ISA_ELF_LOADER_H$/;"	d
 RegFile	regfile.h	/^    RegFile() {$/;"	f	struct:RegFile
 RegFile	regfile.h	/^    RegFile(const RegFile &other) {$/;"	f	struct:RegFile
 RegFile	regfile.h	/^struct RegFile $/;"	s
+RequestThread	bus.cpp	/^void Bus<NR_OF_INITIATORS,NR_OF_TARGETS>::RequestThread()$/;"	f	class:Bus	typeref:typename:void
+ResponseThread	bus.cpp	/^void Bus<NR_OF_INITIATORS, NR_OF_TARGETS>::ResponseThread()$/;"	f	class:Bus	typeref:typename:void
 Runnable	iss.h	/^    Runnable,$/;"	e	enum:CoreExecStatus
 SB	instr.h	/^    SB,$/;"	e	enum:Opcode::mapping
 SC_W	instr.h	/^    SC_W,$/;"	e	enum:Opcode::mapping
@@ -376,8 +387,8 @@ SimpleDMA	dma.h	/^struct SimpleDMA : public sc_core::sc_module {$/;"	s
 SyscallHandler	syscall.h	/^struct SyscallHandler$/;"	s
 T	instr.cpp	/^    typedef Instruction T;$/;"	t	struct:InstructionFactory	typeref:typename:Instruction	file:
 TERMINAL_H	terminal.h	/^#define TERMINAL_H$/;"	d
-Terminal	terminal.h	/^    Terminal(sc_core::sc_module_name) {$/;"	f	struct:Terminal
-Terminal	terminal.h	/^struct Terminal : public sc_core::sc_module {$/;"	s
+Terminal	terminal.h	/^	Terminal($/;"	f	struct:Terminal
+Terminal	terminal.h	/^struct Terminal : public sc_core::sc_module $/;"	s
 Terminated	iss.h	/^    Terminated,$/;"	e	enum:CoreExecStatus
 UNDEF	instr.h	/^    UNDEF = 0,$/;"	e	enum:Opcode::mapping
 UNIMPLEMENTED	csr.h	/^            unsigned UNIMPLEMENTED: 24;	\/\/ WARL$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:24
@@ -425,11 +436,11 @@ __pad2	syscall.cpp	/^    int32_t __pad2;$/;"	m	struct:rv32g_stat	typeref:typenam
 _compute_and_get_current_cycles	iss.h	/^    uint64_t _compute_and_get_current_cycles() {$/;"	f	struct:ISS	typeref:typename:uint64_t
 _copy_block	dma.h	/^    void _copy_block(uint32_t off, uint32_t n) {$/;"	f	struct:SimpleDMA	typeref:typename:void
 _copy_timespec	syscall.cpp	/^void _copy_timespec(rv32g_timespec *dst, timespec *src) {$/;"	f	typeref:typename:void
-_do_transaction	mem_if.h	/^    inline void _do_transaction(tlm::tlm_command cmd, uint64_t addr, uint8_t *data, unsigned num/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
-_load_data	mem_if.h	/^    inline T _load_data(addr_t addr) {$/;"	f	struct:CombinedMemoryInterface	typeref:typename:T
+_do_transaction	mem_if.cpp	/^void CombinedMemoryInterface::_do_transaction(tlm::tlm_command cmd, uint64_t addr, uint8_t *data/;"	f	class:CombinedMemoryInterface	typeref:typename:void
+_load_data	mem_if.h	/^		inline T _load_data(addr_t addr) $/;"	f	struct:CombinedMemoryInterface	typeref:typename:T
 _perform_memcpy	dma.h	/^    void _perform_memcpy() {$/;"	f	struct:SimpleDMA	typeref:typename:void
 _register	csr.h	/^    T *_register(T *p) {$/;"	f	struct:csr_table	typeref:typename:T *
-_store_data	mem_if.h	/^    inline void _store_data(addr_t addr, T value) {$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+_store_data	mem_if.h	/^		inline void _store_data(addr_t addr, T value) $/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
 _wiri0	csr.h	/^            unsigned _wiri0: 2;         \/\/ WIRI$/;"	m	struct:csr_pmpcfg::__anon0f3f74e3120a::__anon0f3f74e31308	typeref:typename:unsigned:2
 a0	regfile.h	/^        a0 = x10,$/;"	e	enum:RegFile::e
 a1	regfile.h	/^        a1 = x11,$/;"	e	enum:RegFile::e
@@ -439,9 +450,10 @@ a4	regfile.h	/^        a4 = x14,$/;"	e	enum:RegFile::e
 a5	regfile.h	/^        a5 = x15,$/;"	e	enum:RegFile::e
 a6	regfile.h	/^        a6 = x16,$/;"	e	enum:RegFile::e
 a7	regfile.h	/^        a7 = x17,$/;"	e	enum:RegFile::e
+addPendingTransaction	bus.h	/^	void addPendingTransaction(tlm::tlm_generic_payload &trans,$/;"	f	struct:Bus	typeref:typename:void
 addr	csr.h	/^    uint32_t addr;$/;"	m	struct:csr_base	typeref:typename:uint32_t
 addr_t	main.cpp	/^	typedef unsigned int addr_t;$/;"	t	struct:Options	typeref:typename:unsigned int	file:
-addr_t	mem_if.h	/^    typedef uint32_t addr_t;$/;"	t	struct:CombinedMemoryInterface	typeref:typename:uint32_t
+addr_t	mem_if.h	/^	typedef uint32_t addr_t;$/;"	t	struct:CombinedMemoryInterface	typeref:typename:uint32_t
 addr_to_csr	csr.h	/^    std::map<uint32_t, csr_base*> addr_to_csr;$/;"	m	struct:csr_table	typeref:typename:std::map<uint32_t,csr_base * >
 addr_to_reg	clint_if.h	/^		std::map<uint64_t, uint32_t *> addr_to_reg;$/;"	m	struct:Clint	typeref:typename:std::map<uint64_t,uint32_t * >
 addr_to_reg	dma.h	/^    std::unordered_map<uint64_t, uint32_t *> addr_to_reg;$/;"	m	struct:SimpleDMA	typeref:typename:std::unordered_map<uint64_t,uint32_t * >
@@ -449,11 +461,9 @@ any_pending	csr.h	/^    inline bool any_pending() {$/;"	f	struct:csr_mip	typeref
 aq	instr.h	/^    inline bool aq() {$/;"	f	struct:Instruction	typeref:typename:bool
 asid	csr.h	/^            unsigned asid: 9;   \/\/ WARL$/;"	m	struct:csr_satp::__anon0f3f74e3100a::__anon0f3f74e31108	typeref:typename:unsigned:9
 at	csr.h	/^    csr_base &at(uint32_t addr) {$/;"	f	struct:csr_table	typeref:typename:csr_base &
-b_transport	bus.h	/^	void b_transport(int id, tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)$/;"	f	struct:Bus	typeref:typename:void
-b_transport	clint_if.cpp	/^void Clint::b_transport(tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)$/;"	f	class:Clint	typeref:typename:void
-b_transport	memory.h	/^void b_transport(tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)$/;"	f	struct:Memory	typeref:typename:void
 bank	csr.h	/^            unsigned bank: 25;$/;"	m	struct:csr_mvendorid::__anon0f3f74e3030a::__anon0f3f74e30408	typeref:typename:unsigned:25
 base	csr.h	/^            unsigned base: 30;	\/\/ WARL$/;"	m	struct:csr_mtvec::__anon0f3f74e3070a::__anon0f3f74e30808	typeref:typename:unsigned:30
+begin_response_thread	device_proxy.cpp	/^void DeviceProxy::begin_response_thread()$/;"	f	class:DeviceProxy	typeref:typename:void
 breakpoints	iss.h	/^    std::unordered_set<uint32_t> breakpoints;$/;"	m	struct:ISS	typeref:typename:std::unordered_set<uint32_t>
 buffer	dma.h	/^    std::array<uint8_t, 64> buffer;$/;"	m	struct:SimpleDMA	typeref:typename:std::array<uint8_t,64>
 c_b12	instr.h	/^    inline uint32_t c_b12() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
@@ -504,7 +514,7 @@ cycle_time	iss.h	/^    sc_core::sc_time cycle_time;$/;"	m	struct:ISS	typeref:typ
 data	instr.h	/^    inline uint32_t data() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
 data_memory_interface	mem_if.h	/^struct data_memory_interface$/;"	s
 debug_mode	iss.h	/^    bool debug_mode = false;$/;"	m	struct:ISS	typeref:typename:bool
-decode	bus.h	/^	unsigned decode(uint64_t addr)$/;"	f	struct:Bus	typeref:typename:unsigned
+decode	bus.cpp	/^unsigned Bus<NR_OF_INITIATORS,NR_OF_TARGETS>::decode(uint64_t addr)$/;"	f	class:Bus	typeref:typename:unsigned
 decode_and_expand_compressed	instr.cpp	/^Opcode::mapping Instruction::decode_and_expand_compressed() $/;"	f	class:Instruction	typeref:typename:Opcode::mapping
 decode_compressed	instr.cpp	/^Compressed::Opcode decode_compressed(Instruction &instr) $/;"	f	typeref:typename:Compressed::Opcode
 decode_normal	instr.cpp	/^Opcode::mapping Instruction::decode_normal() $/;"	f	class:Instruction	typeref:typename:Opcode::mapping
@@ -526,6 +536,8 @@ e_shstrndx	elf_loader.h	/^    Elf32_Half	e_shstrndx;$/;"	m	struct:__anonb7fc4148
 e_type	elf_loader.h	/^    Elf32_Half	e_type;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Half
 e_version	elf_loader.h	/^    Elf32_Word	e_version;$/;"	m	struct:__anonb7fc41480108	typeref:typename:Elf32_Word
 elf	elf_loader.h	/^    boost::iostreams::mapped_file_source elf;$/;"	m	struct:ELFLoader	typeref:typename:boost::iostreams::mapped_file_source
+end_request_thread	device_proxy.cpp	/^void DeviceProxy::end_request_thread()$/;"	f	class:DeviceProxy	typeref:typename:void
+end_response_thread	mem_if.cpp	/^void CombinedMemoryInterface::end_response_thread()$/;"	f	class:CombinedMemoryInterface	typeref:typename:void
 ensure	csr.h	/^inline void ensure(bool cond) {$/;"	f	typeref:typename:void
 exception_code	csr.h	/^            unsigned exception_code: 31;	\/\/ WLRL$/;"	m	struct:csr_mcause::__anon0f3f74e30e0a::__anon0f3f74e30f08	typeref:typename:unsigned:31
 exec_step	iss.h	/^    Opcode::mapping exec_step() {$/;"	f	struct:ISS	typeref:typename:Opcode::mapping
@@ -535,6 +547,7 @@ extensions	csr.h	/^            unsigned extensions: 26;$/;"	m	struct:csr_misa::_
 external_interrupt_target	irq_if.h	/^struct external_interrupt_target {$/;"	s
 filename	elf_loader.h	/^    const char *filename;$/;"	m	struct:ELFLoader	typeref:typename:const char *
 fp	regfile.h	/^        fp = x8,$/;"	e	enum:RegFile::e
+from	bus.h	/^		tlm_utils::simple_target_socket_tagged<Bus>* from;$/;"	m	struct:Bus::ConnectionInfo	typeref:typename:tlm_utils::simple_target_socket_tagged<Bus> *
 fs	csr.h	/^            unsigned fs: 2;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:2
 funct12	instr.h	/^    inline int32_t funct12() {$/;"	f	struct:Instruction	typeref:typename:int32_t
 funct3	instr.h	/^    inline int32_t funct3() {$/;"	f	struct:Instruction	typeref:typename:int32_t
@@ -542,6 +555,9 @@ funct5	instr.h	/^    inline int32_t funct5() {$/;"	f	struct:Instruction	typeref:
 funct7	instr.h	/^    inline int32_t funct7() {$/;"	f	struct:Instruction	typeref:typename:int32_t
 get_base_address	csr.h	/^    uint32_t get_base_address() {$/;"	f	struct:csr_mtvec	typeref:typename:uint32_t
 get_begin_signature_address	elf_loader.h	/^    uint32_t get_begin_signature_address() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
+get_device_delay	clint_if.cpp	/^sc_core::sc_time Clint::get_device_delay(tlm::tlm_generic_payload &trans, sc_core::sc_time &dela/;"	f	class:Clint	typeref:typename:sc_core::sc_time
+get_device_delay	memory.cpp	/^sc_core::sc_time Memory::get_device_delay(tlm::tlm_generic_payload &trans, sc_core::sc_time &del/;"	f	class:Memory	typeref:typename:sc_core::sc_time
+get_device_delay	terminal.h	/^	sc_core::sc_time get_device_delay(tlm::tlm_generic_payload & trans, sc_core::sc_time &delay) ov/;"	f	struct:Terminal	typeref:typename:sc_core::sc_time
 get_end_signature_address	elf_loader.h	/^    uint32_t get_end_signature_address() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
 get_entrypoint	elf_loader.h	/^    uint32_t get_entrypoint() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
 get_heap_addr	elf_loader.h	/^    uint32_t get_heap_addr() {$/;"	f	struct:ELFLoader	typeref:typename:uint32_t
@@ -577,23 +593,41 @@ irq_number	dma.h	/^    uint32_t irq_number = 0;$/;"	m	struct:SimpleDMA	typeref:t
 is_compressed	instr.h	/^    inline bool is_compressed() {$/;"	f	struct:Instruction	typeref:typename:bool
 isock	bus.h	/^	tlm_utils::simple_initiator_socket_tagged<Bus> isock[NR_OF_TARGETS];$/;"	m	struct:Bus	typeref:typename:tlm_utils::simple_initiator_socket_tagged<Bus>[]
 isock	dma.h	/^    tlm_utils::simple_initiator_socket<SimpleDMA> isock;$/;"	m	struct:SimpleDMA	typeref:typename:tlm_utils::simple_initiator_socket<SimpleDMA>
-isock	mem_if.h	/^    tlm_utils::simple_initiator_socket<CombinedMemoryInterface> isock;$/;"	m	struct:CombinedMemoryInterface	typeref:typename:tlm_utils::simple_initiator_socket<CombinedMemoryInterface>
+isock	mem_if.h	/^	tlm_utils::simple_initiator_socket<CombinedMemoryInterface> isock;$/;"	m	struct:CombinedMemoryInterface	typeref:typename:tlm_utils::simple_initiator_socket<CombinedMemoryInterface>
 last_pc	iss.h	/^    uint32_t last_pc;$/;"	m	struct:ISS	typeref:typename:uint32_t
 len	dma.h	/^    uint32_t len  = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
-load_byte	mem_if.h	/^    int32_t load_byte(addr_t addr) { return _load_data<int8_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
+load_byte	mem_if.h	/^	int32_t load_byte(addr_t addr) { return _load_data<int8_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
 load_executable_image	elf_loader.h	/^    void load_executable_image(uint8_t *dst, uint32_t size, uint32_t offset) {$/;"	f	struct:ELFLoader	typeref:typename:void
-load_half	mem_if.h	/^    int32_t load_half(addr_t addr) { return _load_data<int16_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
-load_instr	mem_if.h	/^    int32_t load_instr(addr_t addr) { return _load_data<int32_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
-load_ubyte	mem_if.h	/^    uint32_t load_ubyte(addr_t addr) { return _load_data<uint8_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:uint32_t
-load_uhalf	mem_if.h	/^    uint32_t load_uhalf(addr_t addr) { return _load_data<uint16_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:uint32_t
-load_word	mem_if.h	/^    int32_t load_word(addr_t addr) { return _load_data<int32_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
+load_half	mem_if.h	/^	int32_t load_half(addr_t addr) { return _load_data<int16_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
+load_instr	mem_if.h	/^	int32_t load_instr(addr_t addr) { return _load_data<int32_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
+load_ubyte	mem_if.h	/^	uint32_t load_ubyte(addr_t addr) { return _load_data<uint8_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:uint32_t
+load_uhalf	mem_if.h	/^	uint32_t load_uhalf(addr_t addr) { return _load_data<uint16_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:uint32_t
+load_word	mem_if.h	/^	int32_t load_word(addr_t addr) { return _load_data<int32_t>(addr); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:int32_t
 low	csr.h	/^            int32_t low;$/;"	m	struct:csr_64::__anon0f3f74e3140a::__anon0f3f74e31508	typeref:typename:int32_t
 lrw_marked	iss.h	/^    uint32_t lrw_marked = 0;$/;"	m	struct:ISS	typeref:typename:uint32_t
+mEndRequestEvent	bus.h	/^	sc_core::sc_event mEndRequestEvent;$/;"	m	struct:Bus	typeref:typename:sc_core::sc_event
+mEndRequestEvent	mem_if.h	/^	sc_core::sc_event mEndRequestEvent;$/;"	m	struct:CombinedMemoryInterface	typeref:typename:sc_core::sc_event
+mEndRequestPEQ	device_proxy.h	/^	tlm_utils::peq_with_get<tlm::tlm_generic_payload> mEndRequestPEQ;$/;"	m	struct:DeviceProxy	typeref:typename:tlm_utils::peq_with_get<tlm::tlm_generic_payload>
+mEndResponseEvent	bus.h	/^	sc_core::sc_event mEndResponseEvent;$/;"	m	struct:Bus	typeref:typename:sc_core::sc_event
+mEndResponseEvent	mem_if.h	/^	sc_core::sc_event mEndResponseEvent;$/;"	m	struct:CombinedMemoryInterface	typeref:typename:sc_core::sc_event
+mPendingTransactions	bus.h	/^	PendingTransactions mPendingTransactions;$/;"	m	struct:Bus	typeref:typename:PendingTransactions
+mRequestPEQ	bus.h	/^	tlm_utils::peq_with_get<tlm::tlm_generic_payload> mRequestPEQ;	$/;"	m	struct:Bus	typeref:typename:tlm_utils::peq_with_get<tlm::tlm_generic_payload>
+mResponsePEQ	bus.h	/^	tlm_utils::peq_with_get<tlm::tlm_generic_payload> mResponsePEQ;	$/;"	m	struct:Bus	typeref:typename:tlm_utils::peq_with_get<tlm::tlm_generic_payload>
+mResponsePEQ	device_proxy.h	/^	tlm_utils::peq_with_get<tlm::tlm_generic_payload> mResponsePEQ;$/;"	m	struct:DeviceProxy	typeref:typename:tlm_utils::peq_with_get<tlm::tlm_generic_payload>
+m_accept_delay	device_proxy.h	/^	sc_core::sc_time m_accept_delay;$/;"	m	struct:DeviceProxy	typeref:typename:sc_core::sc_time
+m_clint_delay	clint_if.h	/^	sc_core::sc_time m_clint_delay;$/;"	m	struct:Clint	typeref:typename:sc_core::sc_time
 m_data	memory.h	/^	uint8_t *m_data;$/;"	m	struct:Memory	typeref:typename:uint8_t *
+m_device	device_proxy.h	/^	Device * m_device;$/;"	m	struct:DeviceProxy	typeref:typename:Device *
 m_end	bus.h	/^	uint64_t m_end;$/;"	m	struct:PortMapping	typeref:typename:uint64_t
+m_end_resp_rcvd_event	device_proxy.h	/^	sc_core::sc_event m_end_resp_rcvd_event;$/;"	m	struct:DeviceProxy	typeref:typename:sc_core::sc_event
+m_end_rsp_delay	mem_if.h	/^	sc_core::sc_time m_end_rsp_delay;$/;"	m	struct:CombinedMemoryInterface	typeref:typename:sc_core::sc_time
+m_read_delay	memory.h	/^	sc_core::sc_time m_read_delay;$/;"	m	struct:Memory	typeref:typename:sc_core::sc_time
+m_send_end_rsp_PEQ	mem_if.h	/^	tlm_utils::peq_with_get<tlm::tlm_generic_payload> m_send_end_rsp_PEQ;$/;"	m	struct:CombinedMemoryInterface	typeref:typename:tlm_utils::peq_with_get<tlm::tlm_generic_payload>
 m_size	memory.h	/^	uint32_t m_size;$/;"	m	struct:Memory	typeref:typename:uint32_t
 m_start	bus.h	/^	uint64_t m_start;$/;"	m	struct:PortMapping	typeref:typename:uint64_t
 m_target	clint_if.h	/^	timer_interrupt_target * m_target;	$/;"	m	struct:Clint	typeref:typename:timer_interrupt_target *
+m_terminal_delay	terminal.h	/^	sc_core::sc_time m_terminal_delay;$/;"	m	struct:Terminal	typeref:typename:sc_core::sc_time
+m_write_delay	memory.h	/^	sc_core::sc_time m_write_delay;$/;"	m	struct:Memory	typeref:typename:sc_core::sc_time
 mapping	instr.h	/^enum mapping $/;"	g	namespace:Opcode
 marchid	csr.h	/^    csr_32 *marchid = 0;$/;"	m	struct:csr_table	typeref:typename:csr_32 *
 max_heap	syscall.h	/^	uint32_t max_heap   = 0;$/;"	m	struct:SyscallHandler	typeref:typename:uint32_t
@@ -634,9 +668,16 @@ mvendorid	csr.h	/^    csr_mvendorid *mvendorid = 0;$/;"	m	struct:csr_table	typer
 mxl	csr.h	/^            unsigned mxl: 2;$/;"	m	struct:csr_misa::__anon0f3f74e3010a::__anon0f3f74e30208	typeref:typename:unsigned:2
 mxr	csr.h	/^            unsigned mxr: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
 name	csr.h	/^    const char *name;$/;"	m	struct:csr_base	typeref:typename:const char *
+nb_transport_bw	bus.cpp	/^tlm::tlm_sync_enum Bus<NR_OF_INITIATORS, NR_OF_TARGETS>::nb_transport_bw(int id, tlm::tlm_generi/;"	f	class:Bus	typeref:typename:tlm::tlm_sync_enum
+nb_transport_bw	mem_if.cpp	/^tlm::tlm_sync_enum CombinedMemoryInterface::nb_transport_bw(tlm::tlm_generic_payload &trans, tlm/;"	f	class:CombinedMemoryInterface	typeref:typename:tlm::tlm_sync_enum
+nb_transport_fw	bus.cpp	/^tlm::tlm_sync_enum Bus<NR_OF_INITIATORS,NR_OF_TARGETS>::nb_transport_fw(int id, tlm::tlm_generic/;"	f	class:Bus	typeref:typename:tlm::tlm_sync_enum
+nb_transport_fw	device_proxy.cpp	/^tlm::tlm_sync_enum DeviceProxy::nb_transport_fw(tlm::tlm_generic_payload &trans, tlm::tlm_phase /;"	f	class:DeviceProxy	typeref:typename:tlm::tlm_sync_enum
 offset	csr.h	/^            unsigned offset: 7;$/;"	m	struct:csr_mvendorid::__anon0f3f74e3030a::__anon0f3f74e30408	typeref:typename:unsigned:7
 op	dma.h	/^    uint32_t op   = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint32_t
 opcode	instr.h	/^    inline int32_t opcode() {$/;"	f	struct:Instruction	typeref:typename:int32_t
+operation	clint_if.cpp	/^void Clint::operation(tlm::tlm_generic_payload &gp, sc_core::sc_time &delay)$/;"	f	class:Clint	typeref:typename:void
+operation	memory.cpp	/^void Memory::operation(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay)$/;"	f	class:Memory	typeref:typename:void
+operation	terminal.h	/^	void operation(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) override$/;"	f	struct:Terminal	typeref:typename:void
 operator []	regfile.h	/^    int32_t &operator [](const uint32_t idx) { \/\/这里为什么要重载[] ？regs本身是数/;"	f	struct:RegFile	typeref:typename:int32_t &
 p_align	elf_loader.h	/^    Elf32_Word	p_align;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Word
 p_filesz	elf_loader.h	/^    Elf32_Word	p_filesz;$/;"	m	struct:__anonb7fc41480208	typeref:typename:Elf32_Word
@@ -656,13 +697,10 @@ pmpcfg0	csr.h	/^    csr_pmpcfg *pmpcfg0 = 0;$/;"	m	struct:csr_table	typeref:type
 ports	bus.h	/^	PortMapping * ports[NR_OF_TARGETS];$/;"	m	struct:Bus	typeref:typename:PortMapping * []
 ppn	csr.h	/^            unsigned ppn: 22;   \/\/ WARL$/;"	m	struct:csr_satp::__anon0f3f74e3100a::__anon0f3f74e31108	typeref:typename:unsigned:22
 quadrant	instr.h	/^    inline uint32_t quadrant() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
-quantum_keeper	iss.h	/^    tlm_utils::tlm_quantumkeeper quantum_keeper;$/;"	m	struct:ISS	typeref:typename:tlm_utils::tlm_quantumkeeper
-quantum_keeper	mem_if.h	/^    tlm_utils::tlm_quantumkeeper &quantum_keeper;$/;"	m	struct:CombinedMemoryInterface	typeref:typename:tlm_utils::tlm_quantumkeeper &
 ra	regfile.h	/^        ra = x1,$/;"	e	enum:RegFile::e
 rd	instr.h	/^    inline uint32_t rd() {$/;"	f	struct:Instruction	typeref:typename:uint32_t
 read	csr.h	/^	int32_t read()$/;"	f	struct:csr_base	typeref:typename:int32_t
 read	regfile.h	/^    int32_t read(uint32_t index) {$/;"	f	struct:RegFile	typeref:typename:int32_t
-read_data	memory.h	/^void read_data(unsigned addr, uint8_t *dst, unsigned num_bytes) {$/;"	f	struct:Memory	typeref:typename:void
 reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mcause::__anon0f3f74e30e0a	typeref:typename:int32_t
 reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mepc::__anon0f3f74e30d0a	typeref:typename:int32_t
 reg	csr.h	/^        int32_t reg = 0;$/;"	m	union:csr_mie::__anon0f3f74e3090a	typeref:typename:int32_t
@@ -757,9 +795,9 @@ stat	dma.h	/^    uint32_t stat = 0;$/;"	m	struct:SimpleDMA	typeref:typename:uint
 status	iss.h	/^    CoreExecStatus status = CoreExecStatus::Runnable;$/;"	m	struct:ISS	typeref:typename:CoreExecStatus
 stie	csr.h	/^            unsigned stie: 1;$/;"	m	struct:csr_mie::__anon0f3f74e3090a::__anon0f3f74e30a08	typeref:typename:unsigned:1
 stip	csr.h	/^            unsigned stip: 1;$/;"	m	struct:csr_mip::__anon0f3f74e30b0a::__anon0f3f74e30c08	typeref:typename:unsigned:1
-store_byte	mem_if.h	/^    void store_byte(addr_t addr, uint8_t value) { _store_data(addr, value); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
-store_half	mem_if.h	/^    void store_half(addr_t addr, uint16_t value) { _store_data(addr, value); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
-store_word	mem_if.h	/^    void store_word(addr_t addr, uint32_t value) { _store_data(addr, value); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+store_byte	mem_if.h	/^	void store_byte(addr_t addr, uint8_t value) { _store_data(addr, value); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+store_half	mem_if.h	/^	void store_half(addr_t addr, uint16_t value) { _store_data(addr, value); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
+store_word	mem_if.h	/^	void store_word(addr_t addr, uint32_t value) { _store_data(addr, value); }$/;"	f	struct:CombinedMemoryInterface	typeref:typename:void
 sum	csr.h	/^            unsigned sum: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
 switch_to_trap_handler	iss.h	/^    void switch_to_trap_handler() {$/;"	f	struct:ISS	typeref:typename:void
 sys	iss.h	/^    SyscallHandler *sys;$/;"	m	struct:ISS	typeref:typename:SyscallHandler *
@@ -785,16 +823,14 @@ term_end_addr	main.cpp	/^	addr_t term_end_addr		= term_start_addr + 16;$/;"	m	st
 term_start_addr	main.cpp	/^	addr_t term_start_addr		= 0x20000000;$/;"	m	struct:Options	typeref:typename:addr_t	file:
 timer_interrupt_target	irq_if.h	/^struct timer_interrupt_target {$/;"	s
 tlm_global_quantum	main.cpp	/^	unsigned int tlm_global_quantum = 10;$/;"	m	struct:Options	typeref:typename:unsigned int	file:
+to	bus.h	/^		tlm_utils::simple_initiator_socket_tagged<Bus> * to;$/;"	m	struct:Bus::ConnectionInfo	typeref:typename:tlm_utils::simple_initiator_socket_tagged<Bus> *
 tp	regfile.h	/^        tp = x4,$/;"	e	enum:RegFile::e
 transport	dma.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:SimpleDMA	typeref:typename:void
-transport	terminal.h	/^    void transport(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) {$/;"	f	struct:Terminal	typeref:typename:void
 trigger_external_interrupt	iss.h	/^    virtual void trigger_external_interrupt() override {$/;"	f	struct:ISS	typeref:typename:void
 trigger_timer_interrupt	iss.h	/^    virtual void trigger_timer_interrupt(bool status) override {$/;"	f	struct:ISS	typeref:typename:void
 tsock	bus.h	/^	tlm_utils::simple_target_socket_tagged<Bus> tsock[NR_OF_INITIATORS];$/;"	m	struct:Bus	typeref:typename:tlm_utils::simple_target_socket_tagged<Bus>[]
-tsock	clint_if.h	/^	tlm_utils::simple_target_socket<Clint> tsock;$/;"	m	struct:Clint	typeref:typename:tlm_utils::simple_target_socket<Clint>
+tsock	device_proxy.h	/^	tlm_utils::simple_target_socket<DeviceProxy> tsock;$/;"	m	struct:DeviceProxy	typeref:typename:tlm_utils::simple_target_socket<DeviceProxy>
 tsock	dma.h	/^    tlm_utils::simple_target_socket<SimpleDMA> tsock;$/;"	m	struct:SimpleDMA	typeref:typename:tlm_utils::simple_target_socket<SimpleDMA>
-tsock	memory.h	/^	tlm_utils::simple_target_socket<Memory> tsock;$/;"	m	struct:Memory	typeref:typename:tlm_utils::simple_target_socket<Memory>
-tsock	terminal.h	/^    tlm_utils::simple_target_socket<Terminal> tsock;$/;"	m	struct:Terminal	typeref:typename:tlm_utils::simple_target_socket<Terminal>
 tv_nsec	syscall.cpp	/^    int32_t tv_nsec;$/;"	m	struct:rv32g_timespec	typeref:typename:int32_t	file:
 tv_sec	syscall.cpp	/^    int32_t tv_sec;$/;"	m	struct:rv32g_timespec	typeref:typename:int32_t	file:
 tvm	csr.h	/^            unsigned tvm: 1;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:1
@@ -832,7 +868,6 @@ wpri4	csr.h	/^            unsigned wpri4: 20;$/;"	m	struct:csr_mie::__anon0f3f74
 wpri4	csr.h	/^            unsigned wpri4: 8;$/;"	m	struct:csr_mstatus::__anon0f3f74e3050a::__anon0f3f74e30608	typeref:typename:unsigned:8
 write	csr.h	/^	void write(int32_t val)$/;"	f	struct:csr_base	typeref:typename:void
 write	regfile.h	/^    void write(uint32_t index, int32_t value) {$/;"	f	struct:RegFile	typeref:typename:void
-write_data	memory.h	/^void write_data(unsigned addr, uint8_t *src, unsigned num_bytes) {$/;"	f	struct:Memory	typeref:typename:void
 x0	regfile.h	/^        x0 = 0,$/;"	e	enum:RegFile::e
 x1	regfile.h	/^        x1,$/;"	e	enum:RegFile::e
 x10	regfile.h	/^        x10,$/;"	e	enum:RegFile::e

@@ -7,6 +7,7 @@
 #include "clint_if.h"
 #include "terminal.h"
 #include "bus.h"
+#include "device_proxy.h"
 
 #include <iostream>
 #include <iomanip>
@@ -80,16 +81,21 @@ int sc_main(int argc, char **argv)
 
 	std::srand(std::time(nullptr)); // use current time as seed for random generator
 
-	tlm::tlm_global_quantum::instance().set(sc_core::sc_time(opt.tlm_global_quantum, sc_core::SC_NS));
+	sc_core::sc_time clock = sc_time(10,sc_core::SC_NS);
+	unsigned int max_txns = 4;
 
 	ISS core;
-	Memory mem("Memory", opt.mem_size);
-	Terminal term("Terminal");
+	Memory mem("Memory", opt.mem_size, clock, clock);
+	DeviceProxy memory_proxy("memory_proxy", sc_core::SC_ZERO_TIME, &mem);
+	Terminal term("Terminal", clock);
+	DeviceProxy term_proxy("term_proxy", sc_core::SC_ZERO_TIME, &term);
+	Clint clint("Clint", clock, &core);
+	DeviceProxy clint_proxy("clint_proxy", sc_core::SC_ZERO_TIME, &clint);
 	ELFLoader loader(opt.input_program.c_str());
-	CombinedMemoryInterface iss_mem_if("MemoryInterface", core.quantum_keeper);
+	CombinedMemoryInterface iss_mem_if("MemoryInterface", sc_core::SC_ZERO_TIME, max_txns);
 	SyscallHandler sys;
-	Clint clint("Clint",&core);
-	Bus<1,3> bus("Bus");
+	Bus<1,3> bus("bus");
+
 
 	bus.ports[0] = new PortMapping(opt.mem_start_addr, opt.mem_end_addr);
 	bus.ports[1] = new PortMapping(opt.term_start_addr, opt.term_end_addr);
@@ -100,9 +106,9 @@ int sc_main(int argc, char **argv)
 	sys.init(mem.m_data, opt.mem_start_addr, loader.get_heap_addr());
 	
 	iss_mem_if.isock.bind(bus.tsock[0]);
-	bus.isock[0].bind(mem.tsock);
-	bus.isock[1].bind(term.tsock);
-	bus.isock[2].bind(clint.tsock);
+	bus.isock[0].bind(memory_proxy.tsock);
+	bus.isock[1].bind(term_proxy.tsock);
+	bus.isock[2].bind(clint_proxy.tsock);
 
 	clint.m_target = &core;
 
