@@ -1,5 +1,4 @@
 #include "bus.h"
-#include <iostream>
 
 //template<int NR_OF_INITIATORS, int NR_OF_TARGETS>
 //unsigned Bus<NR_OF_INITIATORS,NR_OF_TARGETS>::decode(uint64_t addr)

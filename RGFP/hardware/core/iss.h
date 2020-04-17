@@ -733,5 +733,4 @@ struct DirectCoreRunner : public sc_core::sc_module {
         sc_core::sc_stop();
     }
 };
-
 #endif
