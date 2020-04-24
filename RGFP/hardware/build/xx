@@ -1,428 +1,128 @@
-Makefile:16: ../core/syscall.cpp ../core/clint_if.cpp ../core/device_proxy.cpp ../core/instr.cpp ../core/loadelf.cpp ../core/bus.cpp ../core/mem_if.cpp ../core/memory.cpp ../core/main.cpp
-Makefile:17: syscall.o clint_if.o device_proxy.o instr.o loadelf.o bus.o mem_if.o memory.o main.o
-In file included from ../core/main.cpp:9:0:
-../core/bus.h: In instantiation of ‘tlm::tlm_sync_enum Bus<NR_OF_INITIATORS, NR_OF_TARGETS>::nb_transport_fw(int, tlm::tlm_generic_payload&, tlm::tlm_phase&, sc_core::sc_time&) [with int NR_OF_INITIATORS = 1; int NR_OF_TARGETS = 3]’:
-../core/bus.h:69:44:   required from ‘Bus<NR_OF_INITIATORS, NR_OF_TARGETS>::Bus(sc_core::sc_module_name) [with int NR_OF_INITIATORS = 1; int NR_OF_TARGETS = 3]’
-../core/main.cpp:96:20:   required from here
-../core/bus.h:188:24: error: no matching function for call to ‘Bus<1, 3>::addPendingTransaction(tlm::tlm_generic_payload*, tlm_utils::simple_initiator_socket_tagged<Bus<1, 3>, 32, tlm::tlm_base_protocol_types> [3], int&)’
-   addPendingTransaction(&gp, isock, id);
-   ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
-../core/bus.h:241:7: note: candidate: void Bus<NR_OF_INITIATORS, NR_OF_TARGETS>::addPendingTransaction(tlm::tlm_generic_payload&, tlm_utils::simple_initiator_socket_tagged<Bus<NR_OF_INITIATORS, NR_OF_TARGETS> >*, int) [with int NR_OF_INITIATORS = 1; int NR_OF_TARGETS = 3]
-  void addPendingTransaction(tlm::tlm_generic_payload &trans,
-       ^~~~~~~~~~~~~~~~~~~~~
-../core/bus.h:241:7: note:   no known conversion for argument 1 from ‘tlm::tlm_generic_payload*’ to ‘tlm::tlm_generic_payload&’
-../core/bus.h:197:85: error: no match for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘<unresolved overloaded function type>’)
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39:0,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:108:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-       operator<<(__ostream_type& (*__pf)(__ostream_type&))
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:108:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:117:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
-       operator<<(__ios_type& (*__pf)(__ios_type&))
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:117:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:127:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-       operator<<(ios_base& (*__pf) (ios_base&))
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:127:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::ios_base& (*)(std::ios_base&)’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:166:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-       operator<<(long __n)
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:166:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘long int’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:170:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-       operator<<(unsigned long __n)
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:170:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘long unsigned int’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-       operator<<(bool __n)
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:174:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘bool’
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:693:0,
-                 from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream.tcc:91:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
-     basic_ostream<_CharT, _Traits>::
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘short int’
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39:0,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:181:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-       operator<<(unsigned short __n)
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:181:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘short unsigned int’
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:693:0,
-                 from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream.tcc:105:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
-     basic_ostream<_CharT, _Traits>::
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘int’
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39:0,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:192:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-       operator<<(unsigned int __n)
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:192:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘unsigned int’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:201:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-       operator<<(long long __n)
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:201:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘long long int’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:205:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-       operator<<(unsigned long long __n)
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:205:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘long long unsigned int’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:220:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-       operator<<(double __f)
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:220:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘double’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:224:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-       operator<<(float __f)
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:224:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘float’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:232:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-       operator<<(long double __f)
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:232:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘long double’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-       operator<<(const void* __p)
-       ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:245:7: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const void*’
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:693:0,
-                 from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream.tcc:119:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
-     basic_ostream<_CharT, _Traits>::
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
-In file included from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/kernel/sc_module.h:38:0,
-                 from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/systemc:74,
-                 from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/systemc.h:219,
-                 from ../core/mem_if.h:6,
-                 from ../core/iss.h:7,
-                 from ../core/main.cpp:4:
-/home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/kernel/sc_time.h:434:1: note: candidate: std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_time&)
- operator << ( ::std::ostream& os, const sc_time& t )
- ^~~~~~~~
-/home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/kernel/sc_time.h:434:1: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const sc_core::sc_time&’
-In file included from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/kernel/sc_simcontext.h:35:0,
-                 from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/kernel/sc_wait.h:34,
-                 from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/kernel/sc_module.h:39,
-                 from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/systemc:74,
-                 from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/systemc.h:219,
-                 from ../core/mem_if.h:6,
-                 from ../core/iss.h:7,
-                 from ../core/main.cpp:4:
-/home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/kernel/sc_status.h:69:22: note: candidate: std::ostream& sc_core::operator<<(std::ostream&, sc_core::sc_status)
- SC_API std::ostream& operator << ( std::ostream&, sc_status );
-                      ^~~~~~~~
-/home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/kernel/sc_status.h:69:22: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘sc_core::sc_status’
-In file included from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/communication/sc_buffer.h:34:0,
-                 from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/systemc:79,
-                 from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/systemc.h:219,
-                 from ../core/mem_if.h:6,
-                 from ../core/iss.h:7,
-                 from ../core/main.cpp:4:
-/home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/communication/sc_signal.h:140:1: note: candidate: std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_signal_channel&)
- operator << ( ::std::ostream& os, const sc_signal_channel& a )
- ^~~~~~~~
-/home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/communication/sc_signal.h:140:1: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const sc_core::sc_signal_channel&’
-In file included from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/communication/sc_clock_ports.h:33:0,
-                 from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/systemc:81,
-                 from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/systemc.h:219,
-                 from ../core/mem_if.h:6,
-                 from ../core/iss.h:7,
-                 from ../core/main.cpp:4:
-/home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/communication/sc_signal_ports.h:292:17: note: candidate: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_in<T>&)
- ::std::ostream& operator << ( ::std::ostream& os, const sc_in<T>& a )
-                 ^~~~~~~~
-/home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/communication/sc_signal_ports.h:292:17: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   couldn't deduce template parameter ‘T’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/communication/sc_clock_ports.h:33:0,
-                 from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/systemc:81,
-                 from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/systemc.h:219,
-                 from ../core/mem_if.h:6,
-                 from ../core/iss.h:7,
-                 from ../core/main.cpp:4:
-/home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/communication/sc_signal_ports.h:1121:17: note: candidate: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_inout<T>&)
- ::std::ostream& operator << ( ::std::ostream& os, const sc_inout<T>& a )
-                 ^~~~~~~~
-/home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/communication/sc_signal_ports.h:1121:17: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   couldn't deduce template parameter ‘T’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/systemc:84:0,
-                 from /home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/systemc.h:219,
-                 from ../core/mem_if.h:6,
-                 from ../core/iss.h:7,
-                 from ../core/main.cpp:4:
-/home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/communication/sc_fifo.h:429:1: note: candidate: template<class T> std::ostream& sc_core::operator<<(std::ostream&, const sc_core::sc_fifo<T>&)
- operator << ( ::std::ostream& os, const sc_fifo<T>& a )
- ^~~~~~~~
-/home/wdz/riscv-vp/riscv-vp/vp/dependencies/systemc-dist/include/sysc/communication/sc_fifo.h:429:1: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   couldn't deduce template parameter ‘T’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /usr/include/boost/config/no_tr1/complex.hpp:21:0,
-                 from /usr/include/boost/math/special_functions/math_fwd.hpp:30,
-                 from /usr/include/boost/math/special_functions/sign.hpp:17,
-                 from /usr/include/boost/lexical_cast.hpp:167,
-                 from /usr/include/boost/program_options/value_semantic.hpp:14,
-                 from /usr/include/boost/program_options/options_description.hpp:13,
-                 from /usr/include/boost/program_options.hpp:15,
-                 from ../core/main.cpp:14:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/complex:528:5: note: candidate: template<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::complex<_Tp>&)
-     operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/complex:528:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   couldn't deduce template parameter ‘_Tp’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from ../core/main.cpp:13:0:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:363:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>) [with _CharT = char; _Traits = std::char_traits<char>]
-     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:363:5: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘std::_Put_time<char>’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:311:5: note: candidate: template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)
-     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:311:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   couldn't deduce template parameter ‘_MoneyT’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from ../core/main.cpp:13:0:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:238:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)
-     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:238:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘std::_Setw’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from ../core/main.cpp:13:0:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:208:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)
-     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:208:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘std::_Setprecision’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from ../core/main.cpp:13:0:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:178:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>) [with _CharT = char; _Traits = std::char_traits<char>]
-     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:178:5: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘std::_Setfill<char>’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:143:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)
-     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:143:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘std::_Setbase’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from ../core/main.cpp:13:0:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:109:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)
-     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:109:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘std::_Setiosflags’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from ../core/main.cpp:13:0:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:79:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)
-     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/iomanip:79:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘std::_Resetiosflags’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/memory:81:0,
-                 from ../core/regfile.h:8,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/shared_ptr.h:66:5: note: candidate: template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)
-     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/shared_ptr.h:66:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   couldn't deduce template parameter ‘_Tp’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39:0,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:682:5: note: candidate: template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)
-     operator<<(_Ostream&& __os, const _Tp& __x)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:682:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   couldn't deduce template parameter ‘_Tp’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39:0,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
-     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:574:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘const unsigned char*’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39:0,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
-     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:569:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘const signed char*’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39:0,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
-     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:556:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘const char*’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:693:0,
-                 from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
-     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘const char*’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39:0,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:539:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>]
-     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:539:5: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘const char*’
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
-     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:519:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘unsigned char’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39:0,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
-     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:514:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘signed char’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39:0,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
-     operator<<(basic_ostream<char, _Traits>& __out, char __c)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:508:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘char’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39:0,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
-     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:502:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘char’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39:0,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:497:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT) [with _CharT = char; _Traits = std::char_traits<char>]
-     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:497:5: note:   no known conversion for argument 2 from ‘<unresolved overloaded function type>’ to ‘char’
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ios_base.h:46:0,
-                 from /opt/rh/devtoolset-7/root/usr/include/c++/7/ios:42,
-                 from /opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:38,
-                 from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/system_error:217:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
-     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/system_error:217:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   cannot convert ‘std::end’ (type ‘<unresolved overloaded function type>’) to type ‘const std::error_code&’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-In file included from /opt/rh/devtoolset-7/root/usr/include/c++/7/string:52:0,
-                 from /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/locale_classes.h:40,
-                 from /opt/rh/devtoolset-7/root/usr/include/c++/7/bits/ios_base.h:41,
-                 from /opt/rh/devtoolset-7/root/usr/include/c++/7/ios:42,
-                 from /opt/rh/devtoolset-7/root/usr/include/c++/7/ostream:38,
-                 from /opt/rh/devtoolset-7/root/usr/include/c++/7/iostream:39,
-                 from ../core/regfile.h:7,
-                 from ../core/iss.h:5,
-                 from ../core/main.cpp:4:
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/basic_string.h:6272:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
-     operator<<(basic_ostream<_CharT, _Traits>& __os,
-     ^~~~~~~~
-/opt/rh/devtoolset-7/root/usr/include/c++/7/bits/basic_string.h:6272:5: note:   template argument deduction/substitution failed:
-In file included from ../core/main.cpp:9:0:
-../core/bus.h:197:85: note:   couldn't deduce template parameter ‘_Alloc’
-   std::cout <<"ERROR: '" << __FUNCTION__ << "': Illegal phase received from mem_if" << std::end;
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
-make: *** [main.o] Error 1
+
+Info: ReconfigController.cpp: 290 ns -yzb Allocate_thread
+      Allocated PE number: 0 @ 290 ns
+
+Info: ReconfigController.cpp: 510 ns -yzb Allocate_thread
+      Allocated PE number: 1 @ 510 ns
+
+Info: ReconfigController.cpp: 710 ns -yzb Allocate_thread
+      Allocated PE number: 4 @ 710 ns
+
+Info: ReconfigController.cpp: 910 ns -yzb Allocate_thread
+      Allocated PE number: 5 @ 910 ns
+
+Info: ReconfigController.cpp: 1110 ns -yzb Allocate_thread
+      Allocated PE number: 6 @ 1110 ns
+
+Info: ReconfigController.cpp: 1310 ns -yzb Allocate_thread
+      Allocated PE number: 11 @ 1310 ns
+
+Info: ReconfigController.cpp: 1520 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1520 ns
+
+Info: ReconfigController.cpp: 1530 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1530 ns
+
+Info: ReconfigController.cpp: 1540 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1540 ns
+
+Info: ReconfigController.cpp: 1550 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1550 ns
+
+Info: ReconfigController.cpp: 1560 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1560 ns
+
+Info: ReconfigController.cpp: 1570 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1570 ns
+
+Info: ReconfigController.cpp: 1580 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1580 ns
+
+Info: ReconfigController.cpp: 1590 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1590 ns
+
+Info: ReconfigController.cpp: 1600 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1600 ns
+
+Info: ReconfigController.cpp: 1610 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1610 ns
+
+Info: ReconfigController.cpp: 1620 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1620 ns
+
+Info: ReconfigController.cpp: 1630 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1630 ns
+
+Info: ReconfigController.cpp: 1640 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1640 ns
+
+Info: ReconfigController.cpp: 1650 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1650 ns
+
+Info: ReconfigController.cpp: 1660 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1660 ns
+
+Info: ReconfigController.cpp: 1670 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1670 ns
+
+Info: ReconfigController.cpp: 1680 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1680 ns
+
+Info: ReconfigController.cpp: 1690 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1690 ns
+
+Info: ReconfigController.cpp: 1700 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1700 ns
+
+Info: ReconfigController.cpp: 1710 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1710 ns
+
+Info: ReconfigController.cpp: 1720 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1720 ns
+
+Info: ReconfigController.cpp: 1730 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1730 ns
+
+Info: ReconfigController.cpp: 1740 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1740 ns
+
+Info: ReconfigController.cpp: 1750 ns -yzb Allocate_thread
+      Not found idle PE, loop again @ 1750 ns
+
+Info: /OSCI/SystemC: Simulation stopped by user.
+simulation time: 1750 ns
+r[0] = 0
+r[1] = 65804
+r[2] = 33554427
+r[3] = 0
+r[4] = 0
+r[5] = 0
+r[6] = 0
+r[7] = 0
+r[8] = 0
+r[9] = 0
+r[10] = 0
+r[11] = 0
+r[12] = 0
+r[13] = 0
+r[14] = 1610645504
+r[15] = 0
+r[16] = 0
+r[17] = 93
+r[18] = 0
+r[19] = 0
+r[20] = 0
+r[21] = 0
+r[22] = 0
+r[23] = 0
+r[24] = 0
+r[25] = 0
+r[26] = 0
+r[27] = 0
+r[28] = 0
+r[29] = 0
+r[30] = 0
+r[31] = 0
+pc = 65816
+num-instr = 49
+max-heap (c-lib malloc, bytes) = 0

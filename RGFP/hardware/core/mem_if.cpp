@@ -38,11 +38,20 @@ void CombinedMemoryInterface::_do_transaction(tlm::tlm_command cmd, uint64_t add
 	trans_ptr->acquire();
 	++m_active_txn_count;
 	data_ptr = trans_ptr->get_data_ptr();
-	*reinterpret_cast<unsigned int*>(data_ptr) = *data;
+	*reinterpret_cast<unsigned int*>(data_ptr) = *(unsigned int *)data;
+//	*reinterpret_cast<unsigned int*>(data_ptr) = *data; //TODO: 深入研究
+//	有的时候正常，有的时候只写入低位；
 
 	trans_ptr->set_command(cmd);
 	trans_ptr->set_address(addr);
-	trans_ptr->set_data_ptr(data);
+//	trans_ptr->set_data_ptr(data);
+	if(cmd == tlm::TLM_READ_COMMAND)
+	{
+		trans_ptr->set_data_ptr(data);
+	}else
+	{
+		trans_ptr->set_data_ptr(data_ptr);	
+	}
 	trans_ptr->set_data_length(num_bytes);
 
 	tlm::tlm_phase phase = tlm::BEGIN_REQ;

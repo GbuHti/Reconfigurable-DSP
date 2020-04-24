@@ -9,6 +9,9 @@
 #include "bus.h"
 #include "device_proxy.h"
 
+#include "ReconfigController.h"
+#include "RFA.h"
+
 #include <iostream>
 #include <iomanip>
 #include <boost/program_options.hpp>
@@ -34,6 +37,9 @@ struct Options {
 	addr_t clint_end_addr		= 0x0200ffff;
 	addr_t term_start_addr		= 0x20000000;
 	addr_t term_end_addr		= term_start_addr + 16;
+	addr_t rfu_start_addr		= 0x30000000;
+	addr_t rfu_end_addr			= 0x30000100;
+
 	
 	unsigned int tlm_global_quantum = 10;
 };
@@ -94,12 +100,16 @@ int sc_main(int argc, char **argv)
 	ELFLoader loader(opt.input_program.c_str());
 	CombinedMemoryInterface iss_mem_if("MemoryInterface", sc_core::SC_ZERO_TIME, max_txns);
 	SyscallHandler sys;
-	Bus<1,3> bus("bus");
-
+	Bus<1,4> bus("bus");
+	
+	ReconfigController reconf_controller("reconf_controller");
+	DeviceProxy rc_proxy("rc_proxy", sc_core::SC_ZERO_TIME, &reconf_controller);
+	RFA rfa("rfa");
 
 	bus.ports[0] = new PortMapping(opt.mem_start_addr, opt.mem_end_addr);
 	bus.ports[1] = new PortMapping(opt.term_start_addr, opt.term_end_addr);
 	bus.ports[2] = new PortMapping(opt.clint_start_addr, opt.clint_end_addr);
+	bus.ports[3] = new PortMapping(opt.rfu_start_addr, opt.rfu_end_addr);
 	
 	loader.load_executable_image(mem.m_data, mem.m_size, opt.mem_start_addr);
 	core.init(&iss_mem_if, &iss_mem_if, &clint, &sys, loader.get_entrypoint(), opt.mem_end_addr - 4);
@@ -109,6 +119,8 @@ int sc_main(int argc, char **argv)
 	bus.isock[0].bind(memory_proxy.tsock);
 	bus.isock[1].bind(term_proxy.tsock);
 	bus.isock[2].bind(clint_proxy.tsock);
+	bus.isock[3].bind(rc_proxy.tsock);
+	reconf_controller.isock.bind(rfa.tsock);
 
 	clint.m_target = &core;
 
