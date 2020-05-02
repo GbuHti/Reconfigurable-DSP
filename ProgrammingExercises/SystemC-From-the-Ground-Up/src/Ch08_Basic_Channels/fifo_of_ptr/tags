@@ -1,0 +1,38 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+BOOST_LIBS	Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+DEFINES_H	defines.h	/^#define DEFINES_H$/;"	d
+DEPTH	defines.h	/^static unsigned DEPTH = 3;$/;"	v	typeref:typename:unsigned
+DFLT	Makefile	/^DFLT:=run$/;"	m
+ESLX	Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+MODULE	Makefile	/^MODULE:=fifo_of_ptr$/;"	m
+MYDATA_H	mydata.h	/^#define MYDATA_H$/;"	d
+RULEDIRS	Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_MODULE	snk.h	/^SC_MODULE(snk) {$/;"	f
+SC_MODULE	src.h	/^SC_MODULE(src) {$/;"	f
+SEND	defines.h	/^static unsigned SEND = 10;$/;"	v	typeref:typename:unsigned
+SNK_H	snk.h	/^#define SNK_H$/;"	d
+SRCS	Makefile	/^SRCS:=main.cpp snk.cpp src.cpp$/;"	m
+SRC_H	src.h	/^#define SRC_H$/;"	d
+STOP	defines.h	/^static const int STOP = -1;$/;"	v	typeref:typename:const int
+data	mydata.h	/^  int data() {$/;"	f	class:mydata	typeref:typename:int
+errors	main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+fifo_of_ptr_H	fifo_of_ptr.h	/^#define fifo_of_ptr_H$/;"	d
+m_data	mydata.h	/^  int m_data;$/;"	m	class:mydata	typeref:typename:int
+mydata	mydata.h	/^  mydata():m_data(0){}$/;"	f	class:mydata
+mydata	mydata.h	/^  mydata(int d):m_data(d) {}$/;"	f	class:mydata
+mydata	mydata.h	/^class mydata {$/;"	c
+operator =	mydata.h	/^  mydata& operator= (mydata& rhs) {$/;"	f	class:mydata	typeref:typename:mydata &
+rand	mydata.h	/^  mydata& rand() {$/;"	f	class:mydata	typeref:typename:mydata &
+sc_main	main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+simulation_name	main.cpp	/^char* simulation_name = "fifo_of_ptr";$/;"	v	typeref:typename:char *
+snk_method	snk.cpp	/^void snk::snk_method(void) {$/;"	f	class:snk	typeref:typename:void
+src_thread	src.cpp	/^void src::src_thread(void) {$/;"	f	class:src	typeref:typename:void

@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+BOOST_LIBS	Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+CPU2PCA_H	cpu2pca.h	/^#define CPU2PCA_H$/;"	d
+CPU_IF_H	CPU_if.h	/^#define CPU_IF_H$/;"	d
+CPU_if	CPU_if.h	/^struct CPU_if: public sc_interface {$/;"	s
+DFLT	Makefile	/^DFLT:=run$/;"	m
+EA_HEARTBEAT_H	ea_heartbeat.h	/^#define EA_HEARTBEAT_H$/;"	d
+EA_HEARTBEAT_IF_H	ea_heartbeat_if.h	/^#define EA_HEARTBEAT_IF_H$/;"	d
+ESLX	Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+HIER_CHAN_H	hier_chan.h	/^#define HIER_CHAN_H$/;"	d
+MEM_ARCH_H	mem_arch.h	/^#define MEM_ARCH_H$/;"	d
+MEM_RTL_H	mem_bsyn.h	/^#define MEM_RTL_H$/;"	d
+MODULE	Makefile	/^MODULE:=hier_chan$/;"	m
+READ	cpu2pca.cpp	/^  enum operation {WRITE=false, READ=true};$/;"	e	enum:operation	file:
+RULEDIRS	Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_MODULE	hier_chan.h	/^SC_MODULE(hier_chan) {$/;"	f
+SC_MODULE	mem_bsyn.h	/^SC_MODULE(mem_bsyn) {$/;"	f
+SC_MODULE	testbench.h	/^SC_MODULE(testbench) {$/;"	f
+SRCS	Makefile	/^SRCS:=cpu2pca.cpp ea_heartbeat.cpp main.cpp mem_bsyn.cpp testbench.cpp$/;"	m
+TESTBENCH_H	testbench.h	/^#define TESTBENCH_H$/;"	d
+WRITE	cpu2pca.cpp	/^  enum operation {WRITE=false, READ=true};$/;"	e	enum:operation	file:
+burst_read	cpu2pca.cpp	/^  void cpu2pca::burst_read(unsigned long addr, unsigned size, long* data) {$/;"	f	class:cpu2pca	typeref:typename:void
+burst_write	cpu2pca.cpp	/^  void cpu2pca::burst_write(unsigned long addr, unsigned size, long* data) {$/;"	f	class:cpu2pca	typeref:typename:void
+default_event	ea_heartbeat.h	/^  const sc_event& default_event() const { return m_heartbeat; }$/;"	f	struct:ea_heartbeat	typeref:typename:const sc_event &
+ea_heartbeat	ea_heartbeat.h	/^  explicit ea_heartbeat() $/;"	f	struct:ea_heartbeat
+ea_heartbeat	ea_heartbeat.h	/^  explicit ea_heartbeat(sc_module_name nm) $/;"	f	struct:ea_heartbeat
+ea_heartbeat	ea_heartbeat.h	/^  explicit ea_heartbeat(sc_module_name nm, sc_time _period) $/;"	f	struct:ea_heartbeat
+ea_heartbeat	ea_heartbeat.h	/^  explicit ea_heartbeat(sc_time _period) $/;"	f	struct:ea_heartbeat
+ea_heartbeat	ea_heartbeat.h	/^struct ea_heartbeat$/;"	s
+ea_heartbeat_if	ea_heartbeat_if.h	/^struct ea_heartbeat_if: public sc_interface {$/;"	s
+errors	main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+heartbeat_method	ea_heartbeat.cpp	/^void ea_heartbeat::heartbeat_method(void) {$/;"	f	class:ea_heartbeat	typeref:typename:void
+m_base	mem_arch.h	/^  unsigned long m_base;$/;"	m	struct:mem_arch	typeref:typename:unsigned long
+m_heartbeat	ea_heartbeat.h	/^  sc_event m_heartbeat;$/;"	m	struct:ea_heartbeat	typeref:typename:sc_event
+m_mem	mem_arch.h	/^  long*         m_mem;$/;"	m	struct:mem_arch	typeref:typename:long *
+m_period	ea_heartbeat.h	/^  sc_time  m_period;$/;"	m	struct:ea_heartbeat	typeref:typename:sc_time
+m_size	mem_arch.h	/^  unsigned      m_size;$/;"	m	struct:mem_arch	typeref:typename:unsigned
+mem_arch	mem_arch.h	/^  explicit mem_arch(sc_module_name nm,$/;"	f	struct:mem_arch
+mem_arch	mem_arch.h	/^struct mem_arch: public sc_channel, CPU_if {$/;"	s
+mem_thread	mem_bsyn.cpp	/^void mem_bsyn::mem_thread() {$/;"	f	class:mem_bsyn	typeref:typename:void
+operation	cpu2pca.cpp	/^  enum operation {WRITE=false, READ=true};$/;"	g	file:
+posedge_event	ea_heartbeat.h	/^  const sc_event& posedge_event() const { return m_heartbeat; }$/;"	f	struct:ea_heartbeat	typeref:typename:const sc_event &
+read	cpu2pca.cpp	/^  long cpu2pca::read(unsigned long addr) {$/;"	f	class:cpu2pca	typeref:typename:long
+read	mem_arch.h	/^  long read(unsigned long  addr) {$/;"	f	struct:mem_arch	typeref:typename:long
+sc_main	main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+simulation_name	main.cpp	/^char* simulation_name = "hier_chan";$/;"	v	typeref:typename:char *
+test_thread	testbench.cpp	/^void testbench::test_thread() {$/;"	f	class:testbench	typeref:typename:void
+write	cpu2pca.cpp	/^  void cpu2pca::write(unsigned long addr, long data) {$/;"	f	class:cpu2pca	typeref:typename:void
+write	mem_arch.h	/^  void write(unsigned long addr, long data) {$/;"	f	struct:mem_arch	typeref:typename:void
+~mem_arch	mem_arch.h	/^  ~mem_arch() { delete [] m_mem; }$/;"	f	struct:mem_arch

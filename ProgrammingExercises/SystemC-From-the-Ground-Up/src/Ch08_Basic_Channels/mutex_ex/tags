@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+BOOST_LIBS	Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+DFLT	Makefile	/^DFLT:=run$/;"	m
+ESLX	Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+MODULE	Makefile	/^MODULE:=mutex_ex$/;"	m
+MUTEX_EX_H	mutex_ex.h	/^#define MUTEX_EX_H$/;"	d
+RULEDIRS	Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_MODULE	mutex_ex.h	/^SC_MODULE(mutex_ex) {$/;"	f
+SRCS	Makefile	/^SRCS:=main.cpp mutex_ex.cpp$/;"	m
+delay	mutex_ex.cpp	/^void mutex_ex::delay(sc_time t, sc_time& fudge, int uncertainty) {$/;"	f	class:mutex_ex	typeref:typename:void
+errors	main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+note	mutex_ex.cpp	/^void mutex_ex::note(char* who,char* message) {$/;"	f	class:mutex_ex	typeref:typename:void
+parent_thread	mutex_ex.cpp	/^void mutex_ex::parent_thread  (void) {$/;"	f	class:mutex_ex	typeref:typename:void
+sc_main	main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+simulation_name	main.cpp	/^char* simulation_name = "mutex_ex";$/;"	v	typeref:typename:char *
+teen_thread	mutex_ex.cpp	/^void mutex_ex::teen_thread(void) {$/;"	f	class:mutex_ex	typeref:typename:void

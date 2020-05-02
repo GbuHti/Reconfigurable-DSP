@@ -1,0 +1,31 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+BOOST_LIBS	video_mix/Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+DFLT	video_mix/Makefile	/^DFLT:=run$/;"	m
+ESLX	video_mix/Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+MIXER_ctrl	video_mix/VIDEO_data.h	/^typedef float MIXER_ctrl;$/;"	t	typeref:typename:float
+MIXER_state	video_mix/VIDEO_data.h	/^typedef unsigned MIXER_state;$/;"	t	typeref:typename:unsigned
+MODULE	video_mix/Makefile	/^MODULE:=video_mix$/;"	m
+RGB_frame	video_mix/VIDEO_data.h	/^typedef unsigned RGB_frame;$/;"	t	typeref:typename:unsigned
+RULEDIRS	video_mix/Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	video_mix/Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	video_mix/Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_MODULE	video_mix/Rgb2YCrCb.h	/^SC_MODULE(Rgb2YCrCb) {$/;"	f
+SC_MODULE	video_mix/YCRCB_Mixer.h	/^SC_MODULE(YCRCB_Mixer) {$/;"	f
+SC_MODULE	video_mix/video_mix.h	/^SC_MODULE(video_mix) {$/;"	f
+SRCS	video_mix/Makefile	/^SRCS:=main.cpp video_mix.cpp$/;"	m
+VIDEO_MIX_H	video_mix/video_mix.h	/^#define VIDEO_MIX_H$/;"	d
+YCRCB_frame	video_mix/VIDEO_data.h	/^typedef unsigned YCRCB_frame;$/;"	t	typeref:typename:unsigned
+do_convert	video_mix/video_mix.cpp	/^void Rgb2YCrCb::do_convert() {$/;"	f	class:Rgb2YCrCb	typeref:typename:void
+do_mix	video_mix/video_mix.cpp	/^void YCRCB_Mixer::do_mix() {$/;"	f	class:YCRCB_Mixer	typeref:typename:void
+errors	video_mix/main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+sc_main	video_mix/main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+simulation_name	video_mix/main.cpp	/^char* simulation_name = "video_mix";$/;"	v	typeref:typename:char *
+simulation_vers	video_mix/main.cpp	/^char* simulation_vers = "$Header: \/eklectICally\/Project\/ea\/Cvsroot\/Book2003\/Examples\/vide/;"	v	typeref:typename:char *
+video_mix	video_mix/video_mix.cpp	/^video_mix::video_mix(sc_module_name nm) \/\/{{{$/;"	f	class:video_mix

@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+BOOST_LIBS	Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+DFLT	Makefile	/^DFLT:=run$/;"	m
+ESLX	Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+MODULE	Makefile	/^MODULE:=fifo_fir$/;"	m
+RULEDIRS	Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_FIFO_EX_H	fifo_fir.h	/^#define SC_FIFO_EX_H$/;"	d
+SC_MODULE	fifo_fir.h	/^SC_MODULE(fifo_fir) {$/;"	f
+SRCS	Makefile	/^SRCS:=fifo_fir.cpp main.cpp$/;"	m
+errors	main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+fifo_fir	fifo_fir.cpp	/^fifo_fir::fifo_fir(sc_module_name _name, char* _cfg_filename) :$/;"	f	class:fifo_fir
+results_thread	fifo_fir.cpp	/^void fifo_fir::results_thread(void) {$/;"	f	class:fifo_fir	typeref:typename:void
+sc_fifo_ex_thread	fifo_fir.cpp	/^void fifo_fir::sc_fifo_ex_thread(void) {$/;"	f	class:fifo_fir	typeref:typename:void
+sc_main	main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+simulation_name	main.cpp	/^char* simulation_name = "fifo_fir";$/;"	v	typeref:typename:char *
+stimulus_thread	fifo_fir.cpp	/^void fifo_fir::stimulus_thread(void) {$/;"	f	class:fifo_fir	typeref:typename:void

@@ -1,0 +1,56 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+ADAPT_H	adapt.h	/^#define ADAPT_H$/;"	d
+BOOST_LIBS	Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+DFLT	Makefile	/^DFLT:=run$/;"	m
+EA_INTERRUPT2SIGBOOL_H	interrupt2sigbool.h	/^#define EA_INTERRUPT2SIGBOOL_H$/;"	d
+EA_INTERRUPT_EVT_IF_H	ea_interrupt_evt_if.h	/^#define EA_INTERRUPT_EVT_IF_H$/;"	d
+EA_INTERRUPT_GEN_IF_H	ea_interrupt_gen_if.h	/^#define EA_INTERRUPT_GEN_IF_H$/;"	d
+ESLX	Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+MODULE	Makefile	/^MODULE:=adapt$/;"	m
+RESP_H	resp.h	/^#define RESP_H$/;"	d
+RESP_RTL_H	resp_rtl.h	/^#define RESP_RTL_H$/;"	d
+RULEDIRS	Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_MODULE	adapt.h	/^SC_MODULE(adapt) {$/;"	f
+SC_MODULE	resp.h	/^SC_MODULE(resp) {$/;"	f
+SC_MODULE	resp_rtl.h	/^SC_MODULE(resp_rtl) {$/;"	f
+SC_MODULE	stim.h	/^SC_MODULE(stim) {$/;"	f
+SRCS	Makefile	/^SRCS:=adapt.cpp main.cpp resp.cpp resp_rtl.cpp stim.cpp$/;"	m
+STIM_H	stim.h	/^#define STIM_H$/;"	d
+adapt	adapt.cpp	/^adapt::adapt(sc_module_name nm) {$/;"	f	class:adapt
+default_event	interrupt2sigbool.h	/^  const sc_event& default_event() const { return value_changed_event(); }$/;"	f	struct:interrupt2sigbool	typeref:typename:const sc_event &
+delayed	interrupt2sigbool.h	/^  const sc_signal_bool_deval& delayed() const {$/;"	f	struct:interrupt2sigbool	typeref:typename:const sc_signal_bool_deval &
+ea_interrupt_evt_if	ea_interrupt_evt_if.h	/^struct ea_interrupt_evt_if: public sc_interface {$/;"	s
+ea_interrupt_gen_if	ea_interrupt_gen_if.h	/^struct ea_interrupt_gen_if: public sc_interface {$/;"	s
+errors	main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+event	interrupt2sigbool.h	/^  bool event() const { return ( simcontext()->delta_count() == m_delta + 1 ); }$/;"	f	struct:interrupt2sigbool	typeref:typename:bool
+get_data_ref	interrupt2sigbool.h	/^  const bool& get_data_ref() const { return read(); }$/;"	f	struct:interrupt2sigbool	typeref:typename:const bool &
+interrupt2sigbool	interrupt2sigbool.h	/^  explicit interrupt2sigbool() $/;"	f	struct:interrupt2sigbool
+interrupt2sigbool	interrupt2sigbool.h	/^  explicit interrupt2sigbool(sc_module_name nm) $/;"	f	struct:interrupt2sigbool
+interrupt2sigbool	interrupt2sigbool.h	/^struct interrupt2sigbool$/;"	s
+m_delay	interrupt2sigbool.h	/^  sc_time  m_delay;  $/;"	m	struct:interrupt2sigbool	typeref:typename:sc_time
+m_delta	interrupt2sigbool.h	/^  sc_dt::uint64   m_delta;    \/\/ delta of last event$/;"	m	struct:interrupt2sigbool	typeref:typename:sc_dt::uint64
+m_interrupt	interrupt2sigbool.h	/^  sc_event m_interrupt;$/;"	m	struct:interrupt2sigbool	typeref:typename:sc_event
+m_val	interrupt2sigbool.h	/^  mutable bool m_val;  $/;"	m	struct:interrupt2sigbool	typeref:typename:bool
+negedge	interrupt2sigbool.h	/^  bool negedge() const { return event(); }$/;"	f	struct:interrupt2sigbool	typeref:typename:bool
+negedge_event	interrupt2sigbool.h	/^  const sc_event& negedge_event() const { return value_changed_event(); }$/;"	f	struct:interrupt2sigbool	typeref:typename:const sc_event &
+notify	interrupt2sigbool.h	/^  void notify() { m_delay = SC_ZERO_TIME; request_update(); }$/;"	f	struct:interrupt2sigbool	typeref:typename:void
+notify	interrupt2sigbool.h	/^  void notify(sc_time t) { m_delay = t; request_update(); }$/;"	f	struct:interrupt2sigbool	typeref:typename:void
+posedge	interrupt2sigbool.h	/^  bool posedge() const { return event(); }$/;"	f	struct:interrupt2sigbool	typeref:typename:bool
+posedge_event	interrupt2sigbool.h	/^  const sc_event& posedge_event() const { return value_changed_event(); }$/;"	f	struct:interrupt2sigbool	typeref:typename:const sc_event &
+read	interrupt2sigbool.h	/^  const bool& read() const { m_val = event(); return m_val; }$/;"	f	struct:interrupt2sigbool	typeref:typename:const bool &
+resp_method	resp.cpp	/^void resp::resp_method(void) {$/;"	f	class:resp	typeref:typename:void
+resp_method	resp_rtl.cpp	/^void resp_rtl::resp_method(void) {$/;"	f	class:resp_rtl	typeref:typename:void
+sc_main	main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+simulation_name	main.cpp	/^char* simulation_name = "adapt";$/;"	v	typeref:typename:char *
+stim_thread	stim.cpp	/^void stim::stim_thread(void) {$/;"	f	class:stim	typeref:typename:void
+update	interrupt2sigbool.h	/^    virtual void update() {$/;"	f	struct:interrupt2sigbool	typeref:typename:void
+value_changed_event	interrupt2sigbool.h	/^  const sc_event& value_changed_event() const { return m_interrupt; }$/;"	f	struct:interrupt2sigbool	typeref:typename:const sc_event &

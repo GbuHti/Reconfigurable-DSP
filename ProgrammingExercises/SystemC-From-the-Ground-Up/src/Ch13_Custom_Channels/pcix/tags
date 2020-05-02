@@ -1,0 +1,39 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+BOOST_LIBS	Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+DFLT	Makefile	/^DFLT:=run$/;"	m
+EA_PCIX_TRANS_H	ea_pcix_trans.h	/^#define EA_PCIX_TRANS_H$/;"	d
+ESLX	Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+MODULE	Makefile	/^MODULE:=pcix$/;"	m
+PCIX_PACKET_H	pcix.h	/^#define PCIX_PACKET_H$/;"	d
+RULEDIRS	Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_MODULE	pcix.h	/^SC_MODULE(pcix) {$/;"	f
+SRCS	Makefile	/^SRCS:=ea_pcix_trans.cpp main.cpp pcix.cpp$/;"	m
+addr	ea_pcix_trans.h	/^  int  addr;$/;"	m	struct:ea_pcix_trans	typeref:typename:int
+attr1	ea_pcix_trans.h	/^  int  attr1;$/;"	m	struct:ea_pcix_trans	typeref:typename:int
+attr2	ea_pcix_trans.h	/^  int  attr2; $/;"	m	struct:ea_pcix_trans	typeref:typename:int
+cmnd	ea_pcix_trans.h	/^  int  cmnd;$/;"	m	struct:ea_pcix_trans	typeref:typename:int
+data	ea_pcix_trans.h	/^  int  data[8];$/;"	m	struct:ea_pcix_trans	typeref:typename:int[8]
+devnum	ea_pcix_trans.h	/^  int  devnum;$/;"	m	struct:ea_pcix_trans	typeref:typename:int
+done	ea_pcix_trans.h	/^  bool done;$/;"	m	struct:ea_pcix_trans	typeref:typename:bool
+ea_pcix_trans	ea_pcix_trans.h	/^  ea_pcix_trans($/;"	f	struct:ea_pcix_trans
+ea_pcix_trans	ea_pcix_trans.h	/^  ea_pcix_trans()$/;"	f	struct:ea_pcix_trans
+ea_pcix_trans	ea_pcix_trans.h	/^struct ea_pcix_trans {$/;"	s
+errors	main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+operator <<	ea_pcix_trans.cpp	/^ostream& operator<<(ostream& os, const ea_pcix_trans& trans) {$/;"	f	typeref:typename:ostream &
+operator =	ea_pcix_trans.h	/^  ea_pcix_trans& operator= (const ea_pcix_trans& rhs) {$/;"	f	struct:ea_pcix_trans	typeref:typename:ea_pcix_trans &
+operator ==	ea_pcix_trans.h	/^  bool operator== (const ea_pcix_trans& rhs) const {$/;"	f	struct:ea_pcix_trans	typeref:typename:bool
+pcix_packet_method	pcix.cpp	/^void pcix::pcix_packet_method(void) {$/;"	f	class:pcix	typeref:typename:void
+pcix_packet_thread	pcix.cpp	/^void pcix::pcix_packet_thread(void) {$/;"	f	class:pcix	typeref:typename:void
+repeat	pcix.cpp	/^#define repeat(/;"	d	file:
+sc_main	main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+sc_trace	ea_pcix_trans.cpp	/^void sc_trace(sc_trace_file*& tf, const ea_pcix_trans& trans, char& nm) {$/;"	f	typeref:typename:void
+simulation_name	main.cpp	/^char* simulation_name = "pcix";$/;"	v	typeref:typename:char *

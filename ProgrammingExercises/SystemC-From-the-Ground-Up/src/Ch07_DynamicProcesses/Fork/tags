@@ -1,0 +1,33 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+AUTO_H	Auto.h	/^#define AUTO_H$/;"	d
+Auto	Auto.cpp	/^Auto::Auto(sc_module_name nm, double base_length) \/\/{{{$/;"	f	class:Auto
+Auto.o	dependencies.mk	/^Auto.o: Auto.cpp \/usr\/include\/stdc-predef.h$/;"	t
+Auto_thread	Auto.cpp	/^void Auto::Auto_thread() { \/\/{{{$/;"	f	class:Auto	typeref:typename:void
+BOOST_LIBS	Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+DFLT	Makefile	/^DFLT:=run$/;"	m
+ESLX	Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+FORK_H	Fork.h	/^#define FORK_H$/;"	d
+Fork	Fork.cpp	/^Fork::Fork(sc_module_name nm) \/\/{{{$/;"	f	class:Fork
+Fork.o	dependencies.mk	/^Fork.o: Fork.cpp \/usr\/include\/stdc-predef.h$/;"	t
+MODULE	Makefile	/^MODULE:=Fork$/;"	m
+RULEDIRS	Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_INCLUDE_DYNAMIC_PROCESSES	Auto.cpp	/^#define SC_INCLUDE_DYNAMIC_PROCESSES$/;"	d	file:
+SC_INCLUDE_DYNAMIC_PROCESSES	Fork.cpp	/^#define SC_INCLUDE_DYNAMIC_PROCESSES$/;"	d	file:
+SC_MODULE	Auto.h	/^SC_MODULE(Auto) {$/;"	f
+SC_MODULE	Fork.h	/^SC_MODULE(Fork) {$/;"	f
+SRCS	Makefile	/^SRCS:=Auto.cpp Fork.cpp main.cpp$/;"	m
+errors	main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+fork_thread	Fork.cpp	/^void Fork::fork_thread() { \/\/{{{$/;"	f	class:Fork	typeref:typename:void
+road_thread	Fork.cpp	/^bool Fork::road_thread(sc_fifo<double>& which) { \/\/{{{$/;"	f	class:Fork	typeref:typename:bool
+sc_main	main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+simulation_name	main.cpp	/^char* simulation_name = "Fork";$/;"	v	typeref:typename:char *
+simulation_vers	main.cpp	/^char* simulation_vers = "$Header: \/eklectICally\/Project\/ea\/Cvsroot\/Book2003\/Examples\/Fork/;"	v	typeref:typename:char *

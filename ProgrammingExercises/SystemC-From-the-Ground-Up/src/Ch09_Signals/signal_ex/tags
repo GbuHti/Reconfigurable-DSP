@@ -1,0 +1,32 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+BLACK	signal_ex.h	/^  enum color {BLACK, RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, WHITE};$/;"	e	enum:SC_MODULE::color
+BLUE	signal_ex.h	/^  enum color {BLACK, RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, WHITE};$/;"	e	enum:SC_MODULE::color
+BOOST_LIBS	Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+CYAN	signal_ex.h	/^  enum color {BLACK, RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, WHITE};$/;"	e	enum:SC_MODULE::color
+DFLT	Makefile	/^DFLT:=run$/;"	m
+ESLX	Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+GREEN	signal_ex.h	/^  enum color {BLACK, RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, WHITE};$/;"	e	enum:SC_MODULE::color
+MAGENTA	signal_ex.h	/^  enum color {BLACK, RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, WHITE};$/;"	e	enum:SC_MODULE::color
+MODULE	Makefile	/^MODULE:=signal_ex$/;"	m
+RED	signal_ex.h	/^  enum color {BLACK, RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, WHITE};$/;"	e	enum:SC_MODULE::color
+RULEDIRS	Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_MODULE	signal_ex.h	/^SC_MODULE(signal_ex) {$/;"	f
+SIGNAL_EX_H	signal_ex.h	/^#define SIGNAL_EX_H$/;"	d
+SRCS	Makefile	/^SRCS:=main.cpp signal_ex.cpp$/;"	m
+WHITE	signal_ex.h	/^  enum color {BLACK, RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, WHITE};$/;"	e	enum:SC_MODULE::color
+YELLOW	signal_ex.h	/^  enum color {BLACK, RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, WHITE};$/;"	e	enum:SC_MODULE::color
+color	signal_ex.h	/^  enum color {BLACK, RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, WHITE};$/;"	g	function:SC_MODULE
+errors	main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+sc_main	main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+signal_ex_method	signal_ex.cpp	/^void signal_ex::signal_ex_method(void) {$/;"	f	class:signal_ex	typeref:typename:void
+signal_ex_thread	signal_ex.cpp	/^void signal_ex::signal_ex_thread(void) {$/;"	f	class:signal_ex	typeref:typename:void
+simulation_name	main.cpp	/^char* simulation_name = "signal_ex";$/;"	v	typeref:typename:char *

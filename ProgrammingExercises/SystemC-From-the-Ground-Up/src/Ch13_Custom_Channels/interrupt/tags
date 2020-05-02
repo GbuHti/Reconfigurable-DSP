@@ -1,0 +1,40 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+BOOST_LIBS	Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+DFLT	Makefile	/^DFLT:=run$/;"	m
+EA_INTERRUPT_EVT_IF_H	ea_interrupt_evt_if.h	/^#define EA_INTERRUPT_EVT_IF_H$/;"	d
+EA_INTERRUPT_GEN_IF_H	ea_interrupt_gen_if.h	/^#define EA_INTERRUPT_GEN_IF_H$/;"	d
+EA_INTERRUPT_H	ea_interrupt.h	/^#define EA_INTERRUPT_H$/;"	d
+ESLX	Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+INTERRUPT_H	interrupt.h	/^#define INTERRUPT_H$/;"	d
+MODULE	Makefile	/^MODULE:=interrupt$/;"	m
+RESP_H	resp.h	/^#define RESP_H$/;"	d
+RULEDIRS	Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_MODULE	interrupt.h	/^SC_MODULE(interrupt) {$/;"	f
+SC_MODULE	resp.h	/^SC_MODULE(resp) {$/;"	f
+SC_MODULE	stim.h	/^SC_MODULE(stim) {$/;"	f
+SRCS	Makefile	/^SRCS:=interrupt.cpp main.cpp resp.cpp stim.cpp$/;"	m
+STIM_H	stim.h	/^#define STIM_H$/;"	d
+default_event	ea_interrupt.h	/^  const sc_event& default_event() const { return m_interrupt; }$/;"	f	struct:ea_interrupt	typeref:typename:const sc_event &
+ea_interrupt	ea_interrupt.h	/^  explicit ea_interrupt() $/;"	f	struct:ea_interrupt
+ea_interrupt	ea_interrupt.h	/^  explicit ea_interrupt(sc_module_name nm) $/;"	f	struct:ea_interrupt
+ea_interrupt	ea_interrupt.h	/^struct ea_interrupt$/;"	s
+ea_interrupt_evt_if	ea_interrupt_evt_if.h	/^struct ea_interrupt_evt_if: public sc_interface {$/;"	s
+ea_interrupt_gen_if	ea_interrupt_gen_if.h	/^struct ea_interrupt_gen_if: public sc_interface {$/;"	s
+errors	main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+interrupt	interrupt.cpp	/^interrupt::interrupt(sc_module_name nm) {$/;"	f	class:interrupt
+m_interrupt	ea_interrupt.h	/^  sc_event m_interrupt;$/;"	m	struct:ea_interrupt	typeref:typename:sc_event
+notify	ea_interrupt.h	/^  void notify() { m_interrupt.notify(); }$/;"	f	struct:ea_interrupt	typeref:typename:void
+notify	ea_interrupt.h	/^  void notify(sc_time t) { m_interrupt.notify(t); }$/;"	f	struct:ea_interrupt	typeref:typename:void
+resp_method	resp.cpp	/^void resp::resp_method(void) {$/;"	f	class:resp	typeref:typename:void
+sc_main	main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+simulation_name	main.cpp	/^char* simulation_name = "interrupt";$/;"	v	typeref:typename:char *
+stim_thread	stim.cpp	/^void stim::stim_thread(void) {$/;"	f	class:stim	typeref:typename:void

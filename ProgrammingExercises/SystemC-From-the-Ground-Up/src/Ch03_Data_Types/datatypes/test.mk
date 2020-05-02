@@ -1,0 +1,10 @@
+$(warning $(dir $(shell pwd) ))
+SRCS=a.cpp b.cpp c.cpp
+OBJS=$(SRCS:.cpp=.o)
+$(warning $(OBJS))
+SYSTEMC_VERSION:=$(firstword $(wildcard $(patsubst %,%/bin/systemc_version,$(subst :, ,$(PATH)))))
+$(warning $(SYSTEMC_VERSION))
+var = $(wildcard ../*)
+$(warning $(var))
+var = $(subst :, ,$(PATH))
+$(warning $(var))

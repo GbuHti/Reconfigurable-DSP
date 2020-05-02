@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+BOOST_LIBS	Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+DFLT	Makefile	/^DFLT:=run$/;"	m
+ESLX	Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+GAS_STATION_H	gas_station.h	/^#define GAS_STATION_H$/;"	d
+MODULE	Makefile	/^MODULE:=gas_station$/;"	m
+RULEDIRS	Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_MODULE	gas_station.h	/^SC_MODULE(gas_station) {$/;"	f
+SRCS	Makefile	/^SRCS:=gas_station.cpp main.cpp$/;"	m
+attendant_method	gas_station.cpp	/^void gas_station::attendant_method(void) {$/;"	f	class:gas_station	typeref:typename:void
+customer1_thread	gas_station.cpp	/^void gas_station::customer1_thread(void) {$/;"	f	class:gas_station	typeref:typename:void
+customer2_thread	gas_station.cpp	/^void gas_station::customer2_thread(void) {$/;"	f	class:gas_station	typeref:typename:void
+errors	main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+hms	gas_station.cpp	/^std::string gas_station::hms(void) {$/;"	f	class:gas_station	typeref:typename:std::string
+sc_main	main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+simulation_name	main.cpp	/^char* simulation_name = "gas_station";$/;"	v	typeref:typename:char *

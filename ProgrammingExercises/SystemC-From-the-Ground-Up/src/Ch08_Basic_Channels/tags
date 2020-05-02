@@ -1,0 +1,124 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+BOOST_LIBS	fifo_fir/Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+BOOST_LIBS	fifo_of_ptr/Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+BOOST_LIBS	fifo_of_smart_ptr/Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+BOOST_LIBS	mutex_ex/Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+BOOST_LIBS	semaphore_ex/Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+DEFINES_H	fifo_of_ptr/defines.h	/^#define DEFINES_H$/;"	d
+DEFINES_H	fifo_of_smart_ptr/defines.h	/^#define DEFINES_H$/;"	d
+DEPTH	fifo_of_ptr/defines.h	/^static unsigned DEPTH = 3;$/;"	v	typeref:typename:unsigned
+DEPTH	fifo_of_smart_ptr/defines.h	/^static unsigned DEPTH = 3;$/;"	v	typeref:typename:unsigned
+DFLT	fifo_fir/Makefile	/^DFLT:=run$/;"	m
+DFLT	fifo_of_ptr/Makefile	/^DFLT:=run$/;"	m
+DFLT	fifo_of_smart_ptr/Makefile	/^DFLT:=run$/;"	m
+DFLT	mutex_ex/Makefile	/^DFLT:=run$/;"	m
+DFLT	semaphore_ex/Makefile	/^DFLT:=run$/;"	m
+ESLX	fifo_fir/Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+ESLX	fifo_of_ptr/Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+ESLX	fifo_of_smart_ptr/Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+ESLX	mutex_ex/Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+ESLX	semaphore_ex/Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+MODULE	fifo_fir/Makefile	/^MODULE:=fifo_fir$/;"	m
+MODULE	fifo_of_ptr/Makefile	/^MODULE:=fifo_of_ptr$/;"	m
+MODULE	fifo_of_smart_ptr/Makefile	/^MODULE:=fifo_of_smart_ptr$/;"	m
+MODULE	mutex_ex/Makefile	/^MODULE:=mutex_ex$/;"	m
+MODULE	semaphore_ex/Makefile	/^MODULE:=semaphore_ex$/;"	m
+MUTEX_EX_H	mutex_ex/mutex_ex.h	/^#define MUTEX_EX_H$/;"	d
+MYDATA_H	fifo_of_ptr/mydata.h	/^#define MYDATA_H$/;"	d
+MYDATA_H	fifo_of_smart_ptr/mydata.h	/^#define MYDATA_H$/;"	d
+RULEDIRS	fifo_fir/Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULEDIRS	fifo_of_ptr/Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULEDIRS	fifo_of_smart_ptr/Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULEDIRS	mutex_ex/Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULEDIRS	semaphore_ex/Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	fifo_fir/Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RULES	fifo_of_ptr/Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RULES	fifo_of_smart_ptr/Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RULES	mutex_ex/Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RULES	semaphore_ex/Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	fifo_fir/Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+RUNTIME_ARGS	fifo_of_ptr/Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+RUNTIME_ARGS	fifo_of_smart_ptr/Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+RUNTIME_ARGS	mutex_ex/Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+RUNTIME_ARGS	semaphore_ex/Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_FIFO_EX_H	fifo_fir/fifo_fir.h	/^#define SC_FIFO_EX_H$/;"	d
+SC_MODULE	fifo_fir/fifo_fir.h	/^SC_MODULE(fifo_fir) {$/;"	f
+SC_MODULE	fifo_of_ptr/snk.h	/^SC_MODULE(snk) {$/;"	f
+SC_MODULE	fifo_of_ptr/src.h	/^SC_MODULE(src) {$/;"	f
+SC_MODULE	fifo_of_smart_ptr/snk.h	/^SC_MODULE(snk) {$/;"	f
+SC_MODULE	fifo_of_smart_ptr/src.h	/^SC_MODULE(src) {$/;"	f
+SC_MODULE	mutex_ex/mutex_ex.h	/^SC_MODULE(mutex_ex) {$/;"	f
+SC_MODULE	semaphore_ex/semaphore_ex.h	/^SC_MODULE(semaphore_ex) {$/;"	f
+SEMAPHORE_EX_H	semaphore_ex/semaphore_ex.h	/^#define SEMAPHORE_EX_H$/;"	d
+SEND	fifo_of_ptr/defines.h	/^static unsigned SEND = 10;$/;"	v	typeref:typename:unsigned
+SEND	fifo_of_smart_ptr/defines.h	/^static unsigned SEND = 10;$/;"	v	typeref:typename:unsigned
+SNK_H	fifo_of_ptr/snk.h	/^#define SNK_H$/;"	d
+SNK_H	fifo_of_smart_ptr/snk.h	/^#define SNK_H$/;"	d
+SRCS	fifo_fir/Makefile	/^SRCS:=fifo_fir.cpp main.cpp$/;"	m
+SRCS	fifo_of_ptr/Makefile	/^SRCS:=main.cpp snk.cpp src.cpp$/;"	m
+SRCS	fifo_of_smart_ptr/Makefile	/^SRCS:=main.cpp snk.cpp src.cpp$/;"	m
+SRCS	mutex_ex/Makefile	/^SRCS:=main.cpp mutex_ex.cpp$/;"	m
+SRCS	semaphore_ex/Makefile	/^SRCS:=main.cpp semaphore_ex.cpp$/;"	m
+SRC_H	fifo_of_ptr/src.h	/^#define SRC_H$/;"	d
+SRC_H	fifo_of_smart_ptr/src.h	/^#define SRC_H$/;"	d
+STOP	fifo_of_ptr/defines.h	/^static const int STOP = -1;$/;"	v	typeref:typename:const int
+STOP	fifo_of_smart_ptr/defines.h	/^static const int STOP = -1;$/;"	v	typeref:typename:const int
+customer	semaphore_ex/semaphore_ex.cpp	/^void semaphore_ex::customer(char* who) {$/;"	f	class:semaphore_ex	typeref:typename:void
+customer1_thread	semaphore_ex/semaphore_ex.cpp	/^void semaphore_ex::customer1_thread(void) {$/;"	f	class:semaphore_ex	typeref:typename:void
+customer2_thread	semaphore_ex/semaphore_ex.cpp	/^void semaphore_ex::customer2_thread(void) {$/;"	f	class:semaphore_ex	typeref:typename:void
+customer3_thread	semaphore_ex/semaphore_ex.cpp	/^void semaphore_ex::customer3_thread(void) {$/;"	f	class:semaphore_ex	typeref:typename:void
+customer4_thread	semaphore_ex/semaphore_ex.cpp	/^void semaphore_ex::customer4_thread(void) {$/;"	f	class:semaphore_ex	typeref:typename:void
+customer5_thread	semaphore_ex/semaphore_ex.cpp	/^void semaphore_ex::customer5_thread(void) {$/;"	f	class:semaphore_ex	typeref:typename:void
+data	fifo_of_ptr/mydata.h	/^  int data() {$/;"	f	class:mydata	typeref:typename:int
+data	fifo_of_smart_ptr/mydata.h	/^  int data() {$/;"	f	class:mydata	typeref:typename:int
+delay	mutex_ex/mutex_ex.cpp	/^void mutex_ex::delay(sc_time t, sc_time& fudge, int uncertainty) {$/;"	f	class:mutex_ex	typeref:typename:void
+delay	semaphore_ex/semaphore_ex.cpp	/^void semaphore_ex::delay(sc_time t,int uncertainty) {$/;"	f	class:semaphore_ex	typeref:typename:void
+errors	fifo_fir/main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+errors	fifo_of_ptr/main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+errors	fifo_of_smart_ptr/main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+errors	mutex_ex/main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+errors	semaphore_ex/main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+fifo_fir	fifo_fir/fifo_fir.cpp	/^fifo_fir::fifo_fir(sc_module_name _name, char* _cfg_filename) :$/;"	f	class:fifo_fir
+fifo_of_ptr_H	fifo_of_ptr/fifo_of_ptr.h	/^#define fifo_of_ptr_H$/;"	d
+fifo_of_ptr_H	fifo_of_smart_ptr/fifo_of_smart_ptr.h	/^#define fifo_of_ptr_H$/;"	d
+m_data	fifo_of_ptr/mydata.h	/^  int m_data;$/;"	m	class:mydata	typeref:typename:int
+m_data	fifo_of_smart_ptr/mydata.h	/^  int m_data;$/;"	m	class:mydata	typeref:typename:int
+monitor_method	semaphore_ex/semaphore_ex.cpp	/^void semaphore_ex::monitor_method(void) {$/;"	f	class:semaphore_ex	typeref:typename:void
+mydata	fifo_of_ptr/mydata.h	/^  mydata():m_data(0){}$/;"	f	class:mydata
+mydata	fifo_of_ptr/mydata.h	/^  mydata(int d):m_data(d) {}$/;"	f	class:mydata
+mydata	fifo_of_ptr/mydata.h	/^class mydata {$/;"	c
+mydata	fifo_of_smart_ptr/mydata.h	/^  mydata():m_data(0){}$/;"	f	class:mydata
+mydata	fifo_of_smart_ptr/mydata.h	/^  mydata(int d):m_data(d) {}$/;"	f	class:mydata
+mydata	fifo_of_smart_ptr/mydata.h	/^class mydata {$/;"	c
+note	mutex_ex/mutex_ex.cpp	/^void mutex_ex::note(char* who,char* message) {$/;"	f	class:mutex_ex	typeref:typename:void
+note	semaphore_ex/semaphore_ex.cpp	/^void semaphore_ex::note(char* who,char* message) {$/;"	f	class:semaphore_ex	typeref:typename:void
+operator =	fifo_of_ptr/mydata.h	/^  mydata& operator= (mydata& rhs) {$/;"	f	class:mydata	typeref:typename:mydata &
+operator =	fifo_of_smart_ptr/mydata.h	/^  mydata& operator= (mydata& rhs) {$/;"	f	class:mydata	typeref:typename:mydata &
+parent_thread	mutex_ex/mutex_ex.cpp	/^void mutex_ex::parent_thread  (void) {$/;"	f	class:mutex_ex	typeref:typename:void
+rand	fifo_of_ptr/mydata.h	/^  mydata& rand() {$/;"	f	class:mydata	typeref:typename:mydata &
+rand	fifo_of_smart_ptr/mydata.h	/^  mydata& rand() {$/;"	f	class:mydata	typeref:typename:mydata &
+results_thread	fifo_fir/fifo_fir.cpp	/^void fifo_fir::results_thread(void) {$/;"	f	class:fifo_fir	typeref:typename:void
+sc_fifo_ex_thread	fifo_fir/fifo_fir.cpp	/^void fifo_fir::sc_fifo_ex_thread(void) {$/;"	f	class:fifo_fir	typeref:typename:void
+sc_main	fifo_fir/main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+sc_main	fifo_of_ptr/main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+sc_main	fifo_of_smart_ptr/main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+sc_main	mutex_ex/main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+sc_main	semaphore_ex/main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+simulation_name	fifo_fir/main.cpp	/^char* simulation_name = "fifo_fir";$/;"	v	typeref:typename:char *
+simulation_name	fifo_of_ptr/main.cpp	/^char* simulation_name = "fifo_of_ptr";$/;"	v	typeref:typename:char *
+simulation_name	fifo_of_smart_ptr/main.cpp	/^char* simulation_name = "fifo_of_smart_ptr";$/;"	v	typeref:typename:char *
+simulation_name	mutex_ex/main.cpp	/^char* simulation_name = "mutex_ex";$/;"	v	typeref:typename:char *
+simulation_name	semaphore_ex/main.cpp	/^char* simulation_name = "semaphore_ex";$/;"	v	typeref:typename:char *
+snk_method	fifo_of_ptr/snk.cpp	/^void snk::snk_method(void) {$/;"	f	class:snk	typeref:typename:void
+snk_method	fifo_of_smart_ptr/snk.cpp	/^void snk::snk_method(void) {$/;"	f	class:snk	typeref:typename:void
+src_thread	fifo_of_ptr/src.cpp	/^void src::src_thread(void) {$/;"	f	class:src	typeref:typename:void
+src_thread	fifo_of_smart_ptr/src.cpp	/^void src::src_thread(void) {$/;"	f	class:src	typeref:typename:void
+stimulus_thread	fifo_fir/fifo_fir.cpp	/^void fifo_fir::stimulus_thread(void) {$/;"	f	class:fifo_fir	typeref:typename:void
+teen_thread	mutex_ex/mutex_ex.cpp	/^void mutex_ex::teen_thread(void) {$/;"	f	class:mutex_ex	typeref:typename:void

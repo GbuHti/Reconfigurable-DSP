@@ -1,0 +1,35 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+BOOST_LIBS	Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+DFLT	Makefile	/^DFLT:=run$/;"	m
+EA_HEARTBEAT_H	ea_heartbeat.h	/^#define EA_HEARTBEAT_H$/;"	d
+EA_HEARTBEAT_IF_H	ea_heartbeat_if.h	/^#define EA_HEARTBEAT_IF_H$/;"	d
+ESLX	Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+HEARTBEAT_H	heartbeat.h	/^#define HEARTBEAT_H$/;"	d
+MODULE	Makefile	/^MODULE:=heartbeat$/;"	m
+RULEDIRS	Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_MODULE	heartbeat.h	/^SC_MODULE(heartbeat) {$/;"	f
+SRCS	Makefile	/^SRCS:=ea_heartbeat.cpp heartbeat.cpp main.cpp$/;"	m
+default_event	ea_heartbeat.h	/^  const sc_event& default_event() const { return m_heartbeat; }$/;"	f	struct:ea_heartbeat	typeref:typename:const sc_event &
+ea_heartbeat	ea_heartbeat.h	/^  explicit ea_heartbeat() $/;"	f	struct:ea_heartbeat
+ea_heartbeat	ea_heartbeat.h	/^  explicit ea_heartbeat(sc_module_name nm) $/;"	f	struct:ea_heartbeat
+ea_heartbeat	ea_heartbeat.h	/^  explicit ea_heartbeat(sc_module_name nm, sc_time _period) $/;"	f	struct:ea_heartbeat
+ea_heartbeat	ea_heartbeat.h	/^  explicit ea_heartbeat(sc_time _period) $/;"	f	struct:ea_heartbeat
+ea_heartbeat	ea_heartbeat.h	/^struct ea_heartbeat$/;"	s
+ea_heartbeat_if	ea_heartbeat_if.h	/^struct ea_heartbeat_if: public sc_interface {$/;"	s
+errors	main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+heartbeat_method	ea_heartbeat.cpp	/^void ea_heartbeat::heartbeat_method(void) {$/;"	f	class:ea_heartbeat	typeref:typename:void
+heartbeat_method	heartbeat.cpp	/^void heartbeat::heartbeat_method(void) {$/;"	f	class:heartbeat	typeref:typename:void
+m_heartbeat	ea_heartbeat.h	/^  sc_event m_heartbeat;$/;"	m	struct:ea_heartbeat	typeref:typename:sc_event
+m_period	ea_heartbeat.h	/^  sc_time  m_period;$/;"	m	struct:ea_heartbeat	typeref:typename:sc_time
+posedge_event	ea_heartbeat.h	/^  const sc_event& posedge_event() const { return m_heartbeat; }$/;"	f	struct:ea_heartbeat	typeref:typename:const sc_event &
+sc_main	main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+simulation_name	main.cpp	/^char* simulation_name = "heartbeat";$/;"	v	typeref:typename:char *

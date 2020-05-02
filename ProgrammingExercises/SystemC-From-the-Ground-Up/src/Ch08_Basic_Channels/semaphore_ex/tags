@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/0c4369e/
+BOOST_LIBS	Makefile	/^BOOST_LIBS:=-lboost_regex$/;"	m
+DFLT	Makefile	/^DFLT:=run$/;"	m
+ESLX	Makefile	/^  ESLX:=\/eda\/eslx\/default$/;"	m
+MODULE	Makefile	/^MODULE:=semaphore_ex$/;"	m
+RULEDIRS	Makefile	/^RULEDIRS := . .. ..\/.. ..\/..\/.. $(ESLX)\/etc$/;"	m
+RULES	Makefile	/^RULES := $(firstword $(wildcard $(addsuffix \/Makefile.rules,$(RULEDIRS))))$/;"	m
+RUNTIME_ARGS	Makefile	/^  RUNTIME_ARGS:=--rcfg rcfg.xml$/;"	m
+SC_MODULE	semaphore_ex.h	/^SC_MODULE(semaphore_ex) {$/;"	f
+SEMAPHORE_EX_H	semaphore_ex.h	/^#define SEMAPHORE_EX_H$/;"	d
+SRCS	Makefile	/^SRCS:=main.cpp semaphore_ex.cpp$/;"	m
+customer	semaphore_ex.cpp	/^void semaphore_ex::customer(char* who) {$/;"	f	class:semaphore_ex	typeref:typename:void
+customer1_thread	semaphore_ex.cpp	/^void semaphore_ex::customer1_thread(void) {$/;"	f	class:semaphore_ex	typeref:typename:void
+customer2_thread	semaphore_ex.cpp	/^void semaphore_ex::customer2_thread(void) {$/;"	f	class:semaphore_ex	typeref:typename:void
+customer3_thread	semaphore_ex.cpp	/^void semaphore_ex::customer3_thread(void) {$/;"	f	class:semaphore_ex	typeref:typename:void
+customer4_thread	semaphore_ex.cpp	/^void semaphore_ex::customer4_thread(void) {$/;"	f	class:semaphore_ex	typeref:typename:void
+customer5_thread	semaphore_ex.cpp	/^void semaphore_ex::customer5_thread(void) {$/;"	f	class:semaphore_ex	typeref:typename:void
+delay	semaphore_ex.cpp	/^void semaphore_ex::delay(sc_time t,int uncertainty) {$/;"	f	class:semaphore_ex	typeref:typename:void
+errors	main.cpp	/^unsigned errors = 0;$/;"	v	typeref:typename:unsigned
+monitor_method	semaphore_ex.cpp	/^void semaphore_ex::monitor_method(void) {$/;"	f	class:semaphore_ex	typeref:typename:void
+note	semaphore_ex.cpp	/^void semaphore_ex::note(char* who,char* message) {$/;"	f	class:semaphore_ex	typeref:typename:void
+sc_main	main.cpp	/^int sc_main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+simulation_name	main.cpp	/^char* simulation_name = "semaphore_ex";$/;"	v	typeref:typename:char *
