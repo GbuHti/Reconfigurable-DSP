@@ -1,0 +1,182 @@
+#include "loader.h"
+
+SC_HAS_PROCESS(Loader);
+Loader::Loader
+(
+	sc_core::sc_module_name name 
+	,unsigned ID
+	,sc_core::sc_time end_rsp_delay
+ )
+:sc_module(name)
+,m_ID(ID)
+,m_end_rsp_delay(end_rsp_delay)
+,m_data_cnt(0)
+,m_all_ini_done(false)
+{		
+	isock_memory.register_nb_transport_bw(this, &Loader::nb_transport_bw_memory);
+	isock_crossbar.register_nb_transport_bw(this, &Loader::nb_transport_bw_crossbar);
+
+	SC_THREAD(read_data_thread);
+	SC_THREAD(send_thread);
+
+	m_trans.set_data_ptr(m_src_data);
+}
+
+void Loader::write_context_reg(slc context)
+{
+	m_batch_len = context.batch_len;
+	m_addr_inc = context.addr_inc;
+	m_addr = context.addr;
+}
+
+void Loader::all_config()
+{
+	m_all_ini_done = true;
+	mAllInitiatedEvent.notify(sc_core::SC_ZERO_TIME);
+}
+
+/**
+ * @brief
+ * @note: Date Loader <--> Data Memory
+ * protocol: 4 phase 
+ */
+tlm::tlm_sync_enum 
+Loader::nb_transport_bw_memory(tlm::tlm_generic_payload &trans, tlm::tlm_phase &phase, sc_core::sc_time &delay)
+{
+	if(phase == tlm::END_REQ)
+	{
+		mEndRequestEvent.notify(sc_core::SC_ZERO_TIME);	
+	}else if(phase == tlm::BEGIN_RESP)
+	{
+		mBeginResponseEvent.notify(sc_core::SC_ZERO_TIME);
+	}else 
+	{
+		assert(false && "loader.cpp: unrecognized pahse");
+	}
+
+	return tlm::TLM_ACCEPTED;
+}
+
+/**
+ * @brief
+ * @note: Date Loader <--> Crossbar
+ */
+tlm::tlm_sync_enum 
+Loader::nb_transport_bw_crossbar(tlm::tlm_generic_payload &trans, tlm::tlm_phase &phase, sc_core::sc_time &delay)
+{
+	if(phase == tlm::BEGIN_RESP)
+	{
+		mCompleteEvent.notify(sc_core::SC_ZERO_TIME);
+	}else 
+	{
+		assert(false && "loader.cpp: unrecognized pahse");
+	}
+	return tlm::TLM_ACCEPTED;
+}
+
+/**
+ * @brief
+ * @note:
+ * 最多支持4个滞外交易
+ */
+void Loader::read_data_thread()
+{
+	while(true)
+	{
+		wait(mAllInitiatedEvent);
+		sc_dt::uint64		addr	= m_addr;
+		tlm::tlm_command	cmd		= NORMAL_COMPUTE;
+		unsigned			len		= 4;
+		while(m_data_cnt < m_batch_len)
+		{
+			tlm::tlm_generic_payload * trans_ptr;
+			unsigned char			 * data_ptr;
+			 
+			assert(!m_transaction_queue.is_empty() && "something wrong happened or transport pool is not big enough"); // transaction pool must be available 
+			trans_ptr = &m_trans;
+			data_ptr = trans_ptr->get_data_ptr();
+
+			m_data_cnt++;
+			if(m_data_cnt == m_batch_len)
+			{
+				cmd = LAST_COMPUTE;
+				m_all_ini_done = false;	
+			}
+
+			trans_ptr->set_command(cmd);
+			trans_ptr->set_address(addr);
+			trans_ptr->set_data_length(len);
+
+			tlm::tlm_phase phase = tlm::BEGIN_REQ;
+			sc_core::sc_time delay = sc_core::SC_ZERO_TIME;
+			tlm::tlm_sync_enum return_value;
+		    return_value = isock_memory->nb_transport_fw(*trans_ptr, phase, delay);
+
+			switch(return_value)
+			{
+				case tlm::TLM_ACCEPTED:
+					wait(mEndRequestEvent); // ensure this transacton has been accepted and start next transaction
+					break;
+				default:
+					std::cout << "ID: " << m_ID << "return_value " << return_value << std::endl;
+					assert(false && "Loader.cpp: only 4 phase transactions supported now");
+						
+			}
+
+			wait(mBeginResponseEvent);
+			
+			wait(m_end_rsp_delay);
+
+			phase = tlm::END_RESP;
+			delay = sc_core::SC_ZERO_TIME;
+			return_value = isock_memory->nb_transport_fw(*trans_ptr, phase, delay);
+
+			switch(return_value)
+			{
+				case tlm::TLM_ACCEPTED:
+				case tlm::TLM_COMPLETED:
+					mBeginRequestEvent.notify(sc_core::SC_ZERO_TIME);
+				default:
+					assert(false);
+			}
+
+			wait(mUseSourceDataEvent); ///< TODO: 要求提前读取
+			if(!m_all_ini_done)
+			{
+				slcs->release_busy();					
+			}
+			addr += m_addr_inc; // update address;
+		}
+	}
+}
+
+/**
+ * @brief 当Loader读取到新的数据时，触发该进程，将数据送出
+ * 并在成功获得反馈后，指示read_data_thread进程进行下一次读取。
+ */
+void Loader::send_thread()
+{
+	while(true)
+	{
+		wait(mBeginRequestEvent);
+		tlm::tlm_generic_payload * trans_ptr = &m_trans;
+		tlm::tlm_phase phase = tlm::BEGIN_REQ;
+		sc_core::sc_time delay = sc_core::SC_ZERO_TIME;
+		tlm::tlm_sync_enum return_value;
+		return_value = isock_crossbar->nb_transport_fw(*trans_ptr, phase, delay);
+			
+		switch(return_value)
+		{
+			case tlm::TLM_ACCEPTED:
+				wait(mCompleteEvent);	
+				mUseSourceDataEvent.notify(sc_core::SC_ZERO_TIME);
+			default:
+				assert(false);
+		}
+	}	
+}
+
+
+
+
+

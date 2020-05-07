@@ -115,6 +115,12 @@ void ReconfigController::Monitor_busy_thread()
 	}
 }
 
+/**
+ * @brief:
+ * @note: 一直找，直到找到为止，此时处理器会被阻塞
+ * TODO：改进为中断，释放处理器
+ */
+
 void ReconfigController::Allocate_thread()
 {
 	std::ostringstream  msg;                      ///< log message
@@ -200,11 +206,6 @@ void ReconfigController::Dispatch_thread()
 		}	
 	}
 }
-
-
-
-
-
 
 
 

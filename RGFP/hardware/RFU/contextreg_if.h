@@ -70,18 +70,18 @@ struct slc
 		uint32_t	reg;
 		struct
 		{
-			unsigned reserved	:12;
-			unsigned busy		:1;
-			unsigned op_aux		:1;
-			unsigned mux_b		:5;
-			unsigned mux_a		:5;
+			unsigned reserved	   :12;
+			unsigned busy	 	   :1;
+			unsigned op_aux	 	   :1;
+			unsigned mux_b	 	   :5;
+			unsigned mux_a	 	   :5;
 		};
 		struct
 		{
-			unsigned addr		:5;
-			unsigned addr_inc	:7;
-			unsigned knalb		:2;
-			unsigned batch_len	:10;	
+			unsigned addr			:5;
+			unsigned addr_inc		:7;
+			unsigned placeholder	:2;
+			unsigned batch_len		:10;	
 		};
 
 		struct
@@ -101,6 +101,7 @@ class contextreg_if
 {
 	public:
 		virtual void write_context_reg( slc context) = 0;
+		virtual void all_config() = 0;
 };
 
 #endif
