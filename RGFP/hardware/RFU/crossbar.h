@@ -6,88 +6,107 @@
 #include "tlm_utils/simple_target_socket.h"
 
 #include "contextreg_if.h"
+#include "define.h"
+#include "distributor.h"
+#include "combiner.h"
+#include "config.h"
 
 #include <iostream>
 #include <map>
 
 using namespace std;
+using namespace sc_core;
 
-#define PE_NUM 14
-#define ARITH_PE_NUM 8
-
-#define mux_ud(portid) \
-	void mux_ud_thread_ ## portid () 
-
-struct context
-{
-	unsigned mux_a;
-	unsigned mux_b;
-};
-
-class Crossbar : public sc_core::sc_module
-			   , public contextreg_if
+class Crossbar : public sc_module
+			   , virtual public tlm::tlm_bw_transport_if<>
+			   , virtual public tlm::tlm_fw_transport_if<>
 {
 	private:
-		context m_context_set[ARITH_PE_NUM];		
-		array < multimap<unsigned, unsigned>, 12> branch_node_table;
-		sc_event mBeginRequestEvent; ///< PE结果发送到crossbar
-		
-	public:
-		tlm_utils::simple_target_socket_tagged<Crossbar> tsock[PE_NUM];
-		tlm_utils::simple_initiator_socket_tagged<Crossbar> isock[2*PE_NUM];
+		/// Not Implemented for this example but required by the initiator socket
+		void												
+			invalidate_direct_mem_ptr					
+			( sc_dt::uint64      start_range                        
+			  , sc_dt::uint64      end_range                 
+			);
+
+		/// Not Implemented for this example but require by the initiator socket
+		tlm::tlm_sync_enum	 
+			nb_transport_bw								
+			( tlm::tlm_generic_payload  &payload
+			  , tlm::tlm_phase            &phase
+			  , sc_core::sc_time          &delta
+			);
+
+		tlm::tlm_sync_enum
+			nb_transport_fw								
+			( tlm::tlm_generic_payload  &payload
+			  , tlm::tlm_phase            &phase
+			  , sc_core::sc_time          &delta
+			);
+
+		/// b_transport() - Blocking Transport
+		void                                                // returns nothing 
+			b_transport
+			( tlm::tlm_generic_payload  &payload                // ref to payload 
+			  , sc_core::sc_time          &delay_time             // delay time 
+			);
+
+
+		/// Not implemented for this example but required by interface
+		bool                                              // success / failure
+			get_direct_mem_ptr                       
+			( tlm::tlm_generic_payload   &payload,            // address + extensions
+			  tlm::tlm_dmi               &dmi_data            // DMI data
+			);
+
+
+		/// Not implemented for this example but required by interface
+		unsigned int                                      // result
+			transport_dbg                            
+			( tlm::tlm_generic_payload  &payload              // debug payload
+			);
 
 	public:
+		tlm::tlm_target_socket<> tsock[LOADER_NUM+ARITH_PE_NUM];
+		tlm::tlm_initiator_socket<> isock[2*ARITH_PE_NUM];
+
 		Crossbar
-		( sc_core::sc_module_name name
+		( sc_module_name name
 		);
+		 
+	private:
+		Distributor distributor0;
+		Distributor distributor1;
+		Distributor distributor2;
+		Distributor distributor3;
+		Distributor distributor4;
+		Distributor distributor5;
+		Distributor distributor6;
+		Distributor distributor7;
+		Distributor distributor8;
+		Distributor distributor9;
+		Distributor distributor10;
+		Distributor distributor11;
 
-		void write_context_reg(slc context) override;
+		Combiner combiner0;
+		Combiner combiner1;
+		Combiner combiner2;
+		Combiner combiner3;
+		Combiner combiner4;
+		Combiner combiner5;
+		Combiner combiner6;
+		Combiner combiner7;
+		Combiner combiner8;
+		Combiner combiner9;
+		Combiner combiner10;
+		Combiner combiner11;
+		Combiner combiner12;
+		Combiner combiner13;
+		Combiner combiner14;
+		Combiner combiner15;
 
-		void mux_ud_thread_8a();
-		void mux_ud_thread_8b();
-		void mux_ud_thread_9a();
-		void mux_ud_thread_9b();
-		void mux_ud_thread_10a();
-		void mux_ud_thread_10b();
-		void mux_ud_thread_11a();
-		void mux_ud_thread_11b();
-		void mux_ud_thread_12a();
-		void mux_ud_thread_12b();
-		void mux_ud_thread_13a();
-		void mux_ud_thread_13b();
-		void mux_ud_thread_14a();
-		void mux_ud_thread_14b();
-		void mux_ud_thread_15a();
-		void mux_ud_thread_15b();
-
-		void mux_du_thread_0();
-		void mux_du_thread_1();
-		void mux_du_thread_2();
-		void mux_du_thread_3();
-		void mux_du_thread_4();
-		void mux_du_thread_5();
-		void mux_du_thread_6();
-		void mux_du_thread_7();
-		void mux_du_thread_8();
-		void mux_du_thread_9();
-		void mux_du_thread_10();
-		void mux_du_thread_11();
-
-		tlm::tlm_sync_enum
-		nb_transport_fw
-		( int id
-		, tlm::tlm_generic_payload  &trans
-		, tlm::tlm_phase			&phase
-		, sc_core::sc_time			&delay
-		);
-
-		tlm::tlm_sync_enum
-		nb_transport_bw
-		( int id
-		, tlm::tlm_generic_payload	&trans
-		, tlm::tlm_phase			&phase
-		, sc_core::sc_time			&delay
-		);
+		Config config;
 };
+
 
 #endif
