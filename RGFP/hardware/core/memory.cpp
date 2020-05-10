@@ -30,6 +30,7 @@ void Memory::operation(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay)
 	}else if(cmd == tlm::TLM_WRITE_COMMAND)
 	{
 		memcpy(m_data+addr, data_ptr, len);	
+//		std::cout << "=> ADDR: " << addr << " DATA: " << *(float *)data_ptr << " @ " << sc_time_stamp()<< endl;
 		delay += m_write_delay;
 	}else
 	{
