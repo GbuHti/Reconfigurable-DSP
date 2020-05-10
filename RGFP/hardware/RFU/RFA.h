@@ -53,13 +53,14 @@ class RFA : public sc_core::sc_module
 
 	private:
 		const sc_core::sc_time loader_end_rsp_delay = sc_core::SC_ZERO_TIME;
+		const unsigned	PE_NUM						= 14;
 
 		Loader m_loader_0;
 		Loader m_loader_1;
 		Loader m_loader_2;
 		Loader m_loader_3;
 
-		contextreg_if * m_PE_proxy;
+		contextreg_if * m_PE_proxy[14];
 };
 
 #endif

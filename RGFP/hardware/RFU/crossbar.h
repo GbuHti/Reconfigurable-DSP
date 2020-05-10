@@ -17,6 +17,11 @@
 using namespace std;
 using namespace sc_core;
 
+/**
+ * @note:
+ * 当PE的一路输入接收来自自己的数据时，需要crossbar在初始化全部完成之后
+ * 发起一个激活transaction
+ */
 class Crossbar : public sc_module
 			   , virtual public tlm::tlm_bw_transport_if<>
 			   , virtual public tlm::tlm_fw_transport_if<>
