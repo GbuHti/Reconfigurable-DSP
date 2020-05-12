@@ -4,7 +4,7 @@
 class slcs_if
 {
 	public:
-		virtual void release_busy()=0;	
+		virtual void release_busy(unsigned id)=0;	
 };
 
 #endif

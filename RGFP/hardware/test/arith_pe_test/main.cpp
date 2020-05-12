@@ -10,20 +10,11 @@
  * 4,双目计算
  * 5,不定长延时反馈，计算延迟与理论值对比
  */
-class Slcs : public slcs_if
-{
-	public:
-		void release_busy()
-		{
-		}
-};
-
 int sc_main(int argc, char *argv[])
 {
 	sc_time clock(10, SC_NS);
 
 	Config config("config",1);
-	Slcs slcs;
 	
 	Master master0("master0", 0);
 	Master master1("master1", 1);
@@ -36,8 +27,8 @@ int sc_main(int argc, char *argv[])
 	master1.isock.bind(arith_pe.tsock[1]);
 	arith_pe.isock.bind(crossbar0.tsock);
 
-	arith_pe.slcs = &slcs;
 	config.config[0] = &arith_pe;
+	arith_pe.slcs = &config;
 	
 	sc_start(200, SC_NS);
 	return 0;

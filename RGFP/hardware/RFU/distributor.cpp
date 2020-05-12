@@ -23,6 +23,9 @@ Distributor::Distributor
 
 	SC_THREAD(request_thread);
 	SC_THREAD(response_thread);
+	SC_THREAD(self_starting_thread);
+
+	m_data = 0;
 }
 
 /**
@@ -39,14 +42,20 @@ void Distributor::write_context_reg(slc context)
 	{
 		portid = 2*(context.phid - LOADER_NUM) + 0;
 		m_branch_tb[portid] = {true,false,false}; 
+		if(context.mux_a == context.phid) //如果arith_pe接收来自自己的结果数据,在初始化需要“推”一把
+		{
+			mSelfStartingEvent.notify(SC_ZERO_TIME);
+		}
 	}
 	else if(context.mux_b == m_ID)
 	{
 		portid = 2*(context.phid - LOADER_NUM) + 1;
 		m_branch_tb[portid] = {true,false,false}; 
+		if(context.mux_b == context.phid) 
+		{
+			mSelfStartingEvent.notify(SC_ZERO_TIME);
+		}
 	}
-
-	
 }
 
 void Distributor::all_config()
@@ -165,3 +174,15 @@ Distributor::nb_transport_bw
 	return tlm::TLM_ACCEPTED;
 }
 
+//========================================================================
+void Distributor::self_starting_thread()
+{
+	while(true)
+	{
+		wait(mSelfStartingEvent);
+		m_self_starting_trans.set_data_ptr((unsigned char *) &m_data);
+		m_self_starting_trans.set_command(NORMAL_COMPUTE);
+		m_self_starting_trans.set_data_length(4);
+		mBeginRequestPEQ.notify(m_self_starting_trans, SC_ZERO_TIME); //如果成功的话这种注入的技术得研究一下
+	}	
+}

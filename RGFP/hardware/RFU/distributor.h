@@ -27,16 +27,19 @@ class Distributor : public sc_module
 {
 	private:
 		unsigned m_ID;
-		array<flags, 2*ARITH_PE_NUM>  m_branch_tb;
+		array<flags, 2*ARITH_PE_NUM+LOADER_NUM>  m_branch_tb;
 		bool m_ini_done;
 		
 		sc_event mTransArrivedEvent;
 		tlm_utils::peq_with_get<tlm::tlm_generic_payload> mBeginRequestPEQ;	
 		tlm_utils::peq_with_get<tlm::tlm_generic_payload> mBeginResponsePEQ;	
 	
+		sc_event mSelfStartingEvent;
+		tlm::tlm_generic_payload m_self_starting_trans;
+		unsigned m_data;
 	public:
 		tlm_utils::simple_target_socket<Distributor> tsock;
-		tlm_utils::simple_initiator_socket_tagged<Distributor> isock[2*ARITH_PE_NUM];
+		tlm_utils::simple_initiator_socket_tagged<Distributor> isock[2*ARITH_PE_NUM + STORER_NUM];
 
 		Distributor
 		( sc_module_name name
@@ -61,6 +64,8 @@ class Distributor : public sc_module
 		void request_thread();	
 
 		void response_thread();
+
+		void self_starting_thread();
 
 		void write_context_reg(slc context) override;
 

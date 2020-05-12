@@ -206,7 +206,7 @@ void Arith_PE::send_thread()
 			m_waiting = false;
 			if( (!m_ini_done) & (m_advance_computing == 0)){ //当没有后续的数据到来可以认为计算任务全部结束
 				assert(slcs != 0 && "You shoud connect PE with RC");
-				slcs->release_busy();	
+				slcs->release_busy(m_ID);	
 			}
 
 		}	

@@ -13,6 +13,8 @@
 
 #define GENERATE_ARITH_PE_SLC(lgid,op,mux_a,mux_b,aux) \
 	(lgid<<27) + (op<<24) + (mux_a<<19) + (mux_b<<14) + (aux << 13) 
+#define GENERATE_STORER_SLC(lgid,op,mux_a,addr_inc,addr) \
+	(lgid<<27) + (op<<24) + (mux_a<<19) + (addr_inc<<5) + (addr) 
 
 
 using namespace std;
@@ -164,10 +166,9 @@ class Config : public sc_module
 			assert( m_broadcast_num <= BROADCAST_MAX && "Broadcast node exceed! ");
 			for(unsigned i = 0; i<m_broadcast_num; i++)
 			{
-				context.reg = GENERATE_ARITH_PE_SLC(4, CONFIG_ADD, 2 ,1, 0);	
+				context.reg = GENERATE_STORER_SLC(12, CONFIG_STORE, 2 ,1, 0);	
 				config[i]->write_context_reg(context);
 			}
-
 			for(unsigned i = 0; i<m_broadcast_num; i++)
 			{
 				config[i]->all_config();
@@ -175,7 +176,7 @@ class Config : public sc_module
 		}
 
 		void release_busy(unsigned id){
-			cout << "MODULE: " << id << "-----RELEASE_BUSY------" << endl;	
+			cout << "MODULE: " << id << " -----RELEASE_BUSY------" << endl;	
 		}
 };
 

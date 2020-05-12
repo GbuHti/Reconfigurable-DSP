@@ -1,4 +1,5 @@
 #include "storer.h"
+#include <iomanip>
 
 SC_HAS_PROCESS(Storer);
 Storer::Storer
@@ -113,6 +114,7 @@ void Storer::fill_buffer_thread()
 		sc_dt::uint64		addr = m_addr*4096 + (m_addr_counter++)*m_addr_inc*4;	
 		trans_ptr->set_command(cmd);
 		trans_ptr->set_address(addr);
+		trans_ptr->set_data_length(4);
 
 		mBufferPEQ.notify(*trans_ptr, SC_ZERO_TIME);
 	}
@@ -141,12 +143,17 @@ void Storer::send_data_thread()
 			delay	= SC_ZERO_TIME;
 			return_value = isock->nb_transport_fw(*trans_ptr, phase, delay);
 			assert(return_value == tlm::TLM_COMPLETED);
+			cout << "### " << m_ID;
+			cout << setw(200) << "Addr " << setfill('-')<< hex << trans_ptr->get_address();
+			cout << setw(5) << " Data " << *(float*)trans_ptr->get_data_ptr() ;
+			cout << "@ " << setw(5) << sc_time_stamp() << endl;
 
 			trans_ptr->release();
 			if( (!m_ini_done) & (m_advance_computing == 0))
 			{
 				assert(slcs != 0 && "You shoud connect Storer with RC");
-				slcs->release_busy();	
+				m_addr_counter = 0;
+				slcs->release_busy(m_ID);	
 			}			
 		}
 	}

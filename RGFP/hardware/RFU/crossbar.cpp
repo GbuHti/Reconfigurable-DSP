@@ -1,4 +1,5 @@
 #include "crossbar.h"
+#include "define.h"
 
 //n号dist的端口连到所有combiner的n号端口
 #define CONNECT_DIST_2_COMB(x) \
@@ -18,6 +19,8 @@
 	distributor ## x.isock[13].bind(combiner13.tsock[x]);\
 	distributor ## x.isock[14].bind(combiner14.tsock[x]);\
 	distributor ## x.isock[15].bind(combiner15.tsock[x]);\
+	distributor ## x.isock[16].bind(combiner16.tsock[x]);\
+	distributor ## x.isock[17].bind(combiner17.tsock[x]);\
 
 
 Crossbar::Crossbar
@@ -52,7 +55,8 @@ Crossbar::Crossbar
 , combiner13("combiner13", 13, SC_ZERO_TIME)
 , combiner14("combiner14", 14, SC_ZERO_TIME)
 , combiner15("combiner15", 15, SC_ZERO_TIME)
-, config("config", 28)
+, combiner16("combiner16", 16, SC_ZERO_TIME)
+, combiner17("combiner17", 17, SC_ZERO_TIME)
 {
 ////<=========== INPUT & DISTRIBUTOR =========================================
 	tsock[0](distributor0.tsock);
@@ -99,35 +103,55 @@ Crossbar::Crossbar
 	combiner13.isock.bind(isock[13]);	
 	combiner14.isock.bind(isock[14]);	
 	combiner15.isock.bind(isock[15]);	
+	combiner16.isock.bind(isock[16]);
+	combiner17.isock.bind(isock[17]);	
 
-	config.config[0] = &distributor0;
-	config.config[1] = &distributor1;
-	config.config[2] = &distributor2;
-	config.config[3] = &distributor3;
-	config.config[4] = &distributor4;
-	config.config[5] = &distributor5;
-	config.config[6] = &distributor6;
-	config.config[7] = &distributor7;
-	config.config[8] = &distributor8;
-	config.config[9] = &distributor9;
-	config.config[10] = &distributor10;
-	config.config[11] = &distributor11;
-	config.config[12] = &combiner0;
-	config.config[13] = &combiner1;
-	config.config[14] = &combiner2;
-	config.config[15] = &combiner3;
-	config.config[16] = &combiner4;
-	config.config[17] = &combiner5;
-	config.config[18] = &combiner6;
-	config.config[19] = &combiner7;
-	config.config[20] = &combiner8;
-	config.config[21] = &combiner9;
-	config.config[22] = &combiner10;
-	config.config[23] = &combiner11;
-	config.config[24] = &combiner12;
-	config.config[25] = &combiner13;
-	config.config[26] = &combiner14;
-	config.config[27] = &combiner15;
+	config_holder[0] = &distributor0;
+	config_holder[1] = &distributor1;
+	config_holder[2] = &distributor2;
+	config_holder[3] = &distributor3;
+	config_holder[4] = &distributor4;
+	config_holder[5] = &distributor5;
+	config_holder[6] = &distributor6;
+	config_holder[7] = &distributor7;
+	config_holder[8] = &distributor8;
+	config_holder[9] = &distributor9;
+	config_holder[10] = &distributor10;
+	config_holder[11] = &distributor11;
+	config_holder[12] = &combiner0;
+	config_holder[13] = &combiner1;
+	config_holder[14] = &combiner2;
+	config_holder[15] = &combiner3;
+	config_holder[16] = &combiner4;
+	config_holder[17] = &combiner5;
+	config_holder[18] = &combiner6;
+	config_holder[19] = &combiner7;
+	config_holder[20] = &combiner8;
+	config_holder[21] = &combiner9;
+	config_holder[22] = &combiner10;
+	config_holder[23] = &combiner11;
+	config_holder[24] = &combiner12;
+	config_holder[25] = &combiner13;
+	config_holder[26] = &combiner14;
+	config_holder[27] = &combiner15;
+	config_holder[28] = &combiner16;
+	config_holder[29] = &combiner17;
+}
+
+//Broastcast to sub-modules
+void Crossbar::write_context_reg(slc context)
+{
+	for(unsigned i=0;i < (LOADER_NUM+3*ARITH_PE_NUM+STORER_NUM); i++)
+	{
+		config_holder[i]->write_context_reg(context);	
+	}
+}
+void Crossbar::all_config()
+{
+	for(unsigned i=0;i < (LOADER_NUM+3*ARITH_PE_NUM+STORER_NUM); i++)
+	{
+		config_holder[i]->all_config();
+	}
 }
 
 void												

@@ -9,7 +9,6 @@
 #include "define.h"
 #include "distributor.h"
 #include "combiner.h"
-#include "config.h"
 
 #include <iostream>
 #include <map>
@@ -25,6 +24,7 @@ using namespace sc_core;
 class Crossbar : public sc_module
 			   , virtual public tlm::tlm_bw_transport_if<>
 			   , virtual public tlm::tlm_fw_transport_if<>
+			   , public contextreg_if
 {
 	private:
 		/// Not Implemented for this example but required by the initiator socket
@@ -73,11 +73,14 @@ class Crossbar : public sc_module
 
 	public:
 		tlm::tlm_target_socket<> tsock[LOADER_NUM+ARITH_PE_NUM];
-		tlm::tlm_initiator_socket<> isock[2*ARITH_PE_NUM];
+		tlm::tlm_initiator_socket<> isock[2*ARITH_PE_NUM + STORER_NUM];
 
 		Crossbar
 		( sc_module_name name
 		);
+
+		void write_context_reg(slc context) override;
+		void all_config() override;
 		 
 	private:
 		Distributor distributor0;
@@ -109,8 +112,10 @@ class Crossbar : public sc_module
 		Combiner combiner13;
 		Combiner combiner14;
 		Combiner combiner15;
+		Combiner combiner16;
+		Combiner combiner17;
 
-		Config config;
+		contextreg_if *config_holder[30];
 };
 
 
