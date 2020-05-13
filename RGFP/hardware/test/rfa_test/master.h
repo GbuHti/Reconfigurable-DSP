@@ -183,7 +183,13 @@ class Config : public sc_module
 			}
 			for(unsigned i = 0; i<m_broadcast_num; i++)
 			{
-				context.reg = GENERATE_STORER_SLC(12, CONFIG_STORE, 4, 1, 1);	
+				context.reg = GENERATE_ARITH_PE_SLC(5, CONFIG_ADD, 0, 4, 0);	
+				config[i]->write_context_reg(context);
+			}
+
+			for(unsigned i = 0; i<m_broadcast_num; i++)
+			{
+				context.reg = GENERATE_STORER_SLC(12, CONFIG_STORE, 5, 1, 1);	
 				config[i]->write_context_reg(context);
 			}
 			for(unsigned i = 0; i<m_broadcast_num; i++)
