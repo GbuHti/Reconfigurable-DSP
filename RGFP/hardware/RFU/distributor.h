@@ -37,6 +37,9 @@ class Distributor : public sc_module
 		sc_event mSelfStartingEvent;
 		tlm::tlm_generic_payload m_self_starting_trans;
 		unsigned m_data;
+		unsigned m_pending_portid;
+		bool	m_isSelfFeeding;
+
 	public:
 		tlm_utils::simple_target_socket<Distributor> tsock;
 		tlm_utils::simple_initiator_socket_tagged<Distributor> isock[2*ARITH_PE_NUM + STORER_NUM];

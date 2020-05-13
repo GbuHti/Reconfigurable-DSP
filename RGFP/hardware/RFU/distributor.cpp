@@ -10,6 +10,7 @@ Distributor::Distributor
 , m_ini_done(false)
 , mBeginRequestPEQ("mBeginRequestPEQ")
 , mBeginResponsePEQ("mBeginResponsePEQ")
+, m_isSelfFeeding(false)
 {
 	tsock.register_nb_transport_fw(this, &Distributor::nb_transport_fw);
 	for(int i = 0; i < 2*ARITH_PE_NUM+LOADER_NUM; i++)
@@ -46,6 +47,7 @@ void Distributor::write_context_reg(slc context)
 			m_branch_tb[portid] = {true,false,false}; 
 			if(context.mux_a == context.phid) //如果arith_pe接收来自自己的结果数据,在初始化需要“推”一把
 			{
+				m_isSelfFeeding = true;
 				mSelfStartingEvent.notify(SC_ZERO_TIME);
 			}
 		}
@@ -55,6 +57,7 @@ void Distributor::write_context_reg(slc context)
 			m_branch_tb[portid] = {true,false,false}; 
 			if(context.mux_b == context.phid) 
 			{
+				m_isSelfFeeding = true; 
 				mSelfStartingEvent.notify(SC_ZERO_TIME);
 			}
 		}
@@ -63,7 +66,13 @@ void Distributor::write_context_reg(slc context)
 		if(context.mux_a == m_ID)
 		{
 			portid = context.phid - LOADER_NUM + ARITH_PE_NUM;	
-			m_branch_tb[portid] = {true, false, false};
+			if(m_isSelfFeeding)		// 需要保证从上往下顺序发送配置信息
+			{
+				m_pending_portid = portid;	// SelfFeeding模式下，同时只支持一个Storer从PE取数据
+			}else
+			{
+				m_branch_tb[portid] = {true, false, false};
+			}
 		}	
 	}
 	
@@ -82,8 +91,22 @@ void Distributor::request_thread()
 		tlm::tlm_generic_payload *trans_ptr;
 		while((trans_ptr = mBeginRequestPEQ.get_next_transaction()) != 0 )
 		{
-			if(trans_ptr->get_command() == LAST_COMPUTE) m_ini_done = false;
+			if(trans_ptr->get_command() == LAST_COMPUTE)
+			{
+				m_ini_done = false;
+				if(m_isSelfFeeding)
+				{
+					for(int i = 0; i < (int)m_branch_tb.size(); i++)
+					{
+						if(m_branch_tb[i].selected)
+						{
+							m_branch_tb[i].selected = false;// 硬件实现时，类似于mip寄存器，bitmask实现	
+						}		
+					}	
+					m_branch_tb[m_pending_portid].selected = true;
+				}// end if: 当前传输为该PE的最后一次时，切换路由路径，这里可能需要加一级寄存器
 
+			}	
 			for(int i = 0; i < (int)m_branch_tb.size(); i++)
 			{
 				tlm::tlm_phase phase;
@@ -134,7 +157,11 @@ void Distributor::response_thread()
 			{
 				for(int i = 0; i < (int)m_branch_tb.size(); i++)
 				{
-					if(!m_ini_done) m_branch_tb[i].selected = false;
+					if(!m_ini_done) 
+					{
+						m_branch_tb[i].selected = false;
+						m_isSelfFeeding = false;
+					}	
 					m_branch_tb[i].hasSend = false;
 					m_branch_tb[i].hasReceive = false;
 				}	

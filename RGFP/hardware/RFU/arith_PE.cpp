@@ -97,7 +97,7 @@ void Arith_PE::wait_data_thread()
 		trans_ptr_b = mSrc_b_PEQ.get_next_transaction();
 		assert(mSrc_b_PEQ.get_next_transaction() == 0);
 
-		if((trans_ptr_a->get_command() == LAST_COMPUTE) & (trans_ptr_b->get_command() == LAST_COMPUTE))
+		if((trans_ptr_a->get_command() == LAST_COMPUTE) | (trans_ptr_b->get_command() == LAST_COMPUTE))
 		{
 			m_ini_done = false;
 		}
