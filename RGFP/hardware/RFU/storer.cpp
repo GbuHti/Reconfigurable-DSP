@@ -8,6 +8,7 @@ Storer::Storer
 )
 : sc_module(name)
 , m_ID(id)
+, m_ready(false)
 , m_ini_done(false)
 , m_pool_size(2)
 , m_addr_counter(0)
@@ -35,6 +36,7 @@ void Storer::write_context_reg(slc context)
 {
 	if(context.phid == m_ID)
 	{
+		m_ready		= true;
 		m_op		= context.op;
 		m_op_aux	= context.op_aux;	
 		m_addr_inc	= context.addr_inc;
@@ -45,7 +47,11 @@ void Storer::write_context_reg(slc context)
 /*=================================================*/
 void Storer::all_config()
 {
-	m_ini_done = true;
+	if(m_ready)
+	{
+		m_ready		= false;	
+		m_ini_done	= true;
+	}
 }
 
 /*=================================================*/

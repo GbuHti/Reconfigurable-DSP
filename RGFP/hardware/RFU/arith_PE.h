@@ -27,7 +27,7 @@ class Arith_PE : public sc_module
 		unsigned m_pool_size;
 
 		unsigned m_advance_computing;
-		bool m_waiting;
+		bool m_ready;
 
 		float m_srca;
 		float m_srcb;

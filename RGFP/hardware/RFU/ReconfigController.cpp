@@ -9,11 +9,12 @@ static const char *filename = "ReconfigController.cpp";  ///< filename for repor
 SC_HAS_PROCESS(ReconfigController);
 
 ReconfigController::ReconfigController
-(
- sc_module_name name
- )
-:sc_module(name)
-,m_dp(0)
+( sc_module_name name
+, contextreg_if * rfa_ptr
+)
+: sc_module(name)
+, m_dp(0)
+, m_rfa_ptr(rfa_ptr)
 {
 	SC_THREAD(Allocate_thread);
 	SC_THREAD(Dispatch_thread);
@@ -140,7 +141,6 @@ void ReconfigController::Allocate_thread()
 					REPORT_INFO(filename, __FUNCTION__, msg.str());
 
 
-					finish_allocate_event.notify(sc_core::SC_ZERO_TIME);
 					dispatch_event.notify(sc_core::SC_ZERO_TIME);
 					has_found = true;
 					m_dp = m_dp | (1 << it->first);
@@ -149,19 +149,23 @@ void ReconfigController::Allocate_thread()
 					switch(m_flc.op)
 					{
 						case CONFIG_LOAD:
-							it->second.addr = m_flc.addr;
-							it->second.addr_inc = m_flc.addr_inc;
-							it->second.op_aux = m_flc.op_aux;		
-							it->second.batch_len = m_flc.batch_len;
+							it->second.addr			= m_flc.addr;
+							it->second.addr_inc		= m_flc.addr_inc;
+							it->second.op_aux		= m_flc.op_aux;		
+							it->second.batch_len	= m_flc.batch_len;
 							break;
 						case CONFIG_ADD:
 						case CONFIG_MUL:
 						case CONFIG_SIN:
 						case CONFIG_SQRT:
+							it->second.op_aux		= m_flc.op_aux;
+							it->second.mux_b		= m_translation_table[m_flc.mux_b];
+							it->second.mux_a		= m_translation_table[m_flc.mux_a];
+							break;
 						case CONFIG_STORE:
-							it->second.op_aux = m_flc.op_aux;
-							it->second.mux_b = m_translation_table[m_flc.mux_b];
-							it->second.mux_a = m_translation_table[m_flc.mux_a];
+							it->second.addr			= m_flc.addr;
+							it->second.addr_inc		= m_flc.addr_inc;
+							it->second.mux_a		= m_translation_table[m_flc.mux_a];
 							break;
 						default:
 							assert(false && "ERROR: Unsupported operation type");
@@ -190,6 +194,9 @@ void ReconfigController::Dispatch_thread()
 		{
 			if( m_dp & (1<<i) )	
 			{
+				assert( m_rfa_ptr != 0 && "You should connect RC with RFA");
+				m_rfa_ptr->write_context_reg(m_slcs[i]);
+
 				m_trans.set_address(m_slcs[i].phid);
 				m_trans.set_data_ptr((unsigned char *)&(m_slcs[i].reg));
 				m_trans.set_command(tlm::TLM_WRITE_COMMAND);

@@ -25,6 +25,7 @@ class Storer : public sc_module
 		unsigned m_addr_inc;
 		unsigned m_addr;
 
+		bool m_ready;
 		bool m_ini_done;
 		unsigned m_pool_size;
 		unsigned m_addr_counter;

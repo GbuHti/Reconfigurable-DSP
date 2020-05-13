@@ -8,6 +8,7 @@ Combiner::Combiner
 )
 : sc_module (name)
 , m_portID(portid)
+, m_ready(false)
 , m_ini_done(false)
 , m_accept_delay(accept_delay)
 , mBeginRequestPEQ("mBeginRequestPEQ")
@@ -29,6 +30,7 @@ void Combiner::write_context_reg(slc context)
 
 	if((m_portID/2 + LOADER_NUM) == context.phid)
 	{
+		m_ready = true;
 		if(m_portID%2 == 0) 
 			m_select = context.mux_a;
 		else 
@@ -38,7 +40,11 @@ void Combiner::write_context_reg(slc context)
 
 void Combiner::all_config()
 {
-	m_ini_done = true;
+	if(m_ready)
+	{
+		m_ready		= false;	
+		m_ini_done	= true;
+	}
 }
 
 tlm::tlm_sync_enum 

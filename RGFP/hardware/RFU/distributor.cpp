@@ -7,6 +7,7 @@ Distributor::Distributor
 )
 : sc_module (name)
 , m_ID (id)
+, m_ready(false)
 , m_ini_done(false)
 , mBeginRequestPEQ("mBeginRequestPEQ")
 , mBeginResponsePEQ("mBeginResponsePEQ")
@@ -43,6 +44,7 @@ void Distributor::write_context_reg(slc context)
 	{
 		if(context.mux_a == m_ID)
 		{
+			m_ready = true;
 			portid = 2*(context.phid - LOADER_NUM) + 0;
 			m_branch_tb[portid] = {true,false,false}; 
 			if(context.mux_a == context.phid) //如果arith_pe接收来自自己的结果数据,在初始化需要“推”一把
@@ -53,6 +55,7 @@ void Distributor::write_context_reg(slc context)
 		}
 		else if(context.mux_b == m_ID)
 		{
+			m_ready = true;
 			portid = 2*(context.phid - LOADER_NUM) + 1;
 			m_branch_tb[portid] = {true,false,false}; 
 			if(context.mux_b == context.phid) 
@@ -65,6 +68,7 @@ void Distributor::write_context_reg(slc context)
 	{
 		if(context.mux_a == m_ID)
 		{
+			m_ready = true;
 			portid = context.phid - LOADER_NUM + ARITH_PE_NUM;	
 			if(m_isSelfFeeding)		// 需要保证从上往下顺序发送配置信息
 			{
@@ -80,7 +84,11 @@ void Distributor::write_context_reg(slc context)
 
 void Distributor::all_config()
 {
-	m_ini_done = true;	
+	if(m_ready)
+	{
+		m_ready = false;	
+		m_ini_done = true;	
+	}
 }
 
 void Distributor::request_thread()

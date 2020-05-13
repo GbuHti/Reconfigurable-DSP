@@ -3,13 +3,15 @@
 
 #include "systemc.h"
 #include "contextreg_if.h"
+#include "slcs_if.h"
 #include "device.h"
 #include "tlm_utils/simple_initiator_socket.h"
 
 #include <map>
 
-class ReconfigController: public sc_core::sc_module,
-	public Device
+class ReconfigController: public sc_core::sc_module
+					    , public Device
+						, public slcs_if
 
 {
 	private:
@@ -33,9 +35,12 @@ class ReconfigController: public sc_core::sc_module,
 		uint32_t * m_data_ptr;
 		
 	public:
-		tlm_utils::simple_initiator_socket<ReconfigController> isock;
+		contextreg_if * m_rfa_ptr;
 
-		ReconfigController(sc_module_name name);
+		ReconfigController
+		( sc_module_name name
+		, contextreg_if * rfa_ptr
+		);
 
 		void operation(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) override;
 
@@ -46,6 +51,8 @@ class ReconfigController: public sc_core::sc_module,
 		void Dispatch_thread();
 
 		void Monitor_busy_thread();
+
+		void release_busy(unsigned id) override;
 };
 
 #endif

@@ -28,6 +28,7 @@ class Distributor : public sc_module
 	private:
 		unsigned m_ID;
 		array<flags, 2*ARITH_PE_NUM+LOADER_NUM>  m_branch_tb;
+		bool m_ready;
 		bool m_ini_done;
 		
 		sc_event mTransArrivedEvent;

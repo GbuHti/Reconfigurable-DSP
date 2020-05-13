@@ -15,6 +15,7 @@ Loader::Loader
 , m_ID(id)
 , m_end_rsp_delay(end_rsp_delay)
 , m_data_cnt(0)
+, m_ready(false)
 , m_ini_done(false)
 , m_pool_size(2)
 , m_addr_counter(0)
@@ -40,6 +41,7 @@ void Loader::write_context_reg(slc context)
 {
 	if(context.phid == m_ID)
 	{
+		m_ready = true;
 		if(context.op_aux)
 		{
 			m_batch_len = pow(2,context.batch_len);
@@ -54,9 +56,13 @@ void Loader::write_context_reg(slc context)
 
 void Loader::all_config()
 {
-	m_ini_done = true;
-	m_data_cnt = 0;
-	mAllInitiatedEvent.notify(sc_core::SC_ZERO_TIME);
+	if(m_ready)
+	{
+		m_ready = false;	
+		m_ini_done = true;
+		m_data_cnt = 0;
+		mAllInitiatedEvent.notify(sc_core::SC_ZERO_TIME);
+	}
 }
 
 /**

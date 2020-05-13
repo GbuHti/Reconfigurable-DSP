@@ -23,6 +23,7 @@ class Combiner : public sc_module
 	private:
 		unsigned m_portID;
 		unsigned m_select;
+		bool m_ready;
 		bool m_ini_done;
 		sc_time m_accept_delay;
 

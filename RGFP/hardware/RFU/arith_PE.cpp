@@ -13,7 +13,7 @@ Arith_PE::Arith_PE
 , m_ini_done(false)
 , m_pool_size(2)
 , m_advance_computing(0)
-, m_waiting(false)
+, m_ready(false)
 , mSendPEQ("mSendPEQ")
 , mSrc_a_PEQ("mSrc_a_PEQ")
 , mSrc_b_PEQ("mSrc_b_PEQ")
@@ -41,6 +41,7 @@ void Arith_PE::write_context_reg(slc context)
 {
 	if(context.phid == m_ID)
 	{
+		m_ready		= true;
 		m_op		= context.op;
 		m_op_aux	= context.op_aux;	
 	}
@@ -49,7 +50,11 @@ void Arith_PE::write_context_reg(slc context)
 /*=================================================*/
 void Arith_PE::all_config()
 {
-	m_ini_done = true;
+	if(m_ready)
+	{
+		m_ready		= false;	
+		m_ini_done =  true;
+	}
 }
 
 /*=================================================*/
@@ -122,7 +127,6 @@ void Arith_PE::execute_thread()
 	while(true)
 	{
 		wait(mExecuteEvent);
-//		if (m_waiting) m_advance_computing = 1; //如果send_thread正忙，则将此次计算标记为提前计算
 		float tmp = 0;
 		sc_time compute_latency;
 		switch(m_op)
@@ -194,7 +198,6 @@ void Arith_PE::send_thread()
 		{
 			m_advance_computing--; //此时刻计算结果已经被发送出去 实质是自减
 			mCheckAdvanceComEvent.notify(SC_ZERO_TIME);
-			m_waiting = true;
 			tlm::tlm_phase phase = tlm::BEGIN_REQ;
 			sc_time delay = SC_ZERO_TIME;
 			tlm::tlm_sync_enum return_value;
@@ -203,7 +206,6 @@ void Arith_PE::send_thread()
 
 			wait(mBeginResponseEvent);
 			trans_ptr->release();
-			m_waiting = false;
 			if( (!m_ini_done) & (m_advance_computing == 0)){ //当没有后续的数据到来可以认为计算任务全部结束
 				assert(slcs != 0 && "You shoud connect PE with RC");
 				slcs->release_busy(m_ID);	

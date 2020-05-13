@@ -25,6 +25,7 @@ class Loader:public sc_core::sc_module
 
 		unsigned m_data_cnt;
 
+		bool m_ready;
 		bool m_ini_done;
 		unsigned m_pool_size;
 		unsigned m_addr_counter;
