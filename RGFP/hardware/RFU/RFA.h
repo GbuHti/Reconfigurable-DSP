@@ -8,6 +8,7 @@
 #include "arith_PE.h"
 #include "storer.h"
 #include "contextreg_if.h"
+#include "slcs_if.h"
 #include "tlm_utils/simple_target_socket.h"
 #include "tlm_utils/simple_initiator_socket.h"
 
@@ -63,12 +64,13 @@ class RFA : public sc_core::sc_module
 
 
 	public:
-		tlm::tlm_target_socket<> tsock[LOADER_NUM+ARITH_PE_NUM];
+//		tlm::tlm_target_socket<> tsock[LOADER_NUM+ARITH_PE_NUM];
 		tlm::tlm_initiator_socket<> isock[LOADER_NUM + STORER_NUM];
 
 	public:
 		RFA
 		( sc_core::sc_module_name	name
+		, slcs_if * slcs_ptr
 		);
 
 		void write_context_reg(slc context) override;
@@ -96,7 +98,7 @@ class RFA : public sc_core::sc_module
 		Storer m_storer_0;
 		Storer m_storer_1;
 
-		contextreg_if * config_holder[LOADER_NUM+ARITH_PE_NUM+LOADER_NUM+1];
+		contextreg_if * config_holder[LOADER_NUM + ARITH_PE_NUM + LOADER_NUM + 1];
 };
 
 #endif

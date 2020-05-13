@@ -11,6 +11,8 @@
 #include "slcs_if.h"
 #include "define.h"
 
+#define GENERATE_LOADER_SLC_(lgid,op,batch_len,aux,addr_inc, addr) \
+	(lgid<<27) + (op<<24) + (batch_len<<14) + (aux<<13) + (addr_inc << 5) + (addr) 
 #define GENERATE_ARITH_PE_SLC(lgid,op,mux_a,mux_b,aux) \
 	(lgid<<27) + (op<<24) + (mux_a<<19) + (mux_b<<14) + (aux << 13) 
 #define GENERATE_STORER_SLC(lgid,op,mux_a,addr_inc,addr) \
@@ -166,7 +168,22 @@ class Config : public sc_module
 			assert( m_broadcast_num <= BROADCAST_MAX && "Broadcast node exceed! ");
 			for(unsigned i = 0; i<m_broadcast_num; i++)
 			{
-				context.reg = GENERATE_STORER_SLC(12, CONFIG_STORE, 2 ,1, 0);	
+				context.reg = GENERATE_LOADER_SLC_(0, CONFIG_LOAD, 12 , 0, 1, 0);	
+				config[i]->write_context_reg(context);
+			}
+			for(unsigned i = 0; i<m_broadcast_num; i++)
+			{
+				context.reg = GENERATE_LOADER_SLC_(1, CONFIG_LOAD, 12 , 0, 1, 0);	
+				config[i]->write_context_reg(context);
+			}
+			for(unsigned i = 0; i<m_broadcast_num; i++)
+			{
+				context.reg = GENERATE_ARITH_PE_SLC(4, CONFIG_ADD, 0, 1, 0);	
+				config[i]->write_context_reg(context);
+			}
+			for(unsigned i = 0; i<m_broadcast_num; i++)
+			{
+				context.reg = GENERATE_STORER_SLC(12, CONFIG_STORE, 4, 1, 1);	
 				config[i]->write_context_reg(context);
 			}
 			for(unsigned i = 0; i<m_broadcast_num; i++)
@@ -176,7 +193,7 @@ class Config : public sc_module
 		}
 
 		void release_busy(unsigned id){
-			cout << "MODULE: " << id << " -----RELEASE_BUSY------" << endl;	
+			cout << "MODULE: " <<dec << id << " -----RELEASE_BUSY------" << endl;	
 		}
 };
 

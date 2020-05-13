@@ -3,6 +3,7 @@
 
 RFA::RFA
 ( sc_core::sc_module_name name
+, slcs_if * slcs_ptr
 )
 :sc_module (name)
 
@@ -66,7 +67,7 @@ RFA::RFA
 
 , m_muldiv_1
 ( "m_muldiv_1"
-, 8
+, 9
 , true
 )
 
@@ -92,7 +93,7 @@ RFA::RFA
 , 13 
 )
 {
-////////////////////////////////////////////////////
+//================ SUBMODULE & PARENT ===================
 	m_loader_0.isock_memory.bind(isock[0]);
 	m_loader_1.isock_memory.bind(isock[1]);
 	m_loader_2.isock_memory.bind(isock[2]);
@@ -100,7 +101,42 @@ RFA::RFA
 
 	m_storer_0.isock.bind(isock[4]);
 	m_storer_1.isock.bind(isock[5]);
+
+//================ MASTERs & CROSSBAR ====================
+	m_loader_0.isock_crossbar.bind(m_crossbar.tsock[0]);
+	m_loader_1.isock_crossbar.bind(m_crossbar.tsock[1]);
+	m_loader_2.isock_crossbar.bind(m_crossbar.tsock[2]);
+	m_loader_3.isock_crossbar.bind(m_crossbar.tsock[3]);
+	m_addsub_0.isock.bind(m_crossbar.tsock[4]);
+	m_addsub_1.isock.bind(m_crossbar.tsock[5]);
+	m_addsub_2.isock.bind(m_crossbar.tsock[6]);
+	m_addsub_3.isock.bind(m_crossbar.tsock[7]);
+	m_muldiv_0.isock.bind(m_crossbar.tsock[8]);
+	m_muldiv_1.isock.bind(m_crossbar.tsock[9]);
+	m_sqrt_0.isock.bind(m_crossbar.tsock[10]);
+	m_sincos_0.isock.bind(m_crossbar.tsock[11]);
+
+//================ CROSSBAR & SLAVERs====================
+	m_crossbar.isock[0](m_addsub_0.tsock[0]);
+	m_crossbar.isock[1](m_addsub_0.tsock[1]);
+	m_crossbar.isock[2](m_addsub_1.tsock[0]);
+	m_crossbar.isock[3](m_addsub_1.tsock[1]);
+	m_crossbar.isock[4](m_addsub_2.tsock[0]);
+	m_crossbar.isock[5](m_addsub_2.tsock[1]);
+	m_crossbar.isock[6](m_addsub_3.tsock[0]);
+	m_crossbar.isock[7](m_addsub_3.tsock[1]);
+	m_crossbar.isock[8](m_muldiv_0.tsock[0]);
+	m_crossbar.isock[9](m_muldiv_0.tsock[1]);
+	m_crossbar.isock[10](m_muldiv_1.tsock[0]);
+	m_crossbar.isock[11](m_muldiv_1.tsock[1]);
+	m_crossbar.isock[12](m_sqrt_0.tsock[0]);
+	m_crossbar.isock[13](m_sqrt_0.tsock[1]);
+	m_crossbar.isock[14](m_sincos_0.tsock[0]);
+	m_crossbar.isock[15](m_sincos_0.tsock[1]);
+	m_crossbar.isock[16](m_storer_0.tsock);
+	m_crossbar.isock[17](m_storer_1.tsock);
 	
+//------------ RC向RFA发出slc配置信息---------------------
 	config_holder[0] = &m_loader_0;
 	config_holder[1] = &m_loader_1;
 	config_holder[2] = &m_loader_2;
@@ -116,17 +152,33 @@ RFA::RFA
 	config_holder[12] = &m_sincos_0 ;
 	config_holder[13] = &m_storer_0 ;
 	config_holder[14] = &m_storer_1 ;
+
+//RFA向RC发出release_busy信息
+	m_loader_0.slcs = slcs_ptr;
+	m_loader_1.slcs = slcs_ptr;
+	m_loader_2.slcs = slcs_ptr;
+	m_loader_3.slcs = slcs_ptr;
+	m_addsub_0.slcs = slcs_ptr;
+	m_addsub_1.slcs = slcs_ptr;
+	m_addsub_2.slcs = slcs_ptr;
+	m_addsub_3.slcs = slcs_ptr;
+	m_muldiv_0.slcs = slcs_ptr;
+	m_muldiv_1.slcs = slcs_ptr;
+	m_sqrt_0.slcs = slcs_ptr;
+	m_sincos_0.slcs = slcs_ptr;
+	m_storer_0.slcs = slcs_ptr;
+	m_storer_1.slcs = slcs_ptr;
 }
 
 //Broastcast to sub-modules
-void Crossbar::write_context_reg(slc context)
+void RFA::write_context_reg(slc context)
 {
-	for(unsigned i = 0; i<(LOADER_NUM+ARITH_PE_NUM+STORER_NUM+1); i++)
+	for(unsigned i = 0; i<(LOADER_NUM + ARITH_PE_NUM + STORER_NUM + 1); i++)
 	{
 		config_holder[i]->write_context_reg(context);	
 	}
 }
-void Crossbar::all_config()
+void RFA::all_config()
 {
 	for(unsigned i = 0; i<(LOADER_NUM+ARITH_PE_NUM+STORER_NUM+1); i++)
 	{
@@ -134,6 +186,7 @@ void Crossbar::all_config()
 	}
 }
 
+//{{{ 必要的函数
 ///////////////////////////////////////////////////////////////////////////////////////
 void												
 RFA::invalidate_direct_mem_ptr					
@@ -199,4 +252,4 @@ RFA::transport_dbg
 	assert(false && "not implenmented");	
 	return 0;
 }
-
+///}}}

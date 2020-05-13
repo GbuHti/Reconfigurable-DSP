@@ -85,6 +85,7 @@ void Storer::wait_data_thread()
 		}
 		
 		m_result = *(float *)trans_ptr->get_data_ptr();
+		cout << "### " << m_ID;
 		cout << "@" << sc_time_stamp() << " m_result: " << m_result << endl;
 
 		mSendDataEvent.notify(SC_ZERO_TIME);

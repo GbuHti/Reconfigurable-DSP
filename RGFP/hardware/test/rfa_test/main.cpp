@@ -14,7 +14,7 @@ int sc_main(int argc, char *argv[])
 	Config config("config",1);
 	Data_loader data_loader(argv[1]);
 	
-	RFA rfa("rfa");
+	RFA rfa("rfa", &config);
 
 	Memory memory("memory", SIZE, SC_ZERO_TIME, SC_ZERO_TIME);	//32K字
 

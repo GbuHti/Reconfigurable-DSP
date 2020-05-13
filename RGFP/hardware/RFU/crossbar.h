@@ -115,7 +115,7 @@ class Crossbar : public sc_module
 		Combiner combiner16;
 		Combiner combiner17;
 
-		contextreg_if *config_holder[30];
+		contextreg_if * config_holder[30];
 };
 
 

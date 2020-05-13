@@ -12,7 +12,7 @@ Distributor::Distributor
 , mBeginResponsePEQ("mBeginResponsePEQ")
 {
 	tsock.register_nb_transport_fw(this, &Distributor::nb_transport_fw);
-	for(int i = 0; i < 2*ARITH_PE_NUM; i++)
+	for(int i = 0; i < 2*ARITH_PE_NUM+LOADER_NUM; i++)
 	{
 		isock[i].register_nb_transport_bw(this, &Distributor::nb_transport_bw,i);	
 	}
@@ -38,24 +38,35 @@ void Distributor::write_context_reg(slc context)
 //	assert(context.mux_a == m_ID || context.mux_b == m_ID); //context在广播模式下，此语句无用
 	
 	unsigned portid = 0;
-	if(context.mux_a == m_ID)
+	if(isArith(context))
 	{
-		portid = 2*(context.phid - LOADER_NUM) + 0;
-		m_branch_tb[portid] = {true,false,false}; 
-		if(context.mux_a == context.phid) //如果arith_pe接收来自自己的结果数据,在初始化需要“推”一把
+		if(context.mux_a == m_ID)
 		{
-			mSelfStartingEvent.notify(SC_ZERO_TIME);
+			portid = 2*(context.phid - LOADER_NUM) + 0;
+			m_branch_tb[portid] = {true,false,false}; 
+			if(context.mux_a == context.phid) //如果arith_pe接收来自自己的结果数据,在初始化需要“推”一把
+			{
+				mSelfStartingEvent.notify(SC_ZERO_TIME);
+			}
 		}
-	}
-	else if(context.mux_b == m_ID)
+		else if(context.mux_b == m_ID)
+		{
+			portid = 2*(context.phid - LOADER_NUM) + 1;
+			m_branch_tb[portid] = {true,false,false}; 
+			if(context.mux_b == context.phid) 
+			{
+				mSelfStartingEvent.notify(SC_ZERO_TIME);
+			}
+		}
+	}else if(isStore(context))
 	{
-		portid = 2*(context.phid - LOADER_NUM) + 1;
-		m_branch_tb[portid] = {true,false,false}; 
-		if(context.mux_b == context.phid) 
+		if(context.mux_a == m_ID)
 		{
-			mSelfStartingEvent.notify(SC_ZERO_TIME);
-		}
+			portid = context.phid - LOADER_NUM + ARITH_PE_NUM;	
+			m_branch_tb[portid] = {true, false, false};
+		}	
 	}
+	
 }
 
 void Distributor::all_config()

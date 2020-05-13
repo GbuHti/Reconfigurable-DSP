@@ -106,6 +106,7 @@ Crossbar::Crossbar
 	combiner16.isock.bind(isock[16]);
 	combiner17.isock.bind(isock[17]);	
 
+///<============= BROADCAST ===============================
 	config_holder[0] = &distributor0;
 	config_holder[1] = &distributor1;
 	config_holder[2] = &distributor2;

@@ -4,7 +4,13 @@ SYSTEMC_LIBDIR := $(SYSTEMC_HOME)/lib
 
 INCDIR = -I../../core -I../../RFU
 INCDIR += -I$(SYSTEMC_INCLUDE)
-SRCs = ../../RFU/storer.cpp
+SRCs += ../../RFU/arith_PE.cpp
+SRCs += ../../RFU/combiner.cpp
+SRCs += ../../RFU/crossbar.cpp
+SRCs += ../../RFU/distributor.cpp
+SRCs += ../../RFU/loader.cpp
+SRCs += ../../RFU/RFA.cpp
+SRCs += ../../RFU/storer.cpp
 SRCs += ../../core/device_proxy.cpp
 SRCs += ../../core/memory.cpp
 SRCs += main.cpp 
