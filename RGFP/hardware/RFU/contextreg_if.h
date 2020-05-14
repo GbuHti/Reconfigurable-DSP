@@ -96,7 +96,13 @@ struct slc
 		};
 	};
 
-	//Constuctor
+	//Helper function
+	bool isArith()
+	{return op == CONFIG_ADD | op == CONFIG_MUL | op == CONFIG_SQRT | op == CONFIG_SIN;}
+
+	bool isStore()
+	{return op == CONFIG_STORE;}
+
 };
 
 

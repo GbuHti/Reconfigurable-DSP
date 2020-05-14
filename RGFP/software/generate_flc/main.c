@@ -23,7 +23,7 @@ int main()
 {
 	uint32_t flc;
 	//set 1
-	flc = GENERATE_LOADER_FLC(0,CONFIG_LOAD, 12, 0, 1, 0);	
+	flc = GENERATE_LOADER_FLC(0,CONFIG_LOAD, 32, 0, 1, 0);	
 	*(uint32_t *)FLC_ADDR = flc;
 	flc = GENERATE_ARITH_PE_FLC(1,CONFIG_ADD, 0, 1, 0);	
 	*(uint32_t *)FLC_ADDR = flc;
@@ -31,9 +31,9 @@ int main()
 	*(uint32_t *)FLC_ADDR = flc;
 
 	//set 2
-	flc = GENERATE_LOADER_FLC(0,CONFIG_LOAD, 12, 0, 1, 0);
+	flc = GENERATE_LOADER_FLC(0,CONFIG_LOAD, 32, 0, 1, 0);
 	*(uint32_t *)FLC_ADDR = flc;
-	flc = GENERATE_LOADER_FLC(1,CONFIG_LOAD, 12, 0, 1, 0);
+	flc = GENERATE_LOADER_FLC(1,CONFIG_LOAD, 32, 0, 1, 0);
 	*(uint32_t *)FLC_ADDR = flc;
 	flc = GENERATE_ARITH_PE_FLC(2,CONFIG_ADD, 0, 1, 0);	
 	*(uint32_t *)FLC_ADDR = flc;

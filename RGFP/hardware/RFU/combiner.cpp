@@ -27,15 +27,25 @@ Combiner::Combiner
 void Combiner::write_context_reg(slc context)
 {
 //	assert((m_portID/2 + LOADER_NUM) == context.phid); //采用广播模式下发context，此语句无用
-
-	if((m_portID/2 + LOADER_NUM) == context.phid)
+	if( context.isArith())
 	{
-		m_ready = true;
-		if(m_portID%2 == 0) 
-			m_select = context.mux_a;
-		else 
-			m_select = context.mux_b;
-	}
+		if((m_portID/2 + LOADER_NUM) == context.phid)
+		{
+			m_ready = true;
+			if(m_portID%2 == 0) 
+				m_select = context.mux_a;
+			else 
+				m_select = context.mux_b;
+		}
+
+	}else if ( context.isStore())
+	{
+		if((m_portID-(2*ARITH_PE_NUM)+LOADER_NUM+ARITH_PE_NUM) == context.phid)
+		{
+			m_ready = true;
+			m_select = context.mux_a;	
+		}	
+	}// endif 要求arith_PE 和 storer在crossbar按一定的规则排列
 }
 
 void Combiner::all_config()

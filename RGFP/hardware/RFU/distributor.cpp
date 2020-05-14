@@ -40,7 +40,7 @@ void Distributor::write_context_reg(slc context)
 //	assert(context.mux_a == m_ID || context.mux_b == m_ID); //context在广播模式下，此语句无用
 	
 	unsigned portid = 0;
-	if(isArith(context))
+	if(context.isArith())
 	{
 		if(context.mux_a == m_ID)
 		{
@@ -64,7 +64,7 @@ void Distributor::write_context_reg(slc context)
 				mSelfStartingEvent.notify(SC_ZERO_TIME);
 			}
 		}
-	}else if(isStore(context))
+	}else if(context.isStore())
 	{
 		if(context.mux_a == m_ID)
 		{

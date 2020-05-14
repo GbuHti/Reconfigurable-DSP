@@ -76,12 +76,6 @@ class Distributor : public sc_module
 		void all_config() override;
 
 		//helper
-		bool isArith(slc context)
-		{return context.op == CONFIG_ADD | context.op == CONFIG_MUL | context.op == CONFIG_SQRT | context.op == CONFIG_SIN;}
-
-		bool isStore(slc context)
-		{return context.op == CONFIG_STORE;}
-
 };
 
 #endif
