@@ -730,7 +730,7 @@ struct DirectCoreRunner : public sc_core::sc_module {
         }
         assert (core.status == CoreExecStatus::Terminated);
 
-        sc_core::sc_stop();
+//       sc_core::sc_stop();
     }
 };
 #endif

@@ -39,7 +39,6 @@ class ReconfigController: public sc_core::sc_module
 
 		ReconfigController
 		( sc_module_name name
-		, contextreg_if * rfa_ptr
 		);
 
 		void operation(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) override;
@@ -53,6 +52,11 @@ class ReconfigController: public sc_core::sc_module
 		void Monitor_busy_thread();
 
 		void release_busy(unsigned id) override;
+
+		//helper function
+		bool isStore(slc context) {return context.op == CONFIG_STORE;}
+
+
 };
 
 #endif

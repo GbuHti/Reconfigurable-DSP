@@ -8,54 +8,50 @@ Disassembly of section .text:
    10054:	fe010113          	addi	sp,sp,-32
    10058:	00812e23          	sw	s0,28(sp)
    1005c:	02010413          	addi	s0,sp,32
-   10060:	090007b7          	lui	a5,0x9000
-   10064:	02078793          	addi	a5,a5,32 # 9000020 <__global_pointer$+0x8fee708>
+   10060:	080607b7          	lui	a5,0x8060
+   10064:	02078793          	addi	a5,a5,32 # 8060020 <__global_pointer$+0x804e718>
    10068:	fef42623          	sw	a5,-20(s0)
    1006c:	300007b7          	lui	a5,0x30000
    10070:	fec42703          	lw	a4,-20(s0)
-   10074:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6e8>
-   10078:	190007b7          	lui	a5,0x19000
-   1007c:	02078793          	addi	a5,a5,32 # 19000020 <__global_pointer$+0x18fee708>
+   10074:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6f8>
+   10078:	180607b7          	lui	a5,0x18060
+   1007c:	02078793          	addi	a5,a5,32 # 18060020 <__global_pointer$+0x1804e718>
    10080:	fef42623          	sw	a5,-20(s0)
    10084:	300007b7          	lui	a5,0x30000
    10088:	fec42703          	lw	a4,-20(s0)
-   1008c:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6e8>
+   1008c:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6f8>
    10090:	200087b7          	lui	a5,0x20008
    10094:	fef42623          	sw	a5,-20(s0)
    10098:	300007b7          	lui	a5,0x30000
    1009c:	fec42703          	lw	a4,-20(s0)
-   100a0:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6e8>
-   100a4:	3000c7b7          	lui	a5,0x3000c
+   100a0:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6f8>
+   100a4:	300107b7          	lui	a5,0x30010
    100a8:	fef42623          	sw	a5,-20(s0)
    100ac:	300007b7          	lui	a5,0x30000
    100b0:	fec42703          	lw	a4,-20(s0)
-   100b4:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6e8>
-   100b8:	400087b7          	lui	a5,0x40008
+   100b4:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6f8>
+   100b8:	443007b7          	lui	a5,0x44300
    100bc:	fef42623          	sw	a5,-20(s0)
    100c0:	300007b7          	lui	a5,0x30000
    100c4:	fec42703          	lw	a4,-20(s0)
-   100c8:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6e8>
-   100cc:	500087b7          	lui	a5,0x50008
-   100d0:	fef42623          	sw	a5,-20(s0)
-   100d4:	300007b7          	lui	a5,0x30000
-   100d8:	fec42703          	lw	a4,-20(s0)
-   100dc:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6e8>
-   100e0:	600087b7          	lui	a5,0x60008
-   100e4:	fef42623          	sw	a5,-20(s0)
-   100e8:	300007b7          	lui	a5,0x30000
-   100ec:	fec42703          	lw	a4,-20(s0)
-   100f0:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6e8>
-   100f4:	00000793          	li	a5,0
-   100f8:	00078513          	mv	a0,a5
-   100fc:	01c12403          	lw	s0,28(sp)
-   10100:	02010113          	addi	sp,sp,32
-   10104:	00008067          	ret
+   100c8:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6f8>
+   100cc:	5a4007b7          	lui	a5,0x5a400
+   100d0:	02178793          	addi	a5,a5,33 # 5a400021 <__global_pointer$+0x5a3ee719>
+   100d4:	fef42623          	sw	a5,-20(s0)
+   100d8:	300007b7          	lui	a5,0x30000
+   100dc:	fec42703          	lw	a4,-20(s0)
+   100e0:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6f8>
+   100e4:	00000793          	li	a5,0
+   100e8:	00078513          	mv	a0,a5
+   100ec:	01c12403          	lw	s0,28(sp)
+   100f0:	02010113          	addi	sp,sp,32
+   100f4:	00008067          	ret
 
-00010108 <_start>:
-   10108:	f4dff0ef          	jal	ra,10054 <main>
-   1010c:	05d00893          	li	a7,93
-   10110:	00000513          	li	a0,0
-   10114:	00000073          	ecall
+000100f8 <_start>:
+   100f8:	f5dff0ef          	jal	ra,10054 <main>
+   100fc:	05d00893          	li	a7,93
+   10100:	00000513          	li	a0,0
+   10104:	00000073          	ecall
 
 Disassembly of section .comment:
 

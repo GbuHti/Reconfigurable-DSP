@@ -58,10 +58,14 @@ struct flc
 	
 };
 
-#define GENERATE_PE_SLC(a,b,c,d,e,f) \
-	(a<<27) + (b<<24) + (c<<19) + (d<<14) + (e<<13) + (f<<12)
-#define GENERATE_LOADER_SLC(a,b,c,d,e,f,g) \
-	(a<<27) + (b<<24) + (c<<14) + (d<<13) + (e<<12) + (f<<5) + g
+
+#define GENERATE_LOADER_SLC(lgid, op, batch_len, aux, busy, addr_inc, addr) \
+	(lgid<<27) + (op<<24) + (batch_len<<14) + (aux<<13) + (busy<<12) + (addr_inc << 5) + (addr) 
+#define GENERATE_ARITH_PE_SLC(lgid, op, mux_a, mux_b, aux, busy) \
+	(lgid<<27) + (op<<24) + (mux_a<<19) + (mux_b<<14) + (aux << 13) + (busy << 12)
+#define GENERATE_STORER_SLC(lgid, op, mux_a, aux, busy, addr_inc, addr) \
+	(lgid<<27) + (op<<24) + (mux_a<<19) + (aux<<13) + (busy<<12) + (addr_inc<<5) + (addr) 
+
 
 struct slc
 {

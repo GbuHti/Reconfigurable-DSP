@@ -12,4 +12,5 @@ const sc_core::sc_time clock_period = sc_time(10,sc_core::SC_NS);
 #define NORMAL_COMPUTE	tlm::TLM_READ_COMMAND
 #define LAST_COMPUTE	tlm::TLM_WRITE_COMMAND
 
+#define DATA_MEM_SIZE 1024*4*32 //32K字
 #endif

@@ -10,11 +10,9 @@ SC_HAS_PROCESS(ReconfigController);
 
 ReconfigController::ReconfigController
 ( sc_module_name name
-, contextreg_if * rfa_ptr
 )
 : sc_module(name)
 , m_dp(0)
-, m_rfa_ptr(rfa_ptr)
 {
 	SC_THREAD(Allocate_thread);
 	SC_THREAD(Dispatch_thread);
@@ -27,17 +25,17 @@ ReconfigController::ReconfigController
 	m_slcs[2].reg = GENERATE_LOADER_SLC(2,CONFIG_LOAD,0,0,0,0,0);
 	m_slcs[3].reg = GENERATE_LOADER_SLC(3,CONFIG_LOAD,0,0,0,0,0);
 
-	m_slcs[4].reg = GENERATE_PE_SLC(4,CONFIG_ADD,0,0,0,0);
-	m_slcs[5].reg = GENERATE_PE_SLC(5,CONFIG_ADD,0,0,0,0);
-	m_slcs[6].reg = GENERATE_PE_SLC(6,CONFIG_ADD,0,0,0,0);
-	m_slcs[7].reg = GENERATE_PE_SLC(7,CONFIG_MUL,0,0,0,0);
-	m_slcs[8].reg = GENERATE_PE_SLC(8,CONFIG_MUL,0,0,0,0);
-	m_slcs[9].reg = GENERATE_PE_SLC(9,CONFIG_SQRT,0,0,0,0);
-	m_slcs[10].reg = GENERATE_PE_SLC(10,CONFIG_SIN,0,0,0,0);
-	m_slcs[11].reg = GENERATE_PE_SLC(11,CONFIG_ADD,0,0,0,0);
+	m_slcs[4].reg = GENERATE_ARITH_PE_SLC(4,CONFIG_ADD,0,0,0,0);
+	m_slcs[5].reg = GENERATE_ARITH_PE_SLC(5,CONFIG_ADD,0,0,0,0);
+	m_slcs[6].reg = GENERATE_ARITH_PE_SLC(6,CONFIG_ADD,0,0,0,0);
+	m_slcs[7].reg = GENERATE_ARITH_PE_SLC(7,CONFIG_ADD,0,0,0,0);
+	m_slcs[8].reg = GENERATE_ARITH_PE_SLC(8,CONFIG_MUL,0,0,0,0);
+	m_slcs[9].reg = GENERATE_ARITH_PE_SLC(9,CONFIG_MUL,0,0,0,0);
+	m_slcs[10].reg = GENERATE_ARITH_PE_SLC(10,CONFIG_SQRT,0,0,0,0);
+	m_slcs[11].reg = GENERATE_ARITH_PE_SLC(11,CONFIG_SIN,0,0,0,0);
 
-	m_slcs[12].reg = GENERATE_PE_SLC(12,CONFIG_STORE,0,0,0,0);
-	m_slcs[13].reg = GENERATE_PE_SLC(13,CONFIG_STORE,0,0,0,0);
+	m_slcs[12].reg = GENERATE_STORER_SLC(12,CONFIG_STORE,0,0,0,0,0);
+	m_slcs[13].reg = GENERATE_STORER_SLC(13,CONFIG_STORE,0,0,0,0,0);
 
 }
 
@@ -98,24 +96,6 @@ void ReconfigController::operation
 }
 //}}}
 
-void ReconfigController::Monitor_busy_thread()
-{
-	while(true)
-	{
-		wait(begin_monitor_busy_event);
-		while(true)
-		{
-			wait(busy_changed_event);
-			if(!m_slcs[m_raw_slcs_num].busy)
-			{
-				end_monitor_busy_event.notify(sc_core::SC_ZERO_TIME);
-				break;
-			}	
-		}
-			
-	}
-}
-
 /**
  * @brief:
  * @note: 一直找，直到找到为止，此时处理器会被阻塞
@@ -140,7 +120,7 @@ void ReconfigController::Allocate_thread()
 					msg << "Allocated PE number: " << it->first << " @ " << sc_time_stamp();
 					REPORT_INFO(filename, __FUNCTION__, msg.str());
 
-
+					finish_allocate_event.notify(sc_core::SC_ZERO_TIME);
 					dispatch_event.notify(sc_core::SC_ZERO_TIME);
 					has_found = true;
 					m_dp = m_dp | (1 << it->first);
@@ -184,7 +164,7 @@ void ReconfigController::Allocate_thread()
 		}		
 	}
 }
-
+//=================================================================================
 void ReconfigController::Dispatch_thread()
 {
 	while(true)
@@ -196,25 +176,39 @@ void ReconfigController::Dispatch_thread()
 			{
 				assert( m_rfa_ptr != 0 && "You should connect RC with RFA");
 				m_rfa_ptr->write_context_reg(m_slcs[i]);
-
-				m_trans.set_address(m_slcs[i].phid);
-				m_trans.set_data_ptr((unsigned char *)&(m_slcs[i].reg));
-				m_trans.set_command(tlm::TLM_WRITE_COMMAND);
-				m_trans.set_data_length(sizeof(uint32_t));
-
-				tlm::tlm_phase phase = tlm::BEGIN_REQ;
-				sc_core::sc_time delay = sc_core::SC_ZERO_TIME;
-				tlm::tlm_sync_enum return_value;
-				return_value = isock->nb_transport_fw(m_trans, phase, delay);
-				
-				assert(return_value==tlm::TLM_COMPLETED && "ERROR: only 1 phase transcations supported");
+				if(isStore(m_slcs[i]))
+				{
+					m_rfa_ptr->all_config();	
+				}
 				m_dp = m_dp & ~(1<<i); //派遣成功后，将对应的位置零；
 			}
 		}	
 	}
 }
+//=================================================================================
+void ReconfigController::Monitor_busy_thread()
+{
+	while(true)
+	{
+		wait(begin_monitor_busy_event);
+		while(true)
+		{
+			wait(busy_changed_event);
+			if(!m_slcs[m_raw_slcs_num].busy)
+			{
+				end_monitor_busy_event.notify(sc_core::SC_ZERO_TIME);
+				break;
+			}	
+		}
+			
+	}
+}
 
-
+//=================================================================================
+void ReconfigController::release_busy(unsigned id)
+{
+	m_slcs[id].busy = 0;	
+}
 
 
 
