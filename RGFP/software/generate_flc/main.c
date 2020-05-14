@@ -23,26 +23,38 @@ int main()
 {
 	uint32_t flc;
 	//set 1
-	flc = GENERATE_LOADER_FLC(0,CONFIG_LOAD, 32, 0, 1, 0);	
+//	flc = GENERATE_LOADER_FLC(0,CONFIG_LOAD, 32, 0, 1, 0);	
+//	*(uint32_t *)FLC_ADDR = flc;
+//	flc = GENERATE_ARITH_PE_FLC(1,CONFIG_ADD, 0, 1, 0);	
+//	*(uint32_t *)FLC_ADDR = flc;
+//	flc = GENERATE_STORER_FLC(2, CONFIG_STORE, 1, 0, 0, 1);	
+//	*(uint32_t *)FLC_ADDR = flc;
+//
+//	//set 2
+//	flc = GENERATE_LOADER_FLC(0,CONFIG_LOAD, 32, 0, 1, 0);
+//	*(uint32_t *)FLC_ADDR = flc;
+//	flc = GENERATE_LOADER_FLC(1,CONFIG_LOAD, 32, 0, 1, 0);
+//	*(uint32_t *)FLC_ADDR = flc;
+//	flc = GENERATE_ARITH_PE_FLC(2,CONFIG_ADD, 0, 1, 0);	
+//	*(uint32_t *)FLC_ADDR = flc;
+//	flc = GENERATE_ARITH_PE_FLC(3,CONFIG_ADD, 0, 2, 0);	
+//	*(uint32_t *)FLC_ADDR = flc;
+//	flc = GENERATE_ARITH_PE_FLC(4,CONFIG_SQRT, 3, 0, 0);	
+//	*(uint32_t *)FLC_ADDR = flc;
+//	flc = GENERATE_STORER_FLC(5, CONFIG_STORE, 4, 0, 1, 2);	
+//	*(uint32_t *)FLC_ADDR = flc;
+
+	flc = GENERATE_LOADER_FLC(0,CONFIG_LOAD, 1023, 0, 1, 0);
 	*(uint32_t *)FLC_ADDR = flc;
-	flc = GENERATE_ARITH_PE_FLC(1,CONFIG_ADD, 0, 1, 0);	
+	flc = GENERATE_LOADER_FLC(1,CONFIG_LOAD, 1023, 0, 1, 0);
 	*(uint32_t *)FLC_ADDR = flc;
-	flc = GENERATE_STORER_FLC(2, CONFIG_STORE, 1, 0, 0, 1);	
+	flc = GENERATE_ARITH_PE_FLC(2,CONFIG_MUL, 0, 1, 0);	
+	*(uint32_t *)FLC_ADDR = flc;
+	flc = GENERATE_ARITH_PE_FLC(3,CONFIG_ADD, 2, 3, 0);	
+	*(uint32_t *)FLC_ADDR = flc;
+	flc = GENERATE_STORER_FLC(4, CONFIG_STORE, 3, 0, 0, 1);	
 	*(uint32_t *)FLC_ADDR = flc;
 
-	//set 2
-	flc = GENERATE_LOADER_FLC(0,CONFIG_LOAD, 32, 0, 1, 0);
-	*(uint32_t *)FLC_ADDR = flc;
-	flc = GENERATE_LOADER_FLC(1,CONFIG_LOAD, 32, 0, 1, 0);
-	*(uint32_t *)FLC_ADDR = flc;
-	flc = GENERATE_ARITH_PE_FLC(2,CONFIG_ADD, 0, 1, 0);	
-	*(uint32_t *)FLC_ADDR = flc;
-	flc = GENERATE_ARITH_PE_FLC(3,CONFIG_ADD, 0, 2, 0);	
-	*(uint32_t *)FLC_ADDR = flc;
-	flc = GENERATE_ARITH_PE_FLC(4,CONFIG_SQRT, 3, 0, 0);	
-	*(uint32_t *)FLC_ADDR = flc;
-	flc = GENERATE_STORER_FLC(5, CONFIG_STORE, 4, 0, 1, 2);	
-	*(uint32_t *)FLC_ADDR = flc;
 
 	//set 3
 
