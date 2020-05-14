@@ -44,5 +44,7 @@ int main()
 	flc = GENERATE_STORER_FLC(5, CONFIG_STORE, 4, 0, 1, 2);	
 	*(uint32_t *)FLC_ADDR = flc;
 
+	//set 3
+
 	return 0;
 }
