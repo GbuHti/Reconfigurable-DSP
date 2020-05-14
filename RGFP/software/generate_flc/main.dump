@@ -9,49 +9,66 @@ Disassembly of section .text:
    10058:	00812e23          	sw	s0,28(sp)
    1005c:	02010413          	addi	s0,sp,32
    10060:	080607b7          	lui	a5,0x8060
-   10064:	02078793          	addi	a5,a5,32 # 8060020 <__global_pointer$+0x804e718>
+   10064:	02078793          	addi	a5,a5,32 # 8060020 <__global_pointer$+0x804e6d4>
    10068:	fef42623          	sw	a5,-20(s0)
    1006c:	300007b7          	lui	a5,0x30000
    10070:	fec42703          	lw	a4,-20(s0)
-   10074:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6f8>
-   10078:	180607b7          	lui	a5,0x18060
-   1007c:	02078793          	addi	a5,a5,32 # 18060020 <__global_pointer$+0x1804e718>
-   10080:	fef42623          	sw	a5,-20(s0)
-   10084:	300007b7          	lui	a5,0x30000
-   10088:	fec42703          	lw	a4,-20(s0)
-   1008c:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6f8>
-   10090:	200087b7          	lui	a5,0x20008
+   10074:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6b4>
+   10078:	100087b7          	lui	a5,0x10008
+   1007c:	fef42623          	sw	a5,-20(s0)
+   10080:	300007b7          	lui	a5,0x30000
+   10084:	fec42703          	lw	a4,-20(s0)
+   10088:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6b4>
+   1008c:	2a1007b7          	lui	a5,0x2a100
+   10090:	00178793          	addi	a5,a5,1 # 2a100001 <__global_pointer$+0x2a0ee6b5>
    10094:	fef42623          	sw	a5,-20(s0)
    10098:	300007b7          	lui	a5,0x30000
    1009c:	fec42703          	lw	a4,-20(s0)
-   100a0:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6f8>
-   100a4:	300107b7          	lui	a5,0x30010
-   100a8:	fef42623          	sw	a5,-20(s0)
-   100ac:	300007b7          	lui	a5,0x30000
-   100b0:	fec42703          	lw	a4,-20(s0)
-   100b4:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6f8>
-   100b8:	443007b7          	lui	a5,0x44300
-   100bc:	fef42623          	sw	a5,-20(s0)
-   100c0:	300007b7          	lui	a5,0x30000
-   100c4:	fec42703          	lw	a4,-20(s0)
-   100c8:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6f8>
-   100cc:	5a4007b7          	lui	a5,0x5a400
-   100d0:	02178793          	addi	a5,a5,33 # 5a400021 <__global_pointer$+0x5a3ee719>
-   100d4:	fef42623          	sw	a5,-20(s0)
-   100d8:	300007b7          	lui	a5,0x30000
-   100dc:	fec42703          	lw	a4,-20(s0)
-   100e0:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6f8>
-   100e4:	00000793          	li	a5,0
-   100e8:	00078513          	mv	a0,a5
-   100ec:	01c12403          	lw	s0,28(sp)
-   100f0:	02010113          	addi	sp,sp,32
-   100f4:	00008067          	ret
+   100a0:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6b4>
+   100a4:	080607b7          	lui	a5,0x8060
+   100a8:	02078793          	addi	a5,a5,32 # 8060020 <__global_pointer$+0x804e6d4>
+   100ac:	fef42623          	sw	a5,-20(s0)
+   100b0:	300007b7          	lui	a5,0x30000
+   100b4:	fec42703          	lw	a4,-20(s0)
+   100b8:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6b4>
+   100bc:	180607b7          	lui	a5,0x18060
+   100c0:	02078793          	addi	a5,a5,32 # 18060020 <__global_pointer$+0x1804e6d4>
+   100c4:	fef42623          	sw	a5,-20(s0)
+   100c8:	300007b7          	lui	a5,0x30000
+   100cc:	fec42703          	lw	a4,-20(s0)
+   100d0:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6b4>
+   100d4:	200087b7          	lui	a5,0x20008
+   100d8:	fef42623          	sw	a5,-20(s0)
+   100dc:	300007b7          	lui	a5,0x30000
+   100e0:	fec42703          	lw	a4,-20(s0)
+   100e4:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6b4>
+   100e8:	300107b7          	lui	a5,0x30010
+   100ec:	fef42623          	sw	a5,-20(s0)
+   100f0:	300007b7          	lui	a5,0x30000
+   100f4:	fec42703          	lw	a4,-20(s0)
+   100f8:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6b4>
+   100fc:	443007b7          	lui	a5,0x44300
+   10100:	fef42623          	sw	a5,-20(s0)
+   10104:	300007b7          	lui	a5,0x30000
+   10108:	fec42703          	lw	a4,-20(s0)
+   1010c:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6b4>
+   10110:	5a4007b7          	lui	a5,0x5a400
+   10114:	02278793          	addi	a5,a5,34 # 5a400022 <__global_pointer$+0x5a3ee6d6>
+   10118:	fef42623          	sw	a5,-20(s0)
+   1011c:	300007b7          	lui	a5,0x30000
+   10120:	fec42703          	lw	a4,-20(s0)
+   10124:	00e7a023          	sw	a4,0(a5) # 30000000 <__global_pointer$+0x2ffee6b4>
+   10128:	00000793          	li	a5,0
+   1012c:	00078513          	mv	a0,a5
+   10130:	01c12403          	lw	s0,28(sp)
+   10134:	02010113          	addi	sp,sp,32
+   10138:	00008067          	ret
 
-000100f8 <_start>:
-   100f8:	f5dff0ef          	jal	ra,10054 <main>
-   100fc:	05d00893          	li	a7,93
-   10100:	00000513          	li	a0,0
-   10104:	00000073          	ecall
+0001013c <_start>:
+   1013c:	f19ff0ef          	jal	ra,10054 <main>
+   10140:	05d00893          	li	a7,93
+   10144:	00000513          	li	a0,0
+   10148:	00000073          	ecall
 
 Disassembly of section .comment:
 
