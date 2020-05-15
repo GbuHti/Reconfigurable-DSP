@@ -114,14 +114,14 @@ int sc_main(int argc, char **argv)
 	DeviceProxy rc_proxy("rc_proxy", sc_core::SC_ZERO_TIME, &rc);
 	RFA rfa("rfa",&rc);
 
-	Memory data_mem("data_memory", DATA_MEM_SIZE, SC_ZERO_TIME, SC_ZERO_TIME);	//32K字
+	Memory data_mem("data_memory", DATA_MEM_SIZE, clock_period, clock_period);	//32K字
 
-	DeviceProxy deviceproxy0("deviceproxy0", SC_ZERO_TIME, &data_mem);
-	DeviceProxy deviceproxy1("deviceproxy1", SC_ZERO_TIME, &data_mem);
-	DeviceProxy deviceproxy2("deviceproxy2", SC_ZERO_TIME, &data_mem);
-	DeviceProxy deviceproxy3("deviceproxy3", SC_ZERO_TIME, &data_mem);
-	DeviceProxy deviceproxy4("deviceproxy4", SC_ZERO_TIME, &data_mem);
-	DeviceProxy deviceproxy5("deviceproxy5", SC_ZERO_TIME, &data_mem);
+	DeviceProxy deviceproxy0("deviceproxy0", sc_core::SC_ZERO_TIME, &data_mem);
+	DeviceProxy deviceproxy1("deviceproxy1", sc_core::SC_ZERO_TIME, &data_mem);
+	DeviceProxy deviceproxy2("deviceproxy2", sc_core::SC_ZERO_TIME, &data_mem);
+	DeviceProxy deviceproxy3("deviceproxy3", sc_core::SC_ZERO_TIME, &data_mem);
+	DeviceProxy deviceproxy4("deviceproxy4", sc_core::SC_ZERO_TIME, &data_mem);
+	DeviceProxy deviceproxy5("deviceproxy5", sc_core::SC_ZERO_TIME, &data_mem);
 
 	rfa.isock[0].bind(deviceproxy0.tsock);
 	rfa.isock[1].bind(deviceproxy1.tsock);

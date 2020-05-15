@@ -40,6 +40,7 @@ struct CombinedMemoryInterface : public sc_core::sc_module
 {
 	typedef uint32_t addr_t;
 
+
 	tlm_utils::simple_initiator_socket<CombinedMemoryInterface> isock;
 	sc_core::sc_event mEndRequestEvent;
 	sc_core::sc_event mEndResponseEvent;
@@ -68,7 +69,7 @@ struct CombinedMemoryInterface : public sc_core::sc_module
 		{
 			T ans;
 			_do_transaction(tlm::TLM_READ_COMMAND, addr, (uint8_t*)&ans, sizeof(T));
-			wait(mEndResponseEvent); //不用等到response阶段结束，已经假设ldst的执行时间足够长
+			//不用等到response阶段结束，已经假设ldst的执行时间足够长
 			return ans;
 		}
 	//}}}
@@ -176,7 +177,6 @@ struct CombinedMemoryInterface : public sc_core::sc_module
 			std::queue<tlm::tlm_generic_payload*> m_queue;        /// queue
 	};
 	//}}}
-
 
 	tg_queue_c		m_transaction_queue;
 	unsigned int	m_active_txn_count;

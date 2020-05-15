@@ -208,6 +208,7 @@ void ReconfigController::Monitor_busy_thread()
 void ReconfigController::release_busy(unsigned id)
 {
 	m_slcs[id].busy = 0;	
+	busy_changed_event.notify(sc_core::SC_ZERO_TIME);
 }
 
 

@@ -69,7 +69,7 @@ void CombinedMemoryInterface::_do_transaction(tlm::tlm_command cmd, uint64_t add
 				assert(false && "mem_if.h: unsupported protocol, only 4 phase transaction supported");	
 			}
 	}
-
+	wait(mEndResponseEvent); 
 }
 	//}}}
 	

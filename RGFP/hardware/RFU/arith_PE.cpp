@@ -11,7 +11,7 @@ Arith_PE::Arith_PE
 , m_ID(id)
 , m_binocular(binocular)
 , m_ini_done(false)
-, m_pool_size(2)
+, m_pool_size(6)
 , m_advance_computing(0)
 , m_ready(false)
 , mSendPEQ("mSendPEQ")
@@ -134,21 +134,21 @@ void Arith_PE::execute_thread()
 			case CONFIG_ADD:
 				if(m_op_aux == 0){
 					tmp = m_srca + m_srcb;
-					compute_latency = 4*clock_period;
+					compute_latency = 6*clock_period;
 				}
 				else{
 					tmp = m_srca - m_srcb;
-					compute_latency = 4*clock_period;
+					compute_latency = 6*clock_period;
 				}
 				break;
 			case CONFIG_MUL:
 				if(m_op_aux == 0){
 					tmp = m_srca * m_srcb;
-					compute_latency = 6*clock_period;
+					compute_latency = 3*clock_period;
 				}
 				else{
 					tmp = m_srca / m_srcb;
-					compute_latency = 10*clock_period;
+					compute_latency = 14*clock_period;
 				}
 				break;
 			case CONFIG_SQRT:
