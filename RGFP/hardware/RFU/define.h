@@ -2,6 +2,7 @@
 #define DEFINE_H
 
 #include "systemc.h"
+#include "instr.h" // 将它的比特域选择宏定义包括进来
 
 const sc_core::sc_time clock_period = sc_time(10,sc_core::SC_NS);
 

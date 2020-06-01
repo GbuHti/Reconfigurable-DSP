@@ -128,7 +128,7 @@ void Loader::read_data_thread()
 			assert( !m_transaction_queue.is_empty());
 			trans_ptr = m_transaction_queue.dequeue();
 			trans_ptr->acquire();
-			sc_dt::uint64		addr	= m_addr*4096 + (m_addr_counter++)*m_addr_inc*4;
+			sc_dt::uint64		addr	= m_addr + (m_addr_counter++)*m_addr_inc*4;
 			trans_ptr->set_command(cmd);
 			trans_ptr->set_address(addr);
 			trans_ptr->set_data_length(len);
@@ -142,10 +142,10 @@ void Loader::read_data_thread()
 			{
 				case tlm::TLM_ACCEPTED:
 					wait(mEndRequestEvent); // ensure this transacton has been accepted and start next transaction
-					cout << "### " << m_ID;
-					cout << "Strating read data #" << m_data_cnt ;
-					cout << "Addr: " << setw(5) << hex << addr;
-					cout << " @ " << setw(5) << sc_time_stamp() << endl;
+					cout << setw(5) << "@ " << sc_time_stamp() << " ";
+					cout << "#Loader: " << m_ID << " ";
+					cout << "Strating read data NO." << dec << m_data_cnt << " ";
+					cout << "Addr: " << hex << addr << " " << endl;
 					break;
 				default:
 					std::cout << "ID: " << m_ID << "return_value " << return_value << std::endl;
@@ -184,9 +184,9 @@ void Loader::end_read_data_thread()
 				case tlm::TLM_COMPLETED:                        // transaction complete
 					{
 						mIssuePEQ.notify(*trans_ptr, SC_ZERO_TIME);
-						cout << "### " << m_ID;
-						cout << setw(50) << "read data back @";
-						cout << setw(5) << sc_time_stamp() << endl;
+						cout << setw(60) << "@ " << sc_time_stamp() << " ";
+						cout << "#Loader: " << m_ID << " ";
+						cout << "read data back" << endl;
 						break;
 					}
 				case tlm::TLM_ACCEPTED:
@@ -208,9 +208,9 @@ void Loader::send_thread()
 		while((trans_ptr = mIssuePEQ.get_next_transaction()) != 0)
 		{
 
-			cout << "### " << m_ID;
-			cout << setw(100) << "Starting send data @";
-			cout << setw(5) << sc_time_stamp() << endl;
+			cout << setw(100) << "@ " << sc_time_stamp() << " ";
+			cout << "#Loader: " << m_ID << " ";
+			cout << "Starting send data" << endl;
 			m_advance_computing--;
 			mCheckAdvanceComEvent.notify(SC_ZERO_TIME);
 
@@ -225,9 +225,9 @@ void Loader::send_thread()
 			assert(return_value == tlm::TLM_ACCEPTED);
 
 			wait(mCompleteEvent);
-			cout << "### " << m_ID;
-			cout << setw(150) << "End send data @";
-			cout << setw(5) << sc_time_stamp() << endl;
+			cout << setw(140) << "@ " << sc_time_stamp() << " ";
+			cout << "#Loader: " << m_ID << " ";
+			cout << "End send data" << endl;
 	
 			trans_ptr->release();
 			if( (!m_ini_done) & (m_advance_computing == 0))

@@ -91,8 +91,9 @@ void Storer::wait_data_thread()
 		}
 		
 		m_result = *(float *)trans_ptr->get_data_ptr();
-		cout << "### " << m_ID;
-		cout << "@" << sc_time_stamp() << " m_result: " << m_result << endl;
+		cout << setw(180) << "@ " << sc_time_stamp() << " ";
+		cout << "#Storer: " << m_ID << " ";
+		cout << "m_result: " << m_result << endl;
 
 		mSendDataEvent.notify(SC_ZERO_TIME);
 
@@ -118,7 +119,7 @@ void Storer::fill_buffer_thread()
 		*reinterpret_cast<float *>(data_ptr) = m_result; 
 
 		tlm::tlm_command cmd = tlm::TLM_WRITE_COMMAND;
-		sc_dt::uint64		addr = m_addr*4096 + (m_addr_counter++)*m_addr_inc*4;	
+		sc_dt::uint64		addr = m_addr + (m_addr_counter++)*m_addr_inc*4;	
 		trans_ptr->set_command(cmd);
 		trans_ptr->set_address(addr);
 		trans_ptr->set_data_length(4);
@@ -150,10 +151,10 @@ void Storer::send_data_thread()
 			delay	= SC_ZERO_TIME;
 			return_value = isock->nb_transport_fw(*trans_ptr, phase, delay);
 			assert(return_value == tlm::TLM_COMPLETED);
-			cout << "### " << m_ID;
-			cout << setw(200) << "Addr " << setfill('-')<< hex << trans_ptr->get_address();
-			cout << setw(5) << " Data " << *(float*)trans_ptr->get_data_ptr() ;
-			cout << "@ " << setw(5) << sc_time_stamp() << endl;
+			cout << setw(200) << "@ " << sc_time_stamp() << " ";
+			cout << "#Storer: " << m_ID << " ";
+			cout << "Addr: " << setfill('-') << hex << trans_ptr->get_address();
+			cout << "Data: " << *(float*)trans_ptr->get_data_ptr() << endl;
 
 			trans_ptr->release();
 			if( (!m_ini_done) & (m_advance_computing == 0))

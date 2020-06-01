@@ -16,6 +16,8 @@ class ReconfigController: public sc_core::sc_module
 {
 	private:
 		flc m_flc;
+		flc m_flc_next;
+		flc_ext m_flc_ext;
 		std::map<unsigned, slc> m_slcs;
 		std::map<unsigned, unsigned> m_translation_table;
 
@@ -33,6 +35,16 @@ class ReconfigController: public sc_core::sc_module
 
 		tlm::tlm_generic_payload m_trans;
 		uint32_t * m_data_ptr;
+
+		enum Status {
+			IDLE			= 0,
+			DIRECT_MODE		= 1,	
+			INDIRECT_MODE_0 = 2,
+			INDIRECT_MODE_1 = 3
+		};
+
+		int m_status;
+		sc_event trigger_evnet;
 		
 	public:
 		contextreg_if * m_rfa_ptr;
@@ -44,6 +56,7 @@ class ReconfigController: public sc_core::sc_module
 		void operation(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) override;
 
 		sc_core::sc_time get_device_delay(tlm::tlm_generic_payload &trans, sc_core::sc_time &delay) override;
+		void Preprocessing_thread();
 
 		void Allocate_thread();
 

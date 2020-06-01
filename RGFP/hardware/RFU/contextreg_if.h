@@ -19,9 +19,10 @@ struct flc
 	union
 	{
 		uint32_t reg;
-		struct
+		struct  
 		{
-			unsigned reserved	:14;
+			unsigned reserved	:13;
+			unsigned ext_aux	:1; // 指示下一个数据的解释方法：0:flc；1: flc_ext
 			unsigned op_aux		:1;
 			unsigned mux_b		:5;
 			unsigned mux_a		:5;
@@ -29,18 +30,18 @@ struct flc
 
 		struct
 		{
-			unsigned addr		:5;				
-			unsigned addr_inc	:7;
-			unsigned devrdser	:2;
-			unsigned knalb		:1;
-			unsigned batch_len	:10;
+			unsigned addr			:5;				
+			unsigned addr_inc		:7;
+			unsigned placeholder_0	:2;
+			unsigned placeholder_1	:1;
+			unsigned batch_len		:10;
 		};
 		
 		struct
 		{
-			unsigned blank		:25;
-			unsigned op			:3;
-			unsigned lgid		:4;
+			unsigned placeholder_3	:25;
+			unsigned op				:3;
+			unsigned lgid			:4;
 		};
 	};	
 
@@ -58,41 +59,56 @@ struct flc
 	
 };
 
+struct flc_ext
+{
+	union
+	{
+		uint32_t reg;
+		struct
+		{
+			unsigned addr_tail		:12; //地址地位部分 组合方式：{flc.addr, flc_ext.addr_tail}
+			unsigned reserved_0		:3;
+			unsigned addr_inc_head	:5;
+			unsigned batch_len_head	:5;	
+			unsigned reserved_1		:7;
+		};	
+	};
+};
 
-#define GENERATE_LOADER_SLC(lgid, op, batch_len, aux, busy, addr_inc, addr) \
-	(lgid<<27) + (op<<24) + (batch_len<<14) + (aux<<13) + (busy<<12) + (addr_inc << 5) + (addr) 
-#define GENERATE_ARITH_PE_SLC(lgid, op, mux_a, mux_b, aux, busy) \
-	(lgid<<27) + (op<<24) + (mux_a<<19) + (mux_b<<14) + (aux << 13) + (busy << 12)
-#define GENERATE_STORER_SLC(lgid, op, mux_a, aux, busy, addr_inc, addr) \
-	(lgid<<27) + (op<<24) + (mux_a<<19) + (aux<<13) + (busy<<12) + (addr_inc<<5) + (addr) 
+#define GENERATE_LOADER_SLC(lgid, op, op_aux, busy, batch_len, addr_inc, addr) \
+	(uint64_t(lgid) << 59) + (uint64_t(op) << 56) + (uint64_t(op_aux) << 55) + (uint64_t(busy) << 54) + (uint64_t(batch_len) << 39) + (uint64_t(addr_inc) << 17) + (addr)
 
+#define GENERATE_ARITH_PE_SLC(lgid, op, op_aux, busy, mux_a, mux_b) \
+	(uint64_t(lgid) << 59) + (uint64_t(op) << 56) + (uint64_t(op_aux) << 55) + (uint64_t(busy) << 54) + (uint64_t(mux_a) << 49) + (uint64_t(mux_b) << 44)
+
+#define GENERATE_STORER_SLC(lgid, op, op_aux, busy, mux_a, addr_inc, addr) \
+	(uint64_t(lgid) << 59) + (uint64_t(op) << 56) + (uint64_t(op_aux) << 55) + (uint64_t(busy) << 54) + (uint64_t(mux_a) << 49) + (uint64_t(addr_inc) << 17) + (addr)
 
 struct slc
 {
 	union
 	{
-		uint32_t	reg;
+		uint64_t reg;			//在RFU内部，位宽不必局限于32bit
 		struct
 		{
-			unsigned reserved	   :12;
-			unsigned busy	 	   :1;
-			unsigned op_aux	 	   :1;
-			unsigned mux_b	 	   :5;
-			unsigned mux_a	 	   :5;
+			uint64_t		reserved	   :44;
+			uint64_t		mux_b	 	   :5;
+			uint64_t		mux_a	 	   :5;
+			uint64_t		busy	 	   :1;
+			uint64_t		op_aux	 	   :1;
 		};
 		struct
 		{
-			unsigned addr			:5;
-			unsigned addr_inc		:7;
-			unsigned placeholder	:2;
-			unsigned batch_len		:10;	
+			uint64_t		addr			:17;
+			uint64_t		addr_inc		:12;
+			uint64_t		placeholder		:10;
+			uint64_t		batch_len		:15;	
 		};
-
 		struct
 		{
-			unsigned blank		:24;
-			unsigned op			:3;
-			unsigned phid		:5;
+			uint64_t		blank		:56;
+			uint64_t		op			:3;
+			uint64_t		phid		:5;
 		};
 	};
 

@@ -13,7 +13,9 @@ ReconfigController::ReconfigController
 )
 : sc_module(name)
 , m_dp(0)
+, m_status(IDLE)
 {
+	SC_THREAD(Preprocessing_thread);
 	SC_THREAD(Allocate_thread);
 	SC_THREAD(Dispatch_thread);
 	SC_THREAD(Monitor_busy_thread);
@@ -49,50 +51,97 @@ sc_core::sc_time ReconfigController::get_device_delay
 }
 
 
-void ReconfigController::operation
+void ReconfigController::operation // FSM
 (
  tlm::tlm_generic_payload &trans
  , sc_core::sc_time &delay 
 )
 //{{{
 {
-	std::ostringstream  msg;                      ///< log message
 	assert( trans.get_command() == tlm::TLM_WRITE_COMMAND);
-
 	unsigned char * data_ptr = trans.get_data_ptr();	
 
-	flc flc_next;
-	flc_next.reg = *(uint32_t *)data_ptr; 
+	m_flc_next.reg = *(uint32_t *)data_ptr; 
 
-	//相关性检测
-	if( flc_next.is_load() && m_flc.is_store())
-	{
-		if(flc_next.addr == m_flc.addr)
-		{
-			m_raw_slcs_num = m_translation_table[m_flc.lgid]; //使用flc的lgid在转换表中，找到phid
-
-			if(m_slcs[m_raw_slcs_num].busy )
-			{
-				begin_monitor_busy_event.notify(clock_period);
-
-				msg.str ("");
-				msg << "RAW detected at: " << sc_time_stamp();
-				REPORT_INFO(filename, __FUNCTION__, msg.str());
-
-				wait(end_monitor_busy_event);//阻塞flc的下发，直到相关(RAW)解除；保守的方案;
-				//TODO: WAW相关检测	
+	switch(m_status) //在verilog FSM中，FSM的ns由当前周期内的输入决定，在下一个时钟沿到来时，
+	{				 //打入CS中，此时，输入因保持时间仍保持不变，可以在CS状态下被采样处理
+		case IDLE:   //总的来看就是，CS更新状态-->根据CS状态在时钟沿采样输入，的过程。
+			if(m_flc_next.ext_aux){ //在systemc中模拟的就是这一过程。
+				m_status = INDIRECT_MODE_0;	
+			}else{
+				m_status = DIRECT_MODE;	
+			}	
+			break;	
+		case DIRECT_MODE:
+			if(m_flc_next.ext_aux){
+				m_status = INDIRECT_MODE_0;	
+			}else{
+				m_status = DIRECT_MODE;		
 			}
-
-		}
+			break;
+		case INDIRECT_MODE_0:
+			m_status = INDIRECT_MODE_1;
+			break;
+		case INDIRECT_MODE_1:
+			if(m_flc_next.ext_aux){
+				m_status = INDIRECT_MODE_0;	
+			}else {
+				m_status = DIRECT_MODE;	
+			}
+			break;
+		default:
+			assert(false && "Unsupported STATUS in RC");
+			break;
 	}
+	trigger_evnet.notify(SC_ZERO_TIME);
+}
 
-	//进入分配阶段
-	m_flc = flc_next;
-	begin_allocate_event.notify(sc_core::SC_ZERO_TIME);	
 
-	wait(finish_allocate_event);
-	
-	delay += sc_core::SC_ZERO_TIME;
+void ReconfigController::Preprocessing_thread()
+{
+
+	std::ostringstream  msg;                      ///< log message
+
+	while(true)
+	{
+		wait(trigger_evnet);
+		//相关性检测
+		if(m_status == DIRECT_MODE || m_status == INDIRECT_MODE_0)
+		{
+			if( m_flc_next.is_load() && m_flc.is_store())
+			{
+				if(m_flc_next.addr == m_flc.addr)
+				{
+					m_raw_slcs_num = m_translation_table[m_flc.lgid]; //使用flc的lgid在转换表中，找到phid
+					if(m_slcs[m_raw_slcs_num].busy )
+					{
+						begin_monitor_busy_event.notify(clock_period);
+
+						msg.str ("");
+						msg << "RAW detected at: " << sc_time_stamp();
+						REPORT_INFO(filename, __FUNCTION__, msg.str());
+
+						wait(end_monitor_busy_event);//阻塞flc的下发，直到相关(RAW)解除；保守的方案;
+						//TODO: WAW相关检测	
+					}
+				}
+			}
+			//进入分配阶段
+			m_flc = m_flc_next;
+			if(m_status == DIRECT_MODE)
+			{
+				begin_allocate_event.notify(sc_core::SC_ZERO_TIME);	
+				wait(finish_allocate_event); //进程阻塞，是否要改进？
+			}
+		}
+		else if(m_status == INDIRECT_MODE_1)
+		{
+			m_flc_ext.reg = m_flc_next.reg;	
+			begin_allocate_event.notify(sc_core::SC_ZERO_TIME);	
+			wait(finish_allocate_event);
+		}
+
+	}
 }
 //}}}
 
@@ -129,10 +178,10 @@ void ReconfigController::Allocate_thread()
 					switch(m_flc.op)
 					{
 						case CONFIG_LOAD:
-							it->second.addr			= m_flc.addr;
-							it->second.addr_inc		= m_flc.addr_inc;
+							it->second.addr			= (m_flc.addr<<12) + m_flc_ext.addr_tail;
+							it->second.addr_inc		= (m_flc_ext.addr_inc_head << 7) + m_flc.addr_inc;
 							it->second.op_aux		= m_flc.op_aux;		
-							it->second.batch_len	= m_flc.batch_len;
+							it->second.batch_len	= (m_flc_ext.batch_len_head << 10) + m_flc.batch_len;
 							break;
 						case CONFIG_ADD:
 						case CONFIG_MUL:
@@ -143,8 +192,8 @@ void ReconfigController::Allocate_thread()
 							it->second.mux_a		= m_translation_table[m_flc.mux_a];
 							break;
 						case CONFIG_STORE:
-							it->second.addr			= m_flc.addr;
-							it->second.addr_inc		= m_flc.addr_inc;
+							it->second.addr			= (m_flc.addr << 12) + m_flc_ext.addr_tail;
+							it->second.addr_inc		= (m_flc_ext.addr_inc_head << 7) + m_flc.addr_inc;
 							it->second.mux_a		= m_translation_table[m_flc.mux_a];
 							break;
 						default:
