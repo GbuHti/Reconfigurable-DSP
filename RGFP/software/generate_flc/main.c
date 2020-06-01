@@ -55,11 +55,11 @@ int main()
 	//dot product
 	flc = GENERATE_LOADER_FLC(0,CONFIG_LOAD, 128, 0, 1, 1, 512*4);
 	*(uint32_t *)FLC_ADDR = flc;
-	flc = GENERATE_FLC_EXT(0,0,512);
+	flc = GENERATE_FLC_EXT(0,0,512*4);
 	*(uint32_t *)FLC_ADDR = flc;
 	flc = GENERATE_LOADER_FLC(1,CONFIG_LOAD, 128, 0, 1, 1, 256*4);
 	*(uint32_t *)FLC_ADDR = flc;
-	flc = GENERATE_FLC_EXT(0,0,256);
+	flc = GENERATE_FLC_EXT(0,0,256*4);
 	*(uint32_t *)FLC_ADDR = flc;
 	flc = GENERATE_ARITH_PE_FLC(2,CONFIG_MUL, 0, 1, 0);	
 	*(uint32_t *)FLC_ADDR = flc;

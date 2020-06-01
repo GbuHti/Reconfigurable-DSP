@@ -1,0 +1,30 @@
+$11 = {
+  <tlm::tlm_mm_interface> = {
+    _vptr.tlm_mm_interface = [34m0x429a08[m <[33mvtable for traffic_generator::tg_queue_c[m+16>
+  }, 
+  members of traffic_generator::tg_queue_c: 
+  m_queue = {
+    c = {
+      <std::_Deque_base<tlm::tlm_generic_payload*, std::allocator<tlm::tlm_generic_payload*> >> = {
+        _M_impl = {
+          <std::allocator<tlm::tlm_generic_payload*>> = {
+            <__gnu_cxx::new_allocator<tlm::tlm_generic_payload*>> = {<No data fields>}, <No data fields>}, 
+          members of std::_Deque_base<tlm::tlm_generic_payload*, std::allocator<tlm::tlm_generic_payload*> >::_Deque_impl: 
+          _M_map = [34m0x675c70[m, 
+          _M_map_size = 8, 
+          _M_start = {
+            _M_cur = [34m0x676870[m, 
+            _M_first = [34m0x676870[m, 
+            _M_last = [34m0x676a70[m, 
+            _M_node = [34m0x675c88[m
+          }, 
+          _M_finish = {
+            _M_cur = [34m0x676880[m, 
+            _M_first = [34m0x676870[m, 
+            _M_last = [34m0x676a70[m, 
+            _M_node = [34m0x675c88[m
+          }
+        }
+      }, <No data fields>}
+  }
+}

@@ -51,6 +51,7 @@ select_initiator::select_initiator                  // constructor
 , m_ID            (ID)                              /// init initiator ID
 , m_end_rsp_delay (end_rsp_delay)                   /// init end response delay
 , m_enable_target_tracking (true)                   /// init tracking mode
+//{{{
 {
   // bind initiator to the export
   initiator_socket (*this);
@@ -63,13 +64,14 @@ select_initiator::select_initiator                  // constructor
     sensitive << m_send_end_rsp_PEQ.get_event();
     dont_initialize();
 }
-
+//}}}
 //=============================================================================
 //
 //  Initiator thread
 //
 //=============================================================================
 void select_initiator::initiator_thread(void)   // initiator thread
+//{{{
 {
   tlm::tlm_generic_payload *transaction_ptr;    // transaction pointer
 
@@ -109,7 +111,7 @@ void select_initiator::initiator_thread(void)   // initiator thread
         << report::print(phase) << ", "
         << delay << ")" << endl;
 
-    switch (return_value)
+    switch (return_value) // 第一次调用前向路径的返回值
     {
 //-----------------------------------------------------------------------------
 //  The target returned COMPLETED this is a single phase transaction
@@ -142,12 +144,12 @@ void select_initiator::initiator_thread(void)   // initiator thread
 
           if (m_enable_target_tracking) {
             m_waiting_bw_path_map.insert(make_pair(transaction_ptr
-                                                  ,Rcved_UPDATED_enum
+                                                  ,Rcved_UPDATED_enum //nb_transport()的返回值
                                                   ));
           }
           else {
-            m_waiting_bw_path_map.insert(make_pair(transaction_ptr
-                                                  ,Rcved_END_REQ_enum
+            m_waiting_bw_path_map.insert(make_pair(transaction_ptr 
+                                                  ,Rcved_END_REQ_enum // nb_transport()被修改的phase
                                                   ));
           }
             wait(delay);                    // wait the annotated delay
@@ -211,7 +213,7 @@ void select_initiator::initiator_thread(void)   // initiator thread
     } // end case
   } // end while true
 } // end initiator_thread
-
+//}}}
 
 
 //=============================================================================
@@ -226,7 +228,7 @@ select_initiator::nb_transport_bw                       // inbound nb_transport_
  , tlm::tlm_phase&            phase                     // tlm phase
  , sc_time&                   delay                     // delay
  )
-
+//{{{
 {
   tlm::tlm_sync_enum        status = tlm::TLM_COMPLETED;  // return status reject by default
   std::ostringstream        msg;                          // log message
@@ -238,7 +240,7 @@ select_initiator::nb_transport_bw                       // inbound nb_transport_
 
   transaction_pair  = m_waiting_bw_path_map.find(&transaction_ref);
 
-  if (transaction_pair == m_waiting_bw_path_map.end() ) {
+  if (transaction_pair == m_waiting_bw_path_map.end() ) { //Initiator 发出的transaction都有记录，后向路径发起的传输要能与记录中的其中一个表项对上。
 
 //=============================================================================
 //  The transaction pointer used by the backward path call does not belong
@@ -273,14 +275,14 @@ select_initiator::nb_transport_bw                       // inbound nb_transport_
 //-----------------------------------------------------------------------------
     case tlm::END_REQ:
       {
-        if (transaction_pair->second == Rcved_ACCEPTED_enum) {
+        if (transaction_pair->second == Rcved_ACCEPTED_enum) { // 为什么要有这样一个确认？
           msg << "      "
               << "Initiator: " << m_ID
               << " transaction waiting begin-response on backward path"
               << endl;
 
-          m_enable_next_request_event.notify(SC_ZERO_TIME);
-          transaction_pair->second = Rcved_END_REQ_enum;
+          m_enable_next_request_event.notify(SC_ZERO_TIME); //只有当发出的请求得到应答，Initiator才能发起下一次传输(Initiator_thread 继续那个循环）。
+          transaction_pair->second = Rcved_END_REQ_enum; //更新记录中表项的状态。
           status = tlm::TLM_ACCEPTED;
 
           msg << "      "
@@ -301,8 +303,8 @@ select_initiator::nb_transport_bw                       // inbound nb_transport_
 
 //-----------------------------------------------------------------------------
 //  Target has responded with BEGIN_RESP
-//    The style could be 2,3 or 4 phase
-//	  Decode the previous tracking enum
+//    The style could be 2,3 or 4 phase 
+//	  Decode the previous tracking enum // 解释了上面的疑问，这个tracking enum的作用
 //-----------------------------------------------------------------------------
     case tlm::BEGIN_RESP:
       {
@@ -343,7 +345,7 @@ select_initiator::nb_transport_bw                       // inbound nb_transport_
 
           msg << "      "
               << "Initiator: " << m_ID
-              << " target omitted end-request timing-point returning ACCEPTED ";
+              << " target omitted end-request timing-point returning ACCEPTED "; //Target可以忽略应答
           REPORT_INFO (filename, __FUNCTION__, msg.str() );
 
           m_waiting_bw_path_map.erase(&transaction_ref);    // erase from map
@@ -359,7 +361,7 @@ select_initiator::nb_transport_bw                       // inbound nb_transport_
 //-----------------------------------------------------------------------------
 // Respond to begin-response - 4 phase style
 //-----------------------------------------------------------------------------
-        else if ( transaction_pair->second == Rcved_END_REQ_enum){
+        else if ( transaction_pair->second == Rcved_END_REQ_enum){ //由上一个case更新后的状态，表示这是4节拍中的第3拍
           msg << "      "
               << "Initiator: " << m_ID
               << " transaction moved to send-end-response PEQ "
@@ -416,7 +418,7 @@ select_initiator::nb_transport_bw                       // inbound nb_transport_
   }
   return status;
 } // end backward nb transport
-
+//}}}
 
 
 //=============================================================================
@@ -429,6 +431,7 @@ select_initiator::nb_transport_bw                       // inbound nb_transport_
 //
 //=============================================================================
 void select_initiator::send_end_rsp_method(void)    // send end response method
+//{{{
 {
   tlm::tlm_generic_payload* transaction_ptr;
   std::ostringstream        msg;                    // log message
@@ -487,7 +490,7 @@ void select_initiator::send_end_rsp_method(void)    // send end response method
 
   return;
 } // end send_end_rsp_method
-
+//}}}
 
 //=============================================================================
 ///  @fn select_initiator::invalidate_direct_mem_ptr
@@ -499,6 +502,7 @@ void select_initiator::invalidate_direct_mem_ptr  // invalidate_direct_mem_ptr
 ( sc_dt::uint64 start_range                       // start range
 , sc_dt::uint64 end_range                         // end range
 )
+//{{{
 {
   std::ostringstream       msg;                   // log message
 
@@ -506,3 +510,4 @@ void select_initiator::invalidate_direct_mem_ptr  // invalidate_direct_mem_ptr
   msg << m_ID << " invalidate_direct_mem_ptr: not implemented";
   REPORT_INFO(filename, __FUNCTION__, msg.str());
 }
+//}}}

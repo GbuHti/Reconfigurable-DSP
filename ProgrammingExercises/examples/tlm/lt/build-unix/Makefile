@@ -18,6 +18,7 @@ OBJS = \
 	at_target_1_phase.o \
 	lt_target.o \
 	initiator_top.o \
+	monitor.o \
 	memory.o \
 	report.o \
 	traffic_generator.o

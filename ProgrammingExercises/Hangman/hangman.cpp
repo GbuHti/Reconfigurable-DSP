@@ -76,7 +76,7 @@ int main()
 			{
 				if(badchars.length() > 0)
 					cout << "Bad choices: " << badchars << endl;
-				cout << guesses << "bad guesses left\n";	
+				cout << guesses << " bad guesses left\n";	
 			}
 			cout << endl;
 		}

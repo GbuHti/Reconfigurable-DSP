@@ -90,10 +90,14 @@ lt_top::lt_top
     , 0x0000000000000000                    // fitst base address
     , 0x0000000010000000                    // second base address
     )
+  , m_monitor
+	( "m_monitor"
+	)
 {
   /// bind TLM2 initiators to TLM2 target sockets on SimpleBus
   m_initiator_1.top_initiator_socket(m_bus.target_socket[0]);
   m_initiator_2.top_initiator_socket(m_bus.target_socket[1]);
+  m_monitor.monitor_isocket(m_bus.target_socket[2]);
 
   /// bind TLM2 targets to TLM2 initiator sockets on SimpleBus
   m_bus.initiator_socket[0](m_at_and_lt_target_1.m_memory_socket);

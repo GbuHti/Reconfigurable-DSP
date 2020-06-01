@@ -86,7 +86,7 @@ example_system_top::example_system_top
     , 102                                   /// 2nd Initiator ID is 102
     , 0x0000000000000200                    // fitst base address
     , 0x0000000010000200                    // second base address
-    , 2                                     // active transactions
+    , 2                                    // active transactions
     )
 {
   /// bind TLM2 initiators to TLM2 target sockets on SimpleBus

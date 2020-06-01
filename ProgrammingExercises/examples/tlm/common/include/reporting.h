@@ -118,7 +118,7 @@ RDG_EXTERN ostringstream reporting_os;                  ///< reporting output st
   { \
     routine_string.erase(0, colon_location + 2); \
   } \
-  os << sc_core::sc_time_stamp() << " - " << routine_string << endl << "      " << text; \
+  os << sc_core::sc_time_stamp() << " -yzb " << routine_string << endl << "      " << text; \
   if (tlm_enable_info_reporting) \
   { \
     SC_REPORT_INFO(source, os.str().c_str()); \

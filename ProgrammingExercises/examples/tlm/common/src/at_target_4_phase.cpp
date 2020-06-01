@@ -81,6 +81,7 @@ at_target_4_phase::at_target_4_phase
   , m_memory_width                // memory width (bytes)      
   )
 {
+//{{{
   /// Bind the socket's export to the interface
   m_memory_socket(*this);
 
@@ -94,7 +95,7 @@ at_target_4_phase::at_target_4_phase
   sensitive << m_response_PEQ.get_event();
   dont_initialize();
 }
-
+//}}}
 //==============================================================================
 //  b_transport implementation calls from initiators 
 //
@@ -104,6 +105,7 @@ at_target_4_phase::b_transport
 ( tlm::tlm_generic_payload  &payload                // ref to  Generic Payload 
 , sc_core::sc_time          &delay_time             // delay time 
 )
+//{{{
 {
   std::ostringstream  msg;                          // log message
   msg.str("");
@@ -123,7 +125,7 @@ at_target_4_phase::b_transport
   
   return;     
 }
-
+//}}}
 //=============================================================================
 // nb_transport_fw implementation calls from initiators 
 //
@@ -133,6 +135,7 @@ at_target_4_phase::nb_transport_fw                  // non-blocking transport ca
 ( tlm::tlm_generic_payload &gp                      // generic payoad pointer
 , tlm::tlm_phase           &phase                   // transaction phase
 , sc_core::sc_time         &delay_time)             // time it should take for transport
+//{{{
 {
   std::ostringstream  msg;                          // log message
   
@@ -223,6 +226,7 @@ at_target_4_phase::nb_transport_fw                  // non-blocking transport ca
   
   return return_status;  
 } //end nb_transport_fw
+//}}}
 
 //=============================================================================
 /// end_request  method function implementation
@@ -231,6 +235,7 @@ at_target_4_phase::nb_transport_fw                  // non-blocking transport ca
 //
 //=============================================================================
 void at_target_4_phase::end_request_method (void)
+//{{{
 {
   std::ostringstream        msg;                    // log message
   tlm::tlm_generic_payload  *transaction_ptr;       // generic payload pointer
@@ -323,6 +328,7 @@ void at_target_4_phase::end_request_method (void)
     }// end switch
   } // end while
 } //end end_request_method
+//}}}
 
 //=============================================================================
 /// begin_response method function implementation
@@ -331,6 +337,7 @@ void at_target_4_phase::end_request_method (void)
 //
 //=============================================================================
 void at_target_4_phase::begin_response_method (void)
+//{{{
 {
   std::ostringstream        msg;                    // log message
   tlm::tlm_generic_payload  *transaction_ptr;       // generic payload pointer
@@ -423,6 +430,7 @@ void at_target_4_phase::begin_response_method (void)
     }
   } // end while
 } //end begin_response_queue_active
+//}}}
 
 //==============================================================================
 // Methods Required by Target Interface but not Implemented for this Example
@@ -433,6 +441,7 @@ at_target_4_phase::get_direct_mem_ptr
   (tlm::tlm_generic_payload   &payload,             ///< address + extensions
    tlm::tlm_dmi               &data                 ///< dmi data
   )
+//{{{
 {
   // THis is not a fatal, print first as warning
   std::ostringstream  msg;
@@ -447,12 +456,13 @@ at_target_4_phase::get_direct_mem_ptr
 	      
   return false;
 }
-
+//}}}
 // Not implemented for this example but required by interface
 unsigned int                                        // result
 at_target_4_phase::transport_dbg            
 ( tlm::tlm_generic_payload   &payload               ///< debug payload
 )
+//{{{
 {
   std::ostringstream  msg; 
   msg.str("");
@@ -466,3 +476,4 @@ at_target_4_phase::transport_dbg
               
   return false;
 }
+//}}}

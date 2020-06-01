@@ -102,7 +102,7 @@ public:
     decodeSocket = &initiator_socket[portId];
     trans.set_address(trans.get_address() & getAddressMask(portId));
 
-    (*decodeSocket)->b_transport(trans, t);
+    (*decodeSocket)->b_transport(trans, t);  // 在前向路径方向做一次转发
   }
 
   unsigned int transportDebug(int SocketId,
@@ -184,7 +184,7 @@ public:
     }
     
     for (unsigned int i = 0; i < NR_OF_INITIATORS; ++i) {
-      (target_socket[i])->invalidate_direct_mem_ptr(start_range, end_range);
+      (target_socket[i])->invalidate_direct_mem_ptr(start_range, end_range); // 在后向路径方向做一次转发
     }
   }
 

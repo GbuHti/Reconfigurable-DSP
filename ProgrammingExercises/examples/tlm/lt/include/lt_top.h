@@ -39,6 +39,7 @@
 #include "at_target_1_phase.h"                // at and lt memory target
 #include "initiator_top.h"                    // processor abstraction initiator
 #include "models/SimpleBusLT.h"               // Bus/Router Implementation
+#include "monitor.h"
 
 /// Top wrapper Module
 class lt_top                                  // Declare SC_MODULE
@@ -51,10 +52,12 @@ public:
 
 //Member Variables  ===========================================================
   private:
-  SimpleBusLT<2, 2>       m_bus;                  ///< simple bus
+  SimpleBusLT<3, 2>       m_bus;                  ///< simple bus
   at_target_1_phase       m_at_and_lt_target_1;   ///< combined blocking/non-blocking
   lt_target               m_lt_target_2;          ///< blocking with convenienece socket
   initiator_top           m_initiator_1;          ///< instance 1 initiator
   initiator_top           m_initiator_2;          ///< instance 2 initiator
+  monitor				  m_monitor;
+  
 };
 #endif /* __LT_TOP_H__ */

@@ -1,0 +1,1699 @@
+
+Info: traffic_generator.cpp: 0 s -yzb traffic_generator_thread
+      Initiator: 101 Starting Traffic
+
+Info: traffic_generator.cpp: 0 s -yzb traffic_generator_thread
+      Initiator: 102 Starting Traffic
+
+Info: lt_initiator.cpp: 0 s -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 0 s -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000000 Data: 0x00000000
+
+Info: at_target_1_phase.cpp: 0 s -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 0 s -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 0 s -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 0 s -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000000 Data: 0x00000000
+
+Info: at_target_1_phase.cpp: 0 s -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 0 s -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 90 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 90 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000004 Data: 0x00000004
+
+Info: at_target_1_phase.cpp: 90 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 90 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 90 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 90 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000004 Data: 0x00000004
+
+Info: at_target_1_phase.cpp: 90 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 90 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: monitor.cpp: 170 ns -yzb monitor_thread
+      Monitor------> Starting
+b_transport(GP, 0 s)
+
+Info: memory.cpp: 170 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000004 Data: 0x00000004
+
+Info: at_target_1_phase.cpp: 170 ns -yzb b_transport
+      Target: 201 returned delay of 0 s + 20 ns + 100 ns = 120 ns
+
+Info: monitor.cpp: 170 ns -yzb monitor_thread
+      Monitor======> Ending
+b_transport returned delay = 120 ns
+Read data = 
+
+Info: lt_initiator.cpp: 180 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 180 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000008 Data: 0x00000008
+
+Info: at_target_1_phase.cpp: 180 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 180 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 180 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 180 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000008 Data: 0x00000008
+
+Info: at_target_1_phase.cpp: 180 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 180 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: monitor.cpp: 190 ns -yzb monitor_thread
+      Delaying........Read data = 
+
+Info: lt_initiator.cpp: 270 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 270 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000000C Data: 0x0000000C
+
+Info: at_target_1_phase.cpp: 270 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 270 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 270 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 270 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000000C Data: 0x0000000C
+
+Info: at_target_1_phase.cpp: 270 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 270 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 360 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 360 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000010 Data: 0x00000010
+
+Info: at_target_1_phase.cpp: 360 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 360 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 360 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 360 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000010 Data: 0x00000010
+
+Info: at_target_1_phase.cpp: 360 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 360 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 450 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 450 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000014 Data: 0x00000014
+
+Info: at_target_1_phase.cpp: 450 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 450 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 450 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 450 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000014 Data: 0x00000014
+
+Info: at_target_1_phase.cpp: 450 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 450 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 540 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 540 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000018 Data: 0x00000018
+
+Info: at_target_1_phase.cpp: 540 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 540 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 540 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 540 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000018 Data: 0x00000018
+
+Info: at_target_1_phase.cpp: 540 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 540 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 630 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 630 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000001C Data: 0x0000001C
+
+Info: at_target_1_phase.cpp: 630 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 630 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 630 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 630 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000001C Data: 0x0000001C
+
+Info: at_target_1_phase.cpp: 630 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 630 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 720 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 720 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000020 Data: 0x00000020
+
+Info: at_target_1_phase.cpp: 720 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 720 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 720 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 720 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000020 Data: 0x00000020
+
+Info: at_target_1_phase.cpp: 720 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 720 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 810 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 810 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000024 Data: 0x00000024
+
+Info: at_target_1_phase.cpp: 810 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 810 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 810 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 810 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000024 Data: 0x00000024
+
+Info: at_target_1_phase.cpp: 810 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 810 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 900 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 900 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000028 Data: 0x00000028
+
+Info: at_target_1_phase.cpp: 900 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 900 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 900 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 900 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000028 Data: 0x00000028
+
+Info: at_target_1_phase.cpp: 900 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 900 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 990 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 990 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000002C Data: 0x0000002C
+
+Info: at_target_1_phase.cpp: 990 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 990 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 990 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 990 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000002C Data: 0x0000002C
+
+Info: at_target_1_phase.cpp: 990 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 990 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 1080 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1080 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000030 Data: 0x00000030
+
+Info: at_target_1_phase.cpp: 1080 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 1080 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 1080 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1080 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000030 Data: 0x00000030
+
+Info: at_target_1_phase.cpp: 1080 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 1080 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 1170 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1170 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000034 Data: 0x00000034
+
+Info: at_target_1_phase.cpp: 1170 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 1170 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 1170 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1170 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000034 Data: 0x00000034
+
+Info: at_target_1_phase.cpp: 1170 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 1170 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 1260 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1260 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000038 Data: 0x00000038
+
+Info: at_target_1_phase.cpp: 1260 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 1260 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 1260 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1260 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000038 Data: 0x00000038
+
+Info: at_target_1_phase.cpp: 1260 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 1260 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 1350 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1350 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000003C Data: 0x0000003C
+
+Info: at_target_1_phase.cpp: 1350 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 1350 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 1350 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1350 ns -yzb print
+      ID: 201 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000003C Data: 0x0000003C
+
+Info: at_target_1_phase.cpp: 1350 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 60 ns = 90 ns
+
+Info: lt_initiator.cpp: 1350 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 90 ns
+
+Info: lt_initiator.cpp: 1440 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1440 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000000 Data: 0x00000000
+
+Info: at_target_1_phase.cpp: 1440 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 1440 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 1440 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1440 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000000 Data: 0x00000000
+
+Info: at_target_1_phase.cpp: 1440 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 1440 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 1570 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1570 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000004 Data: 0x00000004
+
+Info: at_target_1_phase.cpp: 1570 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 1570 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 1570 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1570 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000004 Data: 0x00000004
+
+Info: at_target_1_phase.cpp: 1570 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 1570 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 1700 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1700 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000008 Data: 0x00000008
+
+Info: at_target_1_phase.cpp: 1700 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 1700 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 1700 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1700 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000008 Data: 0x00000008
+
+Info: at_target_1_phase.cpp: 1700 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 1700 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 1830 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1830 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x000000000000000C Data: 0x0000000C
+
+Info: at_target_1_phase.cpp: 1830 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 1830 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 1830 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1830 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x000000000000000C Data: 0x0000000C
+
+Info: at_target_1_phase.cpp: 1830 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 1830 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 1960 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1960 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000010 Data: 0x00000010
+
+Info: at_target_1_phase.cpp: 1960 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 1960 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 1960 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 1960 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000010 Data: 0x00000010
+
+Info: at_target_1_phase.cpp: 1960 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 1960 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2090 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2090 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000014 Data: 0x00000014
+
+Info: at_target_1_phase.cpp: 2090 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2090 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2090 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2090 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000014 Data: 0x00000014
+
+Info: at_target_1_phase.cpp: 2090 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2090 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2220 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2220 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000018 Data: 0x00000018
+
+Info: at_target_1_phase.cpp: 2220 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2220 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2220 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2220 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000018 Data: 0x00000018
+
+Info: at_target_1_phase.cpp: 2220 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2220 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2350 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2350 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x000000000000001C Data: 0x0000001C
+
+Info: at_target_1_phase.cpp: 2350 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2350 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2350 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2350 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x000000000000001C Data: 0x0000001C
+
+Info: at_target_1_phase.cpp: 2350 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2350 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2480 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2480 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000020 Data: 0x00000020
+
+Info: at_target_1_phase.cpp: 2480 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2480 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2480 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2480 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000020 Data: 0x00000020
+
+Info: at_target_1_phase.cpp: 2480 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2480 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2610 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2610 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000024 Data: 0x00000024
+
+Info: at_target_1_phase.cpp: 2610 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2610 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2610 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2610 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000024 Data: 0x00000024
+
+Info: at_target_1_phase.cpp: 2610 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2610 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2740 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2740 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000028 Data: 0x00000028
+
+Info: at_target_1_phase.cpp: 2740 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2740 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2740 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2740 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000028 Data: 0x00000028
+
+Info: at_target_1_phase.cpp: 2740 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2740 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2870 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2870 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x000000000000002C Data: 0x0000002C
+
+Info: at_target_1_phase.cpp: 2870 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2870 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 2870 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 2870 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x000000000000002C Data: 0x0000002C
+
+Info: at_target_1_phase.cpp: 2870 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 2870 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 3 us -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3 us -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000030 Data: 0x00000030
+
+Info: at_target_1_phase.cpp: 3 us -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 3 us -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 3 us -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3 us -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000030 Data: 0x00000030
+
+Info: at_target_1_phase.cpp: 3 us -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 3 us -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 3130 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3130 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000034 Data: 0x00000034
+
+Info: at_target_1_phase.cpp: 3130 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 3130 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 3130 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3130 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000034 Data: 0x00000034
+
+Info: at_target_1_phase.cpp: 3130 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 3130 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 3260 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3260 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000038 Data: 0x00000038
+
+Info: at_target_1_phase.cpp: 3260 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 3260 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 3260 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3260 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x0000000000000038 Data: 0x00000038
+
+Info: at_target_1_phase.cpp: 3260 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 3260 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 3390 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3390 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x000000000000003C Data: 0x0000003C
+
+Info: at_target_1_phase.cpp: 3390 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 3390 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 3390 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3390 ns -yzb print
+      ID: 201 COMMAND: READ Length: 04
+      Addr: 0x000000000000003C Data: 0x0000003C
+
+Info: at_target_1_phase.cpp: 3390 ns -yzb b_transport
+      Target: 201 returned delay of 10 ns + 20 ns + 100 ns = 130 ns
+
+Info: lt_initiator.cpp: 3390 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 130 ns
+
+Info: lt_initiator.cpp: 3520 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3520 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000000 Data: 0xEFFFFFFF
+
+Info: lt_target.cpp: 3520 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3520 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3520 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3520 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000000 Data: 0xEFFFFFFF
+
+Info: lt_target.cpp: 3520 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3520 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3570 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3570 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000004 Data: 0xEFFFFFFB
+
+Info: lt_target.cpp: 3570 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3570 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3570 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3570 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000004 Data: 0xEFFFFFFB
+
+Info: lt_target.cpp: 3570 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3570 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3620 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3620 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000008 Data: 0xEFFFFFF7
+
+Info: lt_target.cpp: 3620 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3620 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3620 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3620 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000008 Data: 0xEFFFFFF7
+
+Info: lt_target.cpp: 3620 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3620 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3670 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3670 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000000C Data: 0xEFFFFFF3
+
+Info: lt_target.cpp: 3670 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3670 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3670 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3670 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000000C Data: 0xEFFFFFF3
+
+Info: lt_target.cpp: 3670 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3670 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3720 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3720 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000010 Data: 0xEFFFFFEF
+
+Info: lt_target.cpp: 3720 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3720 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3720 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3720 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000010 Data: 0xEFFFFFEF
+
+Info: lt_target.cpp: 3720 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3720 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3770 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3770 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000014 Data: 0xEFFFFFEB
+
+Info: lt_target.cpp: 3770 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3770 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3770 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3770 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000014 Data: 0xEFFFFFEB
+
+Info: lt_target.cpp: 3770 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3770 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3820 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3820 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000018 Data: 0xEFFFFFE7
+
+Info: lt_target.cpp: 3820 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3820 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3820 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3820 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000018 Data: 0xEFFFFFE7
+
+Info: lt_target.cpp: 3820 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3820 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3870 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3870 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000001C Data: 0xEFFFFFE3
+
+Info: lt_target.cpp: 3870 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3870 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3870 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3870 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000001C Data: 0xEFFFFFE3
+
+Info: lt_target.cpp: 3870 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3870 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3920 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3920 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000020 Data: 0xEFFFFFDF
+
+Info: lt_target.cpp: 3920 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3920 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3920 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3920 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000020 Data: 0xEFFFFFDF
+
+Info: lt_target.cpp: 3920 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3920 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3970 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3970 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000024 Data: 0xEFFFFFDB
+
+Info: lt_target.cpp: 3970 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3970 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 3970 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 3970 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000024 Data: 0xEFFFFFDB
+
+Info: lt_target.cpp: 3970 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 3970 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 4020 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4020 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000028 Data: 0xEFFFFFD7
+
+Info: lt_target.cpp: 4020 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 4020 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 4020 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4020 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000028 Data: 0xEFFFFFD7
+
+Info: lt_target.cpp: 4020 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 4020 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 4070 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4070 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000002C Data: 0xEFFFFFD3
+
+Info: lt_target.cpp: 4070 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 4070 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 4070 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4070 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000002C Data: 0xEFFFFFD3
+
+Info: lt_target.cpp: 4070 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 4070 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 4120 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4120 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000030 Data: 0xEFFFFFCF
+
+Info: lt_target.cpp: 4120 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 4120 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 4120 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4120 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000030 Data: 0xEFFFFFCF
+
+Info: lt_target.cpp: 4120 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 4120 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 4170 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4170 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000034 Data: 0xEFFFFFCB
+
+Info: lt_target.cpp: 4170 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 4170 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 4170 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4170 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000034 Data: 0xEFFFFFCB
+
+Info: lt_target.cpp: 4170 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 4170 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 4220 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4220 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000038 Data: 0xEFFFFFC7
+
+Info: lt_target.cpp: 4220 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 4220 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 4220 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4220 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x0000000000000038 Data: 0xEFFFFFC7
+
+Info: lt_target.cpp: 4220 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 4220 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 4270 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4270 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000003C Data: 0xEFFFFFC3
+
+Info: lt_target.cpp: 4270 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 4270 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 4270 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4270 ns -yzb print
+      ID: 202 COMMAND: WRITE Length: 04
+      Addr: 0x000000000000003C Data: 0xEFFFFFC3
+
+Info: lt_target.cpp: 4270 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 30 ns = 50 ns
+
+Info: lt_initiator.cpp: 4270 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 50 ns
+
+Info: lt_initiator.cpp: 4320 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4320 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000000 Data: 0xEFFFFFFF
+
+Info: lt_target.cpp: 4320 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4320 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4320 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4320 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000000 Data: 0xEFFFFFFF
+
+Info: lt_target.cpp: 4320 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4320 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4390 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4390 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000004 Data: 0xEFFFFFFB
+
+Info: lt_target.cpp: 4390 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4390 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4390 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4390 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000004 Data: 0xEFFFFFFB
+
+Info: lt_target.cpp: 4390 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4390 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4460 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4460 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000008 Data: 0xEFFFFFF7
+
+Info: lt_target.cpp: 4460 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4460 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4460 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4460 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000008 Data: 0xEFFFFFF7
+
+Info: lt_target.cpp: 4460 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4460 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4530 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4530 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x000000000000000C Data: 0xEFFFFFF3
+
+Info: lt_target.cpp: 4530 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4530 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4530 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4530 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x000000000000000C Data: 0xEFFFFFF3
+
+Info: lt_target.cpp: 4530 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4530 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4600 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4600 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000010 Data: 0xEFFFFFEF
+
+Info: lt_target.cpp: 4600 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4600 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4600 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4600 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000010 Data: 0xEFFFFFEF
+
+Info: lt_target.cpp: 4600 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4600 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4670 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4670 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000014 Data: 0xEFFFFFEB
+
+Info: lt_target.cpp: 4670 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4670 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4670 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4670 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000014 Data: 0xEFFFFFEB
+
+Info: lt_target.cpp: 4670 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4670 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4740 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4740 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000018 Data: 0xEFFFFFE7
+
+Info: lt_target.cpp: 4740 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4740 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4740 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4740 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000018 Data: 0xEFFFFFE7
+
+Info: lt_target.cpp: 4740 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4740 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4810 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4810 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x000000000000001C Data: 0xEFFFFFE3
+
+Info: lt_target.cpp: 4810 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4810 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4810 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4810 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x000000000000001C Data: 0xEFFFFFE3
+
+Info: lt_target.cpp: 4810 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4810 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4880 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4880 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000020 Data: 0xEFFFFFDF
+
+Info: lt_target.cpp: 4880 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4880 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4880 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4880 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000020 Data: 0xEFFFFFDF
+
+Info: lt_target.cpp: 4880 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4880 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4950 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4950 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000024 Data: 0xEFFFFFDB
+
+Info: lt_target.cpp: 4950 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4950 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 4950 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 4950 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000024 Data: 0xEFFFFFDB
+
+Info: lt_target.cpp: 4950 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 4950 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 5020 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 5020 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000028 Data: 0xEFFFFFD7
+
+Info: lt_target.cpp: 5020 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 5020 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 5020 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 5020 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000028 Data: 0xEFFFFFD7
+
+Info: lt_target.cpp: 5020 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 5020 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 5090 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 5090 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x000000000000002C Data: 0xEFFFFFD3
+
+Info: lt_target.cpp: 5090 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 5090 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 5090 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 5090 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x000000000000002C Data: 0xEFFFFFD3
+
+Info: lt_target.cpp: 5090 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 5090 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 5160 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 5160 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000030 Data: 0xEFFFFFCF
+
+Info: lt_target.cpp: 5160 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 5160 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 5160 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 5160 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000030 Data: 0xEFFFFFCF
+
+Info: lt_target.cpp: 5160 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 5160 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 5230 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 5230 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000034 Data: 0xEFFFFFCB
+
+Info: lt_target.cpp: 5230 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 5230 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 5230 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 5230 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000034 Data: 0xEFFFFFCB
+
+Info: lt_target.cpp: 5230 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 5230 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 5300 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 5300 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000038 Data: 0xEFFFFFC7
+
+Info: lt_target.cpp: 5300 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 5300 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 5300 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 5300 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x0000000000000038 Data: 0xEFFFFFC7
+
+Info: lt_target.cpp: 5300 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 5300 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 5370 ns -yzb initiator_thread
+      Initiator: 101 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 5370 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x000000000000003C Data: 0xEFFFFFC3
+
+Info: lt_target.cpp: 5370 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 5370 ns -yzb initiator_thread
+      Initiator: 101 b_transport returned delay = 70 ns
+
+Info: lt_initiator.cpp: 5370 ns -yzb initiator_thread
+      Initiator: 102 b_transport(GP, 10 ns)
+
+Info: memory.cpp: 5370 ns -yzb print
+      ID: 202 COMMAND: READ Length: 04
+      Addr: 0x000000000000003C Data: 0xEFFFFFC3
+
+Info: lt_target.cpp: 5370 ns -yzb custom_b_transport
+      Target: 202 returned delay of 10 ns + 10 ns + 50 ns = 70 ns
+
+Info: lt_initiator.cpp: 5370 ns -yzb initiator_thread
+      Initiator: 102 b_transport returned delay = 70 ns
+
+Info: traffic_generator.cpp: 5440 ns -yzb traffic_generator_thread
+      Traffic Generator : 101
+=========================================================
+            ####  Traffic Generator Complete  #### 
+
+Info: traffic_generator.cpp: 5440 ns -yzb traffic_generator_thread
+      Traffic Generator : 102
+=========================================================
+            ####  Traffic Generator Complete  #### 

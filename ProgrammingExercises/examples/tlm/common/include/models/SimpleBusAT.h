@@ -97,11 +97,12 @@ public:
   //
 
   void RequestThread()
+//{{{
   {
     while (true) {
-      wait(mRequestPEQ.get_event());
+      wait(mRequestPEQ.get_event()); //经过一段delay后，bus向前传递trans. 
 
-      transaction_type* trans;
+      transaction_type* trans;		 //这个delay的实际意义为何？
       while ((trans = mRequestPEQ.get_next_transaction())!=0) {
         unsigned int portId = decode(trans->get_address());
         assert(portId < NR_OF_TARGETS);
@@ -111,27 +112,27 @@ public:
         // Fill in the destination port
         PendingTransactionsIterator it = mPendingTransactions.find(trans);
         assert(it != mPendingTransactions.end());
-        it->second.to = decodeSocket;
+        it->second.to = decodeSocket; // 将填入时并不完整的信息取出来补全；
 
         phase_type phase = tlm::BEGIN_REQ;
         sc_core::sc_time t = sc_core::SC_ZERO_TIME;
 
         // FIXME: No limitation on number of pending transactions
         //        All targets (that return false) must support multiple transactions
-        switch ((*decodeSocket)->nb_transport_fw(*trans, phase, t)) {
-        case tlm::TLM_ACCEPTED:
+        switch ((*decodeSocket)->nb_transport_fw(*trans, phase, t)) { //开始向后发起trans
+        case tlm::TLM_ACCEPTED:						//并根据返回值(同步信号？)进行后续的操作
         case tlm::TLM_UPDATED:
           // Transaction not yet finished
-          if (phase == tlm::BEGIN_REQ) {
+          if (phase == tlm::BEGIN_REQ) {  //传向后面的引用(BEGIN_REQ)没有被修改
             // Request phase not yet finished
-            wait(mEndRequestEvent);
+            wait(mEndRequestEvent); // 需要后向路径的配合使用才可以
 
-          } else if (phase == tlm::END_REQ) {
+          } else if (phase == tlm::END_REQ) { //传向后面的引用(BEGIN_REQ)被修改为(END_REQ)
             // Request phase finished, but response phase not yet started
             wait(t);
 
-          } else if (phase == tlm::BEGIN_RESP) {
-            mResponsePEQ.notify(*trans, t);
+          } else if (phase == tlm::BEGIN_RESP) { //传向后面的引用(BEGIN_REQ)跳过END_REQ，被修改为(BEGIN_RESP)
+            mResponsePEQ.notify(*trans, t); // 将这笔交易加入Response队列中
             // Not needed to send END_REQ to initiator
             continue;
 
@@ -150,12 +151,12 @@ public:
 
         case tlm::TLM_COMPLETED:
           // Transaction finished
-          mResponsePEQ.notify(*trans, t);
+          mResponsePEQ.notify(*trans, t); // 为什么交易结束了，还要加入PEQ？
 
           // reset to destination port (we must not send END_RESP to target)
           it->second.to = 0;
 
-          wait(t);
+          wait(t);  // 将时间向前推进之后，退出
           break;
 
         default:
@@ -164,16 +165,18 @@ public:
       }
     }
   }
+  //}}}
 
   void ResponseThread()
+//{{{ 
   {
     while (true) {
-      wait(mResponsePEQ.get_event());
+      wait(mResponsePEQ.get_event()); // 等待发作
 
       transaction_type* trans;
       while ((trans = mResponsePEQ.get_next_transaction())!=0) {
         PendingTransactionsIterator it = mPendingTransactions.find(trans);
-        assert(it != mPendingTransactions.end());
+        assert(it != mPendingTransactions.end()); // 确定能在mpendingTransactions中找到
 
         phase_type phase = tlm::BEGIN_RESP;
         sc_core::sc_time t = sc_core::SC_ZERO_TIME;
@@ -183,15 +186,15 @@ public:
         it->second.from = 0;
 
         switch ((*initiatorSocket)->nb_transport_bw(*trans, phase, t)) {
-        case tlm::TLM_COMPLETED:
-          // Transaction finished
+        case tlm::TLM_COMPLETED: ///<非阻塞传输的结束方式一：通过返回值TLM_COMPLETED判断结束; 一个节拍(从调用
+          // Transaction finished ///< nb_transport_bw()开始
           wait(t);
           break;
 
         case tlm::TLM_ACCEPTED:
-        case tlm::TLM_UPDATED:
-          // Transaction not yet finished
-          wait(mEndResponseEvent);
+        case tlm::TLM_UPDATED: ///< 非阻塞传输的结束方式二：通过参数phase END_RESP判断结束；两个节拍(从调用
+          // Transaction not yet finished   ///< nb_transport_bw()开始
+          wait(mEndResponseEvent); // 当initiator 发出 END_RESP，标志交易结束，此条件满足；
           break;
 
         default:
@@ -211,6 +214,7 @@ public:
       }
     }
   }
+  //}}}
 
   //
   // interface methods
@@ -220,6 +224,7 @@ public:
                                       transaction_type& trans,
                                       phase_type& phase,
                                       sc_core::sc_time& t)
+//{{{
   {
     if (phase == tlm::BEGIN_REQ) {
       trans.acquire();
@@ -239,11 +244,13 @@ public:
 
     return tlm::TLM_ACCEPTED;
   }
+//}}}
 
-  sync_enum_type targetNBTransport(int portId,
+  sync_enum_type targetNBTransport(int portId,  // 后向路径
                                    transaction_type& trans,
                                    phase_type& phase,
                                    sc_core::sc_time& t)
+//{{{
   {
     if (phase != tlm::END_REQ && phase != tlm::BEGIN_RESP) {
       std::cout << "ERROR: '" << name()
@@ -251,13 +258,14 @@ public:
       assert(false); exit(1);
     }
 
-    mEndRequestEvent.notify(t);
+    mEndRequestEvent.notify(t); // 只要后向路径被使用，就标志request阶段的结束，代表 End request
     if (phase == tlm::BEGIN_RESP) {
-      mResponsePEQ.notify(trans, t);
+      mResponsePEQ.notify(trans, t); // 将交易加入response队列中
     }
 
     return tlm::TLM_ACCEPTED;
   }
+//}}}
 
   unsigned int transportDebug(int initiator_id, transaction_type& trans)
   {

@@ -46,8 +46,10 @@ class select_initiator                              /// TLM AT select_initiator
 //==============================================================================
   typedef tlm::tlm_generic_payload  *gp_ptr;        // generic payload
   public:
-    sc_core::sc_port<sc_core::sc_fifo_in_if  <gp_ptr> > request_in_port;
-    sc_core::sc_port<sc_core::sc_fifo_out_if <gp_ptr> > response_out_port;
+   // sc_core::sc_port<sc_core::sc_fifo_in_if  <gp_ptr> > request_in_port;
+   // sc_core::sc_port<sc_core::sc_fifo_out_if <gp_ptr> > response_out_port;
+	sc_core::sc_fifo_in<gp_ptr> request_in_port;
+	sc_core::sc_fifo_out<gp_ptr> response_out_port;
     tlm::tlm_initiator_socket<>                         initiator_socket;
 
 //=============================================================================

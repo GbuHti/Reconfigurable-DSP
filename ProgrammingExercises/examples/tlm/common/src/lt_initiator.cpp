@@ -79,7 +79,8 @@ void lt_initiator::initiator_thread(void)   ///< initiator thread
 //=============================================================================
     transaction_ptr = request_in_port->read();  // get request from input fifo
   
-    sc_time delay         = SC_ZERO_TIME;       // Create delay objects 
+   // sc_time delay         = SC_ZERO_TIME;       // Create delay objects 
+    sc_time delay         = sc_time(10,SC_NS);       // Create delay objects 
 
     std::ostringstream  msg;           
     msg.str("");

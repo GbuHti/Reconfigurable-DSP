@@ -5,8 +5,7 @@ using namespace std;
 class SimpleModule:public sc_module
 {
 	private:
-		sc_event A_ready;
-		sc_event B_ready;
+		sc_event ready[2];
 		int cnt = 0;
 
 	public:
@@ -23,8 +22,8 @@ class SimpleModule:public sc_module
 
 	void portA()
 	{
-		A_ready.notify(10,SC_NS);
-		wait(A_ready);
+		ready[0].notify(10,SC_NS);
+		wait(ready[0]);
 		cout << "portA trigger event at " << sc_time_stamp() << endl;
 		while(true)
 		{
@@ -35,20 +34,20 @@ class SimpleModule:public sc_module
 
 	void portB()
 	{
-		B_ready.notify(20,SC_NS);
-		wait(B_ready);
+		ready[1].notify(20,SC_NS);
+		wait(ready[1]);
 		cout << "portB trigger event at " << sc_time_stamp() << endl;
 	}
 
 	void portC()
 	{
-		wait(A_ready | B_ready);
+		wait(ready[0] | ready[1]);
 		cout << "portC start at " << sc_time_stamp() << endl;
 	}
 
 	void proc_thread()
 	{
-		wait(A_ready);
+		wait(ready[0]);
 		while(1)
 		{
 			cout << "TIME: " << sc_time_stamp() << endl;
